@@ -1,0 +1,36 @@
+// UserLogin is the message for user login.
+type UserLogin {
+	UserName string `json:"username"`
+	Password string `json:"password"`
+}
+
+// UserLoginReply is the reply for user login.
+type UserLoginReply {
+	Token string `json:"token"`
+}
+
+@server(
+	prefix :/v1
+	group :ping
+)
+
+service gateway-api {
+	@doc "用户登录"
+	@handler ping
+	get /ping
+}
+
+@server(
+	prefix :/v1
+	group :user
+)
+
+service gateway-api {
+	@doc "用户登录"
+	@handler user
+	post /user/userlogin (UserLogin) returns (UserLoginReply)
+
+
+
+
+}

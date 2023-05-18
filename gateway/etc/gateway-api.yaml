@@ -1,0 +1,9 @@
+Name: gateway-api
+Host: 0.0.0.0
+Port: 8888
+
+
+Services:
+  - Name: user
+    Host: localhost
+    port: 8081
