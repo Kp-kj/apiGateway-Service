@@ -2,8 +2,12 @@ Name: gateway-api
 Host: 0.0.0.0
 Port: 8888
 
+#日志配置
+Log:
+  ServiceName: gateway-api
+  Mode: console
+  Level: info
 
-Services:
-  - Name: user
-    Host: localhost
-    port: 8081
+# 用户服务rpc
+UserRpcConf: user.rpc
+
