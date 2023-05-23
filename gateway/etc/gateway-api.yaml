@@ -8,6 +8,17 @@ Log:
   Mode: console
   Level: info
 
-# 用户服务rpc
-UserRpcConf: user.rpc
+Auth:
+  AccessSecret: "1234567890"
+  AccessExpire: 604800
 
+# 用户服务配置
+UserRpcConf:
+  Etcd:
+    Hosts:
+      - localhost:2379
+    Key: user.rpc
+
+# 用户服务直连
+#UserRpcConf:
+#  - 127.0.0.1:8080

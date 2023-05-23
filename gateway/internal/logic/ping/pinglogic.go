@@ -3,8 +3,8 @@ package ping
 import (
 	"context"
 	"fmt"
-	"gateway/client/user"
 	"gateway/internal/svc"
+	"gateway/userclient"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
@@ -23,8 +23,11 @@ func NewPingLogic(ctx context.Context, svcCtx *svc.ServiceContext) *PingLogic {
 }
 
 func (l *PingLogic) Ping() error {
-	pingResp, err := l.svcCtx.UserRpcClient.Ping(l.ctx, &user.Request{Ping: "ping"}, nil)
+	// ping 用户服务测试
+	pingResp, err := l.svcCtx.UserRpcClient.Ping(l.ctx, &userclient.Request{Ping: "ping"})
 	if err != nil {
+		fmt.Println("err")
+		fmt.Println(err)
 		return err
 	}
 	fmt.Println(pingResp.Pong)

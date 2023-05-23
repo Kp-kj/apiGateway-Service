@@ -5,7 +5,7 @@ package userclient
 
 import (
 	"context"
-	"gateway/client/user"
+	"gateway/userclient/user"
 
 	"github.com/zeromicro/go-zero/zrpc"
 	"google.golang.org/grpc"

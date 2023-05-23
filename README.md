@@ -15,3 +15,7 @@ goctl env check -i -f --verbose
 
 生成路由文件
 goctl api go -api gateway.api -dir .
+
+
+启动服务
+go run gateway.go -f etc/gateway-api.yaml

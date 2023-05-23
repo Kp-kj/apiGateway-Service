@@ -3,6 +3,10 @@ package main
 import (
 	"flag"
 	"fmt"
+	"gateway/errorx"
+	"github.com/zeromicro/go-zero/rest/httpx"
+	"golang.org/x/net/context"
+	"net/http"
 
 	"gateway/internal/config"
 	"gateway/internal/handler"
@@ -25,6 +29,16 @@ func main() {
 
 	ctx := svc.NewServiceContext(c)
 	handler.RegisterHandlers(server, ctx)
+
+	// 自定义错误
+	httpx.SetErrorHandlerCtx(func(ctx context.Context, err error) (int, interface{}) {
+		switch e := err.(type) {
+		case *errorx.CodeError:
+			return http.StatusOK, e.Data()
+		default:
+			return http.StatusInternalServerError, nil
+		}
+	})
 
 	fmt.Printf("Starting server at %s:%d...\n", c.Host, c.Port)
 	server.Start()

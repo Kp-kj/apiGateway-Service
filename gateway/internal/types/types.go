@@ -2,8 +2,8 @@
 package types
 
 type UserLogin struct {
-	UserName string `json:"username"`
-	Password string `json:"password"`
+	TwitterUrl string `json:"twitterUrl"`
+	InviteId   string `json:"inviteId"`
 }
 
 type UserLoginReply struct {

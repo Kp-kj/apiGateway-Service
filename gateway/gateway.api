@@ -1,7 +1,7 @@
 // UserLogin is the message for user login.
 type UserLogin {
-	UserName string `json:"username"`
-	Password string `json:"password"`
+	TwitterUrl string `json:"twitterUrl"`
+	InviteId   string `json:"inviteId"`
 }
 
 // UserLoginReply is the reply for user login.
@@ -28,5 +28,17 @@ service gateway-api {
 service gateway-api {
 	@doc "用户登录"
 	@handler user
-	post /user/userlogin (UserLogin) returns (UserLoginReply)
+	post /user/userLogin (UserLogin) returns (UserLoginReply)
+}
+
+@server(
+	prefix :/v1
+	group :user
+	jwt : Auth
+)
+
+service gateway-api {
+	@doc "用户退出登录"
+	@handler userLogout
+	post /user/userLogout  returns (UserLoginReply)
 }
