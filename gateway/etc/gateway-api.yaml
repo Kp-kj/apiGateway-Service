@@ -5,12 +5,16 @@ Port: 8888
 #日志配置
 Log:
   ServiceName: gateway-api
-  Mode: console
+  Mode: file # console, file
+  Path: logs
   Level: info
+  Encoding: plain # json, plain 日志格式
+  Compress: true # 是否压缩
+  KeepDays: 7 # 保留天数
 
 Auth:
   AccessSecret: "1234567890"
-  AccessExpire: 604800
+  AccessExpire: 604800   # 7天
 
 # 用户服务配置
 UserRpcConf:
