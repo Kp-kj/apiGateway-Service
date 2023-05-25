@@ -30,6 +30,11 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Path:    "/user/userLogin",
 				Handler: user.UserHandler(serverCtx),
 			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/user/adminLogin",
+				Handler: user.AdminLoginHandler(serverCtx),
+			},
 		},
 		rest.WithPrefix("/v1"),
 	)
