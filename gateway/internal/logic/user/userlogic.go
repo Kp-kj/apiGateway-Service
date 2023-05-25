@@ -2,7 +2,6 @@ package user
 
 import (
 	"context"
-	"fmt"
 	"gateway/userclient"
 	"github.com/golang-jwt/jwt/v4"
 	"strconv"
@@ -58,37 +57,57 @@ func (l *UserLogic) createUserJwtToken(userId string) (string, error) {
 	return jwtToken, nil
 }
 
-func (l *UserLogic) User(req *types.UserLogin) (resp *types.UserLoginReply, err error) {
-	// todo: 调用推特服务获取 twitterId 和 用户 创建
-	//用推特url 发送给 推特服务拿到 twitterid和twittername
-	//这部分省略直接已经拿到了
-	twitterId := "1498198918672580608 "
-	//twitterName := "Ed17899676"
-	//验证是否有这个用户
-	pingResp, err := l.svcCtx.UserRpcClient.CheckTwitterId(l.ctx, &userclient.CheckTwitterIdRequest{TwitterId: twitterId})
+// 处理不存在的用户
+func (l *UserLogic) handleNonexistentUser(twitterId string, inviteId string) (*types.UserLoginReply, error) {
+	// 创建用户
+	createUserResp, err := l.svcCtx.UserRpcClient.CreateUser(l.ctx, &userclient.CreateUserRequest{TwitterId: twitterId})
 	if err != nil {
-		if strings.Contains(err.Error(), "sql: no rows in result set") { //处理rpc错误 不存在这个用户
-			createUserResp, err := l.svcCtx.UserRpcClient.CreateUser(l.ctx, &userclient.CreateUserRequest{TwitterId: twitterId})
-			if err != nil {
-				return nil, err
-			}
+		return nil, err
+	}
 
-			jwtToken, err := l.createUserJwtToken(createUserResp.UserId) //创建jwt
-			if err != nil {
-				return nil, err
-			}
-			return &types.UserLoginReply{
-				Token: jwtToken,
-			}, nil
-		}
-		return nil, err
-	}
-	jwtToken, err := l.createUserJwtToken(pingResp.UserId)
+	// 创建邀请
+	_, err = l.svcCtx.UserRpcClient.CreateInvite(l.ctx, &userclient.CreateInviteRequest{
+		UserId:   createUserResp.UserId,
+		InviteId: inviteId,
+	})
 	if err != nil {
 		return nil, err
 	}
-	fmt.Println(jwtToken)
+
+	// 创建jwt token
+	jwtToken, err := l.createUserJwtToken(createUserResp.UserId)
+	if err != nil {
+		return nil, err
+	}
+
 	return &types.UserLoginReply{
 		Token: jwtToken,
 	}, nil
+}
+
+// 处理已存在的用户
+func (l *UserLogic) handleExistingUser(userId string) (*types.UserLoginReply, error) {
+	jwtToken, err := l.createUserJwtToken(userId)
+	if err != nil {
+		return nil, err
+	}
+
+	return &types.UserLoginReply{
+		Token: jwtToken,
+	}, nil
+}
+
+func (l *UserLogic) User(req *types.UserLogin) (resp *types.UserLoginReply, err error) {
+	// todo: 调用推特服务获取 twitterId 和 用户 创建
+	twitterId := "1498198918672580608"
+
+	pingResp, err := l.svcCtx.UserRpcClient.CheckTwitterId(l.ctx, &userclient.CheckTwitterIdRequest{TwitterId: twitterId})
+	if err != nil {
+		if strings.Contains(err.Error(), "sql: no rows in result set") {
+			return l.handleNonexistentUser(twitterId, req.InviteId) // 处理不存在的用户
+		}
+		return nil, err
+	}
+
+	return l.handleExistingUser(pingResp.UserId) // 处理已存在的用户
 }

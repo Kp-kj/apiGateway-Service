@@ -29,6 +29,10 @@ service gateway-api {
 	@doc "用户登录"
 	@handler user
 	post /user/userLogin (UserLogin) returns (UserLoginReply)
+
+//	@doc "管理员登录"
+//	@handler admin
+//	post /user/adminLogin (UserLogin) returns (UserLoginReply)
 }
 
 @server(

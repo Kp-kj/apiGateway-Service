@@ -25,7 +25,7 @@ func NewUserLogoutLogic(ctx context.Context, svcCtx *svc.ServiceContext) *UserLo
 }
 
 func (l *UserLogoutLogic) UserLogout() (resp *types.UserLoginReply, err error) {
-	// todo: 编写用户退出逻辑
+	// todo: 编写用户退出逻辑  暂时不做任何操作
 	fmt.Println(l.ctx.Value("userId")) // 从jwt token中解析出来的userId
 	return nil, errorx.NewCodeError(1000, "用户退出失败")
 }

@@ -22,6 +22,7 @@ const (
 	User_Ping_FullMethodName           = "/user.User/Ping"
 	User_CheckTwitterId_FullMethodName = "/user.User/CheckTwitterId"
 	User_CreateUser_FullMethodName     = "/user.User/CreateUser"
+	User_CreateInvite_FullMethodName   = "/user.User/CreateInvite"
 )
 
 // UserClient is the client API for User service.
@@ -31,6 +32,7 @@ type UserClient interface {
 	Ping(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 	CheckTwitterId(ctx context.Context, in *CheckTwitterIdRequest, opts ...grpc.CallOption) (*CheckTwitterIdResponse, error)
 	CreateUser(ctx context.Context, in *CreateUserRequest, opts ...grpc.CallOption) (*CreateUserResponse, error)
+	CreateInvite(ctx context.Context, in *CreateInviteRequest, opts ...grpc.CallOption) (*CreateInviteResponse, error)
 }
 
 type userClient struct {
@@ -68,6 +70,15 @@ func (c *userClient) CreateUser(ctx context.Context, in *CreateUserRequest, opts
 	return out, nil
 }
 
+func (c *userClient) CreateInvite(ctx context.Context, in *CreateInviteRequest, opts ...grpc.CallOption) (*CreateInviteResponse, error) {
+	out := new(CreateInviteResponse)
+	err := c.cc.Invoke(ctx, User_CreateInvite_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // UserServer is the server API for User service.
 // All implementations must embed UnimplementedUserServer
 // for forward compatibility
@@ -75,6 +86,7 @@ type UserServer interface {
 	Ping(context.Context, *Request) (*Response, error)
 	CheckTwitterId(context.Context, *CheckTwitterIdRequest) (*CheckTwitterIdResponse, error)
 	CreateUser(context.Context, *CreateUserRequest) (*CreateUserResponse, error)
+	CreateInvite(context.Context, *CreateInviteRequest) (*CreateInviteResponse, error)
 	mustEmbedUnimplementedUserServer()
 }
 
@@ -90,6 +102,9 @@ func (UnimplementedUserServer) CheckTwitterId(context.Context, *CheckTwitterIdRe
 }
 func (UnimplementedUserServer) CreateUser(context.Context, *CreateUserRequest) (*CreateUserResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateUser not implemented")
+}
+func (UnimplementedUserServer) CreateInvite(context.Context, *CreateInviteRequest) (*CreateInviteResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateInvite not implemented")
 }
 func (UnimplementedUserServer) mustEmbedUnimplementedUserServer() {}
 
@@ -158,6 +173,24 @@ func _User_CreateUser_Handler(srv interface{}, ctx context.Context, dec func(int
 	return interceptor(ctx, in, info, handler)
 }
 
+func _User_CreateInvite_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateInviteRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).CreateInvite(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_CreateInvite_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).CreateInvite(ctx, req.(*CreateInviteRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // User_ServiceDesc is the grpc.ServiceDesc for User service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -176,6 +209,10 @@ var User_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CreateUser",
 			Handler:    _User_CreateUser_Handler,
+		},
+		{
+			MethodName: "CreateInvite",
+			Handler:    _User_CreateInvite_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

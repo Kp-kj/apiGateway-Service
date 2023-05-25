@@ -5,6 +5,7 @@ package userclient
 
 import (
 	"context"
+
 	"gateway/userclient/user"
 
 	"github.com/zeromicro/go-zero/zrpc"
@@ -14,17 +15,18 @@ import (
 type (
 	CheckTwitterIdRequest  = user.CheckTwitterIdRequest
 	CheckTwitterIdResponse = user.CheckTwitterIdResponse
+	CreateInviteRequest    = user.CreateInviteRequest
+	CreateInviteResponse   = user.CreateInviteResponse
 	CreateUserRequest      = user.CreateUserRequest
 	CreateUserResponse     = user.CreateUserResponse
-	ErrorResponse          = user.ErrorResponse
 	Request                = user.Request
 	Response               = user.Response
-	ResponseMessage        = user.ResponseMessage
 
 	User interface {
 		Ping(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 		CheckTwitterId(ctx context.Context, in *CheckTwitterIdRequest, opts ...grpc.CallOption) (*CheckTwitterIdResponse, error)
 		CreateUser(ctx context.Context, in *CreateUserRequest, opts ...grpc.CallOption) (*CreateUserResponse, error)
+		CreateInvite(ctx context.Context, in *CreateInviteRequest, opts ...grpc.CallOption) (*CreateInviteResponse, error)
 	}
 
 	defaultUser struct {
@@ -51,4 +53,9 @@ func (m *defaultUser) CheckTwitterId(ctx context.Context, in *CheckTwitterIdRequ
 func (m *defaultUser) CreateUser(ctx context.Context, in *CreateUserRequest, opts ...grpc.CallOption) (*CreateUserResponse, error) {
 	client := user.NewUserClient(m.cli.Conn())
 	return client.CreateUser(ctx, in, opts...)
+}
+
+func (m *defaultUser) CreateInvite(ctx context.Context, in *CreateInviteRequest, opts ...grpc.CallOption) (*CreateInviteResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.CreateInvite(ctx, in, opts...)
 }
