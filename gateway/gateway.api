@@ -9,6 +9,17 @@ type UserLoginReply {
 	Token string `json:"token"`
 }
 
+// AdminLogin is the message for admin login.
+type AdminLogin {
+	AdminName     string `json:"adminName"`
+	AdminPassword string `json:"adminPassword"`
+}
+
+// AdminLoginReply is the reply for admin login.
+type AdminLoginReply {
+	Token string `json:"token"`
+}
+
 @server(
 	prefix :/v1
 	group :ping
@@ -29,10 +40,10 @@ service gateway-api {
 	@doc "用户登录"
 	@handler user
 	post /user/userLogin (UserLogin) returns (UserLoginReply)
-
-//	@doc "管理员登录"
-//	@handler admin
-//	post /user/adminLogin (UserLogin) returns (UserLoginReply)
+	
+	@doc "管理员登录"
+	@handler adminLogin
+	post /user/adminLogin (AdminLogin) returns (AdminLoginReply)
 }
 
 @server(

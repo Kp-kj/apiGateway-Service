@@ -9,3 +9,12 @@ type UserLogin struct {
 type UserLoginReply struct {
 	Token string `json:"token"`
 }
+
+type AdminLogin struct {
+	AdminName     string `json:"adminName"`
+	AdminPassword string `json:"adminPassword"`
+}
+
+type AdminLoginReply struct {
+	Token string `json:"token"`
+}

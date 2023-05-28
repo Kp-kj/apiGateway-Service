@@ -101,7 +101,7 @@ func (l *UserLogic) User(req *types.UserLogin) (resp *types.UserLoginReply, err 
 	// todo: 调用推特服务获取 twitterId 和 用户 创建
 	twitterId := "1498198918672580608"
 
-	pingResp, err := l.svcCtx.UserRpcClient.CheckTwitterId(l.ctx, &userclient.CheckTwitterIdRequest{TwitterId: twitterId})
+	userResp, err := l.svcCtx.UserRpcClient.CheckTwitterId(l.ctx, &userclient.CheckTwitterIdRequest{TwitterId: twitterId})
 	if err != nil {
 		if strings.Contains(err.Error(), "sql: no rows in result set") {
 			return l.handleNonexistentUser(twitterId, req.InviteId) // 处理不存在的用户
@@ -109,5 +109,5 @@ func (l *UserLogic) User(req *types.UserLogin) (resp *types.UserLoginReply, err 
 		return nil, err
 	}
 
-	return l.handleExistingUser(pingResp.UserId) // 处理已存在的用户
+	return l.handleExistingUser(userResp.UserId) // 处理已存在的用户
 }
