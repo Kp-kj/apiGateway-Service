@@ -15,12 +15,15 @@ Log:
 Auth:
   AccessSecret: "1234567890"
   AccessExpire: 604800   # 7天
+AdminAuth:
+  AccessSecret: "0987654321"
+  AccessExpire: 604800   # 7天
 
 # 用户服务配置
 UserRpcConf:
   Etcd:
     Hosts:
-      - localhost:2379
+      - 47.243.34.199:2379
     Key: user.rpc
 
 # 用户服务直连

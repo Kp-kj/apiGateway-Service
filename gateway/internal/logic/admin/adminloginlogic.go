@@ -1,4 +1,4 @@
-package user
+package admin
 
 import (
 	"context"
@@ -37,9 +37,7 @@ func (l *AdminLoginLogic) getJwtToken(secretKey string, iat, seconds, userId int
 	return token.SignedString([]byte(secretKey))
 }
 
-// AdminLogin 管理员登录逻辑
 func (l *AdminLoginLogic) AdminLogin(req *types.AdminLogin) (resp *types.AdminLoginReply, err error) {
-
 	userResp, err := l.svcCtx.UserRpcClient.AdminLogin(l.ctx, &userclient.AdminLoginRequest{
 		AdminName:   req.AdminName,
 		AdminPasswd: req.AdminPassword,
@@ -52,7 +50,7 @@ func (l *AdminLoginLogic) AdminLogin(req *types.AdminLogin) (resp *types.AdminLo
 	// 创建jwt
 	now := time.Now().Unix()
 	accessExpire := l.svcCtx.Config.Auth.AccessExpire
-	jwtToken, err := l.getJwtToken(l.svcCtx.Config.Auth.AccessSecret, now, accessExpire, userResp.AdminUserId)
+	jwtToken, err := l.getJwtToken(l.svcCtx.Config.AdminAuth.AccessSecret, now, accessExpire, userResp.AdminUserId)
 	if err != nil {
 		logx.Error(err)
 		return nil, err

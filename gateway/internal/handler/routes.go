@@ -4,6 +4,7 @@ package handler
 import (
 	"net/http"
 
+	admin "gateway/internal/handler/admin"
 	ping "gateway/internal/handler/ping"
 	user "gateway/internal/handler/user"
 	"gateway/internal/svc"
@@ -31,9 +32,40 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Handler: user.UserHandler(serverCtx),
 			},
 			{
+				Method:  http.MethodGet,
+				Path:    "/user/getHelpCategoryList",
+				Handler: user.GetHelpCategoryListHandler(serverCtx),
+			},
+		},
+		rest.WithPrefix("/v1"),
+	)
+
+	server.AddRoutes(
+		rest.WithMiddlewares(
+			[]rest.Middleware{serverCtx.BlackMiddleware},
+			[]rest.Route{
+				{
+					Method:  http.MethodPost,
+					Path:    "/user/userLogout",
+					Handler: user.UserLogoutHandler(serverCtx),
+				},
+				{
+					Method:  http.MethodGet,
+					Path:    "/user/getUserInfo",
+					Handler: user.GetUserInfoHandler(serverCtx),
+				},
+			}...,
+		),
+		rest.WithJwt(serverCtx.Config.Auth.AccessSecret),
+		rest.WithPrefix("/v1"),
+	)
+
+	server.AddRoutes(
+		[]rest.Route{
+			{
 				Method:  http.MethodPost,
-				Path:    "/user/adminLogin",
-				Handler: user.AdminLoginHandler(serverCtx),
+				Path:    "/admin/adminLogin",
+				Handler: admin.AdminLoginHandler(serverCtx),
 			},
 		},
 		rest.WithPrefix("/v1"),
@@ -43,11 +75,11 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 		[]rest.Route{
 			{
 				Method:  http.MethodPost,
-				Path:    "/user/userLogout",
-				Handler: user.UserLogoutHandler(serverCtx),
+				Path:    "/admin/adminLogout",
+				Handler: admin.AdminLogoutHandler(serverCtx),
 			},
 		},
-		rest.WithJwt(serverCtx.Config.Auth.AccessSecret),
+		rest.WithJwt(serverCtx.Config.AdminAuth.AccessSecret),
 		rest.WithPrefix("/v1"),
 	)
 }
