@@ -99,7 +99,7 @@ func (l *UserLogic) handleExistingUser(userId string) (*types.UserLoginReply, er
 
 func (l *UserLogic) User(req *types.UserLogin) (resp *types.UserLoginReply, err error) {
 	// todo: 调用推特服务获取 twitterId 和 用户 创建
-	twitterId := "1498198918672580608"
+	twitterId := "123123123"
 
 	userResp, err := l.svcCtx.UserRpcClient.CheckTwitterId(l.ctx, &userclient.CheckTwitterIdRequest{TwitterId: twitterId})
 	if err != nil {

@@ -18,3 +18,23 @@ type AdminLogin struct {
 type AdminLoginReply struct {
 	Token string `json:"token"`
 }
+
+type UserInfoReply struct {
+	UserName    string `json:"userName"`
+	TwitterName string `json:"twitterName"`
+	UserAvatar  string `json:"userAvatar"`
+	IsNew       int64  `json:"isNew"`
+}
+
+type GetHelpCategoryList struct {
+	LanguageCode string `json:"languageCode"`
+}
+
+type HelpCategory struct {
+	CategoryId   int64  `json:"categoryId"`
+	CategoryName string `json:"categoryName"`
+}
+
+type GetHelpCategoryListReply struct {
+	HelpCategoryList []HelpCategory `json:"helpCategoryList"`
+}

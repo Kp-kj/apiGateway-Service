@@ -13,26 +13,48 @@ import (
 )
 
 type (
-	AddAdminRequest          = user.AddAdminRequest
-	AddAdminResponse         = user.AddAdminResponse
-	AddUserInfoRequest       = user.AddUserInfoRequest
-	AddUserInfoResponse      = user.AddUserInfoResponse
-	AdminLoginRequest        = user.AdminLoginRequest
-	AdminLoginResponse       = user.AdminLoginResponse
-	CheckTodayInviteRequest  = user.CheckTodayInviteRequest
-	CheckTodayInviteResponse = user.CheckTodayInviteResponse
-	CheckTwitterIdRequest    = user.CheckTwitterIdRequest
-	CheckTwitterIdResponse   = user.CheckTwitterIdResponse
-	CreateInviteRequest      = user.CreateInviteRequest
-	CreateInviteResponse     = user.CreateInviteResponse
-	CreateUserRequest        = user.CreateUserRequest
-	CreateUserResponse       = user.CreateUserResponse
-	QueryUserRequest         = user.QueryUserRequest
-	QueryUserResponse        = user.QueryUserResponse
-	RemoveAdminRequest       = user.RemoveAdminRequest
-	RemoveAdminResponse      = user.RemoveAdminResponse
-	Request                  = user.Request
-	Response                 = user.Response
+	AddAdminRequest                       = user.AddAdminRequest
+	AddAdminResponse                      = user.AddAdminResponse
+	AddBlackListRequest                   = user.AddBlackListRequest
+	AddBlackListResponse                  = user.AddBlackListResponse
+	AddUserInfoRequest                    = user.AddUserInfoRequest
+	AddUserInfoResponse                   = user.AddUserInfoResponse
+	AdminLoginRequest                     = user.AdminLoginRequest
+	AdminLoginResponse                    = user.AdminLoginResponse
+	CheckTodayInviteRequest               = user.CheckTodayInviteRequest
+	CheckTodayInviteResponse              = user.CheckTodayInviteResponse
+	CheckTwitterIdRequest                 = user.CheckTwitterIdRequest
+	CheckTwitterIdResponse                = user.CheckTwitterIdResponse
+	CreateHelpCategoryRequest             = user.CreateHelpCategoryRequest
+	CreateHelpCategoryResponse            = user.CreateHelpCategoryResponse
+	CreateHelpCategoryTranslationRequest  = user.CreateHelpCategoryTranslationRequest
+	CreateHelpCategoryTranslationResponse = user.CreateHelpCategoryTranslationResponse
+	CreateInviteRequest                   = user.CreateInviteRequest
+	CreateInviteResponse                  = user.CreateInviteResponse
+	CreateUserRequest                     = user.CreateUserRequest
+	CreateUserResponse                    = user.CreateUserResponse
+	DeleteHelpCategoryRequest             = user.DeleteHelpCategoryRequest
+	DeleteHelpCategoryResponse            = user.DeleteHelpCategoryResponse
+	DeleteHelpCategoryTranslationRequest  = user.DeleteHelpCategoryTranslationRequest
+	DeleteHelpCategoryTranslationResponse = user.DeleteHelpCategoryTranslationResponse
+	EditHelpCategoryRequest               = user.EditHelpCategoryRequest
+	EditHelpCategoryResponse              = user.EditHelpCategoryResponse
+	GetHelpCategoriesRequest              = user.GetHelpCategoriesRequest
+	GetHelpCategoriesResponse             = user.GetHelpCategoriesResponse
+	GetHelpCategoryTranslationsRequest    = user.GetHelpCategoryTranslationsRequest
+	GetHelpCategoryTranslationsResponse   = user.GetHelpCategoryTranslationsResponse
+	HelpCategory                          = user.HelpCategory
+	HelpCategoryTranslation               = user.HelpCategoryTranslation
+	QueryBlackListRequest                 = user.QueryBlackListRequest
+	QueryBlackListResponse                = user.QueryBlackListResponse
+	QueryUserRequest                      = user.QueryUserRequest
+	QueryUserResponse                     = user.QueryUserResponse
+	RemoveAdminRequest                    = user.RemoveAdminRequest
+	RemoveAdminResponse                   = user.RemoveAdminResponse
+	RemoveBlackListRequest                = user.RemoveBlackListRequest
+	RemoveBlackListResponse               = user.RemoveBlackListResponse
+	Request                               = user.Request
+	Response                              = user.Response
 
 	User interface {
 		Ping(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
@@ -45,6 +67,16 @@ type (
 		AddAdmin(ctx context.Context, in *AddAdminRequest, opts ...grpc.CallOption) (*AddAdminResponse, error)
 		AdminLogin(ctx context.Context, in *AdminLoginRequest, opts ...grpc.CallOption) (*AdminLoginResponse, error)
 		RemoveAdmin(ctx context.Context, in *RemoveAdminRequest, opts ...grpc.CallOption) (*RemoveAdminResponse, error)
+		AddBlackList(ctx context.Context, in *AddBlackListRequest, opts ...grpc.CallOption) (*AddBlackListResponse, error)
+		QueryBlackList(ctx context.Context, in *QueryBlackListRequest, opts ...grpc.CallOption) (*QueryBlackListResponse, error)
+		RemoveBlackList(ctx context.Context, in *RemoveBlackListRequest, opts ...grpc.CallOption) (*RemoveBlackListResponse, error)
+		CreateHelpCategory(ctx context.Context, in *CreateHelpCategoryRequest, opts ...grpc.CallOption) (*CreateHelpCategoryResponse, error)
+		GetHelpCategories(ctx context.Context, in *GetHelpCategoriesRequest, opts ...grpc.CallOption) (*GetHelpCategoriesResponse, error)
+		DeleteHelpCategory(ctx context.Context, in *DeleteHelpCategoryRequest, opts ...grpc.CallOption) (*DeleteHelpCategoryResponse, error)
+		EditHelpCategory(ctx context.Context, in *EditHelpCategoryRequest, opts ...grpc.CallOption) (*EditHelpCategoryResponse, error)
+		CreateHelpCategoryTranslation(ctx context.Context, in *CreateHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*CreateHelpCategoryTranslationResponse, error)
+		DeleteHelpCategoryTranslation(ctx context.Context, in *DeleteHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*DeleteHelpCategoryTranslationResponse, error)
+		GetHelpCategoryTranslations(ctx context.Context, in *GetHelpCategoryTranslationsRequest, opts ...grpc.CallOption) (*GetHelpCategoryTranslationsResponse, error)
 	}
 
 	defaultUser struct {
@@ -106,4 +138,54 @@ func (m *defaultUser) AdminLogin(ctx context.Context, in *AdminLoginRequest, opt
 func (m *defaultUser) RemoveAdmin(ctx context.Context, in *RemoveAdminRequest, opts ...grpc.CallOption) (*RemoveAdminResponse, error) {
 	client := user.NewUserClient(m.cli.Conn())
 	return client.RemoveAdmin(ctx, in, opts...)
+}
+
+func (m *defaultUser) AddBlackList(ctx context.Context, in *AddBlackListRequest, opts ...grpc.CallOption) (*AddBlackListResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.AddBlackList(ctx, in, opts...)
+}
+
+func (m *defaultUser) QueryBlackList(ctx context.Context, in *QueryBlackListRequest, opts ...grpc.CallOption) (*QueryBlackListResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.QueryBlackList(ctx, in, opts...)
+}
+
+func (m *defaultUser) RemoveBlackList(ctx context.Context, in *RemoveBlackListRequest, opts ...grpc.CallOption) (*RemoveBlackListResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.RemoveBlackList(ctx, in, opts...)
+}
+
+func (m *defaultUser) CreateHelpCategory(ctx context.Context, in *CreateHelpCategoryRequest, opts ...grpc.CallOption) (*CreateHelpCategoryResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.CreateHelpCategory(ctx, in, opts...)
+}
+
+func (m *defaultUser) GetHelpCategories(ctx context.Context, in *GetHelpCategoriesRequest, opts ...grpc.CallOption) (*GetHelpCategoriesResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.GetHelpCategories(ctx, in, opts...)
+}
+
+func (m *defaultUser) DeleteHelpCategory(ctx context.Context, in *DeleteHelpCategoryRequest, opts ...grpc.CallOption) (*DeleteHelpCategoryResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.DeleteHelpCategory(ctx, in, opts...)
+}
+
+func (m *defaultUser) EditHelpCategory(ctx context.Context, in *EditHelpCategoryRequest, opts ...grpc.CallOption) (*EditHelpCategoryResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.EditHelpCategory(ctx, in, opts...)
+}
+
+func (m *defaultUser) CreateHelpCategoryTranslation(ctx context.Context, in *CreateHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*CreateHelpCategoryTranslationResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.CreateHelpCategoryTranslation(ctx, in, opts...)
+}
+
+func (m *defaultUser) DeleteHelpCategoryTranslation(ctx context.Context, in *DeleteHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*DeleteHelpCategoryTranslationResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.DeleteHelpCategoryTranslation(ctx, in, opts...)
+}
+
+func (m *defaultUser) GetHelpCategoryTranslations(ctx context.Context, in *GetHelpCategoryTranslationsRequest, opts ...grpc.CallOption) (*GetHelpCategoryTranslationsResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.GetHelpCategoryTranslations(ctx, in, opts...)
 }

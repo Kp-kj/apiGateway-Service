@@ -20,6 +20,26 @@ type AdminLoginReply {
 	Token string `json:"token"`
 }
 
+type UserInfoReply {
+	UserName    string `json:"userName"`
+	TwitterName string `json:"twitterName"`
+	UserAvatar  string `json:"userAvatar"`
+	IsNew       int64  `json:"isNew"`
+}
+
+type GetHelpCategoryList {
+	LanguageCode string `json:"languageCode"`
+}
+
+type HelpCategory {
+	CategoryId   int64  `json:"categoryId"`
+	CategoryName string `json:"categoryName"`
+}
+
+type GetHelpCategoryListReply {
+	HelpCategoryList []HelpCategory `json:"helpCategoryList"`
+}
+
 @server(
 	prefix :/v1
 	group :ping
@@ -31,6 +51,7 @@ service gateway-api {
 	get /ping
 }
 
+// 下面是用户接口，不需要鉴权
 @server(
 	prefix :/v1
 	group :user
@@ -41,14 +62,17 @@ service gateway-api {
 	@handler user
 	post /user/userLogin (UserLogin) returns (UserLoginReply)
 	
-	@doc "管理员登录"
-	@handler adminLogin
-	post /user/adminLogin (AdminLogin) returns (AdminLoginReply)
+	@doc "获取帮助文档分类列表"
+	@handler getHelpCategoryList
+	get /user/getHelpCategoryList (GetHelpCategoryList) returns (GetHelpCategoryListReply)
+	
 }
 
+// 下面是用户接口，需要鉴权
 @server(
 	prefix :/v1
 	group :user
+	middleware : BlackMiddleware
 	jwt : Auth
 )
 
@@ -56,4 +80,32 @@ service gateway-api {
 	@doc "用户退出登录"
 	@handler userLogout
 	post /user/userLogout  returns (UserLoginReply)
+	
+	@doc "获取用户信息"
+	@handler getUserInfo
+	get /user/getUserInfo returns (UserInfoReply)
+}
+
+// 下面是管理员接口，不需要鉴权
+@server(
+	prefix :/v1
+	group :admin
+)
+service gateway-api {
+	@doc "管理员登录"
+	@handler adminLogin
+	post /admin/adminLogin (AdminLogin) returns (AdminLoginReply)
+}
+
+// 下面是管理员接口，需要鉴权
+@server(
+	prefix :/v1
+	group : admin
+	jwt : AdminAuth
+)
+
+service gateway-api {
+	@doc "管理员退出登录"
+	@handler adminLogout
+	post /admin/adminLogout returns (AdminLoginReply)
 }

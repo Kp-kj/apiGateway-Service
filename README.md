@@ -20,5 +20,8 @@ goctl api go -api gateway.api -dir .
 启动服务
 go run gateway.go -f etc/gateway-api.yaml
 
+etcd启动 
+根目录下
+./etcd.exe --config-file=etcd.conf.yml
 
 "gateway/userclient/user"
