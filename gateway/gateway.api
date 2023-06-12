@@ -27,17 +27,13 @@ type UserInfoReply {
 	IsNew       int64  `json:"isNew"`
 }
 
-type GetHelpCategoryList {
+type HelpCategoryList {
 	LanguageCode string `json:"languageCode"`
 }
 
-type HelpCategory {
+type HelpCategoryListReply {
 	CategoryId   int64  `json:"categoryId"`
 	CategoryName string `json:"categoryName"`
-}
-
-type GetHelpCategoryListReply {
-	HelpCategoryList []HelpCategory `json:"helpCategoryList"`
 }
 
 @server(
@@ -64,8 +60,7 @@ service gateway-api {
 	
 	@doc "获取帮助文档分类列表"
 	@handler getHelpCategoryList
-	get /user/getHelpCategoryList (GetHelpCategoryList) returns (GetHelpCategoryListReply)
-	
+	get /user/getHelpCategoryList returns (HelpCategoryListReply)
 }
 
 // 下面是用户接口，需要鉴权

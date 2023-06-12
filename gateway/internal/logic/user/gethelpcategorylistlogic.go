@@ -2,9 +2,10 @@ package user
 
 import (
 	"context"
+
 	"gateway/internal/svc"
 	"gateway/internal/types"
-	"gateway/userclient"
+
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
@@ -22,19 +23,8 @@ func NewGetHelpCategoryListLogic(ctx context.Context, svcCtx *svc.ServiceContext
 	}
 }
 
-// GetHelpCategoryList 获取帮助分类列表
-func (l *GetHelpCategoryListLogic) GetHelpCategoryList(req *types.GetHelpCategoryList) (resp *types.GetHelpCategoryListReply, err error) {
+func (l *GetHelpCategoryListLogic) GetHelpCategoryList() (resp *types.HelpCategoryListReply, err error) {
+	// todo: add your logic here and delete this line
 
-	// 先获取上架的帮助分类列表   需要改一下
-	dbUserInfo, err := l.svcCtx.UserRpcClient.GetHelpCategories(l.ctx, &userclient.GetHelpCategoriesRequest{
-		CategoryStatus: 0,
-	})
-	if err != nil {
-		logx.Error(err)
-		return nil, err
-	}
-	print(dbUserInfo)
-	//根据 languageCode 来请求相应的帮助分类列表
-
-	return nil, nil
+	return
 }
