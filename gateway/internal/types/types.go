@@ -26,15 +26,11 @@ type UserInfoReply struct {
 	IsNew       int64  `json:"isNew"`
 }
 
-type GetHelpCategoryList struct {
+type HelpCategoryList struct {
 	LanguageCode string `json:"languageCode"`
 }
 
-type HelpCategory struct {
+type HelpCategoryListReply struct {
 	CategoryId   int64  `json:"categoryId"`
 	CategoryName string `json:"categoryName"`
-}
-
-type GetHelpCategoryListReply struct {
-	HelpCategoryList []HelpCategory `json:"helpCategoryList"`
 }
