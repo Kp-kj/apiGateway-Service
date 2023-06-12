@@ -24,4 +24,4 @@ jobs:
           echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
           cd gateway # 切换到 Dockerfile 所在目录
           docker buildx create --use
-          docker buildx build --platform linux/amd64,linux/arm64 --push -t fibonacci77777/userservice .
+          docker buildx build --platform linux/amd64,linux/arm64 --push -t fibonacci77777/apigateway .
