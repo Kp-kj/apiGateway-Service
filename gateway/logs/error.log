@@ -104,3 +104,10 @@ User-Agent: PostmanRuntime/7.32.2
 
 	duration=0.6ms	caller=handler/loghandler.go:162	trace=bba2915222b8caf4ee1b93855351c167	span=cca318559c980ef4
 2023-06-12T11:37:54.823+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-12T12:49:18.556+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-13T10:28:09.732+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-13T10:31:29.734+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-13T10:52:30.510+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-13T10:55:42.238+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-13T10:58:02.242+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-13T11:02:10.568+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
