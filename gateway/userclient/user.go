@@ -43,8 +43,10 @@ type (
 	GetHelpCategoriesResponse             = user.GetHelpCategoriesResponse
 	GetHelpCategoryTranslationsRequest    = user.GetHelpCategoryTranslationsRequest
 	GetHelpCategoryTranslationsResponse   = user.GetHelpCategoryTranslationsResponse
+	GetNotificationsRequest               = user.GetNotificationsRequest
+	GetNotificationsResponse              = user.GetNotificationsResponse
 	HelpCategory                          = user.HelpCategory
-	HelpCategoryTranslation               = user.HelpCategoryTranslation
+	Notification                          = user.Notification
 	QueryBlackListRequest                 = user.QueryBlackListRequest
 	QueryBlackListResponse                = user.QueryBlackListResponse
 	QueryUserRequest                      = user.QueryUserRequest
@@ -70,8 +72,8 @@ type (
 		AddBlackList(ctx context.Context, in *AddBlackListRequest, opts ...grpc.CallOption) (*AddBlackListResponse, error)
 		QueryBlackList(ctx context.Context, in *QueryBlackListRequest, opts ...grpc.CallOption) (*QueryBlackListResponse, error)
 		RemoveBlackList(ctx context.Context, in *RemoveBlackListRequest, opts ...grpc.CallOption) (*RemoveBlackListResponse, error)
-		CreateHelpCategory(ctx context.Context, in *CreateHelpCategoryRequest, opts ...grpc.CallOption) (*CreateHelpCategoryResponse, error)
 		GetHelpCategories(ctx context.Context, in *GetHelpCategoriesRequest, opts ...grpc.CallOption) (*GetHelpCategoriesResponse, error)
+		CreateHelpCategory(ctx context.Context, in *CreateHelpCategoryRequest, opts ...grpc.CallOption) (*CreateHelpCategoryResponse, error)
 		DeleteHelpCategory(ctx context.Context, in *DeleteHelpCategoryRequest, opts ...grpc.CallOption) (*DeleteHelpCategoryResponse, error)
 		EditHelpCategory(ctx context.Context, in *EditHelpCategoryRequest, opts ...grpc.CallOption) (*EditHelpCategoryResponse, error)
 		CreateHelpCategoryTranslation(ctx context.Context, in *CreateHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*CreateHelpCategoryTranslationResponse, error)
@@ -155,14 +157,14 @@ func (m *defaultUser) RemoveBlackList(ctx context.Context, in *RemoveBlackListRe
 	return client.RemoveBlackList(ctx, in, opts...)
 }
 
-func (m *defaultUser) CreateHelpCategory(ctx context.Context, in *CreateHelpCategoryRequest, opts ...grpc.CallOption) (*CreateHelpCategoryResponse, error) {
-	client := user.NewUserClient(m.cli.Conn())
-	return client.CreateHelpCategory(ctx, in, opts...)
-}
-
 func (m *defaultUser) GetHelpCategories(ctx context.Context, in *GetHelpCategoriesRequest, opts ...grpc.CallOption) (*GetHelpCategoriesResponse, error) {
 	client := user.NewUserClient(m.cli.Conn())
 	return client.GetHelpCategories(ctx, in, opts...)
+}
+
+func (m *defaultUser) CreateHelpCategory(ctx context.Context, in *CreateHelpCategoryRequest, opts ...grpc.CallOption) (*CreateHelpCategoryResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.CreateHelpCategory(ctx, in, opts...)
 }
 
 func (m *defaultUser) DeleteHelpCategory(ctx context.Context, in *DeleteHelpCategoryRequest, opts ...grpc.CallOption) (*DeleteHelpCategoryResponse, error) {
