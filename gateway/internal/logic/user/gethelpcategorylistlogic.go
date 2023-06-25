@@ -27,7 +27,6 @@ func NewGetHelpCategoryListLogic(ctx context.Context, svcCtx *svc.ServiceContext
 // GetHelpCategoryList 获取帮助分类列表
 func (l *GetHelpCategoryListLogic) GetHelpCategoryList() (resp *types.HelpCategoryListReply, err error) {
 	// todo: add your logic here and delete this line
-
 	helpResp, err := l.svcCtx.UserRpcClient.GetHelpCategories(l.ctx, &userclient.GetHelpCategoriesRequest{CategoryStatus: 0})
 
 	if err != nil {
