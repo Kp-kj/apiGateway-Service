@@ -26,5 +26,8 @@ func NewGetHelpCategoryListLogic(ctx context.Context, svcCtx *svc.ServiceContext
 func (l *GetHelpCategoryListLogic) GetHelpCategoryList() (resp *types.HelpCategoryListReply, err error) {
 	// todo: add your logic here and delete this line
 
-	return
+	return &types.HelpCategoryListReply{
+		CategoryId:   0,
+		CategoryName: "123",
+	}, nil
 }
