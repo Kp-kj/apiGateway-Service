@@ -78,6 +78,31 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Path:    "/admin/adminLogout",
 				Handler: admin.AdminLogoutHandler(serverCtx),
 			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/getCurrentOnlinePerson",
+				Handler: admin.GetCurrentOnlinePersonHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/getRegisteredPopulation",
+				Handler: admin.GetRegisteredPopulationHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/getUserInfo",
+				Handler: admin.AdminUserInfoHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/getUserListByCondition",
+				Handler: admin.GetUserListByConditionHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/batchUpdateUserBlackStatus",
+				Handler: admin.BatchUpdateUserBlackStatusHandler(serverCtx),
+			},
 		},
 		rest.WithJwt(serverCtx.Config.AdminAuth.AccessSecret),
 		rest.WithPrefix("/v1"),
