@@ -4,10 +4,10 @@ package handler
 import (
 	"net/http"
 
-	admin "gateway/internal/handler/admin"
-	ping "gateway/internal/handler/ping"
-	user "gateway/internal/handler/user"
-	"gateway/internal/svc"
+	admin "gateway/。/internal/handler/admin"
+	ping "gateway/。/internal/handler/ping"
+	user "gateway/。/internal/handler/user"
+	"gateway/。/internal/svc"
 
 	"github.com/zeromicro/go-zero/rest"
 )

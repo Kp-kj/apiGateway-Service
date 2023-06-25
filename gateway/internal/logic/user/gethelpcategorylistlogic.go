@@ -2,9 +2,10 @@ package user
 
 import (
 	"context"
-
+	"fmt"
 	"gateway/internal/svc"
 	"gateway/internal/types"
+	"gateway/userclient"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -23,11 +24,24 @@ func NewGetHelpCategoryListLogic(ctx context.Context, svcCtx *svc.ServiceContext
 	}
 }
 
+// GetHelpCategoryList 获取帮助分类列表
 func (l *GetHelpCategoryListLogic) GetHelpCategoryList() (resp *types.HelpCategoryListReply, err error) {
 	// todo: add your logic here and delete this line
+	helpResp, err := l.svcCtx.UserRpcClient.GetHelpCategories(l.ctx, &userclient.GetHelpCategoriesRequest{CategoryStatus: 0})
 
-	return &types.HelpCategoryListReply{
-		CategoryId:   0,
-		CategoryName: "123",
-	}, nil
+	if err != nil {
+		fmt.Println("err: ", err)
+		return nil, err
+	}
+	fmt.Println(helpResp.HelpCategories)
+
+	categoryList := make([]types.CategoryList, len(helpResp.HelpCategories))
+	for i := range helpResp.HelpCategories {
+		categoryList[i] = types.CategoryList{
+			CategoryId:   helpResp.HelpCategories[i].HelpCategoryId,
+			CategoryName: "helpResp.HelpCategories[i].CategoryName",
+		}
+	}
+
+	return &types.HelpCategoryListReply{CategoryList: categoryList}, nil
 }
