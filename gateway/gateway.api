@@ -36,6 +36,46 @@ type HelpCategoryListReply {
 	CategoryName string `json:"categoryName"`
 }
 
+// CurrentOnlinePersonReply
+type CurrentOnlinePersonReply {
+	CurrentOnlinePerson int64 `json:"currentOnlinePerson"`
+}
+
+//RegisteredPopulationReply
+type RegisteredPopulationReply {
+	RegisteredPopulation int64 `json:"registeredPopulation"`
+}
+
+//GetUserListByCondition
+type GetUserListByCondition {
+	BlackStatus int64  `json:"blackStatus"` //冻结状态
+	PageNum     int64  `json:"pageNum"`     //页码
+	PageSize    int64  `json:"pageSize"`    //每页条数
+	OrderType   string `json:"order"`       //排序
+	TwitterId   string `json:"twitterId"`   //推特id
+}
+
+//GetUserListByConditionReply
+type GetUserListByConditionReply {
+	TwitterId     string `json:"twitterId"`     //推特id
+	UserID        int64  `json:"userId"`        //用户id
+	RegisterAt    int64  `json:"registerAt"`    //注册时间
+	RecomendBy    string `json:"recomendBy"`    //推荐人
+	IsBlacklisted int64  `json:"isBlacklisted"` //是否冻结
+}
+
+//BatchUpdateUserBlackStatus
+type BatchUpdateUserBlackStatus {
+	UserIdList  []int64 `json:"userIdList"`  //用户id列表
+	BlackStatus int64   `json:"blackStatus"` //冻结状态
+}
+
+//BatchUpdateUserBlackStatusReply
+type BatchUpdateUserBlackStatusReply {
+	UserIdList  []int64 `json:"userIdList"`  //用户id列表
+	BlackStatus int64   `json:"blackStatus"` //冻结状态
+}
+
 @server(
 	prefix :/v1
 	group :ping
@@ -103,4 +143,79 @@ service gateway-api {
 	@doc "管理员退出登录"
 	@handler adminLogout
 	post /admin/adminLogout returns (AdminLoginReply)
+	
+	@doc "获取当前在线人数"
+	@handler getCurrentOnlinePerson
+	post /admin/getCurrentOnlinePerson returns (CurrentOnlinePersonReply)
+	
+	@doc "获取当前注册人数"
+	@handler getRegisteredPopulation
+	post /admin/getRegisteredPopulation returns (RegisteredPopulationReply)
+	
+	@doc "获取用户信息"
+	@handler adminUserInfo
+	post /admin/getUserInfo returns (UserInfoReply)
+	
+	@doc "按条件获取用户列表的接口"
+	@handler getUserListByCondition
+	post /admin/getUserListByCondition (GetUserListByCondition) returns (GetUserListByConditionReply)
+	
+	@doc "批量更新用户黑名单状态"
+	@handler batchUpdateUserBlackStatus
+	post /admin/batchUpdateUserBlackStatus (BatchUpdateUserBlackStatus) returns (BatchUpdateUserBlackStatusReply)
+	
+	// 公告管理
+	//	@doc "按条件获取公告列表"
+	//	@handler getNoticeBy
+	//	post /admin/getNoticeBy (GetNoticeBy) returns (GetNoticeByReply)
+	
+	//	@doc "批量修改公告发布状态"
+	//	@handler editNoticeStatus
+	//	post /admin/editNoticeStatus (EditNoticeStatus) returns (EditNoticeStatusReply)
+	
+	//	@doc"新建编辑公告"
+	//	@handler editNotice
+	//	post /admin/editNotice (EditNotice) returns (EditNoticeReply)
+	
+	//	@doc"批量删除公告"
+	//	@handler deleteNotice
+	//	post /admin/deleteNotice (DeleteNotice) returns (DeleteNoticeReply)
+	
+	//    @doc "查看公告详情"
+	//	@handler getNotice
+	//	post /admin/getNotice (GetNotice) returns (GetNoticeReply)
+	
+	// 内容管理
+	//	@doc "新建编辑分类"
+	//	@handler addCategory
+	//	post /admin/addCategory (AddCategory) returns (AddCategoryReply)
+	
+	//	@doc "批量删除分类"
+	//	@handler batchDeleteCategory
+	//	post /admin/batchDeleteCategory (BatchDeleteCategory) returns (BatchDeleteCategoryReply)
+	
+	//	@doc "按条件筛选分类的问答列表"
+	//	@handler getCategoryListByCondition
+	//	post /admin/getCategoryListByCondition (GetCategoryListByCondition) returns (GetCategoryListByConditionReply)
+	
+	//	@doc "批量更改分类的发布状态"
+	//	@handler categorylistStatus
+	//	post /admin/categorylistStatus (CategorylistStatus) returns (CategorylistStatusReply)
+	
+	//	@doc "新建编辑分类问答"
+	//	@handler editCategory
+	//	post /admin/editCategory (EditCategory) returns (EditCategoryReply)
+	
+	//	@doc "按条件筛选分类问答列表"
+	//	@handler getDocumentContentListByCondition
+	//	post /admin/getDocumentContentListByCondition (GetDocumentContentListByCondition) returns (GetDocumentContentListByConditionReply)
+	
+	//	@doc "批量更改分类问答的发布状态"
+	//	@handler documentContentlistStatus
+	//	post /admin/documentContentlistStatus (DocumentContentlistStatus) returns (DocumentContentlistStatusReply)
+	
+	//	@doc "批量删除分类问答"
+	//	@handler batchDeleteCategory
+	//	post /admin/batchDeleteCategory (BatchDeleteCategory) returns (BatchDeleteCategoryReply)
+	
 }
