@@ -2,8 +2,9 @@
 package types
 
 type UserLogin struct {
-	TwitterUrl string `json:"twitterUrl"`
-	InviteId   string `json:"inviteId"`
+	Code         string `json:"code"`
+	CodeVerifier string `json:"codeVerifier"`
+	InviteId     string `json:"inviteId"`
 }
 
 type UserLoginReply struct {
@@ -27,6 +28,10 @@ type UserInfoReply struct {
 }
 
 type HelpCategoryList struct {
+	LanguageCode string `json:"languageCode"`
+}
+
+type GetHelpCategoryList struct {
 	LanguageCode string `json:"languageCode"`
 }
 

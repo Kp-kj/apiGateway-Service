@@ -32,7 +32,7 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Handler: user.UserHandler(serverCtx),
 			},
 			{
-				Method:  http.MethodGet,
+				Method:  http.MethodPost,
 				Path:    "/user/getHelpCategoryList",
 				Handler: user.GetHelpCategoryListHandler(serverCtx),
 			},

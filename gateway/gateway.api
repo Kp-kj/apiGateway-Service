@@ -1,7 +1,8 @@
 // UserLogin is the message for user login.
 type UserLogin {
-	TwitterUrl string `json:"twitterUrl"`
-	InviteId   string `json:"inviteId"`
+	Code         string `json:"code"`
+	CodeVerifier string `json:"codeVerifier"`
+	InviteId     string `json:"inviteId"`
 }
 
 // UserLoginReply is the reply for user login.
@@ -28,6 +29,11 @@ type UserInfoReply {
 }
 
 type HelpCategoryList {
+	LanguageCode string `json:"languageCode"`
+}
+
+//getHelpCategoryList
+type GetHelpCategoryList {
 	LanguageCode string `json:"languageCode"`
 }
 
@@ -151,7 +157,7 @@ service gateway-api {
 	
 	@doc "获取帮助文档分类列表"
 	@handler getHelpCategoryList
-	get /user/getHelpCategoryList returns (HelpCategoryListReply)
+	post /user/getHelpCategoryList (GetHelpCategoryList) returns (HelpCategoryListReply)
 	
 	@doc "获取帮助文档分类内容标题列表"
 	@handler getHelpDocumentTitleList
