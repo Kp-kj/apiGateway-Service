@@ -1,8 +1,7 @@
 // UserLogin is the message for user login.
 type UserLogin {
-	Code         string `json:"code"`
-	CodeVerifier string `json:"codeVerifier"`
-	InviteId     string `json:"inviteId"`
+	TwitterUrl string `json:"twitterUrl"`
+	InviteId   string `json:"inviteId"`
 }
 
 // UserLoginReply is the reply for user login.
@@ -32,105 +31,295 @@ type HelpCategoryList {
 	LanguageCode string `json:"languageCode"`
 }
 
-//getHelpCategoryList
-type GetHelpCategoryList {
-	LanguageCode string `json:"languageCode"`
-}
-
 type HelpCategoryListReply {
-	CategoryList []CategoryList `json:"categoryList"`
-}
-
-type CategoryList {
 	CategoryId   int64  `json:"categoryId"`
 	CategoryName string `json:"categoryName"`
 }
-// CurrentOnlinePersonReply
-type CurrentOnlinePersonReply {
-	CurrentOnlinePerson int64 `json:"currentOnlinePerson"`
+
+/*任务信息开始*/
+//  Curatorial task information receiving table (策展任务信息接收表)
+type CreatePublishTaskInput {
+	Creator      string        `json:"creator"`
+	TweetAddress string        `json:"tweetAddress"`
+	Label        []string      `json:"label"`
+	AwardBudget  float64       `json:"awardBudget"`
+	MaxUser      int64         `json:"maxUser"`
+	AwardAmount  float64       `json:"awardAmount"`
+	TaskDemand   []*TaskDemand `json:"taskDemand"`
 }
 
-//RegisteredPopulationReply
-type RegisteredPopulationReply {
-	RegisteredPopulation int64 `json:"registeredPopulation"`
+// mission requirement (任务要求)
+type TaskDemand {
+	TaskID     uint   `json:"taskId"`
+	TaskName   int    `json:"taskName"`
+	TaskDemand string `json:"taskDemand"`
+	Article    string `json:"article"`
 }
 
-//GetUserListByCondition
-type GetUserListByCondition {
-	BlackStatus int64  `json:"blackStatus"` //冻结状态
-	PageNum     int64  `json:"pageNum"`     //页码
-	PageSize    int64  `json:"pageSize"`    //每页条数
-	OrderType   string `json:"order"`       //排序
-	TwitterId   string `json:"twitterId"`   //推特id
+// Information return (信息返回)
+type Mistake {
+	Msg string `json:"msg"`
 }
 
-//GetUserListByConditionReply
-type GetUserListByConditionReply {
-	TwitterId     string `json:"twitterId"`     //推特id
-	UserID        int64  `json:"userId"`        //用户id
-	RegisterAt    int64  `json:"registerAt"`    //注册时间
-	RecomendBy    string `json:"recomendBy"`    //推荐人
-	IsBlacklisted int64  `json:"isBlacklisted"` //是否冻结
+// Curatorial task information return table (策展任务信息返回表)
+type RePublishTask {
+	PaginationData   PaginationData      `json:"paging"`
+	RePublishTaskBak []*RePublishTaskBak `json:"data"`
 }
 
-//BatchUpdateUserBlackStatus
-type BatchUpdateUserBlackStatus {
-	UserIdList  []int64 `json:"userIdList"`  //用户id列表
-	BlackStatus int64   `json:"blackStatus"` //冻结状态
+// Curatorial task information return table (策展任务信息返回表)
+type RePublishTaskBak {
+	TaskID        uint64        `json:"taskId"`
+	CreatedAt     string        `json:"createdAt"`
+	Creator       string        `json:"creator"`
+	CreatorName   string        `json:"creatorName"`
+	CreatorNick   string        `json:"creatorNick"`
+	CreatorAvatar string        `json:"creatorAvatar"`
+	Status        int32         `json:"status"`
+	TweetDetails  string        `json:"tweetDetails"`
+	TweetPicture  string        `json:"tweetPicture"`
+	Label         string        `json:"label"`
+	AwardBudget   float64       `json:"awardBudget"`
+	MaxUser       int32         `json:"maxUser"`
+	AwardAmount   float64       `json:"awardAmount"`
+	EndTime       string        `json:"endTime"`
+	Accomplish    int32         `json:"accomplish"`
+	TaskDemand    []*TaskDemand `json:"taskDemand"`
 }
 
-//BatchUpdateUserBlackStatusReply
-type BatchUpdateUserBlackStatusReply {
-	UserIdList  []int64 `json:"userIdList"`  //用户id列表
-	BlackStatus int64   `json:"blackStatus"` //冻结状态
+// 分页数据格式
+type PaginationData {
+	Total   int64 `json:"total"`
+	Page    int64 `json:"page"`
+	PerPage int64 `json:"per_page"`
 }
 
-//CreateAdminUser
-type CreateAdminUser {
-	AdminName     string `json:"adminName"`     //管理员名称
-	AdminPassword string `json:"adminPassword"` //管理员密码
+// Query curatorial task input (查询策展任务输入)
+type PublishTaskInput {
+	Status   int64 `json:"status"`
+	CurrPage int64 `json:"currPage"`
+	MaxNum   int64 `json:"maxNum"`
 }
 
-//CreateAdminUserReply
-type CreateAdminUserReply {
-	Token string `json:"token"`
+// 任务详情
+type ReTaskDetails {
+	RePublishTaskBak RePublishTaskBak  `json:"publishTask"`
+	ParticipantBak   []*ParticipantBak `json:"participant"`
+	TaskDemandBak    []*TaskDemandBak  `json:"taskStatus"`
 }
 
-//GetHelpDocumentTitleList
-type GetHelpDocumentTitleList {
-	HelpCategoryId int64  `json:"helpCategoryId"` //帮助文档分类id
-	LanguageCode   string `json:"languageCode"`   //语言编码
+// Query task details (查询任务详情入参)
+type TaskDetailsInput {
+	TaskId uint64 `json:"taskId"`
+	UserId string `json:"userId"`
 }
 
-type GetHelpDocumentTitleListReply {
-	HelpDocumentTitleList []HelpDocumentTitleList `json:"helpDocumentTitleList"`
+type ParticipantBak {
+	UserId      string  `json:"userId"`
+	UserName    string  `json:"userName"`
+	NickName    string  `json:"nickName"`
+	Avatar      string  `json:"avatar"`
+	AwardAmount float64 `json:"awardAmount"`
+	TaskID      uint64  `json:"taskId"`
+	Status      int32   `json:"status"`
+}
+type TaskDemandBak {
+	TaskID     uint64 `json:"taskId"`
+	TaskName   int64  `json:"taskName"`
+	TaskDemand string `json:"taskDemand"`
+	Article    string `json:"article"`
+	Status     int32  `json:"status"`
 }
 
-type HelpDocumentTitleList {
-	HelpDocumentId int64  `json:"helpDocumentId"` //帮助文档id
-	DocumentTitle  string `json:"DocumentTitle"`  //帮助文档标题
-	LanguageCode   string `json:"languageCode"`   //语言编码
+// Query the list of individual initiated tasks + Participating tasks (查询个人发起任务列表+参与任务入参)
+type UserLaunchTaskListInput {
+	UserId   string `json:"userId"`
+	CurrPage int64  `json:"currPage"`
+	MaxNum   int64  `json:"maxNum"`
+	Status   int64  `json:"status"`
+}
+// Create a label entry (创建标签入参)
+type CreateLabelInput {
+	UserId string `json:"userId"`
+	Label  string `json:"label"`
 }
 
-type HelpDocumentTitleListReply {
-	HelpDocumentTitleList []HelpDocumentTitleList `json:"helpDocumentTitleList"`
+// The parameter is the id type
+type TaskIDInquireInput {
+	Id uint64 `json:"id"`
 }
 
-//GetContentByHelpDocumentId
-type GetContentByHelpDocumentId {
-	HelpDocumentId int64  `json:"helpDocumentId"` //帮助文档id
-	LanguageCode   string `json:"languageCode"`   //语言编码
+// The parameter is the userId type
+type UserIDInquireInput {
+	UserId string `json:"userId"`
 }
 
-type ContentByHelpDocumentIdReply {
-	HelpDocumentId  int64  `json:"helpDocumentId"`    //帮助文档id
-	DocumentContent string `json:"documentContent"`   //帮助文档内容
-	LanguageCode    string `json:"languageCode"`      //语言编码
-	DocumentTitle   string `json:"helpDocumentTitle"` //帮助文档标题
+// ReLabelListOut 标签返回结果体
+type ReLabelListOut {
+	ReLabelList []*ReLabelList `json:"reLabelList"`
 }
 
-type GetContentByHelpDocumentIdReply {
-	ContextByHelpDocumentId []ContentByHelpDocumentIdReply `json:"contextByHelpDocumentId"`
+// Gets the tag list out of the parameters (获取标签列表出参)
+type ReLabelList {
+	Id      uint64 `json:"id"`
+	Creator string `json:"creator"`
+	Content string `json:"content"`
+}
+
+// Determine whether the curatorial task has been completed (判断是否完成策展任务进参)
+type PerformTaskInput {
+	TaskId uint64 `json:"taskId"`
+	UserId string `json:"userId"`
+}
+
+// Complete the curatorial task (like + follow)(unfinished) (完成站内策展任务(喜欢+关注)(未完成))
+type VoluntarilyTaskScheduleInput {
+	UserId string `json:"userId"`
+	TaskId int64  `json:"taskId"`
+	Genre  int64  `json:"genre"`
+}
+
+// Create Treasure Chest Style + Edit Treasure Chest style input (创建宝箱样式+编辑宝箱样式进参)
+type TreasureTaskSrtInput {
+	Id                uint64               `json:"id"`
+	Name              string               `json:"name"`
+	DemandIntegral    int64                `json:"demandIntegral"`
+	TaskReward        int64                `json:"taskReward"`
+	ExperienceReward  int64                `json:"experienceReward"`
+	RewardQuantity    int64                `json:"rewardQuantity"`
+	TreasureTaskStage []*TreasureTaskStage `json:"treasureTaskStage"`
+}
+
+// Treasure box stage (宝箱阶段)
+type TreasureTaskStage {
+	ID               int64 `json:"iD"`
+	Treasure         int64 `json:"treasure"`
+	TreasureSequence int64 `json:"treasureSequence"`
+	StageExperience  int64 `json:"stageExperience"`
+	StageReward      int64 `json:"stageReward"`
+}
+
+// Shelves + Remove treasure chest style (上架+删除宝箱样式)
+type TreasureTaskInput {
+	Id     uint64 `json:"id"`
+	Status int32  `json:"status"`
+}
+
+//  Query + Search for a list of chest styles entered (查询+搜索宝箱样式列表入参)
+type TreasureTaskListInput {
+	Name     string `json:"name"`
+	Reward   int64  `json:"reward"`
+	CurrPage int64  `json:"currPage"`
+	MaxNum   int64  `json:"maxNum"`
+}
+
+// Treasure chest style returns the structure (宝箱样式返回结构体)
+type ReTreasureTaskSrt {
+	PaginationData       PaginationData          `json:"paginationData"`
+	TreasureTaskSrtInput []*TreasureTaskSrtInput `json:"treasureTaskSrtInput"`
+}
+
+// The substyle list returns data (子样式列表返回数据)
+type ReSubtaskStyle {
+	SubtaskStyle []*SubtaskStyle `json:"subtaskStyle"`
+}
+
+// The substyle returns the struct (子样式返回结构体)
+type SubtaskStyle {
+	TaskId         int64  `json:"taskId"`
+	TaskName       string `json:"taskName"`
+	TaskNameEng    string `json:"taskNameEng"`
+	TaskDetails    string `json:"taskDetails"`
+	TaskDetailsEng string `json:"taskDetailsEng"`
+	TaskStatus     int64  `json:"taskStatus"`
+}
+
+// Associated subtask (关联子任务)
+type AssociatedSubtaskSrt {
+	AssociatedId   uint64 `json:"associatedId"`
+	TaskId         uint64 `json:"taskId"`
+	TreasureId     uint64 `json:"treasureId"`
+	TaskName       string `json:"taskName"`
+	TaskNameEng    string `json:"taskNameEng"`
+	TaskDetails    string `json:"taskDetails"`
+	TaskDetailsEng string `json:"taskDetailsEng"`
+	TaskStatus     int64  `json:"taskStatus"`
+	Reward         int64  `json:"reward"`
+	Experience     int64  `json:"experience"`
+	Number         int64  `json:"number"`
+	Article        string `json:"article"`
+	Link           string `json:"link"`
+	Label          string `json:"label"`
+}
+
+// Associated subtask return list (关联子任务返回列表)
+type ReAssociatedSubtask {
+	AssociatedSubtask []*AssociatedSubtask `json:"associatedSubtask"`
+}
+// Associated Subtask (关联子任务)
+type AssociatedSubtask {
+	TaskId         uint64 `json:"taskId"`
+	TaskName       string `json:"taskName"`
+	TaskNameEng    string `json:"taskNameEng"`
+	TaskDetails    string `json:"taskDetails"`
+	TaskDetailsEng string `json:"taskDetailsEng"`
+	TaskStatus     int64  `json:"taskStatus"`
+	Reward         int64  `json:"reward"`
+	Experience     int64  `json:"experience"`
+	Number         int64  `json:"number"`
+	Article        string `json:"article"`
+	Link           string `json:"link"`
+	Label          string `json:"label"`
+	TreasureId     uint64 `json:"treasureId"`
+}
+
+// Create Treasure Chest claim level + update Treasure chest claim progress entry (创建宝箱领取度+更新宝箱领取进度入参)
+type AmendChestCollectionInput {
+	UserId string `json:"userId"`
+	Amount int64  `json:"amount"`
+}
+
+// Treasure chest progress returns data (宝箱进度返回数据)
+type ReChestCollectionSrt {
+	SerId                 string                   `json:"serId"`
+	DemandIntegral        int64                    `json:"demandIntegral"`
+	ChestAmount           int64                    `json:"chestAmount"`
+	RewardQuantity        int64                    `json:"rewardQuantity"`
+	TreasureTaskStageSeed []*TreasureTaskStageSeed `json:"treasureTaskStageSeed"`
+	AssociatedSubtaskSeed []*AssociatedSubtaskSeed `json:"associatedSubtaskSeed"`
+}
+
+//  Treasure chest stage substyle (宝箱阶段子样式)
+type TreasureTaskStageSeed {
+	Treasure         int64   `json:"treasure"`
+	TreasureSequence int64   `json:"treasureSequence"`
+	StageExperience  int64   `json:"stageExperience"`
+	TreasureRatio    float64 `json:"treasureRatio"`
+	StageReward      int64   `json:"stageReward"`
+}
+
+// Associate subtask substyles (关联子任务子样式)
+type AssociatedSubtaskSeed {
+	TreasureId     int64  `json:"treasureId"`
+	TaskId         int64  `json:"taskId"`
+	TaskName       string `json:"taskName"`
+	TaskNameEng    string `json:"taskNameEng"`
+	TaskDetails    string `json:"taskDetails"`
+	TaskDetailsEng string `json:"taskDetailsEng"`
+	TaskStatus     int64  `json:"taskStatus"`
+	Reward         int64  `json:"reward"`
+	Experience     int64  `json:"experience"`
+	Number         int64  `json:"number"`
+	Article        string `json:"article"`
+	Link           string `json:"link"`
+	Label          string `json:"label"`
+	Complete       int64  `json:"complete"`
+}
+
+// CreateUserPowerTask 创建用户助力信息
+type CreateUserPowerTaskInput {
+	PublishesUserId string `json:"publishesUserId"`
+	HelperUserId    string `json:"helperUserId"`
 }
 
 @server(
@@ -157,16 +346,7 @@ service gateway-api {
 	
 	@doc "获取帮助文档分类列表"
 	@handler getHelpCategoryList
-	post /user/getHelpCategoryList (GetHelpCategoryList) returns (HelpCategoryListReply)
-	
-	@doc "获取帮助文档分类内容标题列表"
-	@handler getHelpDocumentTitleList
-	get /user/getHelpDocumentTitleList (GetHelpDocumentTitleList) returns (GetHelpDocumentTitleListReply)
-	
-	@doc "根据帮助文档id获取内容详情"
-	@handler getContentByHelpDocumentId
-	get /user/getContentByHelpDocumentId (GetContentByHelpDocumentId) returns (GetContentByHelpDocumentIdReply)
-	
+	get /user/getHelpCategoryList returns (HelpCategoryListReply)
 }
 
 // 下面是用户接口，需要鉴权
@@ -185,15 +365,6 @@ service gateway-api {
 	@doc "获取用户信息"
 	@handler getUserInfo
 	get /user/getUserInfo returns (UserInfoReply)
-	
-	//	@doc "获取消息通知列表"
-	//	@handler getMessageList
-	//	post /user/getMessageList (GetMessageList) returns (GetMessageListReply)
-	
-	//	@doc "根据通知id获取消息通知详情"
-	//	@handler getMessageByNoticeId
-	//	post /user/getMessageByNoticeId (GetMessageByNoticeId) returns (GetMessageByNoticeIdReply)
-	
 }
 
 // 下面是管理员接口，不需要鉴权
@@ -205,11 +376,6 @@ service gateway-api {
 	@doc "管理员登录"
 	@handler adminLogin
 	post /admin/adminLogin (AdminLogin) returns (AdminLoginReply)
-	
-	@doc "管理员注册"
-	@handler createAdminUser
-	post /admin/createAdminUser (CreateAdminUser) returns (CreateAdminUserReply)
-	
 }
 
 // 下面是管理员接口，需要鉴权
@@ -223,79 +389,104 @@ service gateway-api {
 	@doc "管理员退出登录"
 	@handler adminLogout
 	post /admin/adminLogout returns (AdminLoginReply)
+}
+
+// 策展任务相关接口，需要鉴权
+@server(
+	prefix :/v1
+	group :curatorial
+	//	middleware : BlackMiddleware
+	jwt : Auth
+)
+
+service gateway-api {
+	@doc "创建策展任务信息"
+	@handler CreateCuratorialTask
+	post /curatorial/create (CreatePublishTaskInput) returns (Mistake)
 	
-	@doc "获取当前在线人数"
-	@handler getCurrentOnlinePerson
-	post /admin/getCurrentOnlinePerson returns (CurrentOnlinePersonReply)
+	@doc "查询策展任务列表"
+	@handler QueryTaskList
+	get /curatorial/list (PublishTaskInput) returns (RePublishTask)
 	
-	@doc "获取当前注册人数"
-	@handler getRegisteredPopulation
-	post /admin/getRegisteredPopulation returns (RegisteredPopulationReply)
+	@doc "查询任务详情"
+	@handler QueryTaskDetails
+	get /curatorial/details (TaskDetailsInput) returns (ReTaskDetails)
 	
-	@doc "获取用户信息"
-	@handler adminUserInfo
-	post /admin/getUserInfo returns (UserInfoReply)
+	@doc "查询个人发起任务列表+参与任务"
+	@handler QueryUserLaunchTaskList
+	get /curatorial/user/list (UserLaunchTaskListInput) returns (RePublishTask)
 	
-	@doc "按条件获取用户列表的接口"
-	@handler getUserListByCondition
-	post /admin/getUserListByCondition (GetUserListByCondition) returns (GetUserListByConditionReply)
+	@doc "创建标签"
+	@handler createLabel
+	post /curatorial/label/create (CreateLabelInput) returns (Mistake)
 	
-	@doc "批量更新用户黑名单状态"
-	@handler batchUpdateUserBlackStatus
-	post /admin/batchUpdateUserBlackStatus (BatchUpdateUserBlackStatus) returns (BatchUpdateUserBlackStatusReply)
+	@doc "删除标签"
+	@handler DeleteLabel
+	post /curatorial/label/delete (TaskIDInquireInput) returns (Mistake)
 	
-	// 公告管理
-	//	@doc "按条件获取公告列表"
-	//	@handler getNoticeBy
-	//	post /admin/getNoticeBy (GetNoticeBy) returns (GetNoticeByReply)
+	@doc "获取标签列表"
+	@handler getLabelList
+	get /curatorial/label/list (UserIDInquireInput) returns (ReLabelListOut)
 	
-	//	@doc "批量修改公告发布状态"
-	//	@handler editNoticeStatus
-	//	post /admin/editNoticeStatus (EditNoticeStatus) returns (EditNoticeStatusReply)
+	@doc "判断是否完成策展任务"
+	@handler PerformTask
+	post /curatorial/verify (PerformTaskInput) returns (Mistake)
 	
-	//	@doc"新建编辑公告"
-	//	@handler editNotice
-	//	post /admin/editNotice (EditNotice) returns (EditNoticeReply)
+	@doc "完成站内策展任务"
+	@handler VoluntarilyTaskSchedule
+	post /curatorial/voluntarily (VoluntarilyTaskScheduleInput) returns (Mistake)
+}
+
+// 策展任务相关接口，需要鉴权
+@server(
+	prefix :/v1
+	group :everyday
+	//	middleware : BlackMiddleware
+	jwt : Auth
+)
+
+service gateway-api {
+	@doc "修改宝箱样式"
+	@handler AmendTreasureTask
+	post /everyday/treasure/amend (TreasureTaskSrtInput)  returns (Mistake)
 	
-	//	@doc"批量删除公告"
-	//	@handler deleteNotice
-	//	post /admin/deleteNotice (DeleteNotice) returns (DeleteNoticeReply)
+	@doc "上架+删除宝箱样式"
+	@handler ChangeTreasureTask
+	post /everyday/treasure/change (TreasureTaskInput)  returns (Mistake)
 	
-	//    @doc "查看公告详情"
-	//	@handler getNotice
-	//	post /admin/getNotice (GetNotice) returns (GetNoticeReply)
+	@doc "查询+搜索宝箱样式列表"
+	@handler QueryTreasureTaskList
+	get /everyday/treasure/list (TreasureTaskListInput)  returns (ReTreasureTaskSrt)
 	
-	// 内容管理
-	//	@doc "新建编辑分类"
-	//	@handler addCategory
-	//	post /admin/addCategory (AddCategory) returns (AddCategoryReply)
+	@doc "查询子任务样式列表"
+	@handler QuerySubtaskStyle
+	get /everyday/subtask/list (TaskIDInquireInput)  returns (ReSubtaskStyle)
 	
-	//	@doc "批量删除分类"
-	//	@handler batchDeleteCategory
-	//	post /admin/batchDeleteCategory (BatchDeleteCategory) returns (BatchDeleteCategoryReply)
+	@doc "创建关联子任务+编辑关联子任务"
+	@handler AmendAssociatedSubtask
+	post /everyday/subtask/amend(AssociatedSubtaskSrt)  returns (Mistake)
 	
-	//	@doc "按条件筛选分类的问答列表"
-	//	@handler getCategoryListByCondition
-	//	post /admin/getCategoryListByCondition (GetCategoryListByCondition) returns (GetCategoryListByConditionReply)
+	@doc "删除管理子任务"
+	@handler DeleteAssociatedSubtask
+	post /everyday/subtask/delete(TaskIDInquireInput)  returns (Mistake)
 	
-	//	@doc "批量更改分类的发布状态"
-	//	@handler categorylistStatus
-	//	post /admin/categorylistStatus (CategorylistStatus) returns (CategorylistStatusReply)
+	@doc "查询关联子任务"
+	@handler QueryAssociatedSubtask
+	get /everyday/subtask/treasureId (TaskIDInquireInput)  returns (ReAssociatedSubtask)
 	
-	//	@doc "新建编辑分类问答"
-	//	@handler editCategory
-	//	post /admin/editCategory (EditCategory) returns (EditCategoryReply)
+	@doc "创建宝箱领取度+更新宝箱领取进度"
+	@handler AmendChestCollection
+	post /everyday/chest/amemd (AmendChestCollectionInput)  returns (Mistake)
 	
-	//	@doc "按条件筛选分类问答列表"
-	//	@handler getDocumentContentListByCondition
-	//	post /admin/getDocumentContentListByCondition (GetDocumentContentListByCondition) returns (GetDocumentContentListByConditionReply)
+	@doc "获取用户宝箱进度"
+	@handler QueryChestCollection
+	get /everyday/chest/schedule (UserIDInquireInput)  returns (ReChestCollectionSrt)
 	
-	//	@doc "批量更改分类问答的发布状态"
-	//	@handler documentContentlistStatus
-	//	post /admin/documentContentlistStatus (DocumentContentlistStatus) returns (DocumentContentlistStatusReply)
+	@doc "创建用户助力信息"
+	@handler CreateUserPowerTask
+	post /everyday/subtask/power (CreateUserPowerTaskInput)  returns (Mistake)
 	
-	//	@doc "批量删除分类问答"
-	//	@handler batchDeleteCategory
-	//	post /admin/batchDeleteCategory (BatchDeleteCategory) returns (BatchDeleteCategoryReply)
-	
+	@doc "创建子任务样式"
+	@handler CreateSubtaskStyle
+	post /everyday/subtask/create (UserIDInquireInput)  returns (Mistake)
 }

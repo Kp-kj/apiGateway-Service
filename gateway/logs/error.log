@@ -1,368 +1,1964 @@
-2023-06-12T10:38:35.394+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD - 192.168.1.104:31292 - Apifox/1.0.0 (https://www.apifox.cn)
-GET /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD HTTP/1.1
-Host: 192.168.1.104:8888
+2023-06-26T00:00:04.411+08:00	[31;1m error [0m	compress error: remove logs/access.log-2023-06-25: The process cannot access the file because it is being used by another process.	caller=logx/rotatelogger.go:410
+2023-06-26T00:00:04.422+08:00	[31;1m error [0m	compress error: remove logs/error.log-2023-06-25: The process cannot access the file because it is being used by another process.	caller=logx/rotatelogger.go:410
+2023-06-26T00:00:04.456+08:00	[31;1m error [0m	compress error: remove logs/stat.log-2023-06-25: The process cannot access the file because it is being used by another process.	caller=logx/rotatelogger.go:410
+2023-06-26T10:05:39.653+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:49202 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
 Connection: keep-alive
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
-	duration=0.0ms	caller=handler/loghandler.go:162	trace=1403a986f712108c6b39ca4463d2ced3	span=9c2f839728732513
-2023-06-12T10:40:00.415+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-12T10:43:40.083+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-12T10:44:08.046+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD - 192.168.1.104:31481 - Apifox/1.0.0 (https://www.apifox.cn)
-GET /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD HTTP/1.1
-Host: 192.168.1.104:8888
+	duration=2.6ms	caller=handler/loghandler.go:162	trace=3577802630a635443acd095f54a45fef	span=7ad85d44a34fb4b5
+2023-06-26T10:15:57.766+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T10:19:01.406+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:49866 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
 Connection: keep-alive
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
-	duration=0.5ms	caller=handler/loghandler.go:162	trace=e6b4bc90fe871cafecfa204c113740d7	span=05345bac82a200ee
-2023-06-12T10:45:16.957+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD - 192.168.1.104:31515 - Apifox/1.0.0 (https://www.apifox.cn)
-GET /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD HTTP/1.1
-Host: 192.168.1.104:8888
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=f4dc4e8312976f264fa8ad3ca9ae1575	span=18c787732217c8be
+2023-06-26T10:20:32.220+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T10:24:57.178+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T10:25:29.877+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:50210 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
 Connection: keep-alive
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
-	duration=0.0ms	caller=handler/loghandler.go:162	trace=09201ce3fb0006f5ddd79fb4cd39ec14	span=460689e6fd061b11
-2023-06-12T10:45:18.055+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD - 192.168.1.104:31515 - Apifox/1.0.0 (https://www.apifox.cn)
-GET /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD HTTP/1.1
-Host: 192.168.1.104:8888
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=b81cb3fc8145ee0f245c54666e8af00c	span=a0c4b9bea760e4b9
+2023-06-26T10:25:43.790+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:50225 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
 Connection: keep-alive
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
-	duration=0.3ms	caller=handler/loghandler.go:162	trace=c54cbf923ae70f8549e2e88898cf30c4	span=83c7fe60dac9d1ec
-2023-06-12T10:45:18.746+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD - 192.168.1.104:31515 - Apifox/1.0.0 (https://www.apifox.cn)
-GET /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD HTTP/1.1
-Host: 192.168.1.104:8888
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=cc2b0288d9b45cee035e82449b682bc7	span=72074a3f8f8df82c
+2023-06-26T10:30:30.217+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T10:31:53.588+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:50575 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
 Connection: keep-alive
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
-	duration=0.0ms	caller=handler/loghandler.go:162	trace=ad15c0906322d9e855675e60c620b7ca	span=64e2753a556d77a8
-2023-06-12T10:45:19.427+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD - 192.168.1.104:31515 - Apifox/1.0.0 (https://www.apifox.cn)
-GET /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD HTTP/1.1
-Host: 192.168.1.104:8888
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=e9d1d3e5e523b4b71d63fbf87cef6411	span=9971650fbe113496
+2023-06-26T10:32:16.406+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:50593 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
 Connection: keep-alive
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
-	duration=0.8ms	caller=handler/loghandler.go:162	trace=37c906a9ea9ac19d7a96ca385fb88233	span=0eec0ec7c7956da0
-2023-06-12T10:46:00.289+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList - 192.168.1.104:31570 - PostmanRuntime/7.32.2
-GET /v1/user/getHelpCategoryList HTTP/1.1
-Host: 192.168.1.104:8888
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=8645602d012f20a6dffd85c587a2e93b	span=b3429478ec40dd50
+2023-06-26T10:37:15.601+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T10:37:56.916+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:50903 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
-Cache-Control: no-cache
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
 Connection: keep-alive
-Postman-Token: 0d8581ef-34b0-4983-ba1c-011b47a8d0c8
-User-Agent: PostmanRuntime/7.32.2
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
-	duration=0.0ms	caller=handler/loghandler.go:162	trace=c4a59cb69f2b4535423e13545b915c7d	span=6039a015b7b068a9
-2023-06-12T10:46:55.914+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-12T10:49:15.916+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-12T10:55:36.530+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-12T11:01:54.889+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-12T11:10:14.892+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-12T11:29:13.956+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-12T11:30:39.673+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD - 192.168.1.104:35508 - Apifox/1.0.0 (https://www.apifox.cn)
-GET /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD HTTP/1.1
-Host: 192.168.1.104:8888
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=fc3583c53a50bd71cc87f9947b495708	span=77e4e429b2e3888b
+2023-06-26T10:38:56.968+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:50958 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
 Connection: keep-alive
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
-	duration=0.0ms	caller=handler/loghandler.go:162	trace=3ed3183fb92435826aa3c68492bf4417	span=e6dfa66ee2b22a61
-2023-06-12T11:32:17.910+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-12T11:32:23.535+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList - 192.168.1.104:35588 - PostmanRuntime/7.32.2
-GET /v1/user/getHelpCategoryList HTTP/1.1
-Host: 192.168.1.104:8888
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=cdb36b0a15af6b248498edd4f5dbf3d5	span=244c8c66ce5783de
+2023-06-26T10:45:28.122+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:51303 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
-Cache-Control: no-cache
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
 Connection: keep-alive
-Postman-Token: 4d02f1a4-f1bf-440c-b2b1-10336f9fb199
-User-Agent: PostmanRuntime/7.32.2
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
-	duration=0.9ms	caller=handler/loghandler.go:162	trace=df503374456d5d712513c1fbe529fa1f	span=e21bd3d676d8e168
-2023-06-12T11:32:24.336+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList - 192.168.1.104:35588 - PostmanRuntime/7.32.2
-GET /v1/user/getHelpCategoryList HTTP/1.1
-Host: 192.168.1.104:8888
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=c219339e24b972646b051a4f87fd367a	span=8ee255b9d049e448
+2023-06-26T10:46:16.014+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:51334 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
-Cache-Control: no-cache
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
 Connection: keep-alive
-Postman-Token: a34cb639-6c0e-4c72-8056-d789e45647e2
-User-Agent: PostmanRuntime/7.32.2
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
-	duration=0.6ms	caller=handler/loghandler.go:162	trace=bba2915222b8caf4ee1b93855351c167	span=cca318559c980ef4
-2023-06-12T11:37:54.823+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-12T12:49:18.556+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-13T10:28:09.732+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-13T10:31:29.734+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-13T10:52:30.510+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-13T10:55:42.238+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-13T10:58:02.242+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-13T11:02:10.568+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-25T16:54:56.578+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
-2023-06-25T16:55:39.193+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-25T16:56:58.892+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-25T17:06:35.496+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-25T17:12:28.387+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-25T17:14:48.079+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-25T17:54:15.554+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
-2023-06-25T17:57:23.727+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-25T18:07:24.899+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-25T18:09:44.595+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-25T18:14:59.554+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-25T18:16:19.247+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-26T10:11:27.974+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
-2023-06-26T10:12:01.526+08:00	[31;1m error [0m	pingResp: pong:"pong"	caller=ping/pinglogic.go:27
-2023-06-26T10:13:08.283+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-26T10:13:58.260+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7123 - Apifox/1.0.0 (https://www.apifox.cn)
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=b3a79d4eb20e06d37e21664caf3bc21c	span=6c4195d5e2b9da58
+2023-06-26T10:46:18.887+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:51336 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=db6af1ac1e7f29e07c1a1fe49d0ca7b4	span=19cb0c46c11859ac
+2023-06-26T10:47:32.328+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:51459 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=77452628ac8328ddbb3e64cd45eb2cf9	span=843ddc97fa5654ed
+2023-06-26T10:48:16.030+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/user.User/CheckTwitterId - twitter_id:"123123123" - rpc error: code = Unimplemented desc = unknown service user.User	duration=0.5ms	caller=clientinterceptors/durationinterceptor.go:35	trace=e24e36ee6245aaf1991427eac6e46e3a	span=313d572426c815b8
+2023-06-26T10:48:16.030+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 127.0.0.1:51487 - apifox/1.0.0 (https://www.apifox.cn)
 POST /v1/user/userLogin HTTP/1.1
-Host: 192.168.1.104:8888
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Content-Length: 55
+Content-Length: 51
 Content-Type: application/json
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
 {
     "twitterUrl": "45646",
-    "inviteId": "123213"
-}	duration=0.5ms	caller=handler/loghandler.go:162	trace=01b9e41d8fe203b731758e51c329f408	span=7cafa07ddab6cf5f
-2023-06-26T10:14:02.886+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7128 - Apifox/1.0.0 (https://www.apifox.cn)
-POST /v1/user/userLogin HTTP/1.1
-Host: 192.168.1.104:8888
+    "inviteId": "60"
+}	duration=1.0ms	caller=handler/loghandler.go:162	trace=e24e36ee6245aaf1991427eac6e46e3a	span=96a1e735b69b2815
+2023-06-26T10:48:31.481+08:00	[31;1m error [0m	authorize failed: no token present in request
+=> GET /v1/curatorial/list?status=0&currPage=1&maxNum=10 HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Content-Length: 71
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	caller=handler/authhandler.go:103
+2023-06-26T10:48:44.948+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T10:49:12.652+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/list?status=0&currPage=1&maxNum=10 - 127.0.0.1:51530 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/list?status=0&currPage=1&maxNum=10 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=7305ae97c63379cfb5c39c28f828e589	span=2483186660cc5c76
+2023-06-26T11:18:07.459+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/list?status=0&currPage=1&maxNum=10 - 127.0.0.1:53703 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/list?status=0&currPage=1&maxNum=10 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=f2178b42fb65f3ba02793953359b496b	span=67723d48c834b8ef
+2023-06-26T11:18:54.937+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T11:20:03.327+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/list?status=0&currPage=1&maxNum=10 - 127.0.0.1:53786 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/list?status=0&currPage=1&maxNum=10 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=f502258a1547f7e118aeb564071cf5ee	span=4a96e0f002327cd4
+2023-06-26T11:20:05.317+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/list?status=0&currPage=1&maxNum=10 - 127.0.0.1:53786 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/list?status=0&currPage=1&maxNum=10 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=75ad9db593e7a06a85265d03c8409927	span=47e7e0f9750ecbc8
+2023-06-26T11:20:12.217+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:53796 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=b7ec4f428f29ede1af866a986e558a74	span=6330b983a5bbd7be
+2023-06-26T11:20:16.213+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:53798 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=b0d5cf5787253c044cf72ed81ed47aa8	span=27b0e1f951941022
+2023-06-26T11:21:36.636+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T11:28:56.365+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T11:39:13.943+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:64292 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=935c6fa7585e3a97152d8c3cd1929d8a	span=0ed1ffbca0f02de9
+2023-06-26T11:40:13.806+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/list?status=0&currPage=1&maxNum=10 - 127.0.0.1:64329 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/list?status=0&currPage=1&maxNum=10 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=ba74b6827868d94d986f88b534b4fd6d	span=83224f47782a31ca
+2023-06-26T11:40:47.876+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T11:40:53.634+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:64350 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=287267ba1405e087dea2242e37d87eea	span=cf5b689584ee2a19
+2023-06-26T11:42:16.918+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:64429 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 377
 Content-Type: application/json
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
 {
-    "code": "45646",
-    "codeVerifier": "79",
-    "inviteId": "84"
-}	duration=0.0ms	caller=handler/loghandler.go:162	trace=e19556b7c1a4c71c808625c61a2d6156	span=9d6e5c9f59e15f86
-2023-06-26T10:14:32.712+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7162 - Apifox/1.0.0 (https://www.apifox.cn)
-POST /v1/user/userLogin HTTP/1.1
-Host: 192.168.1.104:8888
+    "creator": "esse ullamco",
+    "tweetAddress": "广东省驻马店市醴陵市",
+    "label": [
+        "cupidatat enim Lorem",
+        "in ut"
+    ],
+    "awardBudget": 10,
+    "maxUser": 91,
+    "awardAmount": 54,
+    "taskDemand": {
+        "taskId": 16,
+        "taskName": 80,
+        "taskFemand": "Duis quis nulla",
+        "article": "Ut magna id nostrud"
+    }
+}	duration=0.4ms	caller=handler/loghandler.go:162	trace=54488532044383a22517ce0654c0127a	span=c659ff8360e36c41
+2023-06-26T11:44:07.545+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T11:45:57.341+08:00	[31;1m error [0m	(/v1/curatorial/label/create - 127.0.0.1:64569) runtime error: invalid memory address or nil pointer dereference
+goroutine 71 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x20d1d80, 0x34aa490})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*CreateLabelLogic).CreateLabel(0xc000507bd8, 0xc0003442e0)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/logic/curatorial/createlabellogic.go:29 +0x91
+gateway/internal/handler/curatorial.CreateLabelHandler.func1({0x262f570, 0xc000065200}, 0xc000180900)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/handler/curatorial/createlabelhandler.go:21 +0x1a7
+net/http.HandlerFunc.ServeHTTP(0xc000507cc0?, {0x262f570?, 0xc000065200?}, 0xc000700940?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x262f570, 0xc000065200}, 0xc000180800)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x262f570?, 0xc000065200?}, 0xc000064d80?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x262f570, 0xc000065200}, 0xc000180800)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc2b00f5?, {0x262f570?, 0xc000065200?}, 0x15bca69c5?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x262f570?, 0xc000065200?}, 0x34e1340?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x262f570?, 0xc000065200?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x262f570, 0xc000065200}, 0xc00055ffb0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xc00014a120?, {0x262f570?, 0xc000065200?}, 0xc000645328?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x262f570?, 0xc000065200?}, 0xc00055ff98?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x262f570?, 0xc000065200?}, 0xa15a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=08ce772ccdaf62c90909f59c209aea2e	span=9828ad7ef0de1fe9
+2023-06-26T11:45:57.341+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/label/create - 127.0.0.1:64569 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/label/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 83
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "userId": "550e8400-e29b-41d4-a716-446655440000",
+    "label": "美团UUID"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=08ce772ccdaf62c90909f59c209aea2e	span=9828ad7ef0de1fe9
+2023-06-26T11:47:31.904+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T11:50:42.204+08:00	[31;1m error [0m	(/v1/curatorial/label/create - 127.0.0.1:64858) runtime error: invalid memory address or nil pointer dereference
+goroutine 101 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x2561de0, 0x393a490})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*CreateLabelLogic).CreateLabel(0xc000515d40, 0xc000122580)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/logic/curatorial/createlabellogic.go:31 +0xc7
+gateway/internal/handler/curatorial.CreateLabelHandler.func1({0x2abfa10, 0xc000380f60}, 0xc0001e2700)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/handler/curatorial/createlabelhandler.go:25 +0x12f
+net/http.HandlerFunc.ServeHTTP(0xc00050fcc0?, {0x2abfa10?, 0xc000380f60?}, 0xc000543360?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x2abfa10, 0xc000380f60}, 0xc0001e2600)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x2abfa10?, 0xc000380f60?}, 0xc000515770?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x2abfa10, 0xc000380f60}, 0xc0001e2600)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc2b0212?, {0x2abfa10?, 0xc000380f60?}, 0x3f9d0cc11?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x2abfa10?, 0xc000380f60?}, 0x3971340?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0xc0005e1e78?, {0x2abfa10?, 0xc000380f60?}, 0xc0005e1ed8?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x2abfa10, 0xc000380f60}, 0xc0005ba770?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0x13b6e20?, {0x2abfa10?, 0xc000380f60?}, 0xc0005e1f30?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x2abfa10?, 0xc000380f60?}, 0x0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x2abfa10?, 0xc000380f60?}, 0xea5a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=2c52e8886c749a87fb9284d730980420	span=77e6160863002d10
+2023-06-26T11:50:42.204+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/label/create - 127.0.0.1:64858 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/label/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 83
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "userId": "550e8400-e29b-41d4-a716-446655440000",
+    "label": "美团UUID"
+}	duration=1.1ms	caller=handler/loghandler.go:162	trace=2c52e8886c749a87fb9284d730980420	span=77e6160863002d10
+2023-06-26T11:51:49.949+08:00	[31;1m error [0m	(/v1/curatorial/label/create - 127.0.0.1:64904) runtime error: invalid memory address or nil pointer dereference
+goroutine 89 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x2421de0, 0x37fa490})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*CreateLabelLogic).CreateLabel(0xc000314db0, 0xc0002ea220)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/logic/curatorial/createlabellogic.go:31 +0xc7
+gateway/internal/handler/curatorial.CreateLabelHandler.func1({0x297fa50, 0xc000064960}, 0xc0004a6900)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/handler/curatorial/createlabelhandler.go:25 +0x12f
+net/http.HandlerFunc.ServeHTTP(0xc00068bcc0?, {0x297fa50?, 0xc000064960?}, 0xc000312430?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x297fa50, 0xc000064960}, 0xc0004a6800)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x297fa50?, 0xc000064960?}, 0xc000106ba0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x297fa50, 0xc000064960}, 0xc0004a6800)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc2b0255?, {0x297fa50?, 0xc000064960?}, 0x209d938d9?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x297fa50?, 0xc000064960?}, 0x3831340?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0xc00020de78?, {0x297fa50?, 0xc000064960?}, 0xc00020ded8?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x297fa50, 0xc000064960}, 0xc000187250?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0x1276e20?, {0x297fa50?, 0xc000064960?}, 0xc00020df30?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x297fa50?, 0xc000064960?}, 0xc00020df98?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x297fa50?, 0xc000064960?}, 0xd65a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=3d431bf9483179ceefc859fecc7cf650	span=beba3f71b071d85a
+2023-06-26T11:51:49.949+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/label/create - 127.0.0.1:64904 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/label/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 83
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "userId": "550e8400-e29b-41d4-a716-446655440000",
+    "label": "美团UUID"
+}	duration=20.0ms	caller=handler/loghandler.go:162	trace=3d431bf9483179ceefc859fecc7cf650	span=beba3f71b071d85a
+2023-06-26T11:53:21.586+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T11:55:13.377+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:62933 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=d9fb170d982d40e5cabff9deb51ca5c7	span=c4a4021ead5a4520
+2023-06-26T11:55:31.918+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T12:10:51.690+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T13:12:11.641+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:51172 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=617c6e4125b0fb62f11238af60855c27	span=e1f981c9ca143844
+2023-06-26T13:14:10.351+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:51253 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=10c30fa456bb78fc9d663b20a974d249	span=69f48fa99ac079f7
+2023-06-26T13:14:31.038+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:51270 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 377
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "esse ullamco",
+    "tweetAddress": "广东省驻马店市醴陵市",
+    "label": [
+        "cupidatat enim Lorem",
+        "in ut"
+    ],
+    "awardBudget": 10,
+    "maxUser": 91,
+    "awardAmount": 54,
+    "taskDemand": {
+        "taskId": 16,
+        "taskName": 80,
+        "taskFemand": "Duis quis nulla",
+        "article": "Ut magna id nostrud"
+    }
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=3dce8a31756dced0e11a0a4fe330f0fb	span=54e51274f7d0e906
+2023-06-26T13:14:52.231+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T13:21:11.940+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T13:28:15.892+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:51966 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 377
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "esse ullamco",
+    "tweetAddress": "广东省驻马店市醴陵市",
+    "label": [
+        "cupidatat enim Lorem",
+        "in ut"
+    ],
+    "awardBudget": 10,
+    "maxUser": 91,
+    "awardAmount": 54,
+    "taskDemand": {
+        "taskId": 16,
+        "taskName": 80,
+        "taskFemand": "Duis quis nulla",
+        "article": "Ut magna id nostrud"
+    }
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=27767421fc264d31db942ec95e2a40ef	span=890ed4c23c46b0e9
+2023-06-26T13:29:05.414+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T13:29:39.608+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:52024 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 377
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "esse ullamco",
+    "tweetAddress": "广东省驻马店市醴陵市",
+    "label": [
+        "cupidatat enim Lorem",
+        "in ut"
+    ],
+    "awardBudget": 10,
+    "maxUser": 91,
+    "awardAmount": 54,
+    "taskDemand": {
+        "taskId": 16,
+        "taskName": 80,
+        "taskFemand": "Duis quis nulla",
+        "article": "Ut magna id nostrud"
+    }
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=7e6b88f5f53503126652992b17d189a5	span=414bb8eb26d969d3
+2023-06-26T13:30:33.217+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:52076 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 377
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "esse ullamco",
+    "tweetAddress": "广东省驻马店市醴陵市",
+    "label": [
+        "cupidatat enim Lorem",
+        "in ut"
+    ],
+    "awardBudget": 10,
+    "maxUser": 91,
+    "awardAmount": 54,
+    "taskDemand": {
+        "taskId": 16,
+        "taskName": 80,
+        "taskFemand": "Duis quis nulla",
+        "article": "Ut magna id nostrud"
+    }
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=d5be84e6253b51d11b5f8b54d904085f	span=7ae4bc30c8d0e349
+2023-06-26T13:31:12.322+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:52134 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 377
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "esse ullamco",
+    "tweetAddress": "广东省驻马店市醴陵市",
+    "label": [
+        "cupidatat enim Lorem",
+        "in ut"
+    ],
+    "awardBudget": 10,
+    "maxUser": 91,
+    "awardAmount": 54,
+    "taskDemand": {
+        "taskId": 16,
+        "taskName": 80,
+        "taskFemand": "Duis quis nulla",
+        "article": "Ut magna id nostrud"
+    }
+}	duration=1.0ms	caller=handler/loghandler.go:162	trace=f6cf99f7362b7615e84887cb48d994cc	span=f529591559515b4c
+2023-06-26T13:31:47.711+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:52172 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 377
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "esse ullamco",
+    "tweetAddress": "广东省驻马店市醴陵市",
+    "label": [
+        "cupidatat enim Lorem",
+        "in ut"
+    ],
+    "awardBudget": 10,
+    "maxUser": 91,
+    "awardAmount": 54,
+    "taskDemand": {
+        "taskId": 16,
+        "taskName": 80,
+        "taskFemand": "Duis quis nulla",
+        "article": "Ut magna id nostrud"
+    }
+}	duration=0.9ms	caller=handler/loghandler.go:162	trace=48a07069da4f91e3a38320cae5cdd341	span=e26acdc5146d35d5
+2023-06-26T13:34:48.426+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T13:35:11.107+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:52347 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 377
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "esse ullamco",
+    "tweetAddress": "广东省驻马店市醴陵市",
+    "label": [
+        "cupidatat enim Lorem",
+        "in ut"
+    ],
+    "awardBudget": 10,
+    "maxUser": 91,
+    "awardAmount": 54,
+    "taskDemand": {
+        "taskId": 16,
+        "taskName": 80,
+        "taskFemand": "Duis quis nulla",
+        "article": "Ut magna id nostrud"
+    }
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=36d7a5c80ec2166a52b1c1a2afc3da8e	span=88ac361c2621758d
+2023-06-26T13:36:30.249+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:52415 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 377
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "esse ullamco",
+    "tweetAddress": "广东省驻马店市醴陵市",
+    "label": [
+        "cupidatat enim Lorem",
+        "in ut"
+    ],
+    "awardBudget": 10,
+    "maxUser": 91,
+    "awardAmount": 54,
+    "taskDemand": {
+        "taskId": 16,
+        "taskName": 80,
+        "taskFemand": "Duis quis nulla",
+        "article": "Ut magna id nostrud"
+    }
+}	duration=1.0ms	caller=handler/loghandler.go:162	trace=2d82222a43ee2ba68cd4e0dd4d9042e9	span=f2f59262b042a59d
+2023-06-26T13:36:52.430+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:52433 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 377
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "esse ullamco",
+    "tweetAddress": "广东省驻马店市醴陵市",
+    "label": [
+        "cupidatat enim Lorem",
+        "in ut"
+    ],
+    "awardBudget": 10,
+    "maxUser": 91,
+    "awardAmount": 54,
+    "taskDemand": {
+        "taskId": 16,
+        "taskName": 80,
+        "taskFemand": "Duis quis nulla",
+        "article": "Ut magna id nostrud"
+    }
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=c8f15d58eb3d6731e0f54f28f06d46d8	span=e8dfd3f8e25b2d2c
+2023-06-26T13:38:08.589+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T13:38:30.889+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/list?status=0&currPage=1&maxNum=10 - 127.0.0.1:54194 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/list?status=0&currPage=1&maxNum=10 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=e03242a04ee08e24983a6b2d5f7b5a11	span=a901d6ab878724e0
+2023-06-26T13:39:08.949+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:54231 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 377
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "esse ullamco",
+    "tweetAddress": "广东省驻马店市醴陵市",
+    "label": [
+        "cupidatat enim Lorem",
+        "in ut"
+    ],
+    "awardBudget": 10,
+    "maxUser": 91,
+    "awardAmount": 54,
+    "taskDemand": {
+        "taskId": 16,
+        "taskName": 80,
+        "taskFemand": "Duis quis nulla",
+        "article": "Ut magna id nostrud"
+    }
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=403f37796a48269991971676522e2dfa	span=669a0e66eb25d264
+2023-06-26T13:40:19.427+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:54272 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 377
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "esse ullamco",
+    "tweetAddress": "广东省驻马店市醴陵市",
+    "label": [
+        "cupidatat enim Lorem",
+        "in ut"
+    ],
+    "awardBudget": 10,
+    "maxUser": 91,
+    "awardAmount": 54,
+    "taskDemand": {
+        "taskId": 16,
+        "taskName": 80,
+        "taskFemand": "Duis quis nulla",
+        "article": "Ut magna id nostrud"
+    }
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=78a8ae4bac6d7c832f09b6073870fc53	span=3b686b5c3f8f101c
+2023-06-26T13:41:57.946+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T13:43:07.716+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:53301 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 846
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "occaecat",
+    "tweetAddress": "安徽省三沙市临夏县",
+    "label": [
+        "in incididunt nostrud magna",
+        "deserunt tempor exercitation non",
+        "deserunt eiusmod Duis exercitation"
+    ],
+    "awardBudget": 63,
+    "maxUser": 12,
+    "awardAmount": 56,
+    "taskDemand": [
+        {
+            "article": "est ea enim anim",
+            "taskName": 26,
+            "taskId": 53,
+            "taskFemand": "ut"
+        },
+        {
+            "article": "Excepteur elit exercitation cupidatat aliquip",
+            "taskFemand": "nostrud est anim consequat vel	duration=0.5ms	caller=handler/loghandler.go:162	trace=8ca53acf9089149a768e859d1e33d22f	span=a9b8bb5461521fe4
+2023-06-26T13:44:01.193+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:53327 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 499
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "occaecat",
+    "tweetAddress": "安徽省三沙市临夏县",
+    "label": [
+        "in incididunt nostrud magna",
+        "deserunt tempor exercitation non",
+        "deserunt eiusmod Duis exercitation"
+    ],
+    "awardBudget": 63,
+    "maxUser": 12,
+    "awardAmount": 56,
+    "taskDemand": [
+        {
+            "article": "est ea enim anim",
+            "taskName": 26,
+            "taskId": 53,
+            "taskFemand": "ut"
+        },
+       
+    ]
+}	duration=1.1ms	caller=handler/loghandler.go:162	trace=6e6887a2ccd387a5dae5e17b5c1baf06	span=d3f9a8728e1fbec4
+2023-06-26T13:44:24.272+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:53340 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 498
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "occaecat",
+    "tweetAddress": "安徽省三沙市临夏县",
+    "label": [
+        "in incididunt nostrud magna",
+        "deserunt tempor exercitation non",
+        "deserunt eiusmod Duis exercitation"
+    ],
+    "awardBudget": 63,
+    "maxUser": 12,
+    "awardAmount": 56,
+    "taskDemand": [
+        {
+            "article": "est ea enim anim",
+            "taskName": 26,
+            "taskId": 53,
+            "taskFemand": "ut"
+        }
+       
+    ]
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=5e7b7199876919bd99bb6129baf351f4	span=bce97bf6cb34ba92
+2023-06-26T13:44:38.215+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:53356 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 498
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "occaecat",
+    "tweetAddress": "安徽省三沙市临夏县",
+    "label": [
+        "in incididunt nostrud magna",
+        "deserunt tempor exercitation non",
+        "deserunt eiusmod Duis exercitation"
+    ],
+    "awardBudget": 63,
+    "maxUser": 12,
+    "awardAmount": 56,
+    "taskDemand": [
+        {
+            "article": "est ea enim anim",
+            "taskName": 26,
+            "taskId": 53,
+            "taskFemand": "ut"
+        }
+       
+    ]
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=ba46f9bc247a62d4e027a86729f2080a	span=111f78f44bce3e5e
+2023-06-26T13:45:41.401+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:53394 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 397
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "qui",
+    "tweetAddress": "台湾揭阳市莒光乡",
+    "label": [
+        "dolor fugiat nulla aute"
+    ],
+    "awardBudget": 67,
+    "maxUser": 7,
+    "awardAmount": 21,
+    "taskDemand": [
+        {
+            "article": "qui pariatur Lorem",
+            "taskName": 45,
+            "taskId": 70,
+            "taskDemand": "laboris officia commodo dolore"
+        }
+    ]
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=1fa22470ec04b27e277c55590264a484	span=cd00ee552f05a988
+2023-06-26T13:46:17.065+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T13:47:36.741+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T14:22:10.548+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/CreateCuratorialTask - creator:"qui"  tweetAddress:"https://twitter.com/alifarhat79/status/1673058366522793984"  label:"dolor fugiat nulla aute"  awardBudget:67  maxUser:10  awardAmount:100  taskBak:{taskId:70  taskName:45  taskDemand:"laboris officia commodo dolore"  article:"qui pariatur Lorem"} - rpc error: code = Unknown desc = sql: no rows in result set	duration=13.3ms	caller=clientinterceptors/durationinterceptor.go:35	trace=e33cb8fadd96a467e81a8e9f8d162600	span=d902bbc81e8ad433
+2023-06-26T14:22:10.548+08:00	[31;1m error [0m	(/v1/curatorial/create - 127.0.0.1:64925) runtime error: invalid memory address or nil pointer dereference
+goroutine 207 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x1e57da0, 0x32345a0})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*CreateCuratorialTaskLogic).CreateCuratorialTask(0xc000331bd8, 0xc0000ba000)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/logic/curatorial/createcuratorialtasklogic.go:64 +0x542
+gateway/internal/handler/curatorial.CreateCuratorialTaskHandler.func1({0x23b63f0, 0xc000380780}, 0xc000600900)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/handler/curatorial/createcuratorialtaskhandler.go:28 +0x2b0
+net/http.HandlerFunc.ServeHTTP(0xc000331cc0?, {0x23b63f0?, 0xc000380780?}, 0xc00023e890?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x23b63f0, 0xc000380780}, 0xc000600800)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x23b63f0?, 0xc000380780?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x23b63f0, 0xc000380780}, 0xc000600800)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc2b2592?, {0x23b63f0?, 0xc000380780?}, 0x20cc4c73ee1?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x23b63f0?, 0xc000380780?}, 0x326bbe0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0xc0003b3e78?, {0x23b63f0?, 0xc000380780?}, 0xc0003b3ed8?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x23b63f0, 0xc000380780}, 0xc000672b90?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xca6e20?, {0x23b63f0?, 0xc000380780?}, 0xc0003b3f30?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x23b63f0?, 0xc000380780?}, 0x0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x23b63f0?, 0xc000380780?}, 0x795a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=e33cb8fadd96a467e81a8e9f8d162600	span=632fba4b57f48aa8
+2023-06-26T14:22:10.548+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:64925 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 450
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "qui",
+    "tweetAddress": "https://twitter.com/alifarhat79/status/1673058366522793984",
+    "label": [
+        "dolor fugiat nulla aute"
+    ],
+    "awardBudget": 67,
+    "maxUser": 10,
+    "awardAmount": 100,
+    "taskDemand": [
+        {
+            "article": "qui pariatur Lorem",
+            "taskName": 45,
+            "taskId": 70,
+            "taskDemand": "laboris officia commodo dolore"
+        }
+    ]
+}	duration=15.1ms	caller=handler/loghandler.go:162	trace=e33cb8fadd96a467e81a8e9f8d162600	span=632fba4b57f48aa8
+2023-06-26T14:23:34.172+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/CreateCuratorialTask - creator:"qui" tweetAddress:"https://twitter.com/alifarhat79/status/1673058366522793984" label:"饿了么UUID" awardBudget:67 maxUser:10 awardAmount:100 taskBak:{taskId:1 taskName:1 taskDemand:"laboris officia commodo dolore" article:"qui pariatur Lorem"} - rpc error: code = Unknown desc = sql: no rows in result set	duration=7.9ms	caller=clientinterceptors/durationinterceptor.go:35	trace=555e509c12ed74d224a355035f2a97a5	span=1b4d1dd2058ced58
+2023-06-26T14:23:34.172+08:00	[31;1m error [0m	(/v1/curatorial/create - 127.0.0.1:64975) runtime error: invalid memory address or nil pointer dereference
+goroutine 92 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x1a77da0, 0x2e545a0})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*CreateCuratorialTaskLogic).CreateCuratorialTask(0xc000599bd8, 0xc0003cb0a0)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/logic/curatorial/createcuratorialtasklogic.go:65 +0x56d
+gateway/internal/handler/curatorial.CreateCuratorialTaskHandler.func1({0x1fd6330, 0xc000588240}, 0xc000490700)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/handler/curatorial/createcuratorialtaskhandler.go:20 +0x194
+net/http.HandlerFunc.ServeHTTP(0xc000599cc0?, {0x1fd6330?, 0xc000588240?}, 0xc000513370?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x1fd6330, 0xc000588240}, 0xc000490600)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1fd6330?, 0xc000588240?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x1fd6330, 0xc000588240}, 0xc000490600)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc2b25e6?, {0x1fd6330?, 0xc000588240?}, 0xa0f530cf1?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x1fd6330?, 0xc000588240?}, 0x2e8bbe0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0xc000339e78?, {0x1fd6330?, 0xc000588240?}, 0xc000339ed8?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x1fd6330, 0xc000588240}, 0xc0006f99d0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0x8c6e20?, {0x1fd6330?, 0xc000588240?}, 0xc000339f30?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x1fd6330?, 0xc000588240?}, 0xe?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0xc0003a4d16?, {0x1fd6330?, 0xc000588240?}, 0x3b5a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=555e509c12ed74d224a355035f2a97a5	span=e4bbd5f614dbdba6
+2023-06-26T14:23:34.172+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:64975 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 438
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "qui",
+    "tweetAddress": "https://twitter.com/alifarhat79/status/1673058366522793984",
+    "label": [
+        "饿了么UUID"
+    ],
+    "awardBudget": 67,
+    "maxUser": 10,
+    "awardAmount": 100,
+    "taskDemand": [
+        {
+            "article": "qui pariatur Lorem",
+            "taskName": 1,
+            "taskId": 1,
+            "taskDemand": "laboris officia commodo dolore"
+        }
+    ]
+}	duration=9.6ms	caller=handler/loghandler.go:162	trace=555e509c12ed74d224a355035f2a97a5	span=e4bbd5f614dbdba6
+2023-06-26T14:24:31.375+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T14:24:51.239+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/CreateCuratorialTask - creator:"qui"  tweetAddress:"https://twitter.com/alifarhat79/status/1673058366522793984"  label:"饿了么UUID"  awardBudget:67  maxUser:10  awardAmount:100  taskBak:{taskId:1  taskName:1  taskDemand:"laboris officia commodo dolore"  article:"qui pariatur Lorem"} - rpc error: code = Unknown desc = sql: no rows in result set	duration=12.2ms	caller=clientinterceptors/durationinterceptor.go:35	trace=8cec88965286b48eda2deeeee47debf3	span=77231f90baa5a025
+2023-06-26T14:24:51.240+08:00	[31;1m error [0m	(/v1/curatorial/create - 127.0.0.1:65030) runtime error: invalid memory address or nil pointer dereference
+goroutine 101 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x2557da0, 0x39345a0})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*CreateCuratorialTaskLogic).CreateCuratorialTask(0xc0004a9bd8, 0xc000443110)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/logic/curatorial/createcuratorialtasklogic.go:65 +0x5b9
+gateway/internal/handler/curatorial.CreateCuratorialTaskHandler.func1({0x2ab6350, 0xc000349320}, 0xc000130a00)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/handler/curatorial/createcuratorialtaskhandler.go:20 +0x194
+net/http.HandlerFunc.ServeHTTP(0xc0004a9cc0?, {0x2ab6350?, 0xc000349320?}, 0xc000622d70?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x2ab6350, 0xc000349320}, 0xc000130900)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x2ab6350?, 0xc000349320?}, 0xc00047ef00?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x2ab6350, 0xc000349320}, 0xc000130900)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc2b2633?, {0x2ab6350?, 0xc000349320?}, 0xea84d101?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x2ab6350?, 0xc000349320?}, 0x396bbe0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x2ab6350?, 0xc000349320?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x2ab6350, 0xc000349320}, 0x0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x2ab6350?, 0xc000349320?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x2ab6350?, 0xc000349320?}, 0x0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x2ab6350?, 0xc000349320?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=8cec88965286b48eda2deeeee47debf3	span=f902fc187a913f2e
+2023-06-26T14:24:51.240+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:65030 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 438
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "qui",
+    "tweetAddress": "https://twitter.com/alifarhat79/status/1673058366522793984",
+    "label": [
+        "饿了么UUID"
+    ],
+    "awardBudget": 67,
+    "maxUser": 10,
+    "awardAmount": 100,
+    "taskDemand": [
+        {
+            "article": "qui pariatur Lorem",
+            "taskName": 1,
+            "taskId": 1,
+            "taskDemand": "laboris officia commodo dolore"
+        }
+    ]
+}	duration=15.2ms	caller=handler/loghandler.go:162	trace=8cec88965286b48eda2deeeee47debf3	span=f902fc187a913f2e
+2023-06-26T14:26:27.694+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T14:29:13.138+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/CreateCuratorialTask - creator:"550e8400-e29b-41d4-a716-446655440000"  tweetAddress:"https://twitter.com/alifarhat79/status/1673058366522793984"  label:"饿了么UUID"  awardBudget:1  maxUser:10  awardAmount:100  taskBak:{taskId:1  taskName:1} - rpc error: code = Unknown desc = sql: no rows in result set	duration=35.6ms	caller=clientinterceptors/durationinterceptor.go:35	trace=babafa65d255c6dbf8b921318c3d82d6	span=29362c7464e4aeb1
+2023-06-26T14:29:13.139+08:00	[31;1m error [0m	(/v1/curatorial/create - 127.0.0.1:52972) runtime error: invalid memory address or nil pointer dereference
+goroutine 92 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x2557da0, 0x39345a0})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*CreateCuratorialTaskLogic).CreateCuratorialTask(0xc000209bd8, 0xc0003180e0)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/logic/curatorial/createcuratorialtasklogic.go:65 +0x5b9
+gateway/internal/handler/curatorial.CreateCuratorialTaskHandler.func1({0x2ab6350, 0xc000065a40}, 0xc00054a900)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/handler/curatorial/createcuratorialtaskhandler.go:20 +0x194
+net/http.HandlerFunc.ServeHTTP(0xc000209cc0?, {0x2ab6350?, 0xc000065a40?}, 0xc0005262f0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x2ab6350, 0xc000065a40}, 0xc00054a800)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x2ab6350?, 0xc000065a40?}, 0xc00034e6c0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x2ab6350, 0xc000065a40}, 0xc00054a800)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc2b2739?, {0x2ab6350?, 0xc000065a40?}, 0x3de3a2c081?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x2ab6350?, 0xc000065a40?}, 0x396bbe0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0xc000209e50?, {0x2ab6350?, 0xc000065a40?}, 0x2ac45c0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x2ab6350, 0xc000065a40}, 0x0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xc0005e4170?, {0x2ab6350?, 0xc000065a40?}, 0xc000106ae0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x2ab6350?, 0xc000065a40?}, 0xc000573f58?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0xc000573fd0?, {0x2ab6350?, 0xc000065a40?}, 0xc000534120?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=babafa65d255c6dbf8b921318c3d82d6	span=0a0987478cfe5db7
+2023-06-26T14:29:13.139+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:52972 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 422
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "550e8400-e29b-41d4-a716-446655440000",
+    "tweetAddress": "https://twitter.com/alifarhat79/status/1673058366522793984",
+    "label": [
+        "饿了么UUID"
+    ],
+    "awardBudget": 1,
+    "maxUser": 10,
+    "awardAmount": 100,
+    "taskDemand": [
+        {
+            "article": "",
+            "taskName": 1,
+            "taskId": 1,
+            "taskDemand": ""
+        }
+    ]
+}	duration=36.7ms	caller=handler/loghandler.go:162	trace=babafa65d255c6dbf8b921318c3d82d6	span=0a0987478cfe5db7
+2023-06-26T14:33:09.024+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:33:09.024+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:33:09.024+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:33:09.024+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:33:20.332+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/CreateCuratorialTask - creator:"550e8400-e29b-41d4-a716-446655440000"  tweetAddress:"https://twitter.com/alifarhat79/status/1673058366522793984"  label:"美团UUID"  awardBudget:1  maxUser:10  awardAmount:100  taskBak:{taskId:1  taskName:1} - rpc error: code = Unknown desc = sql: no rows in result set	duration=33.4ms	caller=clientinterceptors/durationinterceptor.go:35	trace=2e105259d7358c10bad7716699e0e476	span=05b171f8251fa48d
+2023-06-26T14:33:20.332+08:00	[31;1m error [0m	(/v1/curatorial/create - 127.0.0.1:64291) runtime error: invalid memory address or nil pointer dereference
+goroutine 144 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x2557da0, 0x39345a0})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*CreateCuratorialTaskLogic).CreateCuratorialTask(0xc00062bbd8, 0xc0004562a0)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/logic/curatorial/createcuratorialtasklogic.go:65 +0x5b9
+gateway/internal/handler/curatorial.CreateCuratorialTaskHandler.func1({0x2ab6350, 0xc00060e600}, 0xc00086c700)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/handler/curatorial/createcuratorialtaskhandler.go:20 +0x194
+net/http.HandlerFunc.ServeHTTP(0xc00062bcc0?, {0x2ab6350?, 0xc00060e600?}, 0xc000526cf0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x2ab6350, 0xc00060e600}, 0xc00086c600)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x2ab6350?, 0xc00060e600?}, 0xc0004da9f0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x2ab6350, 0xc00060e600}, 0xc00086c600)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc2b2830?, {0x2ab6350?, 0xc00060e600?}, 0x7771ab3659?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x2ab6350?, 0xc00060e600?}, 0x396bbe0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x2ab6350?, 0xc00060e600?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x2ab6350, 0xc00060e600}, 0xc000515fb0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xc000052d80?, {0x2ab6350?, 0xc00060e600?}, 0xc0005cc968?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x2ab6350?, 0xc00060e600?}, 0xc000515f98?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x94?, {0x2ab6350?, 0xc00060e600?}, 0xe95a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=2e105259d7358c10bad7716699e0e476	span=f80a2d0d7ddde2d3
+2023-06-26T14:33:20.333+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:64291 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 419
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "550e8400-e29b-41d4-a716-446655440000",
+    "tweetAddress": "https://twitter.com/alifarhat79/status/1673058366522793984",
+    "label": [
+        "美团UUID"
+    ],
+    "awardBudget": 1,
+    "maxUser": 10,
+    "awardAmount": 100,
+    "taskDemand": [
+        {
+            "article": "",
+            "taskName": 1,
+            "taskId": 1,
+            "taskDemand": ""
+        }
+    ]
+}	duration=34.5ms	caller=handler/loghandler.go:162	trace=2e105259d7358c10bad7716699e0e476	span=f80a2d0d7ddde2d3
+2023-06-26T14:34:08.318+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:34:08.318+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:34:08.318+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:34:08.318+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:34:58.526+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/CreateCuratorialTask - creator:"550e8400-e29b-41d4-a716-446655440000"  tweetAddress:"https://twitter.com/alifarhat79/status/1673058366522793984"  label:"美团UUID"  awardBudget:1  maxUser:10  awardAmount:100  taskBak:{taskId:1  taskName:1} - rpc error: code = Unknown desc = sql: no rows in result set	duration=54.6ms	caller=clientinterceptors/durationinterceptor.go:35	trace=af75d048ddedd12f04f2b590bf5d5927	span=e2f1ca6ef5996e21
+2023-06-26T14:34:58.527+08:00	[31;1m error [0m	(/v1/curatorial/create - 127.0.0.1:64358) runtime error: invalid memory address or nil pointer dereference
+goroutine 13 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x1c57da0, 0x30345a0})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*CreateCuratorialTaskLogic).CreateCuratorialTask(0xc000149bd8, 0xc00039e380)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/logic/curatorial/createcuratorialtasklogic.go:65 +0x5b9
+gateway/internal/handler/curatorial.CreateCuratorialTaskHandler.func1({0x21b6350, 0xc000064a20}, 0xc000140a00)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/handler/curatorial/createcuratorialtaskhandler.go:20 +0x194
+net/http.HandlerFunc.ServeHTTP(0xc000149cc0?, {0x21b6350?, 0xc000064a20?}, 0xc00054e4b0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x21b6350, 0xc000064a20}, 0xc000140900)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x21b6350?, 0xc000064a20?}, 0xc000618900?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x21b6350, 0xc000064a20}, 0xc000140900)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc2b2892?, {0x21b6350?, 0xc000064a20?}, 0x858b4bb49?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x21b6350?, 0xc000064a20?}, 0x306bbe0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x21b6350?, 0xc000064a20?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x21b6350, 0xc000064a20}, 0xc0007a3fb0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xc000000240?, {0x21b6350?, 0xc000064a20?}, 0xc000393b48?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x21b6350?, 0xc000064a20?}, 0xc0007a3f98?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x21b6350?, 0xc000064a20?}, 0x595a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=af75d048ddedd12f04f2b590bf5d5927	span=9b07ba226591c789
+2023-06-26T14:34:58.527+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:64358 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 419
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "550e8400-e29b-41d4-a716-446655440000",
+    "tweetAddress": "https://twitter.com/alifarhat79/status/1673058366522793984",
+    "label": [
+        "美团UUID"
+    ],
+    "awardBudget": 1,
+    "maxUser": 10,
+    "awardAmount": 100,
+    "taskDemand": [
+        {
+            "article": "",
+            "taskName": 1,
+            "taskId": 1,
+            "taskDemand": ""
+        }
+    ]
+}	duration=56.8ms	caller=handler/loghandler.go:162	trace=af75d048ddedd12f04f2b590bf5d5927	span=9b07ba226591c789
+2023-06-26T14:36:00.146+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:36:00.146+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:36:00.146+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:36:00.146+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:36:03.025+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T14:36:10.655+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/CreateCuratorialTask - creator:"550e8400-e29b-41d4-a716-446655440000"  tweetAddress:"https://twitter.com/alifarhat79/status/1673058366522793984"  label:"美团UUID"  awardBudget:1  maxUser:10  awardAmount:100  taskBak:{taskId:1  taskName:1} - rpc error: code = Unknown desc = sql: no rows in result set	duration=45.0ms	caller=clientinterceptors/durationinterceptor.go:35	trace=859aef9ac1a4308996ea2bd4dc969fa1	span=72f42ad5068e3651
+2023-06-26T14:36:10.655+08:00	[31;1m error [0m	(/v1/curatorial/create - 127.0.0.1:64430) runtime error: invalid memory address or nil pointer dereference
+goroutine 132 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x1c57da0, 0x30345a0})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*CreateCuratorialTaskLogic).CreateCuratorialTask(0xc0005d1bd8, 0xc00043c000)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/logic/curatorial/createcuratorialtasklogic.go:65 +0x5b9
+gateway/internal/handler/curatorial.CreateCuratorialTaskHandler.func1({0x21b6350, 0xc000624240}, 0xc000656600)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/handler/curatorial/createcuratorialtaskhandler.go:20 +0x194
+net/http.HandlerFunc.ServeHTTP(0xc0005d1cc0?, {0x21b6350?, 0xc000624240?}, 0xc00048cd20?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x21b6350, 0xc000624240}, 0xc000656500)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x21b6350?, 0xc000624240?}, 0xc0003783c0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x21b6350, 0xc000624240}, 0xc000656500)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc2b28da?, {0x21b6350?, 0xc000624240?}, 0x19248aea99?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x21b6350?, 0xc000624240?}, 0x306bbe0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x21b6350?, 0xc000624240?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x21b6350, 0xc000624240}, 0x0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x21b6350?, 0xc000624240?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x21b6350?, 0xc000624240?}, 0x0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x21b6350?, 0xc000624240?}, 0x595a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=859aef9ac1a4308996ea2bd4dc969fa1	span=40ca1ed0f2f4e737
+2023-06-26T14:36:10.655+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:64430 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 419
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "550e8400-e29b-41d4-a716-446655440000",
+    "tweetAddress": "https://twitter.com/alifarhat79/status/1673058366522793984",
+    "label": [
+        "美团UUID"
+    ],
+    "awardBudget": 1,
+    "maxUser": 10,
+    "awardAmount": 100,
+    "taskDemand": [
+        {
+            "article": "",
+            "taskName": 1,
+            "taskId": 1,
+            "taskDemand": ""
+        }
+    ]
+}	duration=46.0ms	caller=handler/loghandler.go:162	trace=859aef9ac1a4308996ea2bd4dc969fa1	span=40ca1ed0f2f4e737
+2023-06-26T14:37:02.966+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:37:02.967+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:37:02.967+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:37:02.967+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:37:09.349+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/CreateCuratorialTask - creator:"550e8400-e29b-41d4-a716-446655440000"  tweetAddress:"https://twitter.com/alifarhat79/status/1673058366522793984"  label:"美团UUID"  awardBudget:1  maxUser:10  awardAmount:100  taskBak:{taskId:1  taskName:1} - rpc error: code = Unknown desc = sql: no rows in result set	duration=34.0ms	caller=clientinterceptors/durationinterceptor.go:35	trace=7a05bd81685233e94c6845c9c24086e8	span=181cd7cefa589297
+2023-06-26T14:37:09.349+08:00	[31;1m error [0m	(/v1/curatorial/create - 127.0.0.1:64510) runtime error: invalid memory address or nil pointer dereference
+goroutine 258 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x1c57da0, 0x30345a0})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*CreateCuratorialTaskLogic).CreateCuratorialTask(0xc000165bd8, 0xc0000ba070)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/logic/curatorial/createcuratorialtasklogic.go:65 +0x5b9
+gateway/internal/handler/curatorial.CreateCuratorialTaskHandler.func1({0x21b6350, 0xc0006c1380}, 0xc000398b00)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/handler/curatorial/createcuratorialtaskhandler.go:20 +0x194
+net/http.HandlerFunc.ServeHTTP(0xc000165cc0?, {0x21b6350?, 0xc0006c1380?}, 0xc000622330?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x21b6350, 0xc0006c1380}, 0xc000398a00)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x21b6350?, 0xc0006c1380?}, 0xc0004af800?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x21b6350, 0xc0006c1380}, 0xc000398a00)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc2b2915?, {0x21b6350?, 0xc0006c1380?}, 0x26cfac55bd?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x21b6350?, 0xc0006c1380?}, 0x306bbe0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x21b6350?, 0xc0006c1380?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x21b6350, 0xc0006c1380}, 0xc0005ddfb0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xc0005882a0?, {0x21b6350?, 0xc0006c1380?}, 0xc000818ca8?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x21b6350?, 0xc0006c1380?}, 0xc0005ddf98?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0xc00066a140?, {0x21b6350?, 0xc0006c1380?}, 0x595a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=7a05bd81685233e94c6845c9c24086e8	span=21cd15138333835b
+2023-06-26T14:37:09.349+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:64510 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 419
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "550e8400-e29b-41d4-a716-446655440000",
+    "tweetAddress": "https://twitter.com/alifarhat79/status/1673058366522793984",
+    "label": [
+        "美团UUID"
+    ],
+    "awardBudget": 1,
+    "maxUser": 10,
+    "awardAmount": 100,
+    "taskDemand": [
+        {
+            "article": "",
+            "taskName": 1,
+            "taskId": 1,
+            "taskDemand": ""
+        }
+    ]
+}	duration=34.0ms	caller=handler/loghandler.go:162	trace=7a05bd81685233e94c6845c9c24086e8	span=21cd15138333835b
+2023-06-26T14:38:16.078+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:38:16.078+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:38:16.078+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:38:16.078+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:41:56.411+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:41:56.411+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:41:56.411+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:41:56.411+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:43:10.087+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:43:10.087+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:43:10.087+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:43:10.087+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:46:22.773+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T14:53:49.598+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T14:57:02.289+08:00	[31;1m error [0m	authorize failed: no token present in request
+=> POST /v1/curatorial/label/delete?id=7 HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Content-Length: 71
+Content-Length: 0
 Content-Type: application/json
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
-{
-    "code": "45646",
-    "codeVerifier": "79",
-    "inviteId": "84"
-}	duration=0.0ms	caller=handler/loghandler.go:162	trace=d9f1f3f52bdaeec4016155a91c388680	span=f5e219807d8f4bbb
-2023-06-26T10:14:44.674+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7169 - Apifox/1.0.0 (https://www.apifox.cn)
-POST /v1/user/userLogin HTTP/1.1
-Host: 192.168.1.104:8888
+	caller=handler/authhandler.go:103
+2023-06-26T14:57:21.138+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T14:58:24.323+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:62047 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=a9f078353837e5bccace37c917251953	span=6efbba2fb05ee619
+2023-06-26T14:59:01.728+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:62058 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=f7a0e2d78e031c28c9a1198c72fb916a	span=da1bfd23dce328ad
+2023-06-26T15:00:41.005+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T15:02:00.679+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T15:21:09.388+08:00	[31;1m error [0m	authorize failed: no token present in request
+=> GET /v1/curatorial/details?taskId=1&userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Content-Length: 71
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	caller=handler/authhandler.go:103
+2023-06-26T15:21:29.966+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/details?taskId=1&userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:53230 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/details?taskId=1&userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=2e24e64637739484bd03b84f940f0b8d	span=8db212a8791fc8c2
+2023-06-26T15:24:20.303+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T15:25:39.975+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T15:28:50.271+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/details?taskId=1&userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:53367 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/details?taskId=1&userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=1c68d11b090ed4ecd74ed3541862877a	span=31c552e2e8431c9f
+2023-06-26T15:29:44.089+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/details?taskId=1&userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:53398 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/details?taskId=1&userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 0
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=8d77ebfbec342357de805694b1d7784c	span=26e358658a821bd1
+2023-06-26T15:29:46.225+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/details?taskId=1&userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:53398 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/details?taskId=1&userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 0
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=f41fe0d99e8a1044d954f92e9157da4d	span=2fd15400f241307b
+2023-06-26T15:31:07.444+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/details?taskId=1&userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:53414 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/details?taskId=1&userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 0
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=0f7b149f98d65a18d1c451af0e5c0cca	span=6fe77122dc03dc40
+2023-06-26T15:31:52.166+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/details?taskId=1&userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:53432 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/details?taskId=1&userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 0
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=2ce90a59618a150347c17ad8221c1435	span=4a4a97be2505e9ee
+2023-06-26T15:33:31.136+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T15:33:50.276+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/details - 127.0.0.1:61964 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/details HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 0
 Content-Type: application/json
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=13e8d6a67c3ab901b456fcdae75f718d	span=568558ac8bed4732
+2023-06-26T15:33:56.379+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/QueryTaskDetails - taskId:66  userId:"34" - rpc error: code = Unknown desc = sql: no rows in result set	duration=10.4ms	caller=clientinterceptors/durationinterceptor.go:35	trace=fae041814af6c60bcca47a9b4db53aeb	span=ce7e259ec9fa5008
+2023-06-26T15:36:38.539+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/details?userId=550e8400-e29b-41d4-a716-446655440000&taskId=25 - 127.0.0.1:62080 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/details?userId=550e8400-e29b-41d4-a716-446655440000&taskId=25 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 2
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{}	duration=1.4ms	caller=handler/loghandler.go:162	trace=3da881694b972b31142cd9cdda336428	span=23d7bc77f20463c9
+2023-06-26T15:36:43.831+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/details?userId=550e8400-e29b-41d4-a716-446655440000&taskId=25 - 127.0.0.1:62081 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/details?userId=550e8400-e29b-41d4-a716-446655440000&taskId=25 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 2
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{}	duration=0.5ms	caller=handler/loghandler.go:162	trace=8fd3f70cb22eb7c1f09892bf85030651	span=6403f6351e874020
+2023-06-26T15:36:48.894+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/details?userId=550e8400-e29b-41d4-a716-446655440000&taskId=25 - 127.0.0.1:62082 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/details?userId=550e8400-e29b-41d4-a716-446655440000&taskId=25 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=b425104950a0a256f0b13a95220ef6d8	span=0fc0c2c9b265e0c7
+2023-06-26T15:37:34.943+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T15:54:28.810+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T15:55:58.827+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T15:55:58.827+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T15:55:58.827+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T15:55:58.827+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T15:57:48.486+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T16:13:00.940+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:13:00.940+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:13:00.940+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:13:00.940+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:13:46.440+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:13:46.440+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:13:46.440+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:13:46.440+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:15:50.732+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:15:50.732+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:15:50.732+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:15:50.732+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:17:29.922+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:17:29.922+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:17:29.922+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:17:29.922+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:17:57.527+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:17:57.527+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:17:57.527+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:17:57.527+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:18:06.576+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/QueryTaskDetails - taskId:25 userId:"550e8400-e29b-41d4-a716-446655440000" - rpc error: code = Internal desc = panic: runtime error: invalid memory address or nil pointer dereference
+
+goroutine 56 [running]:
+runtime/debug.Stack()
+	c:/go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:33 +0x46
+panic({0x1c1e000, 0x313d120})
+	c:/go/src/runtime/panic.go:884 +0x213
+taskManager-Service-main/task/internal/logic.QueryUserTaskCompletionDegree(0xc0005cfeb8, 0xc0006fc140, {0xc00010c1e8, 0x1, 0x0?})
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/logic/querytaskdetailslogic.go:81 +0x1aa
+taskManager-Service-main/task/internal/logic.(*QueryTaskDetailsLogic).QueryTaskDetails(0xc0005cfeb8, 0xc0006fc140)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/logic/querytaskdetailslogic.go:46 +0x19c
+taskManager-Service-main/task/internal/server.(*TaskServer).QueryTaskDetails(0x0?, {0x21c7d40?, 0xc000098be0}, 0x0?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/server/taskserver.go:39 +0xb6
+taskManager-Service-main/task/task._Task_QueryTaskDetails_Handler.func1({0x21c7d40, 0xc000098be0}, {0x1d56f40?, 0xc0006fc140})
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/task/task_grpc.pb.go:415 +0x7b
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:39 +0x12f
+created by github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:29 +0x24a	duration=18.0ms	caller=clientinterceptors/durationinterceptor.go:35	trace=6e64543b9a70eee21c367eee49835407	span=7f5bc85d7d95931c
+2023-06-26T16:18:06.576+08:00	[31;1m error [0m	(/v1/curatorial/details - 127.0.0.1:61141) runtime error: invalid memory address or nil pointer dereference
+goroutine 301 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x25c7da0, 0x39a45a0})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*QueryTaskDetailsLogic).QueryTaskDetails(0xc0008b7bd8, 0xc000008c90)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/logic/curatorial/querytaskdetailslogic.go:35 +0xeb
+gateway/internal/handler/curatorial.QueryTaskDetailsHandler.func1({0x2b26470, 0xc0006e69c0}, 0xc000885300)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/handler/curatorial/querytaskdetailshandler.go:25 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc0008b7cc0?, {0x2b26470?, 0xc0006e69c0?}, 0xc0006478c0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x2b26470, 0xc0006e69c0}, 0xc000885200)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x2b26470?, 0xc0006e69c0?}, 0x14663f6?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x2b26470, 0xc0006e69c0}, 0xc000885200)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc2b40be?, {0x2b26470?, 0xc0006e69c0?}, 0x161794dfb31?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x2b26470?, 0xc0006e69c0?}, 0x39dbbe0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0xc0008ade78?, {0x2b26470?, 0xc0006e69c0?}, 0xc0008aded8?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x2b26470, 0xc0006e69c0}, 0xc000687730?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0x1416e20?, {0x2b26470?, 0xc0006e69c0?}, 0xc0008adf30?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x2b26470?, 0xc0006e69c0?}, 0xc0008adf58?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0xc0008adfd0?, {0x2b26470?, 0xc0006e69c0?}, 0xf05a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=6e64543b9a70eee21c367eee49835407	span=314dcac22fc0716f
+2023-06-26T16:18:06.576+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/details - 127.0.0.1:61141 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/details HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 77
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
 {
-    "code": "45646",
-    "codeVerifier": "79",
-    "inviteId": "84"
-}	duration=0.0ms	caller=handler/loghandler.go:162	trace=89c503d30631adb871763d9452af187e	span=a003e6003af5eefa
-2023-06-26T10:14:46.401+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7169 - Apifox/1.0.0 (https://www.apifox.cn)
-POST /v1/user/userLogin HTTP/1.1
-Host: 192.168.1.104:8888
+    "userId": "550e8400-e29b-41d4-a716-446655440000",
+    "taskId": 25
+}	duration=28.7ms	caller=handler/loghandler.go:162	trace=6e64543b9a70eee21c367eee49835407	span=314dcac22fc0716f
+2023-06-26T16:19:51.576+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:19:51.576+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:19:51.576+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:19:51.576+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T16:21:31.530+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 - 127.0.0.1:55514 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/label/list?userId=550e8400-e29b-41d4-a716-446655440000 HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=de6a03b05f4344c026a12751258b9911	span=a7d76e3521119b6e
+2023-06-26T16:43:26.204+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T16:45:40.708+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T16:51:04.074+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T16:52:23.221+08:00	[31;1m error [0m	(/v1/curatorial/list - 127.0.0.1:61512) runtime error: slice bounds out of range [:10:9]
+goroutine 63 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x1c64f00, 0xc000518048})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*QueryTaskListLogic).QueryTaskList(0xc000483bd8, 0xc0005e60c0)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/logic/curatorial/querytasklistlogic.go:36 +0x111
+gateway/internal/handler/curatorial.QueryTaskListHandler.func1({0x2036450, 0xc000065a40}, 0xc0003b2a00)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/handler/curatorial/querytasklisthandler.go:21 +0x194
+net/http.HandlerFunc.ServeHTTP(0xc000483cc0?, {0x2036450?, 0xc000065a40?}, 0xc0006e0680?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x2036450, 0xc000065a40}, 0xc0003b2900)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x2036450?, 0xc000065a40?}, 0xc0003fdda0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x2036450, 0xc000065a40}, 0xc0003b2900)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc2b48c7?, {0x2036450?, 0xc000065a40?}, 0x949e1d15?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x2036450?, 0xc000065a40?}, 0x2eecbe0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0xc0001c7e78?, {0x2036450?, 0xc000065a40?}, 0xc0001c7ed8?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x2036450, 0xc000065a40}, 0xc0007d4b90?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0x926e20?, {0x2036450?, 0xc000065a40?}, 0xc0001c7f30?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x2036450?, 0xc000065a40?}, 0x0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x2036450?, 0xc000065a40?}, 0x415a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=85555e6db50b4de8e767cbe4842a8f66	span=4dbf2e099cd11739
+2023-06-26T16:52:23.222+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/list - 127.0.0.1:61512 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/list HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 60
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "status": 1,
+    "currPage": 1,
+    "maxNum": 10
+}	duration=11.6ms	caller=handler/loghandler.go:162	trace=85555e6db50b4de8e767cbe4842a8f66	span=4dbf2e099cd11739
+2023-06-26T16:52:45.304+08:00	[31;1m error [0m	(/v1/curatorial/list - 127.0.0.1:61523) runtime error: slice bounds out of range [:10:9]
+goroutine 100 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x26f4f00, 0xc00047e510})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*QueryTaskListLogic).QueryTaskList(0xc0006a5bd8, 0xc000108270)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/logic/curatorial/querytasklistlogic.go:36 +0x111
+gateway/internal/handler/curatorial.QueryTaskListHandler.func1({0x2ac6450, 0xc0002e05a0}, 0xc000364600)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service/gateway/internal/handler/curatorial/querytasklisthandler.go:21 +0x194
+net/http.HandlerFunc.ServeHTTP(0xc0006a5cc0?, {0x2ac6450?, 0xc0002e05a0?}, 0xc0002cd510?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x2ac6450, 0xc0002e05a0}, 0xc000364500)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x2ac6450?, 0xc0002e05a0?}, 0xc0005866c0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x2ac6450, 0xc0002e05a0}, 0xc000364500)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc2b48dd?, {0x2ac6450?, 0xc0002e05a0?}, 0x12265dfed?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x2ac6450?, 0xc0002e05a0?}, 0x397cbe0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x2ac6450?, 0xc0002e05a0?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x2ac6450, 0xc0002e05a0}, 0xc00046bfb0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xc00031ed20?, {0x2ac6450?, 0xc0002e05a0?}, 0xc0006847c8?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x2ac6450?, 0xc0002e05a0?}, 0xc00046bf98?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x2ac6450?, 0xc0002e05a0?}, 0xea5a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=afd351f3ec55b5600d9ae28c96f54207	span=5133b03e9008292d
+2023-06-26T16:52:45.304+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/list - 127.0.0.1:61523 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/list HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 60
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "status": 1,
+    "currPage": 1,
+    "maxNum": 10
+}	duration=5.3ms	caller=handler/loghandler.go:162	trace=afd351f3ec55b5600d9ae28c96f54207	span=5133b03e9008292d
+2023-06-26T16:54:50.443+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T17:05:10.150+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T17:32:10.035+08:00	[31;1m error [0m	authorize failed: no token present in request
+=> GET /v1/curatorial/user/list HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Content-Length: 71
+Content-Length: 116
 Content-Type: application/json
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
 {
-    "code": "45646",
-    "codeVerifier": "79",
-    "inviteId": "84"
-}	duration=0.6ms	caller=handler/loghandler.go:162	trace=bd5d0e6920d8113d1c84d3c9768567d9	span=0861d3c7e0639b70
-2023-06-26T10:15:13.633+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7192 - Apifox/1.0.0 (https://www.apifox.cn)
-POST /v1/user/userLogin HTTP/1.1
-Host: 192.168.1.104:8888
+    "userId": "550e8400-e29b-41d4-a716-446655440000",
+    "currPage": "1",
+    "maxNum": "10",
+    "status": "1"
+}	caller=handler/authhandler.go:103
+2023-06-26T17:32:41.458+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T17:32:50.929+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/user/list - 127.0.0.1:51835 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/user/list HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
 Connection: keep-alive
-Content-Length: 71
+Content-Length: 116
 Content-Type: application/json
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
 {
-    "code": "45646",
-    "codeVerifier": "79",
-    "inviteId": "84"
-}	duration=0.0ms	caller=handler/loghandler.go:162	trace=dd6aa1f9e425a42a55cbbd21173e549c	span=d6e126c4297a040f
-2023-06-26T10:15:30.488+08:00	[31;1m error [0m	pingResp: pong:"pong"	caller=ping/pinglogic.go:27
-2023-06-26T10:16:13.954+08:00	[31;1m error [0m	pingResp: pong:"pong"	caller=ping/pinglogic.go:28
-2023-06-26T10:16:21.241+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7259 - Apifox/1.0.0 (https://www.apifox.cn)
-POST /v1/user/userLogin HTTP/1.1
-Host: 192.168.1.104:8888
-Accept: */*
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Content-Length: 71
-Content-Type: application/json
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
-
-{
-    "code": "45646",
-    "codeVerifier": "79",
-    "inviteId": "84"
-}	duration=0.0ms	caller=handler/loghandler.go:162	trace=8e722c115990a61be30537163eead369	span=04981473af8f65ba
-2023-06-26T10:16:52.305+08:00	[31;1m error [0m	pingResp: pong:"pong"	caller=ping/pinglogic.go:29
-2023-06-26T10:17:46.713+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7326 - Apifox/1.0.0 (https://www.apifox.cn)
-POST /v1/user/userLogin HTTP/1.1
-Host: 192.168.1.104:8888
-Accept: */*
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Content-Length: 71
-Content-Type: application/json
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
-
-{
-    "code": "45646",
-    "codeVerifier": "79",
-    "inviteId": "84"
-}	duration=0.0ms	caller=handler/loghandler.go:162	trace=eb82644d5fa01df8a257c623e769e993	span=2a88a83b0a59514c
-2023-06-26T10:18:35.574+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7379 - Apifox/1.0.0 (https://www.apifox.cn)
-POST /v1/user/userLogin HTTP/1.1
-Host: 192.168.1.104:8888
-Accept: */*
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Content-Length: 71
-Content-Type: application/json
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
-
-{
-    "code": "45646",
-    "codeVerifier": "79",
-    "inviteId": "84"
-}	duration=0.0ms	caller=handler/loghandler.go:162	trace=616b14b62b5c940ea76cd29c5f6aeb5b	span=c8cd859fe55fb0fd
-2023-06-26T10:18:37.006+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7379 - Apifox/1.0.0 (https://www.apifox.cn)
-POST /v1/user/userLogin HTTP/1.1
-Host: 192.168.1.104:8888
-Accept: */*
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Content-Length: 71
-Content-Type: application/json
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
-
-{
-    "code": "45646",
-    "codeVerifier": "79",
-    "inviteId": "84"
-}	duration=0.0ms	caller=handler/loghandler.go:162	trace=bf31208c9a8f7bcf11084842c790a13c	span=3d35f05e4933d135
-2023-06-26T10:19:28.241+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7422 - Apifox/1.0.0 (https://www.apifox.cn)
-POST /v1/user/userLogin HTTP/1.1
-Host: 192.168.1.104:8888
-Accept: */*
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Content-Length: 71
-Content-Type: application/json
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
-
-{
-    "code": "45646",
-    "codeVerifier": "79",
-    "inviteId": "84"
-}	duration=0.0ms	caller=handler/loghandler.go:162	trace=e9b8801b273587ca776ebe4209240ad8	span=777f9d3361ffdb6f
-2023-06-26T10:19:48.585+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7440 - Apifox/1.0.0 (https://www.apifox.cn)
-POST /v1/user/userLogin HTTP/1.1
-Host: 192.168.1.104:8888
-Accept: */*
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Content-Length: 71
-Content-Type: application/json
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
-
-{
-    "code": "45646",
-    "codeVerifier": "79",
-    "inviteId": "84"
-}	duration=0.5ms	caller=handler/loghandler.go:162	trace=116ea52ac94a3ec008e997f4b0ce26b1	span=b23ab62d2ff53523
-2023-06-26T10:20:15.700+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-26T10:21:10.688+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7497 - Apifox/1.0.0 (https://www.apifox.cn)
-POST /v1/user/userLogin HTTP/1.1
-Host: 192.168.1.104:8888
-Accept: */*
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Content-Length: 69
-Content-Type: application/json
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
-
-{
-    "twitterUrl": "asdasdasdasdasdasd",
-    "inviteId": "1231234"
-}	duration=0.6ms	caller=handler/loghandler.go:162	trace=ded03d16e8ec5b89512fd840c151ebbd	span=ef0a4ffddf0c1e00
-2023-06-26T10:21:16.656+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7510 - Apifox/1.0.0 (https://www.apifox.cn)
-POST /v1/user/userLogin HTTP/1.1
-Host: 192.168.1.104:8888
-Accept: */*
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Content-Length: 71
-Content-Type: application/json
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
-
-{
-    "code": "45646",
-    "codeVerifier": "79",
-    "inviteId": "84"
-}	duration=0.0ms	caller=handler/loghandler.go:162	trace=e79d6184d42a0777f8a7afe008065398	span=897b2e1bcaf143b6
-2023-06-26T10:22:14.915+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/user.rpc/user.User/CheckTwitterId - twitter_id:"12313123456" - rpc error: code = Unknown desc = sql: no rows in result set	duration=321.2ms	caller=clientinterceptors/durationinterceptor.go:35	trace=033aa07e23e6078318e55f6d6aa218f8	span=a366cbccb25c82ae
-2023-06-26T10:23:25.655+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/user.rpc/user.User/CheckTwitterId - twitter_id:"12321312" - rpc error: code = Unknown desc = sql: no rows in result set	duration=280.0ms	caller=clientinterceptors/durationinterceptor.go:35	trace=5b68e30fa1be4423dc91f0a1c20d3ee9	span=9da9900dacbb8498
-2023-06-26T10:25:15.565+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7761 - Apifox/1.0.0 (https://www.apifox.cn)
-POST /v1/user/userLogin HTTP/1.1
-Host: 192.168.1.104:8888
-Accept: */*
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Content-Length: 217
-Content-Type: application/json
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
-
-{
-    "code": "UG1nc3ZNY0NMYkJPaFJvMlhNaHM3WFByVXhxd2l1TG1iY1VFQTloR0tkMVRoOjE2ODc3NDU0MTU1Mzc6MToxOmFjOjE",
-    "codeVerifier": "rDREgO8omXiYMQgTR2f5-x7.aIsgD3InkdUX~GYzTrbmb~tx9a3Q5vNFhN7qmcia",
-    "inviteId": ""
-}	duration=126.7ms	caller=handler/loghandler.go:162	trace=6d3d729fea14ba74aeb810b0eedd9501	span=33b2f7b49d77ba6c
-2023-06-26T10:26:55.301+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-26T10:31:04.614+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-26T10:42:51.264+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-26T10:47:10.958+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-26T11:18:05.764+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-26T11:25:25.469+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-26T11:59:05.268+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
-2023-06-26T14:56:39.513+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-26T14:57:59.203+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-26T14:59:07.656+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
-2023-06-26T15:23:49.834+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+    "userId": "550e8400-e29b-41d4-a716-446655440000",
+    "currPage": "1",
+    "maxNum": "10",
+    "status": "1"
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=fdba1e5209bfd6772e9d7619bc3a7d06	span=45eb9679d7fae48f
+2023-06-26T17:35:01.161+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30

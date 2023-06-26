@@ -32,8 +32,8 @@ const (
 	User_AddBlackList_FullMethodName                  = "/user.User/AddBlackList"
 	User_QueryBlackList_FullMethodName                = "/user.User/QueryBlackList"
 	User_RemoveBlackList_FullMethodName               = "/user.User/RemoveBlackList"
-	User_GetHelpCategories_FullMethodName             = "/user.User/GetHelpCategories"
 	User_CreateHelpCategory_FullMethodName            = "/user.User/CreateHelpCategory"
+	User_GetHelpCategories_FullMethodName             = "/user.User/GetHelpCategories"
 	User_DeleteHelpCategory_FullMethodName            = "/user.User/DeleteHelpCategory"
 	User_EditHelpCategory_FullMethodName              = "/user.User/EditHelpCategory"
 	User_CreateHelpCategoryTranslation_FullMethodName = "/user.User/CreateHelpCategoryTranslation"
@@ -58,8 +58,8 @@ type UserClient interface {
 	AddBlackList(ctx context.Context, in *AddBlackListRequest, opts ...grpc.CallOption) (*AddBlackListResponse, error)
 	QueryBlackList(ctx context.Context, in *QueryBlackListRequest, opts ...grpc.CallOption) (*QueryBlackListResponse, error)
 	RemoveBlackList(ctx context.Context, in *RemoveBlackListRequest, opts ...grpc.CallOption) (*RemoveBlackListResponse, error)
-	GetHelpCategories(ctx context.Context, in *GetHelpCategoriesRequest, opts ...grpc.CallOption) (*GetHelpCategoriesResponse, error)
 	CreateHelpCategory(ctx context.Context, in *CreateHelpCategoryRequest, opts ...grpc.CallOption) (*CreateHelpCategoryResponse, error)
+	GetHelpCategories(ctx context.Context, in *GetHelpCategoriesRequest, opts ...grpc.CallOption) (*GetHelpCategoriesResponse, error)
 	DeleteHelpCategory(ctx context.Context, in *DeleteHelpCategoryRequest, opts ...grpc.CallOption) (*DeleteHelpCategoryResponse, error)
 	EditHelpCategory(ctx context.Context, in *EditHelpCategoryRequest, opts ...grpc.CallOption) (*EditHelpCategoryResponse, error)
 	CreateHelpCategoryTranslation(ctx context.Context, in *CreateHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*CreateHelpCategoryTranslationResponse, error)
@@ -192,18 +192,18 @@ func (c *userClient) RemoveBlackList(ctx context.Context, in *RemoveBlackListReq
 	return out, nil
 }
 
-func (c *userClient) GetHelpCategories(ctx context.Context, in *GetHelpCategoriesRequest, opts ...grpc.CallOption) (*GetHelpCategoriesResponse, error) {
-	out := new(GetHelpCategoriesResponse)
-	err := c.cc.Invoke(ctx, User_GetHelpCategories_FullMethodName, in, out, opts...)
+func (c *userClient) CreateHelpCategory(ctx context.Context, in *CreateHelpCategoryRequest, opts ...grpc.CallOption) (*CreateHelpCategoryResponse, error) {
+	out := new(CreateHelpCategoryResponse)
+	err := c.cc.Invoke(ctx, User_CreateHelpCategory_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) CreateHelpCategory(ctx context.Context, in *CreateHelpCategoryRequest, opts ...grpc.CallOption) (*CreateHelpCategoryResponse, error) {
-	out := new(CreateHelpCategoryResponse)
-	err := c.cc.Invoke(ctx, User_CreateHelpCategory_FullMethodName, in, out, opts...)
+func (c *userClient) GetHelpCategories(ctx context.Context, in *GetHelpCategoriesRequest, opts ...grpc.CallOption) (*GetHelpCategoriesResponse, error) {
+	out := new(GetHelpCategoriesResponse)
+	err := c.cc.Invoke(ctx, User_GetHelpCategories_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -272,8 +272,8 @@ type UserServer interface {
 	AddBlackList(context.Context, *AddBlackListRequest) (*AddBlackListResponse, error)
 	QueryBlackList(context.Context, *QueryBlackListRequest) (*QueryBlackListResponse, error)
 	RemoveBlackList(context.Context, *RemoveBlackListRequest) (*RemoveBlackListResponse, error)
-	GetHelpCategories(context.Context, *GetHelpCategoriesRequest) (*GetHelpCategoriesResponse, error)
 	CreateHelpCategory(context.Context, *CreateHelpCategoryRequest) (*CreateHelpCategoryResponse, error)
+	GetHelpCategories(context.Context, *GetHelpCategoriesRequest) (*GetHelpCategoriesResponse, error)
 	DeleteHelpCategory(context.Context, *DeleteHelpCategoryRequest) (*DeleteHelpCategoryResponse, error)
 	EditHelpCategory(context.Context, *EditHelpCategoryRequest) (*EditHelpCategoryResponse, error)
 	CreateHelpCategoryTranslation(context.Context, *CreateHelpCategoryTranslationRequest) (*CreateHelpCategoryTranslationResponse, error)
@@ -325,11 +325,11 @@ func (UnimplementedUserServer) QueryBlackList(context.Context, *QueryBlackListRe
 func (UnimplementedUserServer) RemoveBlackList(context.Context, *RemoveBlackListRequest) (*RemoveBlackListResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RemoveBlackList not implemented")
 }
-func (UnimplementedUserServer) GetHelpCategories(context.Context, *GetHelpCategoriesRequest) (*GetHelpCategoriesResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetHelpCategories not implemented")
-}
 func (UnimplementedUserServer) CreateHelpCategory(context.Context, *CreateHelpCategoryRequest) (*CreateHelpCategoryResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateHelpCategory not implemented")
+}
+func (UnimplementedUserServer) GetHelpCategories(context.Context, *GetHelpCategoriesRequest) (*GetHelpCategoriesResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetHelpCategories not implemented")
 }
 func (UnimplementedUserServer) DeleteHelpCategory(context.Context, *DeleteHelpCategoryRequest) (*DeleteHelpCategoryResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteHelpCategory not implemented")
@@ -593,24 +593,6 @@ func _User_RemoveBlackList_Handler(srv interface{}, ctx context.Context, dec fun
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_GetHelpCategories_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetHelpCategoriesRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(UserServer).GetHelpCategories(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: User_GetHelpCategories_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).GetHelpCategories(ctx, req.(*GetHelpCategoriesRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _User_CreateHelpCategory_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CreateHelpCategoryRequest)
 	if err := dec(in); err != nil {
@@ -625,6 +607,24 @@ func _User_CreateHelpCategory_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(UserServer).CreateHelpCategory(ctx, req.(*CreateHelpCategoryRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_GetHelpCategories_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetHelpCategoriesRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).GetHelpCategories(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_GetHelpCategories_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).GetHelpCategories(ctx, req.(*GetHelpCategoriesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -779,12 +779,12 @@ var User_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _User_RemoveBlackList_Handler,
 		},
 		{
-			MethodName: "GetHelpCategories",
-			Handler:    _User_GetHelpCategories_Handler,
-		},
-		{
 			MethodName: "CreateHelpCategory",
 			Handler:    _User_CreateHelpCategory_Handler,
+		},
+		{
+			MethodName: "GetHelpCategories",
+			Handler:    _User_GetHelpCategories_Handler,
 		},
 		{
 			MethodName: "DeleteHelpCategory",

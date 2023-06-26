@@ -2,9 +2,8 @@
 package types
 
 type UserLogin struct {
-	Code         string `json:"code"`
-	CodeVerifier string `json:"codeVerifier"`
-	InviteId     string `json:"inviteId"`
+	TwitterUrl string `json:"twitterUrl"`
+	InviteId   string `json:"inviteId"`
 }
 
 type UserLoginReply struct {
@@ -31,93 +30,263 @@ type HelpCategoryList struct {
 	LanguageCode string `json:"languageCode"`
 }
 
-type GetHelpCategoryList struct {
-	LanguageCode string `json:"languageCode"`
-}
-
 type HelpCategoryListReply struct {
-	CategoryList []CategoryList `json:"categoryList"`
-}
-
-type CategoryList struct {
 	CategoryId   int64  `json:"categoryId"`
 	CategoryName string `json:"categoryName"`
 }
 
-type CurrentOnlinePersonReply struct {
-	CurrentOnlinePerson int64 `json:"currentOnlinePerson"`
+type CreatePublishTaskInput struct {
+	Creator      string        `json:"creator"`
+	TweetAddress string        `json:"tweetAddress"`
+	Label        []string      `json:"label"`
+	AwardBudget  float64       `json:"awardBudget"`
+	MaxUser      int64         `json:"maxUser"`
+	AwardAmount  float64       `json:"awardAmount"`
+	TaskDemand   []*TaskDemand `json:"taskDemand"`
 }
 
-type RegisteredPopulationReply struct {
-	RegisteredPopulation int64 `json:"registeredPopulation"`
+type TaskDemand struct {
+	TaskID     uint   `json:"taskId"`
+	TaskName   int    `json:"taskName"`
+	TaskDemand string `json:"taskDemand"`
+	Article    string `json:"article"`
 }
 
-type GetUserListByCondition struct {
-	BlackStatus int64  `json:"blackStatus"` //冻结状态
-	PageNum     int64  `json:"pageNum"`     //页码
-	PageSize    int64  `json:"pageSize"`    //每页条数
-	OrderType   string `json:"order"`       //排序
-	TwitterId   string `json:"twitterId"`   //推特id
+type Mistake struct {
+	Msg string `json:"msg"`
 }
 
-type GetUserListByConditionReply struct {
-	TwitterId     string `json:"twitterId"`     //推特id
-	UserID        int64  `json:"userId"`        //用户id
-	RegisterAt    int64  `json:"registerAt"`    //注册时间
-	RecomendBy    string `json:"recomendBy"`    //推荐人
-	IsBlacklisted int64  `json:"isBlacklisted"` //是否冻结
+type RePublishTask struct {
+	PaginationData   PaginationData      `json:"paging"`
+	RePublishTaskBak []*RePublishTaskBak `json:"data"`
 }
 
-type BatchUpdateUserBlackStatus struct {
-	UserIdList  []int64 `json:"userIdList"`  //用户id列表
-	BlackStatus int64   `json:"blackStatus"` //冻结状态
+type RePublishTaskBak struct {
+	TaskID        uint64        `json:"taskId"`
+	CreatedAt     string        `json:"createdAt"`
+	Creator       string        `json:"creator"`
+	CreatorName   string        `json:"creatorName"`
+	CreatorNick   string        `json:"creatorNick"`
+	CreatorAvatar string        `json:"creatorAvatar"`
+	Status        int32         `json:"status"`
+	TweetDetails  string        `json:"tweetDetails"`
+	TweetPicture  string        `json:"tweetPicture"`
+	Label         string        `json:"label"`
+	AwardBudget   float64       `json:"awardBudget"`
+	MaxUser       int32         `json:"maxUser"`
+	AwardAmount   float64       `json:"awardAmount"`
+	EndTime       string        `json:"endTime"`
+	Accomplish    int32         `json:"accomplish"`
+	TaskDemand    []*TaskDemand `json:"taskDemand"`
 }
 
-type BatchUpdateUserBlackStatusReply struct {
-	UserIdList  []int64 `json:"userIdList"`  //用户id列表
-	BlackStatus int64   `json:"blackStatus"` //冻结状态
+type PaginationData struct {
+	Total   int64 `json:"total"`
+	Page    int64 `json:"page"`
+	PerPage int64 `json:"per_page"`
 }
 
-type CreateAdminUser struct {
-	AdminName     string `json:"adminName"`     //管理员名称
-	AdminPassword string `json:"adminPassword"` //管理员密码
+type PublishTaskInput struct {
+	Status   int64 `json:"status"`
+	CurrPage int64 `json:"currPage"`
+	MaxNum   int64 `json:"maxNum"`
 }
 
-type CreateAdminUserReply struct {
-	Token string `json:"token"`
+type ReTaskDetails struct {
+	RePublishTaskBak RePublishTaskBak  `json:"publishTask"`
+	ParticipantBak   []*ParticipantBak `json:"participant"`
+	TaskDemandBak    []*TaskDemandBak  `json:"taskStatus"`
 }
 
-type GetHelpDocumentTitleList struct {
-	HelpCategoryId int64  `json:"helpCategoryId"` //帮助文档分类id
-	LanguageCode   string `json:"languageCode"`   //语言编码
+type TaskDetailsInput struct {
+	TaskId uint64 `json:"taskId"`
+	UserId string `json:"userId"`
 }
 
-type GetHelpDocumentTitleListReply struct {
-	HelpDocumentTitleList []HelpDocumentTitleList `json:"helpDocumentTitleList"`
+type ParticipantBak struct {
+	UserId      string  `json:"userId"`
+	UserName    string  `json:"userName"`
+	NickName    string  `json:"nickName"`
+	Avatar      string  `json:"avatar"`
+	AwardAmount float64 `json:"awardAmount"`
+	TaskID      uint64  `json:"taskId"`
+	Status      int32   `json:"status"`
 }
 
-type HelpDocumentTitleList struct {
-	HelpDocumentId int64  `json:"helpDocumentId"` //帮助文档id
-	DocumentTitle  string `json:"DocumentTitle"`  //帮助文档标题
-	LanguageCode   string `json:"languageCode"`   //语言编码
+type TaskDemandBak struct {
+	TaskID     uint64 `json:"taskId"`
+	TaskName   int64  `json:"taskName"`
+	TaskDemand string `json:"taskDemand"`
+	Article    string `json:"article"`
+	Status     int32  `json:"status"`
 }
 
-type HelpDocumentTitleListReply struct {
-	HelpDocumentTitleList []HelpDocumentTitleList `json:"helpDocumentTitleList"`
+type UserLaunchTaskListInput struct {
+	UserId   string `json:"userId"`
+	CurrPage int64  `json:"currPage"`
+	MaxNum   int64  `json:"maxNum"`
+	Status   int64  `json:"status"`
 }
 
-type GetContentByHelpDocumentId struct {
-	HelpDocumentId int64  `json:"helpDocumentId"` //帮助文档id
-	LanguageCode   string `json:"languageCode"`   //语言编码
+type CreateLabelInput struct {
+	UserId string `json:"userId"`
+	Label  string `json:"label"`
 }
 
-type ContentByHelpDocumentIdReply struct {
-	HelpDocumentId  int64  `json:"helpDocumentId"`    //帮助文档id
-	DocumentContent string `json:"documentContent"`   //帮助文档内容
-	LanguageCode    string `json:"languageCode"`      //语言编码
-	DocumentTitle   string `json:"helpDocumentTitle"` //帮助文档标题
+type TaskIDInquireInput struct {
+	Id uint64 `json:"id"`
 }
 
-type GetContentByHelpDocumentIdReply struct {
-	ContextByHelpDocumentId []ContentByHelpDocumentIdReply `json:"contextByHelpDocumentId"`
+type UserIDInquireInput struct {
+	UserId string `json:"userId"`
+}
+
+type ReLabelListOut struct {
+	ReLabelList []*ReLabelList `json:"reLabelList"`
+}
+
+type ReLabelList struct {
+	Id      uint64 `json:"id"`
+	Creator string `json:"creator"`
+	Content string `json:"content"`
+}
+
+type PerformTaskInput struct {
+	TaskId uint64 `json:"taskId"`
+	UserId string `json:"userId"`
+}
+
+type VoluntarilyTaskScheduleInput struct {
+	UserId string `json:"userId"`
+	TaskId int64  `json:"taskId"`
+	Genre  int64  `json:"genre"`
+}
+
+type TreasureTaskSrtInput struct {
+	Id                uint64               `json:"id"`
+	Name              string               `json:"name"`
+	DemandIntegral    int64                `json:"demandIntegral"`
+	TaskReward        int64                `json:"taskReward"`
+	ExperienceReward  int64                `json:"experienceReward"`
+	RewardQuantity    int64                `json:"rewardQuantity"`
+	TreasureTaskStage []*TreasureTaskStage `json:"treasureTaskStage"`
+}
+
+type TreasureTaskStage struct {
+	ID               int64 `json:"iD"`
+	Treasure         int64 `json:"treasure"`
+	TreasureSequence int64 `json:"treasureSequence"`
+	StageExperience  int64 `json:"stageExperience"`
+	StageReward      int64 `json:"stageReward"`
+}
+
+type TreasureTaskInput struct {
+	Id     uint64 `json:"id"`
+	Status int32  `json:"status"`
+}
+
+type TreasureTaskListInput struct {
+	Name     string `json:"name"`
+	Reward   int64  `json:"reward"`
+	CurrPage int64  `json:"currPage"`
+	MaxNum   int64  `json:"maxNum"`
+}
+
+type ReTreasureTaskSrt struct {
+	PaginationData       PaginationData          `json:"paginationData"`
+	TreasureTaskSrtInput []*TreasureTaskSrtInput `json:"treasureTaskSrtInput"`
+}
+
+type ReSubtaskStyle struct {
+	SubtaskStyle []*SubtaskStyle `json:"subtaskStyle"`
+}
+
+type SubtaskStyle struct {
+	TaskId         int64  `json:"taskId"`
+	TaskName       string `json:"taskName"`
+	TaskNameEng    string `json:"taskNameEng"`
+	TaskDetails    string `json:"taskDetails"`
+	TaskDetailsEng string `json:"taskDetailsEng"`
+	TaskStatus     int64  `json:"taskStatus"`
+}
+
+type AssociatedSubtaskSrt struct {
+	AssociatedId   uint64 `json:"associatedId"`
+	TaskId         uint64 `json:"taskId"`
+	TreasureId     uint64 `json:"treasureId"`
+	TaskName       string `json:"taskName"`
+	TaskNameEng    string `json:"taskNameEng"`
+	TaskDetails    string `json:"taskDetails"`
+	TaskDetailsEng string `json:"taskDetailsEng"`
+	TaskStatus     int64  `json:"taskStatus"`
+	Reward         int64  `json:"reward"`
+	Experience     int64  `json:"experience"`
+	Number         int64  `json:"number"`
+	Article        string `json:"article"`
+	Link           string `json:"link"`
+	Label          string `json:"label"`
+}
+
+type ReAssociatedSubtask struct {
+	AssociatedSubtask []*AssociatedSubtask `json:"associatedSubtask"`
+}
+
+type AssociatedSubtask struct {
+	TaskId         uint64 `json:"taskId"`
+	TaskName       string `json:"taskName"`
+	TaskNameEng    string `json:"taskNameEng"`
+	TaskDetails    string `json:"taskDetails"`
+	TaskDetailsEng string `json:"taskDetailsEng"`
+	TaskStatus     int64  `json:"taskStatus"`
+	Reward         int64  `json:"reward"`
+	Experience     int64  `json:"experience"`
+	Number         int64  `json:"number"`
+	Article        string `json:"article"`
+	Link           string `json:"link"`
+	Label          string `json:"label"`
+	TreasureId     uint64 `json:"treasureId"`
+}
+
+type AmendChestCollectionInput struct {
+	UserId string `json:"userId"`
+	Amount int64  `json:"amount"`
+}
+
+type ReChestCollectionSrt struct {
+	SerId                 string                   `json:"serId"`
+	DemandIntegral        int64                    `json:"demandIntegral"`
+	ChestAmount           int64                    `json:"chestAmount"`
+	RewardQuantity        int64                    `json:"rewardQuantity"`
+	TreasureTaskStageSeed []*TreasureTaskStageSeed `json:"treasureTaskStageSeed"`
+	AssociatedSubtaskSeed []*AssociatedSubtaskSeed `json:"associatedSubtaskSeed"`
+}
+
+type TreasureTaskStageSeed struct {
+	Treasure         int64   `json:"treasure"`
+	TreasureSequence int64   `json:"treasureSequence"`
+	StageExperience  int64   `json:"stageExperience"`
+	TreasureRatio    float64 `json:"treasureRatio"`
+	StageReward      int64   `json:"stageReward"`
+}
+
+type AssociatedSubtaskSeed struct {
+	TreasureId     int64  `json:"treasureId"`
+	TaskId         int64  `json:"taskId"`
+	TaskName       string `json:"taskName"`
+	TaskNameEng    string `json:"taskNameEng"`
+	TaskDetails    string `json:"taskDetails"`
+	TaskDetailsEng string `json:"taskDetailsEng"`
+	TaskStatus     int64  `json:"taskStatus"`
+	Reward         int64  `json:"reward"`
+	Experience     int64  `json:"experience"`
+	Number         int64  `json:"number"`
+	Article        string `json:"article"`
+	Link           string `json:"link"`
+	Label          string `json:"label"`
+	Complete       int64  `json:"complete"`
+}
+
+type CreateUserPowerTaskInput struct {
+	PublishesUserId string `json:"publishesUserId"`
+	HelperUserId    string `json:"helperUserId"`
 }

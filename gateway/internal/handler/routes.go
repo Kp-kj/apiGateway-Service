@@ -5,6 +5,8 @@ import (
 	"net/http"
 
 	admin "gateway/internal/handler/admin"
+	curatorial "gateway/internal/handler/curatorial"
+	everyday "gateway/internal/handler/everyday"
 	ping "gateway/internal/handler/ping"
 	user "gateway/internal/handler/user"
 	"gateway/internal/svc"
@@ -32,19 +34,9 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Handler: user.UserHandler(serverCtx),
 			},
 			{
-				Method:  http.MethodPost,
+				Method:  http.MethodGet,
 				Path:    "/user/getHelpCategoryList",
 				Handler: user.GetHelpCategoryListHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodGet,
-				Path:    "/user/getHelpDocumentTitleList",
-				Handler: user.GetHelpDocumentTitleListHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodGet,
-				Path:    "/user/getContentByHelpDocumentId",
-				Handler: user.GetContentByHelpDocumentIdHandler(serverCtx),
 			},
 		},
 		rest.WithPrefix("/v1"),
@@ -77,11 +69,6 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Path:    "/admin/adminLogin",
 				Handler: admin.AdminLoginHandler(serverCtx),
 			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/admin/createAdminUser",
-				Handler: admin.CreateAdminUserHandler(serverCtx),
-			},
 		},
 		rest.WithPrefix("/v1"),
 	)
@@ -93,33 +80,122 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Path:    "/admin/adminLogout",
 				Handler: admin.AdminLogoutHandler(serverCtx),
 			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/admin/getCurrentOnlinePerson",
-				Handler: admin.GetCurrentOnlinePersonHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/admin/getRegisteredPopulation",
-				Handler: admin.GetRegisteredPopulationHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/admin/getUserInfo",
-				Handler: admin.AdminUserInfoHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/admin/getUserListByCondition",
-				Handler: admin.GetUserListByConditionHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/admin/batchUpdateUserBlackStatus",
-				Handler: admin.BatchUpdateUserBlackStatusHandler(serverCtx),
-			},
 		},
 		rest.WithJwt(serverCtx.Config.AdminAuth.AccessSecret),
+		rest.WithPrefix("/v1"),
+	)
+
+	server.AddRoutes(
+		[]rest.Route{
+			{
+				Method:  http.MethodPost,
+				Path:    "/curatorial/create",
+				Handler: curatorial.CreateCuratorialTaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/curatorial/list",
+				Handler: curatorial.QueryTaskListHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/curatorial/details",
+				Handler: curatorial.QueryTaskDetailsHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/curatorial/user/list",
+				Handler: curatorial.QueryUserLaunchTaskListHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/curatorial/label/create",
+				Handler: curatorial.CreateLabelHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/curatorial/label/delete",
+				Handler: curatorial.DeleteLabelHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/curatorial/label/list",
+				Handler: curatorial.GetLabelListHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/curatorial/verify",
+				Handler: curatorial.PerformTaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/curatorial/voluntarily",
+				Handler: curatorial.VoluntarilyTaskScheduleHandler(serverCtx),
+			},
+		},
+		rest.WithJwt(serverCtx.Config.Auth.AccessSecret),
+		rest.WithPrefix("/v1"),
+	)
+
+	server.AddRoutes(
+		[]rest.Route{
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/treasure/amend",
+				Handler: everyday.AmendTreasureTaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/treasure/change",
+				Handler: everyday.ChangeTreasureTaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/everyday/treasure/list",
+				Handler: everyday.QueryTreasureTaskListHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/everyday/subtask/list",
+				Handler: everyday.QuerySubtaskStyleHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/subtask/amend",
+				Handler: everyday.AmendAssociatedSubtaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/subtask/delete",
+				Handler: everyday.DeleteAssociatedSubtaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/everyday/subtask/treasureId",
+				Handler: everyday.QueryAssociatedSubtaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/chest/amemd",
+				Handler: everyday.AmendChestCollectionHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/everyday/chest/schedule",
+				Handler: everyday.QueryChestCollectionHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/subtask/power",
+				Handler: everyday.CreateUserPowerTaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/subtask/create",
+				Handler: everyday.CreateSubtaskStyleHandler(serverCtx),
+			},
+		},
+		rest.WithJwt(serverCtx.Config.Auth.AccessSecret),
 		rest.WithPrefix("/v1"),
 	)
 }
