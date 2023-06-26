@@ -123,3 +123,246 @@ User-Agent: PostmanRuntime/7.32.2
 2023-06-25T18:09:44.595+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
 2023-06-25T18:14:59.554+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
 2023-06-25T18:16:19.247+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T10:11:27.974+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T10:12:01.526+08:00	[31;1m error [0m	pingResp: pong:"pong"	caller=ping/pinglogic.go:27
+2023-06-26T10:13:08.283+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T10:13:58.260+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7123 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/user/userLogin HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 55
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "twitterUrl": "45646",
+    "inviteId": "123213"
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=01b9e41d8fe203b731758e51c329f408	span=7cafa07ddab6cf5f
+2023-06-26T10:14:02.886+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7128 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/user/userLogin HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 71
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "code": "45646",
+    "codeVerifier": "79",
+    "inviteId": "84"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=e19556b7c1a4c71c808625c61a2d6156	span=9d6e5c9f59e15f86
+2023-06-26T10:14:32.712+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7162 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/user/userLogin HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 71
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "code": "45646",
+    "codeVerifier": "79",
+    "inviteId": "84"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=d9f1f3f52bdaeec4016155a91c388680	span=f5e219807d8f4bbb
+2023-06-26T10:14:44.674+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7169 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/user/userLogin HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 71
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "code": "45646",
+    "codeVerifier": "79",
+    "inviteId": "84"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=89c503d30631adb871763d9452af187e	span=a003e6003af5eefa
+2023-06-26T10:14:46.401+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7169 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/user/userLogin HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 71
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "code": "45646",
+    "codeVerifier": "79",
+    "inviteId": "84"
+}	duration=0.6ms	caller=handler/loghandler.go:162	trace=bd5d0e6920d8113d1c84d3c9768567d9	span=0861d3c7e0639b70
+2023-06-26T10:15:13.633+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7192 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/user/userLogin HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 71
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "code": "45646",
+    "codeVerifier": "79",
+    "inviteId": "84"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=dd6aa1f9e425a42a55cbbd21173e549c	span=d6e126c4297a040f
+2023-06-26T10:15:30.488+08:00	[31;1m error [0m	pingResp: pong:"pong"	caller=ping/pinglogic.go:27
+2023-06-26T10:16:13.954+08:00	[31;1m error [0m	pingResp: pong:"pong"	caller=ping/pinglogic.go:28
+2023-06-26T10:16:21.241+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7259 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/user/userLogin HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 71
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "code": "45646",
+    "codeVerifier": "79",
+    "inviteId": "84"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=8e722c115990a61be30537163eead369	span=04981473af8f65ba
+2023-06-26T10:16:52.305+08:00	[31;1m error [0m	pingResp: pong:"pong"	caller=ping/pinglogic.go:29
+2023-06-26T10:17:46.713+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7326 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/user/userLogin HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 71
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "code": "45646",
+    "codeVerifier": "79",
+    "inviteId": "84"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=eb82644d5fa01df8a257c623e769e993	span=2a88a83b0a59514c
+2023-06-26T10:18:35.574+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7379 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/user/userLogin HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 71
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "code": "45646",
+    "codeVerifier": "79",
+    "inviteId": "84"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=616b14b62b5c940ea76cd29c5f6aeb5b	span=c8cd859fe55fb0fd
+2023-06-26T10:18:37.006+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7379 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/user/userLogin HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 71
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "code": "45646",
+    "codeVerifier": "79",
+    "inviteId": "84"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=bf31208c9a8f7bcf11084842c790a13c	span=3d35f05e4933d135
+2023-06-26T10:19:28.241+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7422 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/user/userLogin HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 71
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "code": "45646",
+    "codeVerifier": "79",
+    "inviteId": "84"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=e9b8801b273587ca776ebe4209240ad8	span=777f9d3361ffdb6f
+2023-06-26T10:19:48.585+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7440 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/user/userLogin HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 71
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "code": "45646",
+    "codeVerifier": "79",
+    "inviteId": "84"
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=116ea52ac94a3ec008e997f4b0ce26b1	span=b23ab62d2ff53523
+2023-06-26T10:20:15.700+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T10:21:10.688+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7497 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/user/userLogin HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 69
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "twitterUrl": "asdasdasdasdasdasd",
+    "inviteId": "1231234"
+}	duration=0.6ms	caller=handler/loghandler.go:162	trace=ded03d16e8ec5b89512fd840c151ebbd	span=ef0a4ffddf0c1e00
+2023-06-26T10:21:16.656+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7510 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/user/userLogin HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 71
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "code": "45646",
+    "codeVerifier": "79",
+    "inviteId": "84"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=e79d6184d42a0777f8a7afe008065398	span=897b2e1bcaf143b6
+2023-06-26T10:22:14.915+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/user.rpc/user.User/CheckTwitterId - twitter_id:"12313123456" - rpc error: code = Unknown desc = sql: no rows in result set	duration=321.2ms	caller=clientinterceptors/durationinterceptor.go:35	trace=033aa07e23e6078318e55f6d6aa218f8	span=a366cbccb25c82ae
+2023-06-26T10:23:25.655+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/user.rpc/user.User/CheckTwitterId - twitter_id:"12321312" - rpc error: code = Unknown desc = sql: no rows in result set	duration=280.0ms	caller=clientinterceptors/durationinterceptor.go:35	trace=5b68e30fa1be4423dc91f0a1c20d3ee9	span=9da9900dacbb8498
+2023-06-26T10:25:15.565+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/user/userLogin - 192.168.1.104:7761 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/user/userLogin HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 217
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "code": "UG1nc3ZNY0NMYkJPaFJvMlhNaHM3WFByVXhxd2l1TG1iY1VFQTloR0tkMVRoOjE2ODc3NDU0MTU1Mzc6MToxOmFjOjE",
+    "codeVerifier": "rDREgO8omXiYMQgTR2f5-x7.aIsgD3InkdUX~GYzTrbmb~tx9a3Q5vNFhN7qmcia",
+    "inviteId": ""
+}	duration=126.7ms	caller=handler/loghandler.go:162	trace=6d3d729fea14ba74aeb810b0eedd9501	span=33b2f7b49d77ba6c
+2023-06-26T10:26:55.301+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T10:31:04.614+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T10:42:51.264+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T10:47:10.958+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T11:18:05.764+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T11:25:25.469+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T11:59:05.268+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T14:56:39.513+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T14:57:59.203+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-26T14:59:07.656+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-26T15:23:49.834+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30

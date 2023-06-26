@@ -260,3 +260,777 @@
 2023-06-25T18:20:19.245+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
 2023-06-25T18:21:19.213+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=7.2Mi, Sys=19.7Mi, NumGC=6	caller=stat/usage.go:61
 2023-06-25T18:21:19.244+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:12:01.526+08:00	[32;1m stat [0m	p2c - conn: 192.168.1.104:8080, load: 1068, reqs: 1	caller=p2c/p2c.go:181
+2023-06-26T10:12:27.938+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.9Mi, TotalAlloc=6.7Mi, Sys=19.2Mi, NumGC=2	caller=stat/usage.go:61
+2023-06-26T10:12:28.516+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 1, pass: 1, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:13:01.528+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 1.0ms, med: 1.2ms, 90th: 1.2ms, 99th: 1.2ms, 99.9th: 1.2ms	caller=stat/metrics.go:210
+2023-06-26T10:13:27.939+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=4.2Mi, TotalAlloc=6.9Mi, Sys=19.2Mi, NumGC=2	caller=stat/usage.go:61
+2023-06-26T10:13:28.516+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:15:30.094+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=6.7Mi, Sys=19.2Mi, NumGC=3	caller=stat/usage.go:61
+2023-06-26T10:15:30.120+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 4, pass: 4, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:15:30.488+08:00	[32;1m stat [0m	p2c - conn: 192.168.1.104:8080, load: 1029, reqs: 1	caller=p2c/p2c.go:181
+2023-06-26T10:15:32.712+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.1/s, drops: 0, avg time: 0.2ms, med: 0.6ms, 90th: 1.1ms, 99th: 1.1ms, 99.9th: 1.1ms	caller=stat/metrics.go:210
+2023-06-26T10:16:13.954+08:00	[32;1m stat [0m	p2c - conn: 192.168.1.104:8080, load: 1398, reqs: 1	caller=p2c/p2c.go:181
+2023-06-26T10:16:52.305+08:00	[32;1m stat [0m	p2c - conn: 192.168.1.104:8080, load: 709, reqs: 1	caller=p2c/p2c.go:181
+2023-06-26T10:19:35.359+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=6.7Mi, Sys=14.8Mi, NumGC=3	caller=stat/usage.go:61
+2023-06-26T10:19:35.396+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 3, pass: 3, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:19:35.575+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.1/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:20:35.360+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=4.0Mi, TotalAlloc=7.0Mi, Sys=18.9Mi, NumGC=3	caller=stat/usage.go:61
+2023-06-26T10:20:35.396+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 1, pass: 1, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:20:35.575+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:22:14.915+08:00	[32;1m stat [0m	p2c - conn: 192.168.1.104:8080, load: 17919, reqs: 1	caller=p2c/p2c.go:181
+2023-06-26T10:23:25.655+08:00	[32;1m stat [0m	p2c - conn: 192.168.1.104:8080, load: 16729, reqs: 1	caller=p2c/p2c.go:181
+2023-06-26T10:24:31.964+08:00	[32;1m stat [0m	p2c - conn: 192.168.1.104:8080, load: 17647, reqs: 1	caller=p2c/p2c.go:181
+2023-06-26T10:24:53.088+08:00	[32;1m stat [0m	p2c - conn: 192.168.1.104:8080, load: 10016, reqs: 1	caller=p2c/p2c.go:181
+2023-06-26T10:26:14.966+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=6.7Mi, Sys=19.4Mi, NumGC=3	caller=stat/usage.go:61
+2023-06-26T10:26:14.994+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 1, pass: 1, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:26:15.565+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 126.0ms, med: 126.7ms, 90th: 126.7ms, 99th: 126.7ms, 99.9th: 126.7ms	caller=stat/metrics.go:210
+2023-06-26T10:27:14.966+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=6.9Mi, Sys=19.4Mi, NumGC=3	caller=stat/usage.go:61
+2023-06-26T10:27:14.995+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:27:15.565+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:28:14.966+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=6.9Mi, Sys=19.4Mi, NumGC=4	caller=stat/usage.go:61
+2023-06-26T10:28:14.995+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:28:15.565+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:29:14.966+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.0Mi, Sys=19.4Mi, NumGC=4	caller=stat/usage.go:61
+2023-06-26T10:29:14.995+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:29:15.566+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:29:27.766+08:00	[32;1m stat [0m	p2c - conn: 192.168.1.104:8080, load: 15202, reqs: 1	caller=p2c/p2c.go:181
+2023-06-26T10:30:24.281+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=6.8Mi, Sys=14.5Mi, NumGC=3	caller=stat/usage.go:61
+2023-06-26T10:30:24.305+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 1, pass: 1, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:30:27.767+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 739.0ms, med: 739.1ms, 90th: 739.1ms, 99th: 739.1ms, 99.9th: 739.1ms	caller=stat/metrics.go:210
+2023-06-26T10:31:24.281+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.8Mi, TotalAlloc=7.0Mi, Sys=14.5Mi, NumGC=3	caller=stat/usage.go:61
+2023-06-26T10:31:24.306+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:31:27.767+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:32:24.282+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.0Mi, Sys=14.8Mi, NumGC=4	caller=stat/usage.go:61
+2023-06-26T10:32:24.306+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:32:27.767+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:33:24.282+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=7.1Mi, Sys=14.8Mi, NumGC=4	caller=stat/usage.go:61
+2023-06-26T10:33:24.305+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:33:27.768+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:34:24.281+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.1Mi, Sys=15.0Mi, NumGC=5	caller=stat/usage.go:61
+2023-06-26T10:34:24.305+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:34:27.768+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:35:24.281+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=7.2Mi, Sys=15.0Mi, NumGC=5	caller=stat/usage.go:61
+2023-06-26T10:35:24.305+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:35:27.769+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:36:24.282+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.2Mi, Sys=15.0Mi, NumGC=6	caller=stat/usage.go:61
+2023-06-26T10:36:24.305+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:36:27.767+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:37:24.281+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.3Mi, Sys=15.0Mi, NumGC=6	caller=stat/usage.go:61
+2023-06-26T10:37:24.305+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:37:27.767+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:38:24.281+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.3Mi, Sys=15.0Mi, NumGC=7	caller=stat/usage.go:61
+2023-06-26T10:38:24.306+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:38:27.767+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:39:24.280+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.3Mi, Sys=15.0Mi, NumGC=7	caller=stat/usage.go:61
+2023-06-26T10:39:24.306+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:39:27.767+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:40:24.282+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.4Mi, Sys=15.0Mi, NumGC=8	caller=stat/usage.go:61
+2023-06-26T10:40:24.306+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:40:27.767+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:41:11.572+08:00	[32;1m stat [0m	p2c - conn: 192.168.1.104:8080, load: 17300, reqs: 1	caller=p2c/p2c.go:181
+2023-06-26T10:42:10.920+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=4.0Mi, TotalAlloc=6.7Mi, Sys=18.9Mi, NumGC=2	caller=stat/usage.go:61
+2023-06-26T10:42:10.945+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 1, pass: 1, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:42:11.573+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 299.0ms, med: 299.9ms, 90th: 299.9ms, 99th: 299.9ms, 99.9th: 299.9ms	caller=stat/metrics.go:210
+2023-06-26T10:43:10.920+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=4.2Mi, TotalAlloc=7.0Mi, Sys=18.9Mi, NumGC=2	caller=stat/usage.go:61
+2023-06-26T10:43:10.946+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:43:11.574+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:44:10.922+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.0Mi, Sys=19.2Mi, NumGC=3	caller=stat/usage.go:61
+2023-06-26T10:44:10.946+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:44:11.572+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:45:10.921+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=7.0Mi, Sys=19.2Mi, NumGC=3	caller=stat/usage.go:61
+2023-06-26T10:45:10.947+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:45:11.573+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:46:10.921+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.0Mi, Sys=19.2Mi, NumGC=4	caller=stat/usage.go:61
+2023-06-26T10:46:10.946+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:46:11.572+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:47:10.920+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=7.2Mi, Sys=19.2Mi, NumGC=4	caller=stat/usage.go:61
+2023-06-26T10:47:10.947+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:47:11.573+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:48:10.920+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=7.3Mi, Sys=19.2Mi, NumGC=5	caller=stat/usage.go:61
+2023-06-26T10:48:10.947+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:48:11.572+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:49:10.920+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=7.3Mi, Sys=19.2Mi, NumGC=5	caller=stat/usage.go:61
+2023-06-26T10:49:10.945+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:49:11.572+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T10:50:10.921+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.3Mi, Sys=19.2Mi, NumGC=6	caller=stat/usage.go:61
+2023-06-26T10:50:10.946+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T10:50:11.572+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:15:53.270+08:00	[32;1m stat [0m	p2c - conn: 192.168.1.104:8080, load: 13721, reqs: 1	caller=p2c/p2c.go:181
+2023-06-26T11:16:31.197+08:00	[32;1m stat [0m	p2c - conn: 192.168.1.104:8080, load: 6084, reqs: 1	caller=p2c/p2c.go:181
+2023-06-26T11:17:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=6.7Mi, Sys=18.9Mi, NumGC=3	caller=stat/usage.go:61
+2023-06-26T11:17:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 1, pass: 1, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:17:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 185.0ms, med: 185.4ms, 90th: 185.4ms, 99th: 185.4ms, 99.9th: 185.4ms	caller=stat/metrics.go:210
+2023-06-26T11:17:31.831+08:00	[32;1m stat [0m	p2c - conn: 192.168.1.104:8080, load: 13710, reqs: 3	caller=p2c/p2c.go:181
+2023-06-26T11:18:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.9Mi, TotalAlloc=7.1Mi, Sys=18.9Mi, NumGC=3	caller=stat/usage.go:61
+2023-06-26T11:18:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 1, pass: 1, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:18:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 336.0ms, med: 336.1ms, 90th: 336.1ms, 99th: 336.1ms, 99.9th: 336.1ms	caller=stat/metrics.go:210
+2023-06-26T11:19:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=7.1Mi, Sys=18.9Mi, NumGC=4	caller=stat/usage.go:61
+2023-06-26T11:19:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:19:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:20:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=7.1Mi, Sys=18.9Mi, NumGC=4	caller=stat/usage.go:61
+2023-06-26T11:20:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:20:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:21:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.1Mi, Sys=18.9Mi, NumGC=5	caller=stat/usage.go:61
+2023-06-26T11:21:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:21:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:22:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.2Mi, Sys=18.9Mi, NumGC=5	caller=stat/usage.go:61
+2023-06-26T11:22:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:22:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:23:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=7.3Mi, Sys=18.9Mi, NumGC=6	caller=stat/usage.go:61
+2023-06-26T11:23:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:23:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:24:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=7.3Mi, Sys=18.9Mi, NumGC=6	caller=stat/usage.go:61
+2023-06-26T11:24:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:24:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:25:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.3Mi, Sys=18.9Mi, NumGC=7	caller=stat/usage.go:61
+2023-06-26T11:25:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:25:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:26:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=7.5Mi, Sys=18.9Mi, NumGC=7	caller=stat/usage.go:61
+2023-06-26T11:26:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:26:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:27:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.5Mi, Sys=18.9Mi, NumGC=8	caller=stat/usage.go:61
+2023-06-26T11:27:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:27:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:28:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=7.6Mi, Sys=18.9Mi, NumGC=8	caller=stat/usage.go:61
+2023-06-26T11:28:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:28:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:29:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.7Mi, Sys=19.4Mi, NumGC=9	caller=stat/usage.go:61
+2023-06-26T11:29:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:29:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:30:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.7Mi, Sys=19.4Mi, NumGC=9	caller=stat/usage.go:61
+2023-06-26T11:30:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:30:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:31:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.7Mi, Sys=19.4Mi, NumGC=10	caller=stat/usage.go:61
+2023-06-26T11:31:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:31:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:32:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.7Mi, Sys=19.4Mi, NumGC=10	caller=stat/usage.go:61
+2023-06-26T11:32:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:32:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:33:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=7.9Mi, Sys=19.4Mi, NumGC=11	caller=stat/usage.go:61
+2023-06-26T11:33:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:33:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:34:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=7.9Mi, Sys=19.4Mi, NumGC=11	caller=stat/usage.go:61
+2023-06-26T11:34:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:34:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:35:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.9Mi, Sys=19.4Mi, NumGC=12	caller=stat/usage.go:61
+2023-06-26T11:35:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:35:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:36:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.9Mi, Sys=19.4Mi, NumGC=12	caller=stat/usage.go:61
+2023-06-26T11:36:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:36:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:37:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=7.9Mi, Sys=19.4Mi, NumGC=13	caller=stat/usage.go:61
+2023-06-26T11:37:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:37:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:38:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=8.1Mi, Sys=19.4Mi, NumGC=13	caller=stat/usage.go:61
+2023-06-26T11:38:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:38:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:39:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=8.1Mi, Sys=19.4Mi, NumGC=14	caller=stat/usage.go:61
+2023-06-26T11:39:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:39:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:40:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=8.1Mi, Sys=19.4Mi, NumGC=14	caller=stat/usage.go:61
+2023-06-26T11:40:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:40:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:41:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=8.1Mi, Sys=19.4Mi, NumGC=15	caller=stat/usage.go:61
+2023-06-26T11:41:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:41:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:42:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=8.1Mi, Sys=19.4Mi, NumGC=15	caller=stat/usage.go:61
+2023-06-26T11:42:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:42:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:43:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=8.3Mi, Sys=19.4Mi, NumGC=16	caller=stat/usage.go:61
+2023-06-26T11:43:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:43:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:44:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=8.3Mi, Sys=19.4Mi, NumGC=16	caller=stat/usage.go:61
+2023-06-26T11:44:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:44:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:45:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=8.3Mi, Sys=19.4Mi, NumGC=17	caller=stat/usage.go:61
+2023-06-26T11:45:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:45:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:46:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=8.4Mi, Sys=19.4Mi, NumGC=17	caller=stat/usage.go:61
+2023-06-26T11:46:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:46:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:47:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=8.4Mi, Sys=19.4Mi, NumGC=18	caller=stat/usage.go:61
+2023-06-26T11:47:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:47:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:48:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=8.5Mi, Sys=19.4Mi, NumGC=18	caller=stat/usage.go:61
+2023-06-26T11:48:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:48:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:49:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=8.5Mi, Sys=19.4Mi, NumGC=19	caller=stat/usage.go:61
+2023-06-26T11:49:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:49:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:50:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=8.5Mi, Sys=19.4Mi, NumGC=19	caller=stat/usage.go:61
+2023-06-26T11:50:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:50:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:51:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=8.6Mi, Sys=19.4Mi, NumGC=20	caller=stat/usage.go:61
+2023-06-26T11:51:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:51:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:52:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=8.6Mi, Sys=19.4Mi, NumGC=20	caller=stat/usage.go:61
+2023-06-26T11:52:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:52:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:53:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=8.7Mi, Sys=19.4Mi, NumGC=21	caller=stat/usage.go:61
+2023-06-26T11:53:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:53:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:54:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=8.7Mi, Sys=19.4Mi, NumGC=21	caller=stat/usage.go:61
+2023-06-26T11:54:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:54:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:55:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=8.8Mi, Sys=19.4Mi, NumGC=22	caller=stat/usage.go:61
+2023-06-26T11:55:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:55:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:56:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=8.8Mi, Sys=19.4Mi, NumGC=22	caller=stat/usage.go:61
+2023-06-26T11:56:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:56:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:57:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=8.8Mi, Sys=19.4Mi, NumGC=23	caller=stat/usage.go:61
+2023-06-26T11:57:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:57:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:58:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=8.9Mi, Sys=19.4Mi, NumGC=23	caller=stat/usage.go:61
+2023-06-26T11:58:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:58:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T11:59:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=9.0Mi, Sys=19.4Mi, NumGC=24	caller=stat/usage.go:61
+2023-06-26T11:59:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T11:59:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:00:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=9.0Mi, Sys=19.4Mi, NumGC=24	caller=stat/usage.go:61
+2023-06-26T12:00:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:00:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:01:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.0Mi, Sys=19.4Mi, NumGC=25	caller=stat/usage.go:61
+2023-06-26T12:01:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:01:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:02:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.1Mi, Sys=19.4Mi, NumGC=25	caller=stat/usage.go:61
+2023-06-26T12:02:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:02:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:03:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.1Mi, Sys=19.4Mi, NumGC=26	caller=stat/usage.go:61
+2023-06-26T12:03:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:03:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:04:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.1Mi, Sys=19.4Mi, NumGC=26	caller=stat/usage.go:61
+2023-06-26T12:04:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:04:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:05:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.1Mi, Sys=19.4Mi, NumGC=27	caller=stat/usage.go:61
+2023-06-26T12:05:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:05:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:06:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.2Mi, Sys=19.4Mi, NumGC=27	caller=stat/usage.go:61
+2023-06-26T12:06:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:06:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:07:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.2Mi, Sys=19.4Mi, NumGC=28	caller=stat/usage.go:61
+2023-06-26T12:07:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:07:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:08:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.2Mi, Sys=19.4Mi, NumGC=28	caller=stat/usage.go:61
+2023-06-26T12:08:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:08:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:09:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.2Mi, Sys=19.4Mi, NumGC=29	caller=stat/usage.go:61
+2023-06-26T12:09:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:09:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:10:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.2Mi, Sys=19.4Mi, NumGC=29	caller=stat/usage.go:61
+2023-06-26T12:10:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:10:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:11:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.3Mi, Sys=19.4Mi, NumGC=30	caller=stat/usage.go:61
+2023-06-26T12:11:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:11:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:12:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.3Mi, Sys=19.4Mi, NumGC=30	caller=stat/usage.go:61
+2023-06-26T12:12:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:12:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:13:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.3Mi, Sys=19.4Mi, NumGC=31	caller=stat/usage.go:61
+2023-06-26T12:13:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:13:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:14:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.3Mi, Sys=19.4Mi, NumGC=31	caller=stat/usage.go:61
+2023-06-26T12:14:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:14:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:15:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.4Mi, Sys=19.4Mi, NumGC=32	caller=stat/usage.go:61
+2023-06-26T12:15:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:15:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:16:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.4Mi, Sys=19.4Mi, NumGC=32	caller=stat/usage.go:61
+2023-06-26T12:16:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:16:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:17:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.4Mi, Sys=19.4Mi, NumGC=33	caller=stat/usage.go:61
+2023-06-26T12:17:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:17:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:18:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.4Mi, Sys=19.4Mi, NumGC=33	caller=stat/usage.go:61
+2023-06-26T12:18:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:18:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:19:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.4Mi, Sys=19.4Mi, NumGC=34	caller=stat/usage.go:61
+2023-06-26T12:19:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:19:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:20:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.5Mi, Sys=19.4Mi, NumGC=34	caller=stat/usage.go:61
+2023-06-26T12:20:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:20:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:21:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.5Mi, Sys=19.4Mi, NumGC=35	caller=stat/usage.go:61
+2023-06-26T12:21:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:21:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:22:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.5Mi, Sys=19.4Mi, NumGC=35	caller=stat/usage.go:61
+2023-06-26T12:22:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:22:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:23:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.5Mi, Sys=19.4Mi, NumGC=36	caller=stat/usage.go:61
+2023-06-26T12:23:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:23:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:24:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.5Mi, Sys=19.4Mi, NumGC=36	caller=stat/usage.go:61
+2023-06-26T12:24:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:24:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:25:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.6Mi, Sys=19.4Mi, NumGC=37	caller=stat/usage.go:61
+2023-06-26T12:25:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:25:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:26:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.6Mi, Sys=19.4Mi, NumGC=37	caller=stat/usage.go:61
+2023-06-26T12:26:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:26:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:27:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.6Mi, Sys=19.4Mi, NumGC=38	caller=stat/usage.go:61
+2023-06-26T12:27:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:27:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:28:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.6Mi, Sys=19.4Mi, NumGC=38	caller=stat/usage.go:61
+2023-06-26T12:28:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:28:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:29:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.6Mi, Sys=19.4Mi, NumGC=39	caller=stat/usage.go:61
+2023-06-26T12:29:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:29:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:30:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.7Mi, Sys=19.4Mi, NumGC=39	caller=stat/usage.go:61
+2023-06-26T12:30:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:30:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:31:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.7Mi, Sys=19.4Mi, NumGC=40	caller=stat/usage.go:61
+2023-06-26T12:31:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:31:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:32:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.7Mi, Sys=19.4Mi, NumGC=40	caller=stat/usage.go:61
+2023-06-26T12:32:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:32:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:33:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.7Mi, Sys=19.4Mi, NumGC=41	caller=stat/usage.go:61
+2023-06-26T12:33:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:33:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:34:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.8Mi, Sys=19.4Mi, NumGC=41	caller=stat/usage.go:61
+2023-06-26T12:34:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:34:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:35:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.8Mi, Sys=19.4Mi, NumGC=42	caller=stat/usage.go:61
+2023-06-26T12:35:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:35:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:36:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.8Mi, Sys=19.4Mi, NumGC=42	caller=stat/usage.go:61
+2023-06-26T12:36:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:36:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:37:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.8Mi, Sys=19.4Mi, NumGC=43	caller=stat/usage.go:61
+2023-06-26T12:37:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:37:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:38:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.8Mi, Sys=19.4Mi, NumGC=43	caller=stat/usage.go:61
+2023-06-26T12:38:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:38:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:39:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.9Mi, Sys=19.4Mi, NumGC=44	caller=stat/usage.go:61
+2023-06-26T12:39:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:39:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:40:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.9Mi, Sys=19.4Mi, NumGC=44	caller=stat/usage.go:61
+2023-06-26T12:40:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:40:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:41:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.9Mi, Sys=19.4Mi, NumGC=45	caller=stat/usage.go:61
+2023-06-26T12:41:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:41:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:42:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.9Mi, Sys=19.4Mi, NumGC=45	caller=stat/usage.go:61
+2023-06-26T12:42:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:42:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:43:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=9.9Mi, Sys=19.4Mi, NumGC=46	caller=stat/usage.go:61
+2023-06-26T12:43:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:43:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:44:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.0Mi, Sys=19.4Mi, NumGC=46	caller=stat/usage.go:61
+2023-06-26T12:44:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:44:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:45:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.0Mi, Sys=19.4Mi, NumGC=47	caller=stat/usage.go:61
+2023-06-26T12:45:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:45:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:46:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.0Mi, Sys=19.4Mi, NumGC=47	caller=stat/usage.go:61
+2023-06-26T12:46:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:46:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:47:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.0Mi, Sys=19.4Mi, NumGC=48	caller=stat/usage.go:61
+2023-06-26T12:47:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:47:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:48:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.0Mi, Sys=19.4Mi, NumGC=48	caller=stat/usage.go:61
+2023-06-26T12:48:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:48:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:49:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.1Mi, Sys=19.4Mi, NumGC=49	caller=stat/usage.go:61
+2023-06-26T12:49:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:49:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:50:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.1Mi, Sys=19.4Mi, NumGC=49	caller=stat/usage.go:61
+2023-06-26T12:50:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:50:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:51:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.1Mi, Sys=19.4Mi, NumGC=50	caller=stat/usage.go:61
+2023-06-26T12:51:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:51:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:52:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.1Mi, Sys=19.4Mi, NumGC=50	caller=stat/usage.go:61
+2023-06-26T12:52:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:52:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:53:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.2Mi, Sys=19.4Mi, NumGC=51	caller=stat/usage.go:61
+2023-06-26T12:53:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:53:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:54:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.2Mi, Sys=19.4Mi, NumGC=51	caller=stat/usage.go:61
+2023-06-26T12:54:25.465+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:54:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:55:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.2Mi, Sys=19.4Mi, NumGC=52	caller=stat/usage.go:61
+2023-06-26T12:55:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:55:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:56:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.2Mi, Sys=19.4Mi, NumGC=52	caller=stat/usage.go:61
+2023-06-26T12:56:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:56:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:57:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.2Mi, Sys=19.4Mi, NumGC=53	caller=stat/usage.go:61
+2023-06-26T12:57:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:57:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:58:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.3Mi, Sys=19.4Mi, NumGC=53	caller=stat/usage.go:61
+2023-06-26T12:58:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:58:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T12:59:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.3Mi, Sys=19.4Mi, NumGC=54	caller=stat/usage.go:61
+2023-06-26T12:59:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T12:59:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:00:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.3Mi, Sys=19.4Mi, NumGC=54	caller=stat/usage.go:61
+2023-06-26T13:00:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:00:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:01:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.3Mi, Sys=19.4Mi, NumGC=55	caller=stat/usage.go:61
+2023-06-26T13:01:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:01:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:02:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.3Mi, Sys=19.4Mi, NumGC=55	caller=stat/usage.go:61
+2023-06-26T13:02:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:02:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:03:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.4Mi, Sys=19.4Mi, NumGC=56	caller=stat/usage.go:61
+2023-06-26T13:03:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:03:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:04:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.4Mi, Sys=19.4Mi, NumGC=56	caller=stat/usage.go:61
+2023-06-26T13:04:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:04:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:05:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.4Mi, Sys=19.4Mi, NumGC=57	caller=stat/usage.go:61
+2023-06-26T13:05:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:05:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:06:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.4Mi, Sys=19.4Mi, NumGC=57	caller=stat/usage.go:61
+2023-06-26T13:06:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:06:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:07:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.4Mi, Sys=19.4Mi, NumGC=58	caller=stat/usage.go:61
+2023-06-26T13:07:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:07:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:08:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.5Mi, Sys=19.4Mi, NumGC=58	caller=stat/usage.go:61
+2023-06-26T13:08:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:08:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:09:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.5Mi, Sys=19.4Mi, NumGC=59	caller=stat/usage.go:61
+2023-06-26T13:09:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:09:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:10:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.5Mi, Sys=19.4Mi, NumGC=59	caller=stat/usage.go:61
+2023-06-26T13:10:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:10:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:11:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.5Mi, Sys=19.4Mi, NumGC=60	caller=stat/usage.go:61
+2023-06-26T13:11:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:11:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:12:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.6Mi, Sys=19.4Mi, NumGC=60	caller=stat/usage.go:61
+2023-06-26T13:12:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:12:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:13:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.6Mi, Sys=19.4Mi, NumGC=61	caller=stat/usage.go:61
+2023-06-26T13:13:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:13:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:14:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.6Mi, Sys=19.4Mi, NumGC=61	caller=stat/usage.go:61
+2023-06-26T13:14:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:14:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:15:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.6Mi, Sys=19.4Mi, NumGC=62	caller=stat/usage.go:61
+2023-06-26T13:15:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:15:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:16:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.6Mi, Sys=19.4Mi, NumGC=62	caller=stat/usage.go:61
+2023-06-26T13:16:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:16:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:17:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.7Mi, Sys=19.4Mi, NumGC=63	caller=stat/usage.go:61
+2023-06-26T13:17:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:17:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:18:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.7Mi, Sys=19.4Mi, NumGC=63	caller=stat/usage.go:61
+2023-06-26T13:18:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:18:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:19:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.7Mi, Sys=19.4Mi, NumGC=64	caller=stat/usage.go:61
+2023-06-26T13:19:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:19:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:20:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.7Mi, Sys=19.4Mi, NumGC=64	caller=stat/usage.go:61
+2023-06-26T13:20:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:20:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:21:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.7Mi, Sys=19.4Mi, NumGC=65	caller=stat/usage.go:61
+2023-06-26T13:21:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:21:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:22:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.8Mi, Sys=19.4Mi, NumGC=65	caller=stat/usage.go:61
+2023-06-26T13:22:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:22:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:23:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.8Mi, Sys=19.4Mi, NumGC=66	caller=stat/usage.go:61
+2023-06-26T13:23:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:23:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:24:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.8Mi, Sys=19.4Mi, NumGC=66	caller=stat/usage.go:61
+2023-06-26T13:24:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:24:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:25:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.8Mi, Sys=19.4Mi, NumGC=67	caller=stat/usage.go:61
+2023-06-26T13:25:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:25:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:26:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.8Mi, Sys=19.4Mi, NumGC=67	caller=stat/usage.go:61
+2023-06-26T13:26:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:26:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:27:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.9Mi, Sys=19.4Mi, NumGC=68	caller=stat/usage.go:61
+2023-06-26T13:27:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:27:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:28:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.9Mi, Sys=19.4Mi, NumGC=68	caller=stat/usage.go:61
+2023-06-26T13:28:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:28:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:29:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.9Mi, Sys=19.4Mi, NumGC=69	caller=stat/usage.go:61
+2023-06-26T13:29:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:29:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:30:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=10.9Mi, Sys=19.4Mi, NumGC=69	caller=stat/usage.go:61
+2023-06-26T13:30:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:30:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:31:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.0Mi, Sys=19.4Mi, NumGC=70	caller=stat/usage.go:61
+2023-06-26T13:31:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:31:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:32:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.0Mi, Sys=19.4Mi, NumGC=70	caller=stat/usage.go:61
+2023-06-26T13:32:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:32:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:33:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.0Mi, Sys=19.4Mi, NumGC=71	caller=stat/usage.go:61
+2023-06-26T13:33:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:33:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:34:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.0Mi, Sys=19.4Mi, NumGC=71	caller=stat/usage.go:61
+2023-06-26T13:34:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:34:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:35:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.0Mi, Sys=19.4Mi, NumGC=72	caller=stat/usage.go:61
+2023-06-26T13:35:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:35:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:36:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.1Mi, Sys=19.4Mi, NumGC=72	caller=stat/usage.go:61
+2023-06-26T13:36:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:36:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:37:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.1Mi, Sys=19.4Mi, NumGC=73	caller=stat/usage.go:61
+2023-06-26T13:37:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:37:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:38:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.1Mi, Sys=19.4Mi, NumGC=73	caller=stat/usage.go:61
+2023-06-26T13:38:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:38:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:39:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.1Mi, Sys=19.4Mi, NumGC=74	caller=stat/usage.go:61
+2023-06-26T13:39:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:39:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:40:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.1Mi, Sys=19.4Mi, NumGC=74	caller=stat/usage.go:61
+2023-06-26T13:40:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:40:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:41:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.2Mi, Sys=19.4Mi, NumGC=75	caller=stat/usage.go:61
+2023-06-26T13:41:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:41:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:42:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.2Mi, Sys=19.4Mi, NumGC=75	caller=stat/usage.go:61
+2023-06-26T13:42:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:42:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:43:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.2Mi, Sys=19.4Mi, NumGC=76	caller=stat/usage.go:61
+2023-06-26T13:43:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:43:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:44:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.2Mi, Sys=19.4Mi, NumGC=76	caller=stat/usage.go:61
+2023-06-26T13:44:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:44:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:45:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.2Mi, Sys=19.4Mi, NumGC=77	caller=stat/usage.go:61
+2023-06-26T13:45:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:45:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:46:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.3Mi, Sys=19.4Mi, NumGC=77	caller=stat/usage.go:61
+2023-06-26T13:46:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:46:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:47:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.3Mi, Sys=19.4Mi, NumGC=78	caller=stat/usage.go:61
+2023-06-26T13:47:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:47:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:48:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.3Mi, Sys=19.4Mi, NumGC=78	caller=stat/usage.go:61
+2023-06-26T13:48:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:48:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:49:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.3Mi, Sys=19.4Mi, NumGC=79	caller=stat/usage.go:61
+2023-06-26T13:49:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:49:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:50:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.4Mi, Sys=19.4Mi, NumGC=79	caller=stat/usage.go:61
+2023-06-26T13:50:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:50:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:51:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.4Mi, Sys=19.4Mi, NumGC=80	caller=stat/usage.go:61
+2023-06-26T13:51:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:51:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:52:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.4Mi, Sys=19.4Mi, NumGC=80	caller=stat/usage.go:61
+2023-06-26T13:52:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:52:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:53:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.4Mi, Sys=19.4Mi, NumGC=81	caller=stat/usage.go:61
+2023-06-26T13:53:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:53:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:54:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.4Mi, Sys=19.4Mi, NumGC=81	caller=stat/usage.go:61
+2023-06-26T13:54:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:54:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:55:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.5Mi, Sys=19.4Mi, NumGC=82	caller=stat/usage.go:61
+2023-06-26T13:55:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:55:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:56:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.5Mi, Sys=19.4Mi, NumGC=82	caller=stat/usage.go:61
+2023-06-26T13:56:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:56:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:57:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.5Mi, Sys=19.4Mi, NumGC=83	caller=stat/usage.go:61
+2023-06-26T13:57:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:57:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:58:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.5Mi, Sys=19.4Mi, NumGC=83	caller=stat/usage.go:61
+2023-06-26T13:58:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:58:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T13:59:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.5Mi, Sys=19.4Mi, NumGC=84	caller=stat/usage.go:61
+2023-06-26T13:59:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T13:59:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:00:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.6Mi, Sys=19.4Mi, NumGC=84	caller=stat/usage.go:61
+2023-06-26T14:00:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:00:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:01:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.6Mi, Sys=19.4Mi, NumGC=85	caller=stat/usage.go:61
+2023-06-26T14:01:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:01:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:02:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.6Mi, Sys=19.4Mi, NumGC=85	caller=stat/usage.go:61
+2023-06-26T14:02:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:02:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:03:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.6Mi, Sys=19.4Mi, NumGC=86	caller=stat/usage.go:61
+2023-06-26T14:03:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:03:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:04:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.6Mi, Sys=19.4Mi, NumGC=86	caller=stat/usage.go:61
+2023-06-26T14:04:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:04:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:05:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.7Mi, Sys=19.4Mi, NumGC=87	caller=stat/usage.go:61
+2023-06-26T14:05:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:05:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:06:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.7Mi, Sys=19.4Mi, NumGC=87	caller=stat/usage.go:61
+2023-06-26T14:06:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:06:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:07:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.7Mi, Sys=19.4Mi, NumGC=88	caller=stat/usage.go:61
+2023-06-26T14:07:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:07:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:08:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.7Mi, Sys=19.4Mi, NumGC=88	caller=stat/usage.go:61
+2023-06-26T14:08:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:08:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:09:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.7Mi, Sys=19.4Mi, NumGC=89	caller=stat/usage.go:61
+2023-06-26T14:09:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:09:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:10:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.8Mi, Sys=19.4Mi, NumGC=89	caller=stat/usage.go:61
+2023-06-26T14:10:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:10:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:11:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.8Mi, Sys=19.4Mi, NumGC=90	caller=stat/usage.go:61
+2023-06-26T14:11:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:11:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:12:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.8Mi, Sys=19.4Mi, NumGC=90	caller=stat/usage.go:61
+2023-06-26T14:12:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:12:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:13:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.8Mi, Sys=19.4Mi, NumGC=91	caller=stat/usage.go:61
+2023-06-26T14:13:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:13:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:14:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.9Mi, Sys=19.4Mi, NumGC=91	caller=stat/usage.go:61
+2023-06-26T14:14:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:14:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:15:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.9Mi, Sys=19.4Mi, NumGC=92	caller=stat/usage.go:61
+2023-06-26T14:15:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:15:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:16:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.9Mi, Sys=19.4Mi, NumGC=92	caller=stat/usage.go:61
+2023-06-26T14:16:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:16:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:17:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.9Mi, Sys=19.4Mi, NumGC=93	caller=stat/usage.go:61
+2023-06-26T14:17:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:17:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:18:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=11.9Mi, Sys=19.4Mi, NumGC=93	caller=stat/usage.go:61
+2023-06-26T14:18:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:18:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:19:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.0Mi, Sys=19.4Mi, NumGC=94	caller=stat/usage.go:61
+2023-06-26T14:19:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:19:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:20:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.0Mi, Sys=19.4Mi, NumGC=94	caller=stat/usage.go:61
+2023-06-26T14:20:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:20:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:21:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.0Mi, Sys=19.4Mi, NumGC=95	caller=stat/usage.go:61
+2023-06-26T14:21:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:21:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:22:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.0Mi, Sys=19.4Mi, NumGC=95	caller=stat/usage.go:61
+2023-06-26T14:22:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:22:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:23:25.426+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.0Mi, Sys=19.4Mi, NumGC=96	caller=stat/usage.go:61
+2023-06-26T14:23:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:23:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:24:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.1Mi, Sys=19.4Mi, NumGC=96	caller=stat/usage.go:61
+2023-06-26T14:24:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:24:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:25:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.1Mi, Sys=19.4Mi, NumGC=97	caller=stat/usage.go:61
+2023-06-26T14:25:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:25:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:26:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.1Mi, Sys=19.4Mi, NumGC=97	caller=stat/usage.go:61
+2023-06-26T14:26:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:26:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:27:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.1Mi, Sys=19.4Mi, NumGC=98	caller=stat/usage.go:61
+2023-06-26T14:27:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:27:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:28:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.1Mi, Sys=19.4Mi, NumGC=98	caller=stat/usage.go:61
+2023-06-26T14:28:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:28:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:29:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.2Mi, Sys=19.4Mi, NumGC=99	caller=stat/usage.go:61
+2023-06-26T14:29:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:29:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:30:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.2Mi, Sys=19.4Mi, NumGC=99	caller=stat/usage.go:61
+2023-06-26T14:30:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:30:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:31:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.2Mi, Sys=19.4Mi, NumGC=100	caller=stat/usage.go:61
+2023-06-26T14:31:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:31:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:32:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.2Mi, Sys=19.4Mi, NumGC=100	caller=stat/usage.go:61
+2023-06-26T14:32:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:32:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:33:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.3Mi, Sys=19.4Mi, NumGC=101	caller=stat/usage.go:61
+2023-06-26T14:33:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:33:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:34:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.3Mi, Sys=19.4Mi, NumGC=101	caller=stat/usage.go:61
+2023-06-26T14:34:25.463+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:34:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:35:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=12.3Mi, Sys=19.4Mi, NumGC=102	caller=stat/usage.go:61
+2023-06-26T14:35:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:35:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:36:05.540+08:00	[32;1m stat [0m	p2c - conn: 192.168.1.104:8080, load: 16196, reqs: 1	caller=p2c/p2c.go:181
+2023-06-26T14:36:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=12.5Mi, Sys=19.4Mi, NumGC=102	caller=stat/usage.go:61
+2023-06-26T14:36:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 1, pass: 1, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:36:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 414.0ms, med: 414.2ms, 90th: 414.2ms, 99th: 414.2ms, 99.9th: 414.2ms	caller=stat/metrics.go:210
+2023-06-26T14:37:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=12.5Mi, Sys=19.4Mi, NumGC=103	caller=stat/usage.go:61
+2023-06-26T14:37:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:37:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:38:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=12.6Mi, Sys=19.4Mi, NumGC=103	caller=stat/usage.go:61
+2023-06-26T14:38:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:38:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:39:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=12.6Mi, Sys=19.4Mi, NumGC=104	caller=stat/usage.go:61
+2023-06-26T14:39:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:39:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:40:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=12.6Mi, Sys=19.4Mi, NumGC=104	caller=stat/usage.go:61
+2023-06-26T14:40:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:40:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:41:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=12.7Mi, Sys=19.4Mi, NumGC=105	caller=stat/usage.go:61
+2023-06-26T14:41:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:41:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:42:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=12.8Mi, Sys=19.4Mi, NumGC=105	caller=stat/usage.go:61
+2023-06-26T14:42:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:42:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:43:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=12.8Mi, Sys=19.4Mi, NumGC=106	caller=stat/usage.go:61
+2023-06-26T14:43:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:43:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:44:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=12.8Mi, Sys=19.4Mi, NumGC=106	caller=stat/usage.go:61
+2023-06-26T14:44:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:44:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:45:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=12.8Mi, Sys=19.4Mi, NumGC=107	caller=stat/usage.go:61
+2023-06-26T14:45:25.457+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:45:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:46:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=13.0Mi, Sys=19.4Mi, NumGC=107	caller=stat/usage.go:61
+2023-06-26T14:46:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:46:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:47:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=13.0Mi, Sys=19.4Mi, NumGC=108	caller=stat/usage.go:61
+2023-06-26T14:47:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:47:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:48:25.425+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=13.0Mi, Sys=19.4Mi, NumGC=108	caller=stat/usage.go:61
+2023-06-26T14:48:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:48:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:49:25.423+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=13.0Mi, Sys=19.4Mi, NumGC=109	caller=stat/usage.go:61
+2023-06-26T14:49:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:49:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:50:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=13.0Mi, Sys=19.4Mi, NumGC=109	caller=stat/usage.go:61
+2023-06-26T14:50:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:50:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:51:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=13.2Mi, Sys=19.4Mi, NumGC=110	caller=stat/usage.go:61
+2023-06-26T14:51:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:51:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:52:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=13.2Mi, Sys=19.4Mi, NumGC=110	caller=stat/usage.go:61
+2023-06-26T14:52:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:52:31.345+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:53:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=13.2Mi, Sys=19.4Mi, NumGC=111	caller=stat/usage.go:61
+2023-06-26T14:53:25.455+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:53:31.346+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:54:25.424+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.6Mi, TotalAlloc=13.2Mi, Sys=19.4Mi, NumGC=111	caller=stat/usage.go:61
+2023-06-26T14:54:25.456+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:54:31.347+08:00	[32;1m stat [0m	(gateway-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210
+2023-06-26T14:55:59.165+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.4Mi, TotalAlloc=6.6Mi, Sys=14.8Mi, NumGC=3	caller=stat/usage.go:61
+2023-06-26T14:55:59.199+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:56:59.164+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=6.8Mi, Sys=14.8Mi, NumGC=3	caller=stat/usage.go:61
+2023-06-26T14:56:59.199+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:57:59.164+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=6.9Mi, Sys=15.3Mi, NumGC=4	caller=stat/usage.go:61
+2023-06-26T14:57:59.200+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:58:59.164+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.7Mi, TotalAlloc=7.0Mi, Sys=15.3Mi, NumGC=4	caller=stat/usage.go:61
+2023-06-26T14:58:59.199+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T14:59:59.164+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=7.1Mi, Sys=15.3Mi, NumGC=5	caller=stat/usage.go:61
+2023-06-26T14:59:59.199+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T15:00:59.164+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=7.1Mi, Sys=15.3Mi, NumGC=5	caller=stat/usage.go:61
+2023-06-26T15:00:59.200+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T15:01:59.164+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.4Mi, TotalAlloc=7.1Mi, Sys=15.3Mi, NumGC=6	caller=stat/usage.go:61
+2023-06-26T15:01:59.199+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T15:02:59.164+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.4Mi, TotalAlloc=7.1Mi, Sys=15.3Mi, NumGC=6	caller=stat/usage.go:61
+2023-06-26T15:02:59.200+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T15:23:09.493+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.8Mi, TotalAlloc=6.6Mi, Sys=18.9Mi, NumGC=2	caller=stat/usage.go:61
+2023-06-26T15:23:09.528+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2023-06-26T15:24:09.493+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=4.0Mi, TotalAlloc=6.8Mi, Sys=18.9Mi, NumGC=2	caller=stat/usage.go:61
+2023-06-26T15:24:09.528+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
