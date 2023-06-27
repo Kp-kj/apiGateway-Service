@@ -4,9 +4,10 @@ import (
 	"flag"
 	"fmt"
 	"gateway/errorx"
+	"net/http"
+
 	"github.com/zeromicro/go-zero/rest/httpx"
 	"golang.org/x/net/context"
-	"net/http"
 
 	"gateway/internal/config"
 	"gateway/internal/handler"
