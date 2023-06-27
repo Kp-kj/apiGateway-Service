@@ -301,45 +301,6 @@ service gateway-api {
 
 }
 
-
-// UserLogin is the message for user login.
-type UserLogin {
-	TwitterUrl string `json:"twitterUrl"`
-	InviteId   string `json:"inviteId"`
-}
-
-// UserLoginReply is the reply for user login.
-type UserLoginReply {
-	Token string `json:"token"`
-}
-
-// AdminLogin is the message for admin login.
-type AdminLogin {
-	AdminName     string `json:"adminName"`
-	AdminPassword string `json:"adminPassword"`
-}
-
-// AdminLoginReply is the reply for admin login.
-type AdminLoginReply {
-	Token string `json:"token"`
-}
-
-type UserInfoReply {
-	UserName    string `json:"userName"`
-	TwitterName string `json:"twitterName"`
-	UserAvatar  string `json:"userAvatar"`
-	IsNew       int64  `json:"isNew"`
-}
-
-type HelpCategoryList {
-	LanguageCode string `json:"languageCode"`
-}
-
-type HelpCategoryListReply {
-	CategoryId   int64  `json:"categoryId"`
-	CategoryName string `json:"categoryName"`
-}
-
 /*任务信息开始*/
 //  Curatorial task information receiving table (策展任务信息接收表)
 type CreatePublishTaskInput {
@@ -626,74 +587,6 @@ type CreateUserPowerTaskInput {
 	HelperUserId    string `json:"helperUserId"`
 }
 
-@server(
-	prefix :/v1
-	group :ping
-)
-
-service gateway-api {
-	@doc "用户登录"
-	@handler ping
-	get /ping
-}
-
-// 下面是用户接口，不需要鉴权
-@server(
-	prefix :/v1
-	group :user
-)
-
-service gateway-api {
-	@doc "用户登录"
-	@handler user
-	post /user/userLogin (UserLogin) returns (UserLoginReply)
-	
-	@doc "获取帮助文档分类列表"
-	@handler getHelpCategoryList
-	get /user/getHelpCategoryList returns (HelpCategoryListReply)
-}
-
-// 下面是用户接口，需要鉴权
-@server(
-	prefix :/v1
-	group :user
-	middleware : BlackMiddleware
-	jwt : Auth
-)
-
-service gateway-api {
-	@doc "用户退出登录"
-	@handler userLogout
-	post /user/userLogout  returns (UserLoginReply)
-	
-	@doc "获取用户信息"
-	@handler getUserInfo
-	get /user/getUserInfo returns (UserInfoReply)
-}
-
-// 下面是管理员接口，不需要鉴权
-@server(
-	prefix :/v1
-	group :admin
-)
-service gateway-api {
-	@doc "管理员登录"
-	@handler adminLogin
-	post /admin/adminLogin (AdminLogin) returns (AdminLoginReply)
-}
-
-// 下面是管理员接口，需要鉴权
-@server(
-	prefix :/v1
-	group : admin
-	jwt : AdminAuth
-)
-
-service gateway-api {
-	@doc "管理员退出登录"
-	@handler adminLogout
-	post /admin/adminLogout returns (AdminLoginReply)
-}
 
 // 策展任务相关接口，需要鉴权
 @server(
