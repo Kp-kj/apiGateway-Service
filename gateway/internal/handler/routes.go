@@ -5,6 +5,8 @@ import (
 	"net/http"
 
 	admin "gateway/internal/handler/admin"
+	curatorial "gateway/internal/handler/curatorial"
+	everyday "gateway/internal/handler/everyday"
 	ping "gateway/internal/handler/ping"
 	user "gateway/internal/handler/user"
 	"gateway/internal/svc"
@@ -120,6 +122,120 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 			},
 		},
 		rest.WithJwt(serverCtx.Config.AdminAuth.AccessSecret),
+		rest.WithPrefix("/v1"),
+	)
+
+	server.AddRoutes(
+		[]rest.Route{
+			{
+				Method:  http.MethodPost,
+				Path:    "/curatorial/create",
+				Handler: curatorial.CreateCuratorialTaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/curatorial/list",
+				Handler: curatorial.QueryTaskListHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/curatorial/details",
+				Handler: curatorial.QueryTaskDetailsHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/curatorial/user/list",
+				Handler: curatorial.QueryUserLaunchTaskListHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/curatorial/label/create",
+				Handler: curatorial.CreateLabelHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/curatorial/label/delete",
+				Handler: curatorial.DeleteLabelHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/curatorial/label/list",
+				Handler: curatorial.GetLabelListHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/curatorial/verify",
+				Handler: curatorial.PerformTaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/curatorial/voluntarily",
+				Handler: curatorial.VoluntarilyTaskScheduleHandler(serverCtx),
+			},
+		},
+		rest.WithJwt(serverCtx.Config.Auth.AccessSecret),
+		rest.WithPrefix("/v1"),
+	)
+
+	server.AddRoutes(
+		[]rest.Route{
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/treasure/amend",
+				Handler: everyday.AmendTreasureTaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/treasure/change",
+				Handler: everyday.ChangeTreasureTaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/everyday/treasure/list",
+				Handler: everyday.QueryTreasureTaskListHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/everyday/subtask/list",
+				Handler: everyday.QuerySubtaskStyleHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/subtask/amend",
+				Handler: everyday.AmendAssociatedSubtaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/subtask/delete",
+				Handler: everyday.DeleteAssociatedSubtaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/everyday/subtask/treasureId",
+				Handler: everyday.QueryAssociatedSubtaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/chest/amemd",
+				Handler: everyday.AmendChestCollectionHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/everyday/chest/schedule",
+				Handler: everyday.QueryChestCollectionHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/subtask/power",
+				Handler: everyday.CreateUserPowerTaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/subtask/create",
+				Handler: everyday.CreateSubtaskStyleHandler(serverCtx),
+			},
+		},
+		rest.WithJwt(serverCtx.Config.Auth.AccessSecret),
 		rest.WithPrefix("/v1"),
 	)
 }

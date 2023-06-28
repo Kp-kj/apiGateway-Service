@@ -121,3 +121,259 @@ type ContentByHelpDocumentIdReply struct {
 type GetContentByHelpDocumentIdReply struct {
 	ContextByHelpDocumentId []ContentByHelpDocumentIdReply `json:"contextByHelpDocumentId"`
 }
+
+type CreatePublishTaskInput struct {
+	Creator      string        `json:"creator"`
+	TweetAddress string        `json:"tweetAddress"`
+	Label        []string      `json:"label"`
+	AwardBudget  float64       `json:"awardBudget"`
+	MaxUser      int64         `json:"maxUser"`
+	AwardAmount  float64       `json:"awardAmount"`
+	TaskDemand   []*TaskDemand `json:"taskDemand"`
+}
+
+type TaskDemand struct {
+	TaskID     uint   `json:"taskId"`
+	TaskName   int    `json:"taskName"`
+	TaskDemand string `json:"taskDemand"`
+	Article    string `json:"article"`
+}
+
+type Mistake struct {
+	Msg string `json:"msg"`
+}
+
+type RePublishTask struct {
+	PaginationData   PaginationData      `json:"paging"`
+	RePublishTaskBak []*RePublishTaskBak `json:"data"`
+}
+
+type RePublishTaskBak struct {
+	TaskID        uint64        `json:"taskId"`
+	CreatedAt     string        `json:"createdAt"`
+	Creator       string        `json:"creator"`
+	CreatorName   string        `json:"creatorName"`
+	CreatorNick   string        `json:"creatorNick"`
+	CreatorAvatar string        `json:"creatorAvatar"`
+	Status        int32         `json:"status"`
+	TweetDetails  string        `json:"tweetDetails"`
+	TweetPicture  string        `json:"tweetPicture"`
+	Label         string        `json:"label"`
+	AwardBudget   float64       `json:"awardBudget"`
+	MaxUser       int32         `json:"maxUser"`
+	AwardAmount   float64       `json:"awardAmount"`
+	EndTime       string        `json:"endTime"`
+	Accomplish    int32         `json:"accomplish"`
+	TaskDemand    []*TaskDemand `json:"taskDemand"`
+}
+
+type PaginationData struct {
+	Total   int64 `json:"total"`
+	Page    int64 `json:"page"`
+	PerPage int64 `json:"per_page"`
+}
+
+type PublishTaskInput struct {
+	Status   int64 `json:"status"`
+	CurrPage int64 `json:"currPage"`
+	MaxNum   int64 `json:"maxNum"`
+}
+
+type ReTaskDetails struct {
+	RePublishTaskBak RePublishTaskBak  `json:"publishTask"`
+	ParticipantBak   []*ParticipantBak `json:"participant"`
+	TaskDemandBak    []*TaskDemandBak  `json:"taskStatus"`
+}
+
+type TaskDetailsInput struct {
+	TaskId uint64 `json:"taskId"`
+	UserId string `json:"userId"`
+}
+
+type ParticipantBak struct {
+	UserId      string  `json:"userId"`
+	UserName    string  `json:"userName"`
+	NickName    string  `json:"nickName"`
+	Avatar      string  `json:"avatar"`
+	AwardAmount float64 `json:"awardAmount"`
+	TaskID      uint64  `json:"taskId"`
+	Status      int32   `json:"status"`
+}
+
+type TaskDemandBak struct {
+	TaskID     uint64 `json:"taskId"`
+	TaskName   int64  `json:"taskName"`
+	TaskDemand string `json:"taskDemand"`
+	Article    string `json:"article"`
+	Status     int32  `json:"status"`
+}
+
+type UserLaunchTaskListInput struct {
+	UserId   string `json:"userId"`
+	CurrPage int64  `json:"currPage"`
+	MaxNum   int64  `json:"maxNum"`
+	Status   int64  `json:"status"`
+}
+
+type CreateLabelInput struct {
+	UserId string `json:"userId"`
+	Label  string `json:"label"`
+}
+
+type TaskIDInquireInput struct {
+	Id uint64 `json:"id"`
+}
+
+type UserIDInquireInput struct {
+	UserId string `json:"userId"`
+}
+
+type ReLabelListOut struct {
+	ReLabelList []*ReLabelList `json:"reLabelList"`
+}
+
+type ReLabelList struct {
+	Id      uint64 `json:"id"`
+	Creator string `json:"creator"`
+	Content string `json:"content"`
+}
+
+type PerformTaskInput struct {
+	TaskId uint64 `json:"taskId"`
+	UserId string `json:"userId"`
+}
+
+type VoluntarilyTaskScheduleInput struct {
+	UserId string `json:"userId"`
+	TaskId int64  `json:"taskId"`
+	Genre  int64  `json:"genre"`
+}
+
+type TreasureTaskSrtInput struct {
+	Id                uint64               `json:"id"`
+	Name              string               `json:"name"`
+	DemandIntegral    int64                `json:"demandIntegral"`
+	TaskReward        int64                `json:"taskReward"`
+	ExperienceReward  int64                `json:"experienceReward"`
+	RewardQuantity    int64                `json:"rewardQuantity"`
+	TreasureTaskStage []*TreasureTaskStage `json:"treasureTaskStage"`
+}
+
+type TreasureTaskStage struct {
+	ID               int64 `json:"iD"`
+	Treasure         int64 `json:"treasure"`
+	TreasureSequence int64 `json:"treasureSequence"`
+	StageExperience  int64 `json:"stageExperience"`
+	StageReward      int64 `json:"stageReward"`
+}
+
+type TreasureTaskInput struct {
+	Id     uint64 `json:"id"`
+	Status int32  `json:"status"`
+}
+
+type TreasureTaskListInput struct {
+	Name     string `json:"name"`
+	Reward   int64  `json:"reward"`
+	CurrPage int64  `json:"currPage"`
+	MaxNum   int64  `json:"maxNum"`
+}
+
+type ReTreasureTaskSrt struct {
+	PaginationData       PaginationData          `json:"paginationData"`
+	TreasureTaskSrtInput []*TreasureTaskSrtInput `json:"treasureTaskSrtInput"`
+}
+
+type ReSubtaskStyle struct {
+	SubtaskStyle []*SubtaskStyle `json:"subtaskStyle"`
+}
+
+type SubtaskStyle struct {
+	TaskId         int64  `json:"taskId"`
+	TaskName       string `json:"taskName"`
+	TaskNameEng    string `json:"taskNameEng"`
+	TaskDetails    string `json:"taskDetails"`
+	TaskDetailsEng string `json:"taskDetailsEng"`
+	TaskStatus     int64  `json:"taskStatus"`
+}
+
+type AssociatedSubtaskSrt struct {
+	AssociatedId   uint64 `json:"associatedId"`
+	TaskId         uint64 `json:"taskId"`
+	TreasureId     uint64 `json:"treasureId"`
+	TaskName       string `json:"taskName"`
+	TaskNameEng    string `json:"taskNameEng"`
+	TaskDetails    string `json:"taskDetails"`
+	TaskDetailsEng string `json:"taskDetailsEng"`
+	TaskStatus     int64  `json:"taskStatus"`
+	Reward         int64  `json:"reward"`
+	Experience     int64  `json:"experience"`
+	Number         int64  `json:"number"`
+	Article        string `json:"article"`
+	Link           string `json:"link"`
+	Label          string `json:"label"`
+}
+
+type ReAssociatedSubtask struct {
+	AssociatedSubtask []*AssociatedSubtask `json:"associatedSubtask"`
+}
+
+type AssociatedSubtask struct {
+	TaskId         uint64 `json:"taskId"`
+	TaskName       string `json:"taskName"`
+	TaskNameEng    string `json:"taskNameEng"`
+	TaskDetails    string `json:"taskDetails"`
+	TaskDetailsEng string `json:"taskDetailsEng"`
+	TaskStatus     int64  `json:"taskStatus"`
+	Reward         int64  `json:"reward"`
+	Experience     int64  `json:"experience"`
+	Number         int64  `json:"number"`
+	Article        string `json:"article"`
+	Link           string `json:"link"`
+	Label          string `json:"label"`
+	TreasureId     uint64 `json:"treasureId"`
+}
+
+type AmendChestCollectionInput struct {
+	UserId string `json:"userId"`
+	Amount int64  `json:"amount"`
+}
+
+type ReChestCollectionSrt struct {
+	SerId                 string                   `json:"serId"`
+	DemandIntegral        int64                    `json:"demandIntegral"`
+	ChestAmount           int64                    `json:"chestAmount"`
+	RewardQuantity        int64                    `json:"rewardQuantity"`
+	TreasureTaskStageSeed []*TreasureTaskStageSeed `json:"treasureTaskStageSeed"`
+	AssociatedSubtaskSeed []*AssociatedSubtaskSeed `json:"associatedSubtaskSeed"`
+}
+
+type TreasureTaskStageSeed struct {
+	Treasure         int64   `json:"treasure"`
+	TreasureSequence int64   `json:"treasureSequence"`
+	StageExperience  int64   `json:"stageExperience"`
+	TreasureRatio    float64 `json:"treasureRatio"`
+	StageReward      int64   `json:"stageReward"`
+}
+
+type AssociatedSubtaskSeed struct {
+	TreasureId     int64  `json:"treasureId"`
+	TaskId         int64  `json:"taskId"`
+	TaskName       string `json:"taskName"`
+	TaskNameEng    string `json:"taskNameEng"`
+	TaskDetails    string `json:"taskDetails"`
+	TaskDetailsEng string `json:"taskDetailsEng"`
+	TaskStatus     int64  `json:"taskStatus"`
+	Reward         int64  `json:"reward"`
+	Experience     int64  `json:"experience"`
+	Number         int64  `json:"number"`
+	Article        string `json:"article"`
+	Link           string `json:"link"`
+	Label          string `json:"label"`
+	Complete       int64  `json:"complete"`
+}
+
+type CreateUserPowerTaskInput struct {
+	PublishesUserId string `json:"publishesUserId"`
+	HelperUserId    string `json:"helperUserId"`
+}

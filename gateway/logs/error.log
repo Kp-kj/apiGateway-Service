@@ -1,48 +1,85 @@
-2023-06-12T10:38:35.394+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD - 192.168.1.104:31292 - Apifox/1.0.0 (https://www.apifox.cn)
-GET /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD HTTP/1.1
-Host: 192.168.1.104:8888
+2023-06-27T00:00:39.365+08:00	[31;1m error [0m	compress error: remove logs/access.log-2023-06-26: The process cannot access the file because it is being used by another process.	caller=logx/rotatelogger.go:410
+2023-06-27T00:00:39.367+08:00	[31;1m error [0m	compress error: remove logs/stat.log-2023-06-26: The process cannot access the file because it is being used by another process.	caller=logx/rotatelogger.go:410
+2023-06-27T00:00:39.379+08:00	[31;1m error [0m	compress error: remove logs/error.log-2023-06-26: The process cannot access the file because it is being used by another process.	caller=logx/rotatelogger.go:410
+2023-06-27T10:06:50.122+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-27T10:06:50.122+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-27T10:06:50.122+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-27T10:06:50.122+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-06-27T10:09:15.192+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-27T10:12:34.867+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-27T11:48:53.147+08:00	[31;1m error [0m	authorize failed: no token present in request
+=> POST /v1/curatorial/voluntarily HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+Content-Length: 95
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
-	duration=0.0ms	caller=handler/loghandler.go:162	trace=1403a986f712108c6b39ca4463d2ced3	span=9c2f839728732513
-2023-06-12T10:40:00.415+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-12T10:43:40.083+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
-2023-06-12T10:44:08.046+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD - 192.168.1.104:31481 - Apifox/1.0.0 (https://www.apifox.cn)
-GET /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD HTTP/1.1
-Host: 192.168.1.104:8888
+{
+    "userId": "550e8400-e29b-41d4-a716-446655440000",
+    "taskId": "6",
+    "genre": 1
+}	caller=handler/authhandler.go:103
+2023-06-27T11:49:03.489+08:00	[31;1m error [0m	authorize failed: no token present in request
+=> POST /v1/curatorial/voluntarily HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
+Authorization: 
 Connection: keep-alive
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+Content-Length: 95
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
-	duration=0.5ms	caller=handler/loghandler.go:162	trace=e6b4bc90fe871cafecfa204c113740d7	span=05345bac82a200ee
-2023-06-12T10:45:16.957+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD - 192.168.1.104:31515 - Apifox/1.0.0 (https://www.apifox.cn)
-GET /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD HTTP/1.1
-Host: 192.168.1.104:8888
+{
+    "userId": "550e8400-e29b-41d4-a716-446655440000",
+    "taskId": "6",
+    "genre": 1
+}	caller=handler/authhandler.go:103
+2023-06-27T11:49:07.403+08:00	[31;1m error [0m	authorize failed: token contains an invalid number of segments
+=> POST /v1/curatorial/voluntarily HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
+Authorization: 111111111
 Connection: keep-alive
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+Content-Length: 95
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
-	duration=0.0ms	caller=handler/loghandler.go:162	trace=09201ce3fb0006f5ddd79fb4cd39ec14	span=460689e6fd061b11
-2023-06-12T10:45:18.055+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD - 192.168.1.104:31515 - Apifox/1.0.0 (https://www.apifox.cn)
-GET /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD HTTP/1.1
-Host: 192.168.1.104:8888
+{
+    "userId": "550e8400-e29b-41d4-a716-446655440000",
+    "taskId": "6",
+    "genre": 1
+}	caller=handler/authhandler.go:103
+2023-06-27T13:20:11.415+08:00	[31;1m error [0m	authorize failed: no token present in request
+=> POST /v1/curatorial/voluntarily HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
+Authorization: 
 Connection: keep-alive
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+Content-Length: 95
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
-	duration=0.3ms	caller=handler/loghandler.go:162	trace=c54cbf923ae70f8549e2e88898cf30c4	span=83c7fe60dac9d1ec
-2023-06-12T10:45:18.746+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD - 192.168.1.104:31515 - Apifox/1.0.0 (https://www.apifox.cn)
-GET /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD HTTP/1.1
-Host: 192.168.1.104:8888
+{
+    "userId": "550e8400-e29b-41d4-a716-446655440000",
+    "taskId": "6",
+    "genre": 1
+}	caller=handler/authhandler.go:103
+2023-06-27T13:20:23.962+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/voluntarily - 127.0.0.1:64145 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/voluntarily HTTP/1.1
+Host: 127.0.0.1:8888
 Accept: */*
 Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
 Connection: keep-alive
-User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+Content-Length: 95
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 
 	duration=0.0ms	caller=handler/loghandler.go:162	trace=ad15c0906322d9e855675e60c620b7ca	span=64e2753a556d77a8
 2023-06-12T10:45:19.427+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getHelpCategoryList?languageCode=%E4%BD%A0%E5%A5%BD - 192.168.1.104:31515 - Apifox/1.0.0 (https://www.apifox.cn)
