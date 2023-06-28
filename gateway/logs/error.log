@@ -403,3 +403,4 @@ User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
 2023-06-26T14:57:59.203+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
 2023-06-26T14:59:07.656+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
 2023-06-26T15:23:49.834+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-06-28T10:30:03.022+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34

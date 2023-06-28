@@ -24,6 +24,7 @@ UserRpcConf:
   Etcd:
     Hosts:
       - 47.243.34.199:2379
+#      - 127.0.0.1:2379
     Key: user.rpc
 
 # 任务服务配置
@@ -31,9 +32,8 @@ TaskRpcConf:
   Etcd:
     Hosts:
       - 47.243.34.199:2379
+#      - 127.0.0.1:2379
     Key: task.rpc
-
-
 
 # 用户服务直连
 #UserRpcConf:
