@@ -298,7 +298,6 @@ service gateway-api {
 	//	@handler batchDeleteCategory
 	//	post /admin/batchDeleteCategory (BatchDeleteCategory) returns (BatchDeleteCategoryReply)
 	
-
 }
 
 /*任务信息开始*/
@@ -586,7 +585,6 @@ type CreateUserPowerTaskInput {
 	PublishesUserId string `json:"publishesUserId"`
 	HelperUserId    string `json:"helperUserId"`
 }
-
 
 // 策展任务相关接口，需要鉴权
 @server(
