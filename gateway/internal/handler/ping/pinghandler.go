@@ -1,11 +1,11 @@
 package ping
 
 import (
+	xhttp "github.com/zeromicro/x/http"
 	"net/http"
 
 	"gateway/internal/logic/ping"
 	"gateway/internal/svc"
-	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
 func PingHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
@@ -13,9 +13,11 @@ func PingHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 		l := ping.NewPingLogic(r.Context(), svcCtx)
 		err := l.Ping()
 		if err != nil {
-			httpx.ErrorCtx(r.Context(), w, err)
+			// code-data 响应格式
+			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {
-			httpx.Ok(w)
+			// code-data 响应格式
+			xhttp.JsonBaseResponseCtx(r.Context(), w, "pong")
 		}
 	}
 }

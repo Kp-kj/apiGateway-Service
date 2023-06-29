@@ -2,6 +2,7 @@ package curatorial
 
 import (
 	"fmt"
+	xhttp "github.com/zeromicro/x/http"
 	"net/http"
 
 	"gateway/internal/logic/curatorial"
@@ -22,9 +23,11 @@ func QueryLabelListHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 		fmt.Printf("11111111111111111111111111")
 		resp, err := l.QueryLabelList(&req)
 		if err != nil {
-			httpx.ErrorCtx(r.Context(), w, err)
+			// code-data 响应格式
+			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {
-			httpx.OkJsonCtx(r.Context(), w, resp)
+			// code-data 响应格式
+			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)
 		}
 	}
 }

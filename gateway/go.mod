@@ -6,6 +6,7 @@ require (
 	github.com/golang-jwt/jwt/v4 v4.5.0
 	github.com/shopspring/decimal v1.3.1
 	github.com/zeromicro/go-zero v1.5.2
+	github.com/zeromicro/x v0.0.0-20230424055333-01c7fb9548d4
 	golang.org/x/net v0.9.0
 	google.golang.org/grpc v1.54.0
 	google.golang.org/protobuf v1.30.0

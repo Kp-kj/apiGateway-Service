@@ -2,6 +2,7 @@ package curatorial
 
 import (
 	"fmt"
+	xhttp "github.com/zeromicro/x/http"
 	"net/http"
 
 	"gateway/internal/logic/curatorial"
@@ -22,9 +23,11 @@ func QueryUserLaunchTaskListHandler(svcCtx *svc.ServiceContext) http.HandlerFunc
 		l := curatorial.NewQueryUserLaunchTaskListLogic(r.Context(), svcCtx)
 		resp, err := l.QueryUserLaunchTaskList(&req)
 		if err != nil {
-			httpx.ErrorCtx(r.Context(), w, err)
+			// code-data 响应格式
+			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {
-			httpx.OkJsonCtx(r.Context(), w, resp)
+			// code-data 响应格式
+			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)
 		}
 	}
 }
