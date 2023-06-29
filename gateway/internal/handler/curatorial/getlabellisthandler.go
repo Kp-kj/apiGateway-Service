@@ -27,6 +27,7 @@ func GetLabelListHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {
 			// code-data 响应格式
+			w.WriteHeader(http.StatusOK)
 			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)
 		}
 	}
