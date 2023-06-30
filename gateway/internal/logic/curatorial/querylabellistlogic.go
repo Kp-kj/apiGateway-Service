@@ -27,7 +27,7 @@ func NewQueryLabelListLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Qu
 func (l *QueryLabelListLogic) QueryLabelList(req *types.UserIDInquireInput) (resp *types.ReLabelListOut, err error) {
 	label, err := l.svcCtx.TaskClient.QueryLabelList(l.ctx, &taskclient.UserIDInquireInput{UserId: req.UserId})
 	var labelList []*types.ReLabelList
-	for _, item := range label.ReLabelListOut {
+	for _, item := range label.ReLabelList {
 		labelList = append(labelList, &types.ReLabelList{
 			Id:      item.Id,
 			Creator: item.Creator,

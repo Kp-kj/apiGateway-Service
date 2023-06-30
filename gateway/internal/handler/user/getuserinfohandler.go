@@ -1,8 +1,9 @@
 package user
 
 import (
-	xhttp "github.com/zeromicro/x/http"
 	"net/http"
+
+	xhttp "github.com/zeromicro/x/http"
 
 	"gateway/internal/logic/user"
 	"gateway/internal/svc"

@@ -1,13 +1,14 @@
 package everyday
 
 import (
-	xhttp "github.com/zeromicro/x/http"
 	"net/http"
 
 	"gateway/internal/logic/everyday"
 	"gateway/internal/svc"
 	"gateway/internal/types"
+
 	"github.com/zeromicro/go-zero/rest/httpx"
+	xhttp "github.com/zeromicro/x/http"
 )
 
 func QueryAssociatedSubtaskHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
@@ -21,10 +22,9 @@ func QueryAssociatedSubtaskHandler(svcCtx *svc.ServiceContext) http.HandlerFunc 
 		l := everyday.NewQueryAssociatedSubtaskLogic(r.Context(), svcCtx)
 		resp, err := l.QueryAssociatedSubtask(&req)
 		if err != nil {
-			// code-data 响应格式
+			w.WriteHeader(http.StatusInternalServerError)
 			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {
-			// code-data 响应格式
 			w.WriteHeader(http.StatusOK)
 			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)
 		}

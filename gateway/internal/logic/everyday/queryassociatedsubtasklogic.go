@@ -2,6 +2,7 @@ package everyday
 
 import (
 	"context"
+	"gateway/taskclient"
 
 	"gateway/internal/svc"
 	"gateway/internal/types"
@@ -23,8 +24,26 @@ func NewQueryAssociatedSubtaskLogic(ctx context.Context, svcCtx *svc.ServiceCont
 	}
 }
 
+// QueryAssociatedSubtask 查询关联子任务
 func (l *QueryAssociatedSubtaskLogic) QueryAssociatedSubtask(req *types.TaskIDInquireInput) (resp *types.ReAssociatedSubtask, err error) {
-	// todo: add your logic here and delete this line
-
-	return
+	data, err := l.svcCtx.TaskClient.QueryAssociatedSubtask(l.ctx, &taskclient.TaskIDInquireInput{Id: req.Id})
+	var associatedSubtask []*types.AssociatedSubtask
+	for _, item := range data.AssociatedSubtask {
+		associatedSubtask = append(associatedSubtask, &types.AssociatedSubtask{
+			TaskId:         item.TaskId,
+			TaskName:       item.TaskName,
+			TaskNameEng:    item.TaskNameEng,
+			TaskDetails:    item.TaskDetails,
+			TaskDetailsEng: item.TaskDetailsEng,
+			TaskStatus:     item.TaskStatus,
+			Reward:         item.Reward,
+			Experience:     item.Experience,
+			Number:         item.Number,
+			Article:        item.Article,
+			Link:           item.Link,
+			Label:          item.Label,
+			TreasureId:     item.TreasureId,
+		})
+	}
+	return &types.ReAssociatedSubtask{AssociatedSubtask: associatedSubtask}, err
 }

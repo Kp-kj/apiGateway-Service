@@ -2,6 +2,7 @@ package everyday
 
 import (
 	"context"
+	"gateway/taskclient"
 
 	"gateway/internal/svc"
 	"gateway/internal/types"
@@ -23,8 +24,8 @@ func NewCreateSubtaskStyleLogic(ctx context.Context, svcCtx *svc.ServiceContext)
 	}
 }
 
+// CreateSubtaskStyle 创建子任务样式
 func (l *CreateSubtaskStyleLogic) CreateSubtaskStyle(req *types.UserIDInquireInput) (resp *types.Mistake, err error) {
-	// todo: add your logic here and delete this line
-
-	return
+	err1, err := l.svcCtx.TaskClient.CreateSubtaskStyle(l.ctx, &taskclient.UserIDInquireInput{UserId: req.UserId})
+	return &types.Mistake{Msg: err1.Msg}, err
 }

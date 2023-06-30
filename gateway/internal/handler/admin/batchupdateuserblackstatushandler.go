@@ -1,7 +1,6 @@
 package admin
 
 import (
-	xhttp "github.com/zeromicro/x/http"
 	"net/http"
 
 	"gateway/internal/logic/admin"
@@ -21,12 +20,9 @@ func BatchUpdateUserBlackStatusHandler(svcCtx *svc.ServiceContext) http.HandlerF
 		l := admin.NewBatchUpdateUserBlackStatusLogic(r.Context(), svcCtx)
 		resp, err := l.BatchUpdateUserBlackStatus(&req)
 		if err != nil {
-			// code-data 响应格式
-			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
+			httpx.ErrorCtx(r.Context(), w, err)
 		} else {
-			// code-data 响应格式
-			w.WriteHeader(http.StatusOK)
-			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)
+			httpx.OkJsonCtx(r.Context(), w, resp)
 		}
 	}
 }

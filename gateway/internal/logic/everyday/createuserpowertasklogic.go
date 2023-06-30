@@ -2,6 +2,7 @@ package everyday
 
 import (
 	"context"
+	"gateway/taskclient"
 
 	"gateway/internal/svc"
 	"gateway/internal/types"
@@ -23,8 +24,11 @@ func NewCreateUserPowerTaskLogic(ctx context.Context, svcCtx *svc.ServiceContext
 	}
 }
 
+// CreateUserPowerTask 创建用户助力信息
 func (l *CreateUserPowerTaskLogic) CreateUserPowerTask(req *types.CreateUserPowerTaskInput) (resp *types.Mistake, err error) {
-	// todo: add your logic here and delete this line
-
-	return
+	err1, err := l.svcCtx.TaskClient.CreateUserPowerTask(l.ctx, &taskclient.CreateUserPowerTaskInput{
+		PublishesUserId: req.PublishesUserId,
+		HelperUserId:    req.HelperUserId,
+	})
+	return &types.Mistake{Msg: err1.Msg}, err
 }

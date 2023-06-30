@@ -1,30 +1,30 @@
 package everyday
 
 import (
-	xhttp "github.com/zeromicro/x/http"
 	"net/http"
 
 	"gateway/internal/logic/everyday"
 	"gateway/internal/svc"
 	"gateway/internal/types"
+
 	"github.com/zeromicro/go-zero/rest/httpx"
+	xhttp "github.com/zeromicro/x/http"
 )
 
-func GetSubtaskStyleHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
+func QueryAssistanceTaskHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		var req types.TaskIDInquireInput
+		var req types.UserIDInquireInput
 		if err := httpx.Parse(r, &req); err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 			return
 		}
 
-		l := everyday.NewGetSubtaskStyleLogic(r.Context(), svcCtx)
-		resp, err := l.GetSubtaskStyle(&req)
+		l := everyday.NewQueryAssistanceTaskLogic(r.Context(), svcCtx)
+		resp, err := l.QueryAssistanceTask(&req)
 		if err != nil {
-			// code-data 响应格式
+			w.WriteHeader(http.StatusInternalServerError)
 			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {
-			// code-data 响应格式
 			w.WriteHeader(http.StatusOK)
 			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)
 		}

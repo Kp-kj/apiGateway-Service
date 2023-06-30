@@ -2,6 +2,7 @@ package everyday
 
 import (
 	"context"
+	"gateway/taskclient"
 
 	"gateway/internal/svc"
 	"gateway/internal/types"
@@ -24,7 +25,28 @@ func NewAmendTreasureTaskLogic(ctx context.Context, svcCtx *svc.ServiceContext) 
 }
 
 func (l *AmendTreasureTaskLogic) AmendTreasureTask(req *types.TreasureTaskSrtInput) (resp *types.Mistake, err error) {
-	// todo: add your logic here and delete this line
+	var treasureTaskStage []*taskclient.TreasureTaskStage
 
-	return
+	for i, item := range req.TreasureTaskStage {
+		if item.TreasureSequence != int64(i+1) {
+			return &types.Mistake{Msg: "宝箱阶段不合规"}, nil
+		}
+		treasureTaskStage = append(treasureTaskStage, &taskclient.TreasureTaskStage{
+			Treasure:         item.Treasure,
+			TreasureSequence: item.TreasureSequence,
+			StageExperience:  item.StageExperience,
+			StageReward:      item.StageReward,
+		})
+	}
+	treasureTask := &taskclient.TreasureTaskSrtInput{
+		Id:                req.Id,
+		Name:              req.Name,
+		DemandIntegral:    req.DemandIntegral,
+		TaskReward:        req.TaskReward,
+		ExperienceReward:  req.ExperienceReward,
+		RewardQuantity:    req.RewardQuantity,
+		TreasureTaskStage: treasureTaskStage,
+	}
+	err1, err := l.svcCtx.TaskClient.AmendTreasureTask(l.ctx, treasureTask)
+	return &types.Mistake{Msg: err1.Msg}, err
 }
