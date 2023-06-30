@@ -7,6 +7,7 @@ import (
 	"gateway/internal/svc"
 	"gateway/internal/types"
 	"github.com/zeromicro/go-zero/rest/httpx"
+	xhttp "github.com/zeromicro/x/http"
 )
 
 func AdminLoginHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
@@ -20,9 +21,12 @@ func AdminLoginHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 		l := admin.NewAdminLoginLogic(r.Context(), svcCtx)
 		resp, err := l.AdminLogin(&req)
 		if err != nil {
-			httpx.ErrorCtx(r.Context(), w, err)
+			// code-data 响应格式
+			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {
-			httpx.OkJsonCtx(r.Context(), w, resp)
+			// code-data 响应格式
+			w.WriteHeader(http.StatusOK)
+			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)
 		}
 	}
 }
