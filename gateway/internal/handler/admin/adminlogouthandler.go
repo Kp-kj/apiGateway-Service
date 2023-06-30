@@ -1,11 +1,11 @@
 package admin
 
 import (
+	xhttp "github.com/zeromicro/x/http"
 	"net/http"
 
 	"gateway/internal/logic/admin"
 	"gateway/internal/svc"
-	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
 func AdminLogoutHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
@@ -13,9 +13,12 @@ func AdminLogoutHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 		l := admin.NewAdminLogoutLogic(r.Context(), svcCtx)
 		resp, err := l.AdminLogout()
 		if err != nil {
-			httpx.ErrorCtx(r.Context(), w, err)
+			// code-data 响应格式
+			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {
-			httpx.OkJsonCtx(r.Context(), w, resp)
+			// code-data 响应格式
+			w.WriteHeader(http.StatusOK)
+			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)
 		}
 	}
 }
