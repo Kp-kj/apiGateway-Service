@@ -2,7 +2,6 @@ package curatorial
 
 import (
 	"context"
-	"fmt"
 	"gateway/taskclient"
 
 	"gateway/internal/svc"
@@ -26,12 +25,10 @@ func NewQueryTaskListLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Que
 }
 
 func (l *QueryTaskListLogic) QueryTaskList(req *types.PublishTaskInput) (resp *types.RePublishTask, err error) {
-	fmt.Printf("444444444444444444444444444:\n")
 	data, err := l.svcCtx.TaskClient.QueryTaskList(l.ctx, &taskclient.PublishTaskInput{
 		Status:   req.Status,
 		CurrPage: req.CurrPage,
 		MaxNum:   req.MaxNum})
-	fmt.Printf("2222222222222222:%v\n", err)
 	var rePublishTaskBak []*types.RePublishTaskBak
 	for _, item := range data.RePublishTaskBak {
 		var taskDemand []*types.TaskDemand

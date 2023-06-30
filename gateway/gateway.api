@@ -456,7 +456,6 @@ type TreasureTaskSrtInput {
 
 // Treasure box stage (宝箱阶段)
 type TreasureTaskStage {
-	ID               int64 `json:"iD"`
 	Treasure         int64 `json:"treasure"`
 	TreasureSequence int64 `json:"treasureSequence"`
 	StageExperience  int64 `json:"stageExperience"`
@@ -586,6 +585,25 @@ type CreateUserPowerTaskInput {
 	HelperUserId    string `json:"helperUserId"`
 }
 
+// Create a user publishing assistance task 创建用户发布助力任务
+type UserPublishingAssistanceTaskInput {
+	UserId   string `json:"userId"`
+	UserName string `json:"userName"`
+	Avatar   string `json:"avatar"`
+}
+
+// Example Query user publishing assistance information 查询用户发布助力信息
+type UserPublishingAssistanceTask {
+	ID        int64  `json:"id"`
+	CreatedAt string `json:"createdAt"`
+	UserId    string `json:"userId"`
+	UserName  string `json:"userName"`
+	Avatar    string `json:"avatar"`
+	Article   string `json:"article"`
+	Link      string `json:"link"`
+	Label     string `json:"label"`
+}
+
 // 策展任务相关接口，需要鉴权
 @server(
 	prefix :/v1
@@ -612,7 +630,7 @@ service gateway-api {
 	get /curatorial/user/list (UserLaunchTaskListInput) returns (RePublishTask)
 	
 	@doc "创建标签"
-	@handler createLabel
+	@handler CreateLabel
 	post /curatorial/label/create (CreateLabelInput) returns (Mistake)
 	
 	@doc "删除标签"
@@ -620,7 +638,7 @@ service gateway-api {
 	post /curatorial/label/delete (TaskIDInquireInput) returns (Mistake)
 	
 	@doc "获取标签列表"
-	@handler getLabelList
+	@handler QueryLabelList
 	get /curatorial/label/list (UserIDInquireInput) returns (ReLabelListOut)
 	
 	@doc "判断是否完成策展任务"
@@ -684,4 +702,17 @@ service gateway-api {
 	@doc "创建子任务样式"
 	@handler CreateSubtaskStyle
 	post /everyday/subtask/create (UserIDInquireInput)  returns (Mistake)
+	
+	@doc "Ping测试"
+	@handler Ping
+	post /everyday/subtask/ping (UserIDInquireInput)  returns (Mistake)
+	
+	@doc "创建用户发布助力"
+	@handler CreateAssistanceTask
+	post /everyday/subtask/helper/create (UserPublishingAssistanceTaskInput)  returns (Mistake)
+	
+	@doc "查询用户发布助力信息"
+	@handler QueryAssistanceTask
+	get /everyday/subtask/helper (UserIDInquireInput)  returns (UserPublishingAssistanceTask)
+	
 }

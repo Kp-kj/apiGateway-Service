@@ -22,6 +22,6 @@ func NewServiceContext(c config.Config) *ServiceContext {
 		Config:          c,
 		BlackMiddleware: middleware.NewBlackMiddleware().Handle, // 黑名单中间件 初始化
 		UserRpcClient:   userclient.NewUser(zrpc.MustNewClient(c.UserRpcConf)),
-		TaskClient:      taskclient.NewTask(zrpc.MustNewClient(c.TaskRpcConf)),
+		TaskClient:      taskclient.NewTask(zrpc.MustNewClient(c.UserRpcConf)),
 	}
 }

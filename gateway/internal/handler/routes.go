@@ -160,7 +160,7 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 			{
 				Method:  http.MethodGet,
 				Path:    "/curatorial/label/list",
-				Handler: curatorial.GetLabelListHandler(serverCtx),
+				Handler: curatorial.QueryLabelListHandler(serverCtx),
 			},
 			{
 				Method:  http.MethodPost,
@@ -233,6 +233,21 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Method:  http.MethodPost,
 				Path:    "/everyday/subtask/create",
 				Handler: everyday.CreateSubtaskStyleHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/subtask/ping",
+				Handler: everyday.PingHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/subtask/helper/create",
+				Handler: everyday.CreateAssistanceTaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/everyday/subtask/helper",
+				Handler: everyday.QueryAssistanceTaskHandler(serverCtx),
 			},
 		},
 		rest.WithJwt(serverCtx.Config.Auth.AccessSecret),

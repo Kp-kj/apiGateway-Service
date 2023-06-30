@@ -260,7 +260,6 @@ type TreasureTaskSrtInput struct {
 }
 
 type TreasureTaskStage struct {
-	ID               int64 `json:"iD"`
 	Treasure         int64 `json:"treasure"`
 	TreasureSequence int64 `json:"treasureSequence"`
 	StageExperience  int64 `json:"stageExperience"`
@@ -376,4 +375,21 @@ type AssociatedSubtaskSeed struct {
 type CreateUserPowerTaskInput struct {
 	PublishesUserId string `json:"publishesUserId"`
 	HelperUserId    string `json:"helperUserId"`
+}
+
+type UserPublishingAssistanceTaskInput struct {
+	UserId   string `json:"userId"`
+	UserName string `json:"userName"`
+	Avatar   string `json:"avatar"`
+}
+
+type UserPublishingAssistanceTask struct {
+	ID        int64  `json:"id"`
+	CreatedAt string `json:"createdAt"`
+	UserId    string `json:"userId"`
+	UserName  string `json:"userName"`
+	Avatar    string `json:"avatar"`
+	Article   string `json:"article"`
+	Link      string `json:"link"`
+	Label     string `json:"label"`
 }

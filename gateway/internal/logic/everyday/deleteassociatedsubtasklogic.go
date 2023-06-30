@@ -2,6 +2,7 @@ package everyday
 
 import (
 	"context"
+	"gateway/taskclient"
 
 	"gateway/internal/svc"
 	"gateway/internal/types"
@@ -24,7 +25,6 @@ func NewDeleteAssociatedSubtaskLogic(ctx context.Context, svcCtx *svc.ServiceCon
 }
 
 func (l *DeleteAssociatedSubtaskLogic) DeleteAssociatedSubtask(req *types.TaskIDInquireInput) (resp *types.Mistake, err error) {
-	// todo: add your logic here and delete this line
-
-	return
+	err1, err := l.svcCtx.TaskClient.DeleteAssociatedSubtask(l.ctx, &taskclient.TaskIDInquireInput{Id: req.Id})
+	return &types.Mistake{Msg: err1.Msg}, err
 }

@@ -2,6 +2,7 @@ package curatorial
 
 import (
 	"context"
+	"gateway/taskclient"
 
 	"gateway/internal/svc"
 	"gateway/internal/types"
@@ -23,8 +24,11 @@ func NewPerformTaskLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Perfo
 	}
 }
 
+// PerformTask 判断是否完成策展任务
 func (l *PerformTaskLogic) PerformTask(req *types.PerformTaskInput) (resp *types.Mistake, err error) {
-	// todo: add your logic here and delete this line
-
-	return
+	err1, err := l.svcCtx.TaskClient.PerformTask(l.ctx, &taskclient.PerformTaskInput{
+		TaskId: req.TaskId,
+		UserId: req.UserId,
+	})
+	return &types.Mistake{Msg: err1.Msg}, err
 }

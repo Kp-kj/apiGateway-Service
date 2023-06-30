@@ -1,11 +1,11 @@
 package admin
 
 import (
-	xhttp "github.com/zeromicro/x/http"
 	"net/http"
 
 	"gateway/internal/logic/admin"
 	"gateway/internal/svc"
+	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
 func GetRegisteredPopulationHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
@@ -13,12 +13,9 @@ func GetRegisteredPopulationHandler(svcCtx *svc.ServiceContext) http.HandlerFunc
 		l := admin.NewGetRegisteredPopulationLogic(r.Context(), svcCtx)
 		resp, err := l.GetRegisteredPopulation()
 		if err != nil {
-			// code-data 响应格式
-			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
+			httpx.ErrorCtx(r.Context(), w, err)
 		} else {
-			// code-data 响应格式
-			w.WriteHeader(http.StatusOK)
-			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)
+			httpx.OkJsonCtx(r.Context(), w, resp)
 		}
 	}
 }
