@@ -456,6 +456,7 @@ type TreasureTaskSrtInput {
 
 // Treasure box stage (宝箱阶段)
 type TreasureTaskStage {
+	ID               int64 `json:"iD"`
 	Treasure         int64 `json:"treasure"`
 	TreasureSequence int64 `json:"treasureSequence"`
 	StageExperience  int64 `json:"stageExperience"`
@@ -585,25 +586,6 @@ type CreateUserPowerTaskInput {
 	HelperUserId    string `json:"helperUserId"`
 }
 
-// Create a user publishing assistance task 创建用户发布助力任务
-type UserPublishingAssistanceTaskInput {
-	UserId   string `json:"userId"`
-	UserName string `json:"userName"`
-	Avatar   string `json:"avatar"`
-}
-
-// Example Query user publishing assistance information 查询用户发布助力信息
-type UserPublishingAssistanceTask {
-	ID        int64  `json:"id"`
-	CreatedAt string `json:"createdAt"`
-	UserId    string `json:"userId"`
-	UserName  string `json:"userName"`
-	Avatar    string `json:"avatar"`
-	Article   string `json:"article"`
-	Link      string `json:"link"`
-	Label     string `json:"label"`
-}
-
 // 策展任务相关接口，需要鉴权
 @server(
 	prefix :/v1
@@ -630,7 +612,7 @@ service gateway-api {
 	get /curatorial/user/list (UserLaunchTaskListInput) returns (RePublishTask)
 	
 	@doc "创建标签"
-	@handler CreateLabel
+	@handler createLabel
 	post /curatorial/label/create (CreateLabelInput) returns (Mistake)
 	
 	@doc "删除标签"
@@ -638,7 +620,7 @@ service gateway-api {
 	post /curatorial/label/delete (TaskIDInquireInput) returns (Mistake)
 	
 	@doc "获取标签列表"
-	@handler QueryLabelList
+	@handler getLabelList
 	get /curatorial/label/list (UserIDInquireInput) returns (ReLabelListOut)
 	
 	@doc "判断是否完成策展任务"
@@ -702,17 +684,218 @@ service gateway-api {
 	@doc "创建子任务样式"
 	@handler CreateSubtaskStyle
 	post /everyday/subtask/create (UserIDInquireInput)  returns (Mistake)
+}
+
+/*商城部分开始*/
+// 管理系统创建矿机
+type CreateCryptominerInput {
+	AdminUserID         int64  `json:"adminUserId"`
+	CryptominerName     string `json:"cryptominerName"`
+	CryptominerPicture  string `json:"cryptominerPicture"`
+	CryptominerDescribe string `json:"cryptominerDescribe"`
+	CryptominerPrice    int64  `json:"cryptominerPrice"`
+	CryptominerDuration int64  `json:"cryptominerDuration"`
+}
+
+// 响应
+type IsSuccessReply {
+	IsSuccess bool `json:"isSuccess"` // 创建成功
+}
+
+// 管理系统创建道具
+type CreatePropInput {
+	AdminUserID  int64  `json:"adminUserId"`  // 创建者id
+	PropName     string `json:"propName"`     // 矿机名称
+	PropPicture  string `json:"propPicture"`  // 矿机图片
+	PropDescribe string `json:"propDescribe"` // 矿机描述
+	PropPrice    int64  `json:"propPrice"`    // 矿机价格
+}
+
+// 获取商城列表
+type GetGoodsListInput {
+	UserID int64 `json:"userId"`
+}
+
+// 获取商城列表
+type GetGoodsListReply {
+	Cryptominer []*Cryptominer `json:"cryptominer"`
+	Prop        []*Prop        `json:"prop"`
+}
+
+// Cryptominer 矿机
+type Cryptominer {
+	CryptominerID        int64  `json:"cryptominerId"` // ID
+	UserID               int64  `json:"userId"`
+	CryptominerTypeID    int64  `json:"cryptominerTypeId"`    // 矿机种类id
+	CryptominerName      string `json:"cryptominerName"`      // 矿机名称
+	CryptominerPicture   string `json:"cryptominerPicture"`   // 矿机图片
+	CryptominerDescribe  string `json:"cryptominerDescribe"`  // 矿机描述
+	CryptominerPrice     int64  `json:"cryptominerPrice"`     // 矿机价格
+	OptionalStatus       string `json:"optionalStatus"`       // 矿机状态 0：未购买 1：工作中 2：已失效 3：砍价中
+	PurchaseTime         string `json:"purchaseTime"`         // 购买时间
+	IsBargain            bool   `json:"isBargain"`            // 是否可砍
+	PurchaseWay          string `json:"purchaseWay"`          // 购买方式 0：全额购买 1：限时砍价
+	CryptominerStartTime string `json:"cryptominerStartTime"` // 矿机开始运作时间
+	CryptominerEndTime   string `json:"cryptominerEndTime"`   // 矿机失效时间
+	CryptominerDuration  string `json:"cryptominerDuration"`  // 矿机运作时间
+}
+
+// Prop 道具
+type Prop {
+	PropID       int64  `json:"propId"` // ID
+	UserID       int64  `json:"userId"`
+	PropTypeID   int64  `json:"propTypeId"`   // 道具种类id
+	PropName     string `json:"propName"`     // 道具名称
+	PropPicture  string `json:"propPicture"`  // 道具图片
+	PropDescribe string `json:"propDescribe"` // 道具描述
+	PropPrice    int64  `json:"propPrice"`    // 道具价格
+	PurchaseTime string `json:"purchaseTime"` // 购买时间
+}
+
+// 判断是否可以砍价
+type JudgeBargainInput {
+	UserID            int64 `json:"userId"`            // 用户id
+	CryptominerTypeID int64 `json:"cryptominerTypeId"` // 矿机种类ids
+}
+
+// 判断是否可以砍价
+type JudgeBargainReply {
+	IsBargain bool `json:"isBargain"` // 砍价id
+}
+
+// 矿机全额购买
+type CryptominerPurchaseInput {
+	UserID        int64 `json:"userId"`        // 用户id
+	CryptominerID int64 `json:"cryptominerId"` // 商品id
+}
+
+// 矿机限时购买
+type CryptominerBargainInput {
+	UserID        int64 `json:"userId"`        // 用户id
+	CryptominerID int64 `json:"cryptominerId"` // 商品id
+}
+
+// 矿机限时购买
+type CryptominerBargainReply {
+	BargainID int64 `json:"bargainId"` // 砍价id
+	IsFirst   bool  `json:"isFirst"`   // 是否为第一次砍价
+}
+
+// 获取活动规则
+type GetBargainRuleInput {
+	BargainID int64 `json:"bargainId"` // 砍价id
+}
+
+// 获取活动规则
+type GetBargainRuleReply {
+	BargainRuleDescribe string `json:"bargainRuleDescribe"` // 规则描述
+}
+
+// 获取砍价商品信息
+type GetBargainCryptominerInput {
+	CryptominerID int64 `json:"cryptominerId"` // 矿机id
+}
+
+// 获取砍价矿机信息
+type GetBargainCryptominerReply {
+	CryptominerName    string `json:"cryptominerName"`    // 矿机名称
+	CryptominerPicture string `json:"cryptominerPicture"` // 矿机图片
+}
+
+// 获取砍价进度
+type GetBargainProgressInput {
+	BargainID int64 `json:"bargainId"` // 砍价id
+}
+
+// 获取砍价进度
+type GetBargainProgressReply {
+	ActivityStartTime string  `json:"activityStartTime"` // 活动开始时间
+	RemainingPrice    float32 `json:"remainingPrice"`    // 剩余金额
+}
+
+// 获取砍价记录列表
+type GetBargainRecordInput {
+	BargainID int64 `json:"bargainId"` // 砍价id
+}
+
+// 获取砍价记录列表
+type GetBargainRecordReply {
+	Cryptominer   []*Cryptominer   `json:"cryptominer"`   // 矿机
+	BargainAmount []*BargainAmount `json:"bargainAmount"` // 每份金额计算
+	Profile       []*Profile       `json:"profile"`       // 对应金额的砍价人信息
+}
+
+// 金额计算
+type BargainAmount {
+	FirstBargainPercentage float32 `json:"firstBargainPercentage"` // 初次砍价百分比
+	BargainMinPrice        float32 `json:"bargainMinPrice"`        // 砍价最小额度
+	BargainPrice           float32 `json:"bargainPrice"`           // 本次砍价额度
+}
+
+// 用户信息
+type Profile {
+	UserID   int64  `json:"userId"`   // 用户id
+	UserName string `json:"userName"` // 用户名
+	Avatar   string `json:"avatar"`   // 用户头像
+}
+
+// 创建商品，需要鉴权
+@server(
+	prefix :/v1
+	group :adminmall
+	//	middleware : BlackMiddleware
+	//  jwt : AdminAuth
+)
+
+service gateway-api {
+	@doc "管理系统添加矿机"
+	@handler CreateCryptominer
+	post /adminmall/create/cryptominer (CreateCryptominerInput)  returns (IsSuccessReply)
 	
-	@doc "Ping测试"
-	@handler Ping
-	post /everyday/subtask/ping (UserIDInquireInput)  returns (Mistake)
+	@doc "管理系统添加道具"
+	@handler CreateProp
+	post /adminmall/create/prop (CreatePropInput)  returns (IsSuccessReply)
+}
+
+// 用户商城，需要鉴权
+@server(
+	prefix :/v1
+	group :mall
+	//	middleware : BlackMiddleware
+	jwt : Auth
+)
+
+service gateway-api {
+	@doc "获取商品列表"
+	@handler GetGoodsList
+	get /mall/goodlist (GetGoodsListInput)  returns (GetGoodsListReply)
 	
-	@doc "创建用户发布助力"
-	@handler CreateAssistanceTask
-	post /everyday/subtask/helper/create (UserPublishingAssistanceTaskInput)  returns (Mistake)
+	@doc "判断是否可砍"
+	@handler JudgeBargain
+	get /mall/judgebargain (JudgeBargainInput)  returns (JudgeBargainReply)
 	
-	@doc "查询用户发布助力信息"
-	@handler QueryAssistanceTask
-	get /everyday/subtask/helper (UserIDInquireInput)  returns (UserPublishingAssistanceTask)
+	@doc "全额购买"
+	@handler CryptominerFullPurchase
+	post /mall/purchase/full(CryptominerPurchaseInput)  returns (IsSuccessReply)
+	
+	@doc "砍价购买"
+	@handler CryptominerBargainPurchase
+	post /mall/purchase/bargain(CryptominerBargainInput)  returns (CryptominerBargainReply)
+	
+	@doc "获取砍价活动规则"
+	@handler GetBargainRule
+	get /mall/activity/rule (GetBargainRuleInput)  returns (GetBargainRuleReply)
+	
+	@doc "获取砍价矿机信息"
+	@handler GetBargainCryptominer
+	get /mall/activity/cryptominer (GetBargainCryptominerInput)  returns (GetBargainCryptominerReply)
+	
+	@doc "获取砍价进度"
+	@handler GetBargainProgress
+	get /mall/activity/progress (GetBargainProgressInput)  returns (GetBargainProgressReply)
+	
+	@doc "获取砍价记录列表"
+	@handler GetBargainRecord
+	get /mall/activity/bargainlist (GetBargainRecordInput)  returns (GetBargainRecordReply)
 	
 }

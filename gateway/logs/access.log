@@ -1,4 +1,0 @@
-2023-07-03T00:00:28.183+08:00	[34;1m info [0m	compressing log file: logs/stat.log-2023-07-02	caller=logx/rotatelogger.go:408
-2023-07-03T00:00:28.186+08:00	[34;1m info [0m	compressing log file: logs/access.log-2023-07-02	caller=logx/rotatelogger.go:408
-2023-07-03T00:00:28.195+08:00	[34;1m info [0m	compressing log file: logs/error.log-2023-07-02	caller=logx/rotatelogger.go:408
-2023-07-03T13:21:52.652+08:00	[34;1m info [0m	[HTTP] [42;97;1m 200 [0m - [44;97;1m GET [0m /v1/curatorial/list - 127.0.0.1:61005 - apifox/1.0.0 (https://www.apifox.cn)	duration=131.6ms	caller=handler/loghandler.go:160	trace=f0d88ba70b0e8e8c9f681108c25ec7e1	span=dc36f3e74d34573b
