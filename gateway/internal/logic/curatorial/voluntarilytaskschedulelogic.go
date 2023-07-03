@@ -24,6 +24,7 @@ func NewVoluntarilyTaskScheduleLogic(ctx context.Context, svcCtx *svc.ServiceCon
 	}
 }
 
+// VoluntarilyTaskSchedule 完成站内策展任务(喜欢+关注)(未完成)
 func (l *VoluntarilyTaskScheduleLogic) VoluntarilyTaskSchedule(req *types.VoluntarilyTaskScheduleInput) (resp *types.Mistake, err error) {
 	err1, err := l.svcCtx.TaskClient.VoluntarilyTaskSchedule(l.ctx, &taskclient.VoluntarilyTaskScheduleInput{
 		UserId: req.UserId,

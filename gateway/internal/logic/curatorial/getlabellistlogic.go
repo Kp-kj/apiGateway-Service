@@ -27,6 +27,10 @@ func NewGetLabelListLogic(ctx context.Context, svcCtx *svc.ServiceContext) *GetL
 func (l *GetLabelListLogic) GetLabelList(req *types.UserIDInquireInput) (resp *types.ReLabelListOut, err error) {
 	reLabelListOut, err := l.svcCtx.TaskClient.QueryLabelList(l.ctx, &taskclient.UserIDInquireInput{
 		UserId: req.UserId})
+	if err != nil {
+		return nil, err
+	}
+
 	var reLabelList []*types.ReLabelList
 	for _, item := range reLabelListOut.ReLabelList {
 		reLabelList = append(reLabelList, &types.ReLabelList{
@@ -37,5 +41,5 @@ func (l *GetLabelListLogic) GetLabelList(req *types.UserIDInquireInput) (resp *t
 	}
 	return &types.ReLabelListOut{
 		ReLabelList: reLabelList,
-	}, nil
+	}, err
 }
