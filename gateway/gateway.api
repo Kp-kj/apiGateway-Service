@@ -129,8 +129,17 @@ type ContentByHelpDocumentIdReply {
 	DocumentTitle   string `json:"helpDocumentTitle"` //帮助文档标题
 }
 
-type GetContentByHelpDocumentIdReply {
-	ContextByHelpDocumentId []ContentByHelpDocumentIdReply `json:"contextByHelpDocumentId"`
+type GetMessageList {
+	LastNoticeId int64 `json:"lastNoticeId"` //通知时间
+	NoticeType   int64 `json:"noticeType"`   //通知类型 1:系统通知 2:用户通知 3:全部
+}
+type NoticeList {
+	NoticeId      int64  `json:"noticeId"`      //通知id
+	NoticeTitle   string `json:"noticeTitle"`   //通知标题
+	NoticeContent string `json:"noticeContent"` //通知内容
+	NoticeTime    int64  `json:"noticeTime"`    //通知时间
+	NoticeType    int64  `json:"noticeType"`    //通知类型 1:系统通知 2:用户通知
+	NoticeStatus  int64  `json:"noticeStatus"`  //通知状态 1:未读 2:已读
 }
 
 @server(
@@ -165,8 +174,12 @@ service gateway-api {
 	
 	@doc "根据帮助文档id获取内容详情"
 	@handler getContentByHelpDocumentId
-	get /user/getContentByHelpDocumentId (GetContentByHelpDocumentId) returns (GetContentByHelpDocumentIdReply)
+	get /user/getContentByHelpDocumentId (GetContentByHelpDocumentId) returns (ContentByHelpDocumentIdReply)
 	
+}
+
+type GetMessageListReply {
+	NoticeList []NoticeList `json:"noticeList"`
 }
 
 // 下面是用户接口，需要鉴权
@@ -186,9 +199,9 @@ service gateway-api {
 	@handler getUserInfo
 	get /user/getUserInfo returns (UserInfoReply)
 	
-	//	@doc "获取消息通知列表"
-	//	@handler getMessageList
-	//	post /user/getMessageList (GetMessageList) returns (GetMessageListReply)
+	@doc "获取消息通知列表"
+	@handler getMessageList
+	get /user/getMessageList (GetMessageList) returns (GetMessageListReply)
 	
 	//	@doc "根据通知id获取消息通知详情"
 	//	@handler getMessageByNoticeId

@@ -39,6 +39,21 @@ const (
 	User_CreateHelpCategoryTranslation_FullMethodName = "/user.User/CreateHelpCategoryTranslation"
 	User_DeleteHelpCategoryTranslation_FullMethodName = "/user.User/DeleteHelpCategoryTranslation"
 	User_GetHelpCategoryTranslations_FullMethodName   = "/user.User/GetHelpCategoryTranslations"
+	User_EditHelpCategoryTranslation_FullMethodName   = "/user.User/EditHelpCategoryTranslation"
+	User_GetHelpDocuments_FullMethodName              = "/user.User/GetHelpDocuments"
+	User_CreateHelpDocument_FullMethodName            = "/user.User/CreateHelpDocument"
+	User_DeleteHelpDocument_FullMethodName            = "/user.User/DeleteHelpDocument"
+	User_EditHelpDocument_FullMethodName              = "/user.User/EditHelpDocument"
+	User_CreateHelpDocumentTranslation_FullMethodName = "/user.User/CreateHelpDocumentTranslation"
+	User_DeleteHelpDocumentTranslation_FullMethodName = "/user.User/DeleteHelpDocumentTranslation"
+	User_GetHelpDocumentTranslations_FullMethodName   = "/user.User/GetHelpDocumentTranslations"
+	User_EditHelpDocumentTranslation_FullMethodName   = "/user.User/EditHelpDocumentTranslation"
+	User_CreateSystemNotification_FullMethodName      = "/user.User/CreateSystemNotification"
+	User_EditSystemNotification_FullMethodName        = "/user.User/EditSystemNotification"
+	User_GetSystemNotifications_FullMethodName        = "/user.User/GetSystemNotifications"
+	User_QuerySystemNotification_FullMethodName       = "/user.User/QuerySystemNotification"
+	User_CreateNotice_FullMethodName                  = "/user.User/CreateNotice"
+	User_RecordNotice_FullMethodName                  = "/user.User/RecordNotice"
 )
 
 // UserClient is the client API for User service.
@@ -65,6 +80,22 @@ type UserClient interface {
 	CreateHelpCategoryTranslation(ctx context.Context, in *CreateHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*CreateHelpCategoryTranslationResponse, error)
 	DeleteHelpCategoryTranslation(ctx context.Context, in *DeleteHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*DeleteHelpCategoryTranslationResponse, error)
 	GetHelpCategoryTranslations(ctx context.Context, in *GetHelpCategoryTranslationsRequest, opts ...grpc.CallOption) (*GetHelpCategoryTranslationsResponse, error)
+	EditHelpCategoryTranslation(ctx context.Context, in *EditHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*EditHelpCategoryTranslationResponse, error)
+	GetHelpDocuments(ctx context.Context, in *GetHelpDocumentsRequest, opts ...grpc.CallOption) (*GetHelpDocumentsResponse, error)
+	CreateHelpDocument(ctx context.Context, in *CreateHelpDocumentRequest, opts ...grpc.CallOption) (*CreateHelpDocumentResponse, error)
+	DeleteHelpDocument(ctx context.Context, in *DeleteHelpDocumentRequest, opts ...grpc.CallOption) (*DeleteHelpDocumentResponse, error)
+	EditHelpDocument(ctx context.Context, in *EditHelpDocumentRequest, opts ...grpc.CallOption) (*EditHelpDocumentResponse, error)
+	CreateHelpDocumentTranslation(ctx context.Context, in *CreateHelpDocumentTranslationRequest, opts ...grpc.CallOption) (*CreateHelpDocumentTranslationResponse, error)
+	DeleteHelpDocumentTranslation(ctx context.Context, in *DeleteHelpDocumentTranslationRequest, opts ...grpc.CallOption) (*DeleteHelpDocumentTranslationResponse, error)
+	GetHelpDocumentTranslations(ctx context.Context, in *GetHelpDocumentTranslationsRequest, opts ...grpc.CallOption) (*GetHelpDocumentTranslationsResponse, error)
+	EditHelpDocumentTranslation(ctx context.Context, in *EditHelpDocumentTranslationRequest, opts ...grpc.CallOption) (*EditHelpDocumentTranslationResponse, error)
+	CreateSystemNotification(ctx context.Context, in *CreateSystemNotificationRequest, opts ...grpc.CallOption) (*CreateSystemNotificationResponse, error)
+	EditSystemNotification(ctx context.Context, in *EditSystemNotificationRequest, opts ...grpc.CallOption) (*EditSystemNotificationResponse, error)
+	GetSystemNotifications(ctx context.Context, in *GetSystemNotificationsRequest, opts ...grpc.CallOption) (*GetSystemNotificationsResponse, error)
+	QuerySystemNotification(ctx context.Context, in *QuerySystemNotificationRequest, opts ...grpc.CallOption) (*QuerySystemNotificationResponse, error)
+	//recordNotice 通知记录
+	CreateNotice(ctx context.Context, in *CreateNoticeRequest, opts ...grpc.CallOption) (*CreateNoticeResponse, error)
+	RecordNotice(ctx context.Context, in *RecordNoticeRequest, opts ...grpc.CallOption) (*RecordNoticeResponse, error)
 }
 
 type userClient struct {
@@ -255,6 +286,141 @@ func (c *userClient) GetHelpCategoryTranslations(ctx context.Context, in *GetHel
 	return out, nil
 }
 
+func (c *userClient) EditHelpCategoryTranslation(ctx context.Context, in *EditHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*EditHelpCategoryTranslationResponse, error) {
+	out := new(EditHelpCategoryTranslationResponse)
+	err := c.cc.Invoke(ctx, User_EditHelpCategoryTranslation_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) GetHelpDocuments(ctx context.Context, in *GetHelpDocumentsRequest, opts ...grpc.CallOption) (*GetHelpDocumentsResponse, error) {
+	out := new(GetHelpDocumentsResponse)
+	err := c.cc.Invoke(ctx, User_GetHelpDocuments_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) CreateHelpDocument(ctx context.Context, in *CreateHelpDocumentRequest, opts ...grpc.CallOption) (*CreateHelpDocumentResponse, error) {
+	out := new(CreateHelpDocumentResponse)
+	err := c.cc.Invoke(ctx, User_CreateHelpDocument_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) DeleteHelpDocument(ctx context.Context, in *DeleteHelpDocumentRequest, opts ...grpc.CallOption) (*DeleteHelpDocumentResponse, error) {
+	out := new(DeleteHelpDocumentResponse)
+	err := c.cc.Invoke(ctx, User_DeleteHelpDocument_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) EditHelpDocument(ctx context.Context, in *EditHelpDocumentRequest, opts ...grpc.CallOption) (*EditHelpDocumentResponse, error) {
+	out := new(EditHelpDocumentResponse)
+	err := c.cc.Invoke(ctx, User_EditHelpDocument_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) CreateHelpDocumentTranslation(ctx context.Context, in *CreateHelpDocumentTranslationRequest, opts ...grpc.CallOption) (*CreateHelpDocumentTranslationResponse, error) {
+	out := new(CreateHelpDocumentTranslationResponse)
+	err := c.cc.Invoke(ctx, User_CreateHelpDocumentTranslation_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) DeleteHelpDocumentTranslation(ctx context.Context, in *DeleteHelpDocumentTranslationRequest, opts ...grpc.CallOption) (*DeleteHelpDocumentTranslationResponse, error) {
+	out := new(DeleteHelpDocumentTranslationResponse)
+	err := c.cc.Invoke(ctx, User_DeleteHelpDocumentTranslation_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) GetHelpDocumentTranslations(ctx context.Context, in *GetHelpDocumentTranslationsRequest, opts ...grpc.CallOption) (*GetHelpDocumentTranslationsResponse, error) {
+	out := new(GetHelpDocumentTranslationsResponse)
+	err := c.cc.Invoke(ctx, User_GetHelpDocumentTranslations_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) EditHelpDocumentTranslation(ctx context.Context, in *EditHelpDocumentTranslationRequest, opts ...grpc.CallOption) (*EditHelpDocumentTranslationResponse, error) {
+	out := new(EditHelpDocumentTranslationResponse)
+	err := c.cc.Invoke(ctx, User_EditHelpDocumentTranslation_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) CreateSystemNotification(ctx context.Context, in *CreateSystemNotificationRequest, opts ...grpc.CallOption) (*CreateSystemNotificationResponse, error) {
+	out := new(CreateSystemNotificationResponse)
+	err := c.cc.Invoke(ctx, User_CreateSystemNotification_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) EditSystemNotification(ctx context.Context, in *EditSystemNotificationRequest, opts ...grpc.CallOption) (*EditSystemNotificationResponse, error) {
+	out := new(EditSystemNotificationResponse)
+	err := c.cc.Invoke(ctx, User_EditSystemNotification_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) GetSystemNotifications(ctx context.Context, in *GetSystemNotificationsRequest, opts ...grpc.CallOption) (*GetSystemNotificationsResponse, error) {
+	out := new(GetSystemNotificationsResponse)
+	err := c.cc.Invoke(ctx, User_GetSystemNotifications_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) QuerySystemNotification(ctx context.Context, in *QuerySystemNotificationRequest, opts ...grpc.CallOption) (*QuerySystemNotificationResponse, error) {
+	out := new(QuerySystemNotificationResponse)
+	err := c.cc.Invoke(ctx, User_QuerySystemNotification_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) CreateNotice(ctx context.Context, in *CreateNoticeRequest, opts ...grpc.CallOption) (*CreateNoticeResponse, error) {
+	out := new(CreateNoticeResponse)
+	err := c.cc.Invoke(ctx, User_CreateNotice_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) RecordNotice(ctx context.Context, in *RecordNoticeRequest, opts ...grpc.CallOption) (*RecordNoticeResponse, error) {
+	out := new(RecordNoticeResponse)
+	err := c.cc.Invoke(ctx, User_RecordNotice_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // UserServer is the server API for User service.
 // All implementations must embed UnimplementedUserServer
 // for forward compatibility
@@ -279,6 +445,22 @@ type UserServer interface {
 	CreateHelpCategoryTranslation(context.Context, *CreateHelpCategoryTranslationRequest) (*CreateHelpCategoryTranslationResponse, error)
 	DeleteHelpCategoryTranslation(context.Context, *DeleteHelpCategoryTranslationRequest) (*DeleteHelpCategoryTranslationResponse, error)
 	GetHelpCategoryTranslations(context.Context, *GetHelpCategoryTranslationsRequest) (*GetHelpCategoryTranslationsResponse, error)
+	EditHelpCategoryTranslation(context.Context, *EditHelpCategoryTranslationRequest) (*EditHelpCategoryTranslationResponse, error)
+	GetHelpDocuments(context.Context, *GetHelpDocumentsRequest) (*GetHelpDocumentsResponse, error)
+	CreateHelpDocument(context.Context, *CreateHelpDocumentRequest) (*CreateHelpDocumentResponse, error)
+	DeleteHelpDocument(context.Context, *DeleteHelpDocumentRequest) (*DeleteHelpDocumentResponse, error)
+	EditHelpDocument(context.Context, *EditHelpDocumentRequest) (*EditHelpDocumentResponse, error)
+	CreateHelpDocumentTranslation(context.Context, *CreateHelpDocumentTranslationRequest) (*CreateHelpDocumentTranslationResponse, error)
+	DeleteHelpDocumentTranslation(context.Context, *DeleteHelpDocumentTranslationRequest) (*DeleteHelpDocumentTranslationResponse, error)
+	GetHelpDocumentTranslations(context.Context, *GetHelpDocumentTranslationsRequest) (*GetHelpDocumentTranslationsResponse, error)
+	EditHelpDocumentTranslation(context.Context, *EditHelpDocumentTranslationRequest) (*EditHelpDocumentTranslationResponse, error)
+	CreateSystemNotification(context.Context, *CreateSystemNotificationRequest) (*CreateSystemNotificationResponse, error)
+	EditSystemNotification(context.Context, *EditSystemNotificationRequest) (*EditSystemNotificationResponse, error)
+	GetSystemNotifications(context.Context, *GetSystemNotificationsRequest) (*GetSystemNotificationsResponse, error)
+	QuerySystemNotification(context.Context, *QuerySystemNotificationRequest) (*QuerySystemNotificationResponse, error)
+	//recordNotice 通知记录
+	CreateNotice(context.Context, *CreateNoticeRequest) (*CreateNoticeResponse, error)
+	RecordNotice(context.Context, *RecordNoticeRequest) (*RecordNoticeResponse, error)
 	mustEmbedUnimplementedUserServer()
 }
 
@@ -345,6 +527,51 @@ func (UnimplementedUserServer) DeleteHelpCategoryTranslation(context.Context, *D
 }
 func (UnimplementedUserServer) GetHelpCategoryTranslations(context.Context, *GetHelpCategoryTranslationsRequest) (*GetHelpCategoryTranslationsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetHelpCategoryTranslations not implemented")
+}
+func (UnimplementedUserServer) EditHelpCategoryTranslation(context.Context, *EditHelpCategoryTranslationRequest) (*EditHelpCategoryTranslationResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method EditHelpCategoryTranslation not implemented")
+}
+func (UnimplementedUserServer) GetHelpDocuments(context.Context, *GetHelpDocumentsRequest) (*GetHelpDocumentsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetHelpDocuments not implemented")
+}
+func (UnimplementedUserServer) CreateHelpDocument(context.Context, *CreateHelpDocumentRequest) (*CreateHelpDocumentResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateHelpDocument not implemented")
+}
+func (UnimplementedUserServer) DeleteHelpDocument(context.Context, *DeleteHelpDocumentRequest) (*DeleteHelpDocumentResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteHelpDocument not implemented")
+}
+func (UnimplementedUserServer) EditHelpDocument(context.Context, *EditHelpDocumentRequest) (*EditHelpDocumentResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method EditHelpDocument not implemented")
+}
+func (UnimplementedUserServer) CreateHelpDocumentTranslation(context.Context, *CreateHelpDocumentTranslationRequest) (*CreateHelpDocumentTranslationResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateHelpDocumentTranslation not implemented")
+}
+func (UnimplementedUserServer) DeleteHelpDocumentTranslation(context.Context, *DeleteHelpDocumentTranslationRequest) (*DeleteHelpDocumentTranslationResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteHelpDocumentTranslation not implemented")
+}
+func (UnimplementedUserServer) GetHelpDocumentTranslations(context.Context, *GetHelpDocumentTranslationsRequest) (*GetHelpDocumentTranslationsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetHelpDocumentTranslations not implemented")
+}
+func (UnimplementedUserServer) EditHelpDocumentTranslation(context.Context, *EditHelpDocumentTranslationRequest) (*EditHelpDocumentTranslationResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method EditHelpDocumentTranslation not implemented")
+}
+func (UnimplementedUserServer) CreateSystemNotification(context.Context, *CreateSystemNotificationRequest) (*CreateSystemNotificationResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateSystemNotification not implemented")
+}
+func (UnimplementedUserServer) EditSystemNotification(context.Context, *EditSystemNotificationRequest) (*EditSystemNotificationResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method EditSystemNotification not implemented")
+}
+func (UnimplementedUserServer) GetSystemNotifications(context.Context, *GetSystemNotificationsRequest) (*GetSystemNotificationsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetSystemNotifications not implemented")
+}
+func (UnimplementedUserServer) QuerySystemNotification(context.Context, *QuerySystemNotificationRequest) (*QuerySystemNotificationResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method QuerySystemNotification not implemented")
+}
+func (UnimplementedUserServer) CreateNotice(context.Context, *CreateNoticeRequest) (*CreateNoticeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateNotice not implemented")
+}
+func (UnimplementedUserServer) RecordNotice(context.Context, *RecordNoticeRequest) (*RecordNoticeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RecordNotice not implemented")
 }
 func (UnimplementedUserServer) mustEmbedUnimplementedUserServer() {}
 
@@ -719,6 +946,276 @@ func _User_GetHelpCategoryTranslations_Handler(srv interface{}, ctx context.Cont
 	return interceptor(ctx, in, info, handler)
 }
 
+func _User_EditHelpCategoryTranslation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(EditHelpCategoryTranslationRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).EditHelpCategoryTranslation(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_EditHelpCategoryTranslation_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).EditHelpCategoryTranslation(ctx, req.(*EditHelpCategoryTranslationRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_GetHelpDocuments_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetHelpDocumentsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).GetHelpDocuments(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_GetHelpDocuments_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).GetHelpDocuments(ctx, req.(*GetHelpDocumentsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_CreateHelpDocument_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateHelpDocumentRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).CreateHelpDocument(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_CreateHelpDocument_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).CreateHelpDocument(ctx, req.(*CreateHelpDocumentRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_DeleteHelpDocument_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DeleteHelpDocumentRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).DeleteHelpDocument(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_DeleteHelpDocument_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).DeleteHelpDocument(ctx, req.(*DeleteHelpDocumentRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_EditHelpDocument_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(EditHelpDocumentRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).EditHelpDocument(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_EditHelpDocument_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).EditHelpDocument(ctx, req.(*EditHelpDocumentRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_CreateHelpDocumentTranslation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateHelpDocumentTranslationRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).CreateHelpDocumentTranslation(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_CreateHelpDocumentTranslation_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).CreateHelpDocumentTranslation(ctx, req.(*CreateHelpDocumentTranslationRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_DeleteHelpDocumentTranslation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DeleteHelpDocumentTranslationRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).DeleteHelpDocumentTranslation(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_DeleteHelpDocumentTranslation_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).DeleteHelpDocumentTranslation(ctx, req.(*DeleteHelpDocumentTranslationRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_GetHelpDocumentTranslations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetHelpDocumentTranslationsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).GetHelpDocumentTranslations(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_GetHelpDocumentTranslations_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).GetHelpDocumentTranslations(ctx, req.(*GetHelpDocumentTranslationsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_EditHelpDocumentTranslation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(EditHelpDocumentTranslationRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).EditHelpDocumentTranslation(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_EditHelpDocumentTranslation_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).EditHelpDocumentTranslation(ctx, req.(*EditHelpDocumentTranslationRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_CreateSystemNotification_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateSystemNotificationRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).CreateSystemNotification(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_CreateSystemNotification_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).CreateSystemNotification(ctx, req.(*CreateSystemNotificationRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_EditSystemNotification_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(EditSystemNotificationRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).EditSystemNotification(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_EditSystemNotification_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).EditSystemNotification(ctx, req.(*EditSystemNotificationRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_GetSystemNotifications_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetSystemNotificationsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).GetSystemNotifications(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_GetSystemNotifications_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).GetSystemNotifications(ctx, req.(*GetSystemNotificationsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_QuerySystemNotification_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(QuerySystemNotificationRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).QuerySystemNotification(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_QuerySystemNotification_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).QuerySystemNotification(ctx, req.(*QuerySystemNotificationRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_CreateNotice_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateNoticeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).CreateNotice(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_CreateNotice_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).CreateNotice(ctx, req.(*CreateNoticeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_RecordNotice_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RecordNoticeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).RecordNotice(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: User_RecordNotice_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).RecordNotice(ctx, req.(*RecordNoticeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // User_ServiceDesc is the grpc.ServiceDesc for User service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -805,6 +1302,66 @@ var User_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetHelpCategoryTranslations",
 			Handler:    _User_GetHelpCategoryTranslations_Handler,
+		},
+		{
+			MethodName: "EditHelpCategoryTranslation",
+			Handler:    _User_EditHelpCategoryTranslation_Handler,
+		},
+		{
+			MethodName: "GetHelpDocuments",
+			Handler:    _User_GetHelpDocuments_Handler,
+		},
+		{
+			MethodName: "CreateHelpDocument",
+			Handler:    _User_CreateHelpDocument_Handler,
+		},
+		{
+			MethodName: "DeleteHelpDocument",
+			Handler:    _User_DeleteHelpDocument_Handler,
+		},
+		{
+			MethodName: "EditHelpDocument",
+			Handler:    _User_EditHelpDocument_Handler,
+		},
+		{
+			MethodName: "CreateHelpDocumentTranslation",
+			Handler:    _User_CreateHelpDocumentTranslation_Handler,
+		},
+		{
+			MethodName: "DeleteHelpDocumentTranslation",
+			Handler:    _User_DeleteHelpDocumentTranslation_Handler,
+		},
+		{
+			MethodName: "GetHelpDocumentTranslations",
+			Handler:    _User_GetHelpDocumentTranslations_Handler,
+		},
+		{
+			MethodName: "EditHelpDocumentTranslation",
+			Handler:    _User_EditHelpDocumentTranslation_Handler,
+		},
+		{
+			MethodName: "CreateSystemNotification",
+			Handler:    _User_CreateSystemNotification_Handler,
+		},
+		{
+			MethodName: "EditSystemNotification",
+			Handler:    _User_EditSystemNotification_Handler,
+		},
+		{
+			MethodName: "GetSystemNotifications",
+			Handler:    _User_GetSystemNotifications_Handler,
+		},
+		{
+			MethodName: "QuerySystemNotification",
+			Handler:    _User_QuerySystemNotification_Handler,
+		},
+		{
+			MethodName: "CreateNotice",
+			Handler:    _User_CreateNotice_Handler,
+		},
+		{
+			MethodName: "RecordNotice",
+			Handler:    _User_RecordNotice_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

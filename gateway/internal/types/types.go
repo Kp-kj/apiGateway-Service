@@ -118,8 +118,22 @@ type ContentByHelpDocumentIdReply struct {
 	DocumentTitle   string `json:"helpDocumentTitle"` //帮助文档标题
 }
 
-type GetContentByHelpDocumentIdReply struct {
-	ContextByHelpDocumentId []ContentByHelpDocumentIdReply `json:"contextByHelpDocumentId"`
+type GetMessageList struct {
+	LastNoticeId int64 `json:"lastNoticeId"` //通知时间
+	NoticeType   int64 `json:"noticeType"`   //通知类型 1:系统通知 2:用户通知 3:全部
+}
+
+type NoticeList struct {
+	NoticeId      int64  `json:"noticeId"`      //通知id
+	NoticeTitle   string `json:"noticeTitle"`   //通知标题
+	NoticeContent string `json:"noticeContent"` //通知内容
+	NoticeTime    int64  `json:"noticeTime"`    //通知时间
+	NoticeType    int64  `json:"noticeType"`    //通知类型 1:系统通知 2:用户通知
+	NoticeStatus  int64  `json:"noticeStatus"`  //通知状态 1:未读 2:已读
+}
+
+type GetMessageListReply struct {
+	NoticeList []NoticeList `json:"noticeList"`
 }
 
 type CreatePublishTaskInput struct {
