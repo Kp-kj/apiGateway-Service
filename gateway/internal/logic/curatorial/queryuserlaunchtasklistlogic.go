@@ -3,6 +3,7 @@ package curatorial
 import (
 	"context"
 	"gateway/taskclient"
+	"gateway/userclient"
 
 	"gateway/internal/svc"
 	"gateway/internal/types"
@@ -43,13 +44,24 @@ func (l *QueryUserLaunchTaskListLogic) QueryUserLaunchTaskList(req *types.UserLa
 				Article:    item1.Article,
 			})
 		}
+		// 判断用户是否存在
+		user, _ := l.svcCtx.UserRpcClient.QueryUser(l.ctx, &userclient.QueryUserRequest{UserId: item.Creator})
+		var userInfo userclient.QueryUserResponse
+		if user == nil {
+			userInfo = userclient.QueryUserResponse{
+				TwitterName: user.TwitterName,
+				UserName:    user.UserName,
+				UserAvatar:  user.UserAvatar,
+				IsNew:       user.IsNew,
+			}
+		}
 		rePublishTaskBak = append(rePublishTaskBak, &types.RePublishTaskBak{
 			TaskID:        item.TaskId,
 			CreatedAt:     item.CreatedAt,
 			Creator:       item.Creator,
-			CreatorName:   item.CreatorName,
-			CreatorNick:   item.CreatorNick,
-			CreatorAvatar: item.CreatorAvatar,
+			CreatorName:   userInfo.TwitterName,
+			CreatorNick:   userInfo.UserName,
+			CreatorAvatar: userInfo.UserAvatar,
 			Status:        item.Status,
 			TweetDetails:  item.TweetDetails,
 			TweetPicture:  item.TweetPicture,

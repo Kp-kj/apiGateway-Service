@@ -1,0 +1,2 @@
+2023-06-07T10:44:40.625+08:00	[32;1m stat [0m	CPU: 0m, MEMORY: Alloc=3.9Mi, TotalAlloc=8.6Mi, Sys=23.0Mi, NumGC=9	caller=stat/usage.go:61
+2023-06-07T10:44:40.655+08:00	[32;1m stat [0m	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61

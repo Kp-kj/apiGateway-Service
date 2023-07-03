@@ -608,7 +608,7 @@ type UserPublishingAssistanceTask {
 @server(
 	prefix :/v1
 	group :curatorial
-	//	middleware : BlackMiddleware
+	middleware : BlackMiddleware
 	jwt : Auth
 )
 
@@ -654,7 +654,7 @@ service gateway-api {
 @server(
 	prefix :/v1
 	group :everyday
-	//	middleware : BlackMiddleware
+	middleware : BlackMiddleware
 	jwt : Auth
 )
 

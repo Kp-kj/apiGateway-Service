@@ -3,6 +3,7 @@ package curatorial
 import (
 	"context"
 	"gateway/taskclient"
+	"gateway/userclient"
 
 	"gateway/internal/svc"
 	"gateway/internal/types"
@@ -26,10 +27,18 @@ func NewCreateLabelLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Creat
 
 // CreateLabel 创建标签
 func (l *CreateLabelLogic) CreateLabel(req *types.CreateLabelInput) (resp *types.Mistake, err error) {
+	// 判断用户是否存在
+	user, err := l.svcCtx.UserRpcClient.QueryUser(l.ctx, &userclient.QueryUserRequest{UserId: req.UserId})
+	if err != nil {
+		return nil, err
+	}
+	if user == nil {
+		return &types.Mistake{Msg: "用户不存在"}, err
+	}
+
 	err1, err := l.svcCtx.TaskClient.CreateLabel(l.ctx, &taskclient.CreateLabelInput{
 		UserId: req.UserId,
 		Label:  req.Label,
 	})
-
 	return &types.Mistake{Msg: err1.Msg}, err
 }

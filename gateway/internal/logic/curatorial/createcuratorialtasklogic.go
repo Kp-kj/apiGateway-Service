@@ -4,8 +4,10 @@ import (
 	"context"
 	"fmt"
 	"gateway/taskclient"
-	"github.com/shopspring/decimal"
+	"gateway/userclient"
 	"strings"
+
+	"github.com/shopspring/decimal"
 
 	"gateway/internal/svc"
 	"gateway/internal/types"
@@ -29,6 +31,14 @@ func NewCreateCuratorialTaskLogic(ctx context.Context, svcCtx *svc.ServiceContex
 
 // CreateCuratorialTask 创建策展任务
 func (l *CreateCuratorialTaskLogic) CreateCuratorialTask(req *types.CreatePublishTaskInput) (resp *types.Mistake, err error) {
+	// 判断用户是否存在
+	user, err := l.svcCtx.UserRpcClient.QueryUser(l.ctx, &userclient.QueryUserRequest{UserId: req.Creator})
+	if err != nil {
+		return nil, err
+	}
+	if user == nil {
+		return &types.Mistake{Msg: "用户不存在"}, err
+	}
 	// 判断推特文章地址是否正确
 	if !strings.Contains(req.TweetAddress, "twitter.com/") {
 		return &types.Mistake{Msg: "推特文章地址不正确"}, fmt.Errorf("推特文章地址不正确")
