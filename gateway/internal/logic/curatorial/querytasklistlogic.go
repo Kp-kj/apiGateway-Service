@@ -65,7 +65,6 @@ func (l *QueryTaskListLogic) QueryTaskList(req *types.PublishTaskInput) (resp *t
 			TaskDemand:    taskDemand,
 		})
 	}
-
 	return &types.RePublishTask{
 		PaginationData: types.PaginationData{
 			Total:   data.PaginationData.Total,

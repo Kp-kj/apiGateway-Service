@@ -19,7 +19,7 @@ AdminAuth:
   AccessSecret: "0987654321"
   AccessExpire: 604800   # 7天
 
-# 用户服务配置
+## 用户服务配置
 UserRpcConf:
   Etcd:
     Hosts:
@@ -35,7 +35,7 @@ TaskRpcConf:
 #       - 127.0.0.1:2379
     Key: task.rpc
 
-# 链上配置
+## 链上配置
 blockRpcConf:
   Etcd:
     Hosts:
