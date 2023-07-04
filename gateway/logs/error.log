@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2023-07-04T00:00:26.575+08:00	[31;1m error [0m	compress error: remove logs/access.log-2023-07-03: The process cannot access the file because it is being used by another process.	caller=logx/rotatelogger.go:410
 2023-07-04T00:00:26.578+08:00	[31;1m error [0m	compress error: remove logs/stat.log-2023-07-03: The process cannot access the file because it is being used by another process.	caller=logx/rotatelogger.go:410
 2023-07-04T00:00:26.584+08:00	[31;1m error [0m	compress error: remove logs/error.log-2023-07-03: The process cannot access the file because it is being used by another process.	caller=logx/rotatelogger.go:410
@@ -20,3 +21,371 @@ User-Agent: apifox/1.0.0 (https://www.apifox.cn)
 }	duration=3.1ms	caller=handler/loghandler.go:162	trace=bab62e37a1a71f3de29ceedbc539eb2e	span=7d4d63e9b4e5cc58
 2023-07-04T09:57:39.406+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
 2023-07-04T09:58:59.084+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+=======
+2023-07-03T15:42:28.548+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-07-03T15:43:00.965+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1052 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorizationtoken: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IjEiLCJQYXNzV29yZCI6IjEyMzQ1NiIsImV4cCI6MTY3ODk0OTEyOCwiaWF0IjoxNjc4MzQ0MzI4LCJpc3MiOiIxMjcuMC4wLjEiLCJzdWIiOiJ1c2VyIHRva2VuIn0.piGKdaR2kcaAGIAbMXa02QhxZfyicxZTSco44Nl-wsM eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IjEiLCJQYXNzV29yZCI6IjEyMzQ1NiIsImV4cCI6MTY4MDkzNjMyOCwiaWF0IjoxNjc4MzQ0MzI4LCJpc3MiOiIxMjcuMC4wLjEiLCJzdWIiOiJ1c2VyIHRva2VuIn0.z2jYxa-NVsr5aue-CS_5246Dt-fkIp_HBRrG4O68G_A
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "cn"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=b233acd8ba8cc1c2522cfe796a941027	span=2b55475fc27559cf
+2023-07-03T15:43:25.837+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1066 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorizationtoken: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5NzQ5ODksImlhdCI6MTY4ODM3MDE4OSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.af4RVRZVQ7kMCCB5ITW-GRCj9GCJJ4YrGd2eMXkT14k
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "cn"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=498f9aafb130b7f71c033721755eec77	span=3f45ca2591b812e7
+2023-07-03T15:43:46.254+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1083 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "cn"
+}	duration=0.9ms	caller=handler/loghandler.go:162	trace=3b915656c13174e82fb2f00dea1da557	span=afb48ff239baa5f1
+2023-07-03T15:44:31.922+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-03T15:45:45.474+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1292 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorizationtoken: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IjEiLCJQYXNzV29yZCI6IjEyMzQ1NiIsImV4cCI6MTY3ODk0OTEyOCwiaWF0IjoxNjc4MzQ0MzI4LCJpc3MiOiIxMjcuMC4wLjEiLCJzdWIiOiJ1c2VyIHRva2VuIn0.piGKdaR2kcaAGIAbMXa02QhxZfyicxZTSco44Nl-wsM eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IjEiLCJQYXNzV29yZCI6IjEyMzQ1NiIsImV4cCI6MTY4MDkzNjMyOCwiaWF0IjoxNjc4MzQ0MzI4LCJpc3MiOiIxMjcuMC4wLjEiLCJzdWIiOiJ1c2VyIHRva2VuIn0.z2jYxa-NVsr5aue-CS_5246Dt-fkIp_HBRrG4O68G_A
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpDocumentId": "1674628031345332224",
+    "languageCode": "cn"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=98348e68b1c6ac758c8b92e4dce52ded	span=df85b36ae4dd1eb7
+2023-07-03T15:46:06.486+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1295 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 56
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "69",
+    "languageCode": "51"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=c8604bde99315eef895f1baad52e903f	span=867d62da2950682f
+2023-07-03T15:46:13.828+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1303 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "cn"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=247c0305911b0b667d1ed3312763f96f	span=aa0e0e80e8d1e0f7
+2023-07-03T15:46:17.555+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1304 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "en"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=ab7e125c8f3e7148ccdfb85049808a15	span=95a338282051d3cc
+2023-07-03T15:46:34.488+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1309 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "en"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=f61afb007ceb7c69cd56498ed61dfccb	span=53bd44440ca4d258
+2023-07-03T15:46:51.618+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-03T15:47:27.605+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/user.rpc/user.User/GetHelpDocumentTranslations - helpDocumentId:1674628031345332224  language:"zh" - rpc error: code = Unknown desc = sql: no rows in result set	duration=78.9ms	caller=clientinterceptors/durationinterceptor.go:35	trace=40445f1f58cc6e52a2ca2ea79f35ef7e	span=aa76b5d1ed7cc8b6
+2023-07-03T15:47:39.943+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/user.rpc/user.User/GetHelpDocumentTranslations - helpDocumentId:1674628031345332224  language:"zh" - rpc error: code = Unknown desc = sql: no rows in result set	duration=75.5ms	caller=clientinterceptors/durationinterceptor.go:35	trace=9362eb549cb12ff7953a95ba1359893b	span=71c9e4c664046802
+2023-07-03T15:47:58.368+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1397 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "zh"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=e573130d3a68c95e9208eb4331d68875	span=9a2bafd295323cc5
+2023-07-03T15:51:18.392+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1549 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "zh"
+}	duration=1.0ms	caller=handler/loghandler.go:162	trace=0d4c798f4ca4a39d8da0531fee7e8c78	span=727adbd33252094b
+2023-07-03T15:51:19.660+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1549 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "zh"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=5dc4082bc8ff76eb3e42ee2e163bedb0	span=f108a26fcef27e60
+2023-07-03T15:51:28.445+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1556 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "zh"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=949a1c74edca07e9cf3196f53b396fb7	span=2a1f1704419a013c
+2023-07-03T15:52:57.447+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-03T15:53:41.868+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1607 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=194dd38b0a1c6b932e9253e7efe8b97b	span=41123f00b481f956
+2023-07-03T15:53:44.143+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/user.rpc/user.User/GetHelpDocumentTranslations - helpDocumentId:80  language:"45" - rpc error: code = Unknown desc = sql: no rows in result set	duration=228.3ms	caller=clientinterceptors/durationinterceptor.go:35	trace=3965dd708086e0ddb09d9812a4fc3d1e	span=d2f91b68ff186114
+2023-07-03T16:22:07.713+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-03T16:24:40.876+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-03T16:27:00.573+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-03T16:27:13.910+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=422da5261fdd0befdd1da8164925335c	span=622d45ea72d2f7ca
+2023-07-03T16:27:15.622+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=0.8ms	caller=handler/loghandler.go:162	trace=40e19129fa607e0f1d45ecfc09581763	span=e1493aa4fde96657
+2023-07-03T16:27:17.251+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=0.2ms	caller=handler/loghandler.go:162	trace=7ad13b321209c6dc79ea4795cc04d187	span=af59cf0468435ebf
+2023-07-03T16:27:18.518+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=0.4ms	caller=handler/loghandler.go:162	trace=0cfdbc154692450ece80426016115fcf	span=004bf06c3842cccc
+2023-07-03T16:27:19.553+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=1.1ms	caller=handler/loghandler.go:162	trace=a33a7b81a7d9dd56d4b183dc0caeefed	span=7bf0757f8bcdadb6
+2023-07-03T16:27:20.611+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=1.5ms	caller=handler/loghandler.go:162	trace=2da7c4c1f8a26186d9ff787c08ef75e8	span=0ce7c2d40fa35ea1
+2023-07-03T16:27:21.646+08:00	[31;1m error [0m	[http] dropped, /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)	caller=handler/breakerhandler.go:25
+2023-07-03T16:27:21.647+08:00	[31;1m error [0m	[HTTP] [103;90;1m 503 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=6ee69976c4fc0aceb8da8f85f6686c3e	span=2b019be73bb70b43
+2023-07-03T16:28:27.235+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1711 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=0.7ms	caller=handler/loghandler.go:162	trace=be68adcf9db129121d01ef3ac43703c0	span=c13ce94d73ab1ee6
+2023-07-03T16:28:28.657+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1711 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=9b1bb83aa366ba6b9ec45cb5f175a411	span=4e66012e0bb676ba
+2023-07-03T16:28:39.363+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1717 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 52
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": "",
+    "NoticeType": "1"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=ed9c879a9bca9063ce7d664a4760b4a6	span=4ee2aef02e1d08da
+2023-07-03T16:29:27.923+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1750 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 52
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": "",
+    "NoticeType": "1"
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=029e7c76ce9c49fe7707b73368051550	span=a47d75c714aa10a3
+2023-07-03T16:30:03.486+08:00	[31;1m error [0m	authorize failed: Token is expired
+=> POST /v1/user/userLogout HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODY1NjQyMzIsImlhdCI6MTY4NTk1OTQzMiwidXNlcklkIjoxNjYxNjQwMDI3OTYyMDg1Mzc2fQ.orgeyww1CjuXHVk-jOgN0EuLZ2qSeYXhOqJEcf9IycE
+Connection: keep-alive
+Content-Length: 0
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+	caller=handler/authhandler.go:103
+2023-07-03T16:31:05.150+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+>>>>>>> 35271542c26e230efdfaa402f27909cfd98bda09
