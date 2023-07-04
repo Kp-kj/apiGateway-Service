@@ -3,6 +3,7 @@ package curatorial
 import (
 	"context"
 	"gateway/taskclient"
+	"gateway/userclient"
 
 	"gateway/internal/svc"
 	"gateway/internal/types"
@@ -40,13 +41,18 @@ func (l *QueryTaskListLogic) QueryTaskList(req *types.PublishTaskInput) (resp *t
 				Article:    item1.Article,
 			})
 		}
+		// 获取用户信息
+		user, err := l.svcCtx.UserRpcClient.QueryUser(l.ctx, &userclient.QueryUserRequest{UserId: item.Creator})
+		if err != nil {
+			return nil, err
+		}
 		rePublishTaskBak = append(rePublishTaskBak, &types.RePublishTaskBak{
 			TaskID:        item.TaskId,
 			CreatedAt:     item.CreatedAt,
 			Creator:       item.Creator,
-			CreatorName:   item.CreatorName,
-			CreatorNick:   item.CreatorNick,
-			CreatorAvatar: item.CreatorAvatar,
+			CreatorName:   user.UserName,
+			CreatorNick:   user.TwitterName,
+			CreatorAvatar: user.UserAvatar,
 			Status:        item.Status,
 			TweetDetails:  item.TweetDetails,
 			TweetPicture:  item.TweetPicture,

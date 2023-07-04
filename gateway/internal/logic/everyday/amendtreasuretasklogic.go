@@ -26,7 +26,6 @@ func NewAmendTreasureTaskLogic(ctx context.Context, svcCtx *svc.ServiceContext) 
 
 func (l *AmendTreasureTaskLogic) AmendTreasureTask(req *types.TreasureTaskSrtInput) (resp *types.Mistake, err error) {
 	var treasureTaskStage []*taskclient.TreasureTaskStage
-
 	for i, item := range req.TreasureTaskStage {
 		if item.TreasureSequence != int64(i+1) {
 			return &types.Mistake{Msg: "宝箱阶段不合规"}, nil
