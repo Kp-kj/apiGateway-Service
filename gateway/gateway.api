@@ -57,11 +57,11 @@ type RegisteredPopulationReply {
 
 //GetUserListByCondition
 type GetUserListByCondition {
-	BlackStatus int64  `json:"blackStatus"` //冻结状态
-	PageNum     int64  `json:"pageNum"`     //页码
-	PageSize    int64  `json:"pageSize"`    //每页条数
-	OrderType   string `json:"order"`       //排序
-	TwitterId   string `json:"twitterId"`   //推特id
+	BlackStatus *int64  `json:"blackStatus"` //冻结状态
+	PageNum     int64   `json:"pageNum"`     //页码
+	PageSize    int64   `json:"pageSize"`    //每页条数
+	OrderType   *string `json:"order"`       //排序
+	TwitterId   *string `json:"twitterId"`   //推特id
 }
 
 //GetUserListByConditionReply
@@ -170,16 +170,21 @@ service gateway-api {
 	
 	@doc "获取帮助文档分类内容标题列表"
 	@handler getHelpDocumentTitleList
-	get /user/getHelpDocumentTitleList (GetHelpDocumentTitleList) returns (GetHelpDocumentTitleListReply)
+	post /user/getHelpDocumentTitleList (GetHelpDocumentTitleList) returns (GetHelpDocumentTitleListReply)
 	
 	@doc "根据帮助文档id获取内容详情"
 	@handler getContentByHelpDocumentId
-	get /user/getContentByHelpDocumentId (GetContentByHelpDocumentId) returns (ContentByHelpDocumentIdReply)
+	post /user/getContentByHelpDocumentId (GetContentByHelpDocumentId) returns (ContentByHelpDocumentIdReply)
 	
 }
 
 type GetMessageListReply {
 	NoticeList []NoticeList `json:"noticeList"`
+}
+
+//GetMessageByNoticeId
+type GetMessageByNoticeId {
+	NoticeId int64 `json:"noticeId"` //通知id
 }
 
 // 下面是用户接口，需要鉴权
@@ -197,15 +202,15 @@ service gateway-api {
 	
 	@doc "获取用户信息"
 	@handler getUserInfo
-	get /user/getUserInfo returns (UserInfoReply)
+	post /user/getUserInfo returns (UserInfoReply)
 	
 	@doc "获取消息通知列表"
 	@handler getMessageList
-	get /user/getMessageList (GetMessageList) returns (GetMessageListReply)
+	post /user/getMessageList (GetMessageList) returns (GetMessageListReply)
 	
-	//	@doc "根据通知id获取消息通知详情"
-	//	@handler getMessageByNoticeId
-	//	post /user/getMessageByNoticeId (GetMessageByNoticeId) returns (GetMessageByNoticeIdReply)
+	@doc "根据通知id获取消息通知详情"
+	@handler getMessageByNoticeId
+	post /user/getMessageByNoticeId (GetMessageByNoticeId) returns (NoticeList)
 	
 }
 

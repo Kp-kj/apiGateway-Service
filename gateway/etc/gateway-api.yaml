@@ -18,13 +18,15 @@ Auth:
 AdminAuth:
   AccessSecret: "0987654321"
   AccessExpire: 604800   # 7天
-
-## 用户服务配置
+Redis:  # redis配置
+  Address: "r-j6chekse51xve3vtk6pd.redis.rds.aliyuncs.com:6379"
+  Pass: "scanuser:Mk@2022rds#%"
+# 用户服务配置
 UserRpcConf:
   Etcd:
     Hosts:
       - 47.243.34.199:2379
-      # - 127.0.0.1:2379
+#      - 127.0.0.1:2379
     Key: user.rpc
 
 # 任务服务配置
@@ -32,16 +34,18 @@ TaskRpcConf:
   Etcd:
     Hosts:
       - 47.243.34.199:2379
-#       - 127.0.0.1:2379
+#      - 127.0.0.1:2379
     Key: task.rpc
 
-## 链上配置
+# 链上配置
 blockRpcConf:
   Etcd:
     Hosts:
       - 47.243.34.199:2379
-      # - 127.0.0.1:2379
+#      - 127.0.0.1:2379
     Key: block.rpc
+
+
 
 # 用户服务直连
 #UserRpcConf:

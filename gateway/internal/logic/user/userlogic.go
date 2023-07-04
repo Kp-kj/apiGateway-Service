@@ -1,14 +1,9 @@
 package user
 
 import (
-	"bytes"
 	"context"
-	"encoding/json"
-	"fmt"
 	"gateway/userclient"
 	"github.com/golang-jwt/jwt/v4"
-	"io/ioutil"
-	"net/http"
 	"strconv"
 	"strings"
 	"time"
@@ -104,39 +99,39 @@ func (l *UserLogic) handleExistingUser(userId string) (*types.UserLoginReply, er
 
 func (l *UserLogic) User(req *types.UserLogin) (resp *types.UserLoginReply, err error) {
 	// todo: 调用推特服务获取 twitterId 和 用户 创建
-	url := "http://47.243.34.199:6001/oauth/callback"
+	//url := "http://47.243.34.199:6001/oauth/callback"
 
-	// 准备请求的数据
-	data := map[string]interface{}{
-		"code":          req.Code,
-		"code_verifier": req.CodeVerifier,
-	}
-
-	fmt.Println("data:", data)
-
-	// 将请求数据转换为JSON格式
-	jsonData, err := json.Marshal(data)
-	if err != nil {
-		fmt.Println("Error encoding JSON:", err)
-		return
-	}
-
-	// 发送POST请求
-	respPost, err := http.Post(url, "application/json", bytes.NewBuffer(jsonData))
-	if err != nil {
-		fmt.Println("Error sending request:", err)
-		return
-	}
-	defer respPost.Body.Close()
-
-	// 读取响应数据
-	body, err := ioutil.ReadAll(respPost.Body)
-	if err != nil {
-		fmt.Println("Error reading response:", err)
-		return
-	}
-
-	fmt.Println(string(body))
+	//// 准备请求的数据
+	//data := map[string]interface{}{
+	//	"code":          req.Code,
+	//	"code_verifier": req.CodeVerifier,
+	//}
+	//
+	//fmt.Println("data:", data)
+	//
+	//// 将请求数据转换为JSON格式
+	//jsonData, err := json.Marshal(data)
+	//if err != nil {
+	//	fmt.Println("Error encoding JSON:", err)
+	//	return
+	//}
+	//
+	//// 发送POST请求
+	//respPost, err := http.Post(url, "application/json", bytes.NewBuffer(jsonData))
+	//if err != nil {
+	//	fmt.Println("Error sending request:", err)
+	//	return
+	//}
+	//defer respPost.Body.Close()
+	//
+	//// 读取响应数据
+	//body, err := ioutil.ReadAll(respPost.Body)
+	//if err != nil {
+	//	fmt.Println("Error reading response:", err)
+	//	return
+	//}
+	//
+	//fmt.Println(string(body))
 
 	twitterId := "12321312"
 
@@ -147,6 +142,14 @@ func (l *UserLogic) User(req *types.UserLogin) (resp *types.UserLoginReply, err 
 		}
 		return nil, err
 	}
+
+	// 添加在线用户
+	_, err = l.svcCtx.Redis.Sadd("online_users", userResp.UserId)
+	if err != nil {
+		return nil, err
+	}
+	// 设置过期时间 一小时
+	l.svcCtx.Redis.Expire("online_users", 3600)
 
 	return l.handleExistingUser(userResp.UserId) // 处理已存在的用户
 }

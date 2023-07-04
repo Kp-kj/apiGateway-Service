@@ -25,10 +25,11 @@ func NewAdminUserInfoLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Adm
 	}
 }
 
+// AdminUserInfo 获取用户信息逻辑
 func (l *AdminUserInfoLogic) AdminUserInfo() (resp *types.UserInfoReply, err error) {
 	// todo: add your logic here and delete this line
 	dbUserInfo, err := l.svcCtx.UserRpcClient.QueryUser(l.ctx, &userclient.QueryUserRequest{
-		UserId: "1661640027962085376",
+		UserId: "1674266735504527360",
 	})
 
 	if err != nil {
