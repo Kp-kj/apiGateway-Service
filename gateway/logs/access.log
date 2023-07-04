@@ -1,3 +1,4 @@
 2023-07-04T00:00:26.565+08:00	[34;1m info [0m	compressing log file: logs/stat.log-2023-07-03	caller=logx/rotatelogger.go:408
 2023-07-04T00:00:26.568+08:00	[34;1m info [0m	compressing log file: logs/access.log-2023-07-03	caller=logx/rotatelogger.go:408
 2023-07-04T00:00:26.577+08:00	[34;1m info [0m	compressing log file: logs/error.log-2023-07-03	caller=logx/rotatelogger.go:408
+2023-07-04T09:56:02.187+08:00	[34;1m info [0m	[HTTP] [42;97;1m 200 [0m - [46;97;1m POST [0m /v1/curatorial/label/create - 127.0.0.1:54875 - apifox/1.0.0 (https://www.apifox.cn)	duration=373.6ms	caller=handler/loghandler.go:160	trace=60c81596405c7e0beae734a9628f8724	span=8cfea9462d40660e

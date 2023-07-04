@@ -18,3 +18,5 @@ User-Agent: apifox/1.0.0 (https://www.apifox.cn)
     "userId": "1674266735504527360",
     "label": "美团UUID"
 }	duration=3.1ms	caller=handler/loghandler.go:162	trace=bab62e37a1a71f3de29ceedbc539eb2e	span=7d4d63e9b4e5cc58
+2023-07-04T09:57:39.406+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T09:58:59.084+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
