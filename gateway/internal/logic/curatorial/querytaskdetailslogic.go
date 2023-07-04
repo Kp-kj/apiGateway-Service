@@ -3,6 +3,7 @@ package curatorial
 import (
 	"context"
 	"gateway/taskclient"
+	"gateway/userclient"
 
 	"gateway/internal/svc"
 	"gateway/internal/types"
@@ -38,6 +39,11 @@ func (l *QueryTaskDetailsLogic) QueryTaskDetails(req *types.TaskDetailsInput) (r
 			Article:    item.Article,
 		})
 	}
+	//// 获取用户信息
+	//userPublishTask, err := l.svcCtx.UserRpcClient.QueryUser(l.ctx, &userclient.QueryUserRequest{UserId: date.RePublishTaskSrt.UserId})
+	//if err != nil {
+	//	return nil, err
+	//}
 	rePublishTaskSrt := types.RePublishTaskBak{
 		TaskID:        date.RePublishTaskSrt.TaskId,
 		CreatedAt:     date.RePublishTaskSrt.CreatedAt,
@@ -58,11 +64,16 @@ func (l *QueryTaskDetailsLogic) QueryTaskDetails(req *types.TaskDetailsInput) (r
 	}
 	var participant []*types.ParticipantBak
 	for _, item := range date.Participant {
+		// 获取用户信息
+		user, err := l.svcCtx.UserRpcClient.QueryUser(l.ctx, &userclient.QueryUserRequest{UserId: item.UserId})
+		if err != nil {
+			return nil, err
+		}
 		participant = append(participant, &types.ParticipantBak{
 			UserId:      item.UserId,
-			UserName:    item.UserName,
-			NickName:    item.NickName,
-			Avatar:      item.Avatar,
+			UserName:    user.UserName,
+			NickName:    user.TwitterName,
+			Avatar:      user.UserAvatar,
 			AwardAmount: item.AwardAmount,
 			TaskID:      item.TaskID,
 			Status:      item.Status,
