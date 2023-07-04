@@ -33,7 +33,6 @@ func (l *QueryLabelListLogic) QueryLabelList(req *types.UserIDInquireInput) (res
 			Creator: item.Creator,
 			Content: item.Content,
 		})
-
 	}
-	return &types.ReLabelListOut{ReLabelList: labelList}, nil
+	return &types.ReLabelListOut{ReLabelList: labelList}, err
 }

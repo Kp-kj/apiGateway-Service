@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+2023-07-04T00:00:26.575+08:00	[31;1m error [0m	compress error: remove logs/access.log-2023-07-03: The process cannot access the file because it is being used by another process.	caller=logx/rotatelogger.go:410
+2023-07-04T00:00:26.578+08:00	[31;1m error [0m	compress error: remove logs/stat.log-2023-07-03: The process cannot access the file because it is being used by another process.	caller=logx/rotatelogger.go:410
+2023-07-04T00:00:26.584+08:00	[31;1m error [0m	compress error: remove logs/error.log-2023-07-03: The process cannot access the file because it is being used by another process.	caller=logx/rotatelogger.go:410
+2023-07-04T09:51:22.079+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T09:54:51.748+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/user.User/QueryUser - user_id:"1674266735504527360" - rpc error: code = Unimplemented desc = unknown service user.User	duration=0.5ms	caller=clientinterceptors/durationinterceptor.go:35	trace=bab62e37a1a71f3de29ceedbc539eb2e	span=7d51775adb3a8841
+2023-07-04T09:54:51.749+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/label/create - 127.0.0.1:64917 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/label/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 69
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "userId": "1674266735504527360",
+    "label": "美团UUID"
+}	duration=3.1ms	caller=handler/loghandler.go:162	trace=bab62e37a1a71f3de29ceedbc539eb2e	span=7d4d63e9b4e5cc58
+2023-07-04T09:57:39.406+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T09:58:59.084+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+=======
 2023-07-03T15:42:28.548+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
 2023-07-03T15:43:00.965+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1052 - Apifox/1.0.0 (https://www.apifox.cn)
 GET /v1/user/getContentByHelpDocumentId HTTP/1.1
@@ -364,3 +388,4 @@ User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
 
 	caller=handler/authhandler.go:103
 2023-07-03T16:31:05.150+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+>>>>>>> 35271542c26e230efdfaa402f27909cfd98bda09

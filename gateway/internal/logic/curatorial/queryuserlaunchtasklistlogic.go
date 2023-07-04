@@ -81,5 +81,5 @@ func (l *QueryUserLaunchTaskListLogic) QueryUserLaunchTaskList(req *types.UserLa
 			PerPage: data.PaginationData.PerPage,
 		},
 		RePublishTaskBak: rePublishTaskBak,
-	}, nil
+	}, err
 }
