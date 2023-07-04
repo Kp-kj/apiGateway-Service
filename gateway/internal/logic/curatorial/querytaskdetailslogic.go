@@ -82,5 +82,5 @@ func (l *QueryTaskDetailsLogic) QueryTaskDetails(req *types.TaskDetailsInput) (r
 		RePublishTaskBak: rePublishTaskSrt,
 		ParticipantBak:   participant,
 		TaskDemandBak:    taskDemandBak,
-	}, nil
+	}, err
 }

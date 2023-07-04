@@ -67,5 +67,5 @@ func (l *QueryTaskListLogic) QueryTaskList(req *types.PublishTaskInput) (resp *t
 			PerPage: data.PaginationData.PerPage,
 		},
 		RePublishTaskBak: rePublishTaskBak,
-	}, nil
+	}, err
 }
