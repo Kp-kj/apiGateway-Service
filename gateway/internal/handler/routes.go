@@ -142,17 +142,17 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 					Handler: curatorial.CreateCuratorialTaskHandler(serverCtx),
 				},
 				{
-					Method:  http.MethodGet,
+					Method:  http.MethodPost,
 					Path:    "/curatorial/list",
 					Handler: curatorial.QueryTaskListHandler(serverCtx),
 				},
 				{
-					Method:  http.MethodGet,
+					Method:  http.MethodPost,
 					Path:    "/curatorial/details",
 					Handler: curatorial.QueryTaskDetailsHandler(serverCtx),
 				},
 				{
-					Method:  http.MethodGet,
+					Method:  http.MethodPost,
 					Path:    "/curatorial/user/list",
 					Handler: curatorial.QueryUserLaunchTaskListHandler(serverCtx),
 				},
@@ -167,7 +167,7 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 					Handler: curatorial.DeleteLabelHandler(serverCtx),
 				},
 				{
-					Method:  http.MethodGet,
+					Method:  http.MethodPost,
 					Path:    "/curatorial/label/list",
 					Handler: curatorial.GetLabelListHandler(serverCtx),
 				},
@@ -202,12 +202,12 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 					Handler: everyday.ChangeTreasureTaskHandler(serverCtx),
 				},
 				{
-					Method:  http.MethodGet,
+					Method:  http.MethodPost,
 					Path:    "/everyday/treasure/list",
 					Handler: everyday.QueryTreasureTaskListHandler(serverCtx),
 				},
 				{
-					Method:  http.MethodGet,
+					Method:  http.MethodPost,
 					Path:    "/everyday/subtask/list",
 					Handler: everyday.QuerySubtaskStyleHandler(serverCtx),
 				},
@@ -222,7 +222,7 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 					Handler: everyday.DeleteAssociatedSubtaskHandler(serverCtx),
 				},
 				{
-					Method:  http.MethodGet,
+					Method:  http.MethodPost,
 					Path:    "/everyday/subtask/treasureId",
 					Handler: everyday.QueryAssociatedSubtaskHandler(serverCtx),
 				},
@@ -232,7 +232,7 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 					Handler: everyday.AmendChestCollectionHandler(serverCtx),
 				},
 				{
-					Method:  http.MethodGet,
+					Method:  http.MethodPost,
 					Path:    "/everyday/chest/schedule",
 					Handler: everyday.QueryChestCollectionHandler(serverCtx),
 				},

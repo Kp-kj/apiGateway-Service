@@ -614,15 +614,15 @@ service gateway-api {
 	
 	@doc "查询策展任务列表"
 	@handler QueryTaskList
-	get /curatorial/list (PublishTaskInput) returns (RePublishTask)
+	post /curatorial/list (PublishTaskInput) returns (RePublishTask)
 	
 	@doc "查询任务详情"
 	@handler QueryTaskDetails
-	get /curatorial/details (TaskDetailsInput) returns (ReTaskDetails)
+	post /curatorial/details (TaskDetailsInput) returns (ReTaskDetails)
 	
 	@doc "查询个人发起任务列表+参与任务"
 	@handler QueryUserLaunchTaskList
-	get /curatorial/user/list (UserLaunchTaskListInput) returns (RePublishTask)
+	post /curatorial/user/list (UserLaunchTaskListInput) returns (RePublishTask)
 	
 	@doc "创建标签"
 	@handler createLabel
@@ -634,7 +634,7 @@ service gateway-api {
 	
 	@doc "获取标签列表"
 	@handler getLabelList
-	get /curatorial/label/list (UserIDInquireInput) returns (ReLabelListOut)
+	post /curatorial/label/list (UserIDInquireInput) returns (ReLabelListOut)
 	
 	@doc "判断是否完成策展任务"
 	@handler PerformTask
@@ -664,11 +664,11 @@ service gateway-api {
 	
 	@doc "查询+搜索宝箱样式列表"
 	@handler QueryTreasureTaskList
-	get /everyday/treasure/list (TreasureTaskListInput)  returns (ReTreasureTaskSrt)
+	post /everyday/treasure/list (TreasureTaskListInput)  returns (ReTreasureTaskSrt)
 	
 	@doc "查询子任务样式列表"
 	@handler QuerySubtaskStyle
-	get /everyday/subtask/list (TaskIDInquireInput)  returns (ReSubtaskStyle)
+	post /everyday/subtask/list (TaskIDInquireInput)  returns (ReSubtaskStyle)
 	
 	@doc "创建关联子任务+编辑关联子任务"
 	@handler AmendAssociatedSubtask
@@ -680,7 +680,7 @@ service gateway-api {
 	
 	@doc "查询关联子任务"
 	@handler QueryAssociatedSubtask
-	get /everyday/subtask/treasureId (TaskIDInquireInput)  returns (ReAssociatedSubtask)
+	post /everyday/subtask/treasureId (TaskIDInquireInput)  returns (ReAssociatedSubtask)
 	
 	@doc "创建宝箱领取度+更新宝箱领取进度"
 	@handler AmendChestCollection
@@ -688,7 +688,7 @@ service gateway-api {
 	
 	@doc "获取用户宝箱进度"
 	@handler QueryChestCollection
-	get /everyday/chest/schedule (UserIDInquireInput)  returns (ReChestCollectionSrt)
+	post /everyday/chest/schedule (UserIDInquireInput)  returns (ReChestCollectionSrt)
 	
 	@doc "创建用户助力信息"
 	@handler CreateUserPowerTask

@@ -39,18 +39,18 @@ func (l *QueryTaskDetailsLogic) QueryTaskDetails(req *types.TaskDetailsInput) (r
 			Article:    item.Article,
 		})
 	}
-	//// 获取用户信息
-	//userPublishTask, err := l.svcCtx.UserRpcClient.QueryUser(l.ctx, &userclient.QueryUserRequest{UserId: date.RePublishTaskSrt.UserId})
-	//if err != nil {
-	//	return nil, err
-	//}
+	// 获取用户信息
+	userPublishTask, err := l.svcCtx.UserRpcClient.QueryUser(l.ctx, &userclient.QueryUserRequest{UserId: date.RePublishTaskSrt.Creator})
+	if err != nil {
+		return nil, err
+	}
 	rePublishTaskSrt := types.RePublishTaskBak{
 		TaskID:        date.RePublishTaskSrt.TaskId,
 		CreatedAt:     date.RePublishTaskSrt.CreatedAt,
 		Creator:       date.RePublishTaskSrt.Creator,
-		CreatorName:   date.RePublishTaskSrt.CreatorName,
-		CreatorNick:   date.RePublishTaskSrt.CreatorNick,
-		CreatorAvatar: date.RePublishTaskSrt.CreatorAvatar,
+		CreatorName:   userPublishTask.UserName,
+		CreatorNick:   userPublishTask.TwitterName,
+		CreatorAvatar: userPublishTask.UserAvatar,
 		Status:        date.RePublishTaskSrt.Status,
 		TweetDetails:  date.RePublishTaskSrt.TweetDetails,
 		TweetPicture:  date.RePublishTaskSrt.TweetPicture,
