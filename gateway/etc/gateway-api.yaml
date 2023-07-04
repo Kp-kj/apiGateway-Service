@@ -31,6 +31,7 @@ AdminAuth:
 UserRpcConf:
   Etcd:
     Hosts:
+<<<<<<< HEAD
 #      - 47.243.34.199:2379
        - 127.0.0.1:2379
     Key: task.rpc
@@ -42,6 +43,27 @@ UserRpcConf:
 #      - 47.243.34.199:2379
 #      # - 127.0.0.1:2379
 #    Key: block.rpc
+=======
+      - 47.243.34.199:2379
+#       - 127.0.0.1:2379
+    Key: user.rpc
+
+# 任务服务配置
+TaskRpcConf:
+  Etcd:
+    Hosts:
+      - 47.243.34.199:2379
+#       - 127.0.0.1:2379
+    Key: task.rpc
+
+# 链上配置
+blockRpcConf:
+  Etcd:
+    Hosts:
+      - 47.243.34.199:2379
+#       - 127.0.0.1:2379
+    Key: block.rpc
+>>>>>>> 35271542c26e230efdfaa402f27909cfd98bda09
 
 # 用户服务直连
 #UserRpcConf:

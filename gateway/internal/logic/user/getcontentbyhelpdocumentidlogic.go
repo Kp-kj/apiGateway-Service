@@ -25,18 +25,19 @@ func NewGetContentByHelpDocumentIdLogic(ctx context.Context, svcCtx *svc.Service
 	}
 }
 
-// GetContentByHelpDocumentId 获取帮助文档内容
-func (l *GetContentByHelpDocumentIdLogic) GetContentByHelpDocumentId(req *types.GetContentByHelpDocumentId) (resp *types.GetContentByHelpDocumentIdReply, err error) {
+func (l *GetContentByHelpDocumentIdLogic) GetContentByHelpDocumentId(req *types.GetContentByHelpDocumentId) (resp *types.ContentByHelpDocumentIdReply, err error) {
 	// todo: add your logic here and delete this line
-	helpResp, err := l.svcCtx.UserRpcClient.GetHelpCategories(l.ctx, &userclient.GetHelpCategoriesRequest{CategoryStatus: 0})
+	helpResp, err := l.svcCtx.UserRpcClient.GetHelpDocumentTranslations(l.ctx, &userclient.GetHelpDocumentTranslationsRequest{
+		HelpDocumentId: req.HelpDocumentId,
+		Language:       req.LanguageCode,
+	})
 
 	if err != nil {
 		fmt.Println("err: ", err)
 		return nil, err
 	}
-	fmt.Println(helpResp.HelpCategories)
+	fmt.Println(helpResp)
 
-	categoryList := make([]types.ContentByHelpDocumentIdReply, 0)
+	return &types.ContentByHelpDocumentIdReply{HelpDocumentId: helpResp.HelpDocumentId, DocumentContent: helpResp.DocumentContent, DocumentTitle: helpResp.DocumentTitle, LanguageCode: helpResp.Language}, nil
 
-	return &types.GetContentByHelpDocumentIdReply{ContextByHelpDocumentId: categoryList}, nil
 }

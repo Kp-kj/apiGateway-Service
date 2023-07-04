@@ -29,34 +29,67 @@ type (
 	CreateHelpCategoryResponse            = user.CreateHelpCategoryResponse
 	CreateHelpCategoryTranslationRequest  = user.CreateHelpCategoryTranslationRequest
 	CreateHelpCategoryTranslationResponse = user.CreateHelpCategoryTranslationResponse
+	CreateHelpDocumentRequest             = user.CreateHelpDocumentRequest
+	CreateHelpDocumentResponse            = user.CreateHelpDocumentResponse
+	CreateHelpDocumentTranslationRequest  = user.CreateHelpDocumentTranslationRequest
+	CreateHelpDocumentTranslationResponse = user.CreateHelpDocumentTranslationResponse
 	CreateInviteRequest                   = user.CreateInviteRequest
 	CreateInviteResponse                  = user.CreateInviteResponse
+	CreateNoticeRequest                   = user.CreateNoticeRequest
+	CreateNoticeResponse                  = user.CreateNoticeResponse
+	CreateSystemNotificationRequest       = user.CreateSystemNotificationRequest
+	CreateSystemNotificationResponse      = user.CreateSystemNotificationResponse
 	CreateUserRequest                     = user.CreateUserRequest
 	CreateUserResponse                    = user.CreateUserResponse
 	DeleteHelpCategoryRequest             = user.DeleteHelpCategoryRequest
 	DeleteHelpCategoryResponse            = user.DeleteHelpCategoryResponse
 	DeleteHelpCategoryTranslationRequest  = user.DeleteHelpCategoryTranslationRequest
 	DeleteHelpCategoryTranslationResponse = user.DeleteHelpCategoryTranslationResponse
+	DeleteHelpDocumentRequest             = user.DeleteHelpDocumentRequest
+	DeleteHelpDocumentResponse            = user.DeleteHelpDocumentResponse
+	DeleteHelpDocumentTranslationRequest  = user.DeleteHelpDocumentTranslationRequest
+	DeleteHelpDocumentTranslationResponse = user.DeleteHelpDocumentTranslationResponse
 	EditHelpCategoryRequest               = user.EditHelpCategoryRequest
 	EditHelpCategoryResponse              = user.EditHelpCategoryResponse
+	EditHelpCategoryTranslationRequest    = user.EditHelpCategoryTranslationRequest
+	EditHelpCategoryTranslationResponse   = user.EditHelpCategoryTranslationResponse
+	EditHelpDocumentRequest               = user.EditHelpDocumentRequest
+	EditHelpDocumentResponse              = user.EditHelpDocumentResponse
+	EditHelpDocumentTranslationRequest    = user.EditHelpDocumentTranslationRequest
+	EditHelpDocumentTranslationResponse   = user.EditHelpDocumentTranslationResponse
+	EditSystemNotificationRequest         = user.EditSystemNotificationRequest
+	EditSystemNotificationResponse        = user.EditSystemNotificationResponse
 	GetHelpCategoriesRequest              = user.GetHelpCategoriesRequest
 	GetHelpCategoriesResponse             = user.GetHelpCategoriesResponse
 	GetHelpCategoryTranslationsRequest    = user.GetHelpCategoryTranslationsRequest
 	GetHelpCategoryTranslationsResponse   = user.GetHelpCategoryTranslationsResponse
+	GetHelpDocumentTranslationsRequest    = user.GetHelpDocumentTranslationsRequest
+	GetHelpDocumentTranslationsResponse   = user.GetHelpDocumentTranslationsResponse
+	GetHelpDocumentsRequest               = user.GetHelpDocumentsRequest
+	GetHelpDocumentsResponse              = user.GetHelpDocumentsResponse
 	GetNotificationsRequest               = user.GetNotificationsRequest
 	GetNotificationsResponse              = user.GetNotificationsResponse
+	GetSystemNotificationsRequest         = user.GetSystemNotificationsRequest
+	GetSystemNotificationsResponse        = user.GetSystemNotificationsResponse
 	HelpCategory                          = user.HelpCategory
+	HelpDocument                          = user.HelpDocument
+	Notice                                = user.Notice
 	Notification                          = user.Notification
 	QueryBlackListRequest                 = user.QueryBlackListRequest
 	QueryBlackListResponse                = user.QueryBlackListResponse
+	QuerySystemNotificationRequest        = user.QuerySystemNotificationRequest
+	QuerySystemNotificationResponse       = user.QuerySystemNotificationResponse
 	QueryUserRequest                      = user.QueryUserRequest
 	QueryUserResponse                     = user.QueryUserResponse
+	RecordNoticeRequest                   = user.RecordNoticeRequest
+	RecordNoticeResponse                  = user.RecordNoticeResponse
 	RemoveAdminRequest                    = user.RemoveAdminRequest
 	RemoveAdminResponse                   = user.RemoveAdminResponse
 	RemoveBlackListRequest                = user.RemoveBlackListRequest
 	RemoveBlackListResponse               = user.RemoveBlackListResponse
 	Request                               = user.Request
 	Response                              = user.Response
+	SystemNotification                    = user.SystemNotification
 
 	User interface {
 		Ping(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
@@ -79,6 +112,22 @@ type (
 		CreateHelpCategoryTranslation(ctx context.Context, in *CreateHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*CreateHelpCategoryTranslationResponse, error)
 		DeleteHelpCategoryTranslation(ctx context.Context, in *DeleteHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*DeleteHelpCategoryTranslationResponse, error)
 		GetHelpCategoryTranslations(ctx context.Context, in *GetHelpCategoryTranslationsRequest, opts ...grpc.CallOption) (*GetHelpCategoryTranslationsResponse, error)
+		EditHelpCategoryTranslation(ctx context.Context, in *EditHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*EditHelpCategoryTranslationResponse, error)
+		GetHelpDocuments(ctx context.Context, in *GetHelpDocumentsRequest, opts ...grpc.CallOption) (*GetHelpDocumentsResponse, error)
+		CreateHelpDocument(ctx context.Context, in *CreateHelpDocumentRequest, opts ...grpc.CallOption) (*CreateHelpDocumentResponse, error)
+		DeleteHelpDocument(ctx context.Context, in *DeleteHelpDocumentRequest, opts ...grpc.CallOption) (*DeleteHelpDocumentResponse, error)
+		EditHelpDocument(ctx context.Context, in *EditHelpDocumentRequest, opts ...grpc.CallOption) (*EditHelpDocumentResponse, error)
+		CreateHelpDocumentTranslation(ctx context.Context, in *CreateHelpDocumentTranslationRequest, opts ...grpc.CallOption) (*CreateHelpDocumentTranslationResponse, error)
+		DeleteHelpDocumentTranslation(ctx context.Context, in *DeleteHelpDocumentTranslationRequest, opts ...grpc.CallOption) (*DeleteHelpDocumentTranslationResponse, error)
+		GetHelpDocumentTranslations(ctx context.Context, in *GetHelpDocumentTranslationsRequest, opts ...grpc.CallOption) (*GetHelpDocumentTranslationsResponse, error)
+		EditHelpDocumentTranslation(ctx context.Context, in *EditHelpDocumentTranslationRequest, opts ...grpc.CallOption) (*EditHelpDocumentTranslationResponse, error)
+		CreateSystemNotification(ctx context.Context, in *CreateSystemNotificationRequest, opts ...grpc.CallOption) (*CreateSystemNotificationResponse, error)
+		EditSystemNotification(ctx context.Context, in *EditSystemNotificationRequest, opts ...grpc.CallOption) (*EditSystemNotificationResponse, error)
+		GetSystemNotifications(ctx context.Context, in *GetSystemNotificationsRequest, opts ...grpc.CallOption) (*GetSystemNotificationsResponse, error)
+		QuerySystemNotification(ctx context.Context, in *QuerySystemNotificationRequest, opts ...grpc.CallOption) (*QuerySystemNotificationResponse, error)
+		// recordNotice 通知记录
+		CreateNotice(ctx context.Context, in *CreateNoticeRequest, opts ...grpc.CallOption) (*CreateNoticeResponse, error)
+		RecordNotice(ctx context.Context, in *RecordNoticeRequest, opts ...grpc.CallOption) (*RecordNoticeResponse, error)
 	}
 
 	defaultUser struct {
@@ -190,4 +239,80 @@ func (m *defaultUser) DeleteHelpCategoryTranslation(ctx context.Context, in *Del
 func (m *defaultUser) GetHelpCategoryTranslations(ctx context.Context, in *GetHelpCategoryTranslationsRequest, opts ...grpc.CallOption) (*GetHelpCategoryTranslationsResponse, error) {
 	client := user.NewUserClient(m.cli.Conn())
 	return client.GetHelpCategoryTranslations(ctx, in, opts...)
+}
+
+func (m *defaultUser) EditHelpCategoryTranslation(ctx context.Context, in *EditHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*EditHelpCategoryTranslationResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.EditHelpCategoryTranslation(ctx, in, opts...)
+}
+
+func (m *defaultUser) GetHelpDocuments(ctx context.Context, in *GetHelpDocumentsRequest, opts ...grpc.CallOption) (*GetHelpDocumentsResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.GetHelpDocuments(ctx, in, opts...)
+}
+
+func (m *defaultUser) CreateHelpDocument(ctx context.Context, in *CreateHelpDocumentRequest, opts ...grpc.CallOption) (*CreateHelpDocumentResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.CreateHelpDocument(ctx, in, opts...)
+}
+
+func (m *defaultUser) DeleteHelpDocument(ctx context.Context, in *DeleteHelpDocumentRequest, opts ...grpc.CallOption) (*DeleteHelpDocumentResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.DeleteHelpDocument(ctx, in, opts...)
+}
+
+func (m *defaultUser) EditHelpDocument(ctx context.Context, in *EditHelpDocumentRequest, opts ...grpc.CallOption) (*EditHelpDocumentResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.EditHelpDocument(ctx, in, opts...)
+}
+
+func (m *defaultUser) CreateHelpDocumentTranslation(ctx context.Context, in *CreateHelpDocumentTranslationRequest, opts ...grpc.CallOption) (*CreateHelpDocumentTranslationResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.CreateHelpDocumentTranslation(ctx, in, opts...)
+}
+
+func (m *defaultUser) DeleteHelpDocumentTranslation(ctx context.Context, in *DeleteHelpDocumentTranslationRequest, opts ...grpc.CallOption) (*DeleteHelpDocumentTranslationResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.DeleteHelpDocumentTranslation(ctx, in, opts...)
+}
+
+func (m *defaultUser) GetHelpDocumentTranslations(ctx context.Context, in *GetHelpDocumentTranslationsRequest, opts ...grpc.CallOption) (*GetHelpDocumentTranslationsResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.GetHelpDocumentTranslations(ctx, in, opts...)
+}
+
+func (m *defaultUser) EditHelpDocumentTranslation(ctx context.Context, in *EditHelpDocumentTranslationRequest, opts ...grpc.CallOption) (*EditHelpDocumentTranslationResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.EditHelpDocumentTranslation(ctx, in, opts...)
+}
+
+func (m *defaultUser) CreateSystemNotification(ctx context.Context, in *CreateSystemNotificationRequest, opts ...grpc.CallOption) (*CreateSystemNotificationResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.CreateSystemNotification(ctx, in, opts...)
+}
+
+func (m *defaultUser) EditSystemNotification(ctx context.Context, in *EditSystemNotificationRequest, opts ...grpc.CallOption) (*EditSystemNotificationResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.EditSystemNotification(ctx, in, opts...)
+}
+
+func (m *defaultUser) GetSystemNotifications(ctx context.Context, in *GetSystemNotificationsRequest, opts ...grpc.CallOption) (*GetSystemNotificationsResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.GetSystemNotifications(ctx, in, opts...)
+}
+
+func (m *defaultUser) QuerySystemNotification(ctx context.Context, in *QuerySystemNotificationRequest, opts ...grpc.CallOption) (*QuerySystemNotificationResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.QuerySystemNotification(ctx, in, opts...)
+}
+
+// recordNotice 通知记录
+func (m *defaultUser) CreateNotice(ctx context.Context, in *CreateNoticeRequest, opts ...grpc.CallOption) (*CreateNoticeResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.CreateNotice(ctx, in, opts...)
+}
+
+func (m *defaultUser) RecordNotice(ctx context.Context, in *RecordNoticeRequest, opts ...grpc.CallOption) (*RecordNoticeResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.RecordNotice(ctx, in, opts...)
 }

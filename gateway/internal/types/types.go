@@ -118,8 +118,22 @@ type ContentByHelpDocumentIdReply struct {
 	DocumentTitle   string `json:"helpDocumentTitle"` //帮助文档标题
 }
 
-type GetContentByHelpDocumentIdReply struct {
-	ContextByHelpDocumentId []ContentByHelpDocumentIdReply `json:"contextByHelpDocumentId"`
+type GetMessageList struct {
+	LastNoticeId int64 `json:"lastNoticeId"` //通知时间
+	NoticeType   int64 `json:"noticeType"`   //通知类型 1:系统通知 2:用户通知 3:全部
+}
+
+type NoticeList struct {
+	NoticeId      int64  `json:"noticeId"`      //通知id
+	NoticeTitle   string `json:"noticeTitle"`   //通知标题
+	NoticeContent string `json:"noticeContent"` //通知内容
+	NoticeTime    int64  `json:"noticeTime"`    //通知时间
+	NoticeType    int64  `json:"noticeType"`    //通知类型 1:系统通知 2:用户通知
+	NoticeStatus  int64  `json:"noticeStatus"`  //通知状态 1:未读 2:已读
+}
+
+type GetMessageListReply struct {
+	NoticeList []NoticeList `json:"noticeList"`
 }
 
 type CreatePublishTaskInput struct {
@@ -260,6 +274,7 @@ type TreasureTaskSrtInput struct {
 }
 
 type TreasureTaskStage struct {
+	ID               int64 `json:"iD"`
 	Treasure         int64 `json:"treasure"`
 	TreasureSequence int64 `json:"treasureSequence"`
 	StageExperience  int64 `json:"stageExperience"`
@@ -377,19 +392,132 @@ type CreateUserPowerTaskInput struct {
 	HelperUserId    string `json:"helperUserId"`
 }
 
-type UserPublishingAssistanceTaskInput struct {
-	UserId   string `json:"userId"`
-	UserName string `json:"userName"`
-	Avatar   string `json:"avatar"`
+type CreateCryptominerInput struct {
+	AdminUserID         int64  `json:"adminUserId"`
+	CryptominerName     string `json:"cryptominerName"`
+	CryptominerPicture  string `json:"cryptominerPicture"`
+	CryptominerDescribe string `json:"cryptominerDescribe"`
+	CryptominerPrice    int64  `json:"cryptominerPrice"`
+	CryptominerDuration int64  `json:"cryptominerDuration"`
 }
 
-type UserPublishingAssistanceTask struct {
-	ID        int64  `json:"id"`
-	CreatedAt string `json:"createdAt"`
-	UserId    string `json:"userId"`
-	UserName  string `json:"userName"`
-	Avatar    string `json:"avatar"`
-	Article   string `json:"article"`
-	Link      string `json:"link"`
-	Label     string `json:"label"`
+type IsSuccessReply struct {
+	IsSuccess bool `json:"isSuccess"` // 创建成功
+}
+
+type CreatePropInput struct {
+	AdminUserID  int64  `json:"adminUserId"`  // 创建者id
+	PropName     string `json:"propName"`     // 矿机名称
+	PropPicture  string `json:"propPicture"`  // 矿机图片
+	PropDescribe string `json:"propDescribe"` // 矿机描述
+	PropPrice    int64  `json:"propPrice"`    // 矿机价格
+}
+
+type GetGoodsListInput struct {
+	UserID int64 `json:"userId"`
+}
+
+type GetGoodsListReply struct {
+	Cryptominer []*Cryptominer `json:"cryptominer"`
+	Prop        []*Prop        `json:"prop"`
+}
+
+type Cryptominer struct {
+	CryptominerID        int64  `json:"cryptominerId"` // ID
+	UserID               int64  `json:"userId"`
+	CryptominerTypeID    int64  `json:"cryptominerTypeId"`    // 矿机种类id
+	CryptominerName      string `json:"cryptominerName"`      // 矿机名称
+	CryptominerPicture   string `json:"cryptominerPicture"`   // 矿机图片
+	CryptominerDescribe  string `json:"cryptominerDescribe"`  // 矿机描述
+	CryptominerPrice     int64  `json:"cryptominerPrice"`     // 矿机价格
+	OptionalStatus       string `json:"optionalStatus"`       // 矿机状态 0：未购买 1：工作中 2：已失效 3：砍价中
+	PurchaseTime         string `json:"purchaseTime"`         // 购买时间
+	IsBargain            bool   `json:"isBargain"`            // 是否可砍
+	PurchaseWay          string `json:"purchaseWay"`          // 购买方式 0：全额购买 1：限时砍价
+	CryptominerStartTime string `json:"cryptominerStartTime"` // 矿机开始运作时间
+	CryptominerEndTime   string `json:"cryptominerEndTime"`   // 矿机失效时间
+	CryptominerDuration  string `json:"cryptominerDuration"`  // 矿机运作时间
+}
+
+type Prop struct {
+	PropID       int64  `json:"propId"` // ID
+	UserID       int64  `json:"userId"`
+	PropTypeID   int64  `json:"propTypeId"`   // 道具种类id
+	PropName     string `json:"propName"`     // 道具名称
+	PropPicture  string `json:"propPicture"`  // 道具图片
+	PropDescribe string `json:"propDescribe"` // 道具描述
+	PropPrice    int64  `json:"propPrice"`    // 道具价格
+	PurchaseTime string `json:"purchaseTime"` // 购买时间
+}
+
+type JudgeBargainInput struct {
+	UserID            int64 `json:"userId"`            // 用户id
+	CryptominerTypeID int64 `json:"cryptominerTypeId"` // 矿机种类ids
+}
+
+type JudgeBargainReply struct {
+	IsBargain bool `json:"isBargain"` // 砍价id
+}
+
+type CryptominerPurchaseInput struct {
+	UserID        int64 `json:"userId"`        // 用户id
+	CryptominerID int64 `json:"cryptominerId"` // 商品id
+}
+
+type CryptominerBargainInput struct {
+	UserID        int64 `json:"userId"`        // 用户id
+	CryptominerID int64 `json:"cryptominerId"` // 商品id
+}
+
+type CryptominerBargainReply struct {
+	BargainID int64 `json:"bargainId"` // 砍价id
+	IsFirst   bool  `json:"isFirst"`   // 是否为第一次砍价
+}
+
+type GetBargainRuleInput struct {
+	BargainID int64 `json:"bargainId"` // 砍价id
+}
+
+type GetBargainRuleReply struct {
+	BargainRuleDescribe string `json:"bargainRuleDescribe"` // 规则描述
+}
+
+type GetBargainCryptominerInput struct {
+	CryptominerID int64 `json:"cryptominerId"` // 矿机id
+}
+
+type GetBargainCryptominerReply struct {
+	CryptominerName    string `json:"cryptominerName"`    // 矿机名称
+	CryptominerPicture string `json:"cryptominerPicture"` // 矿机图片
+}
+
+type GetBargainProgressInput struct {
+	BargainID int64 `json:"bargainId"` // 砍价id
+}
+
+type GetBargainProgressReply struct {
+	ActivityStartTime string  `json:"activityStartTime"` // 活动开始时间
+	RemainingPrice    float32 `json:"remainingPrice"`    // 剩余金额
+}
+
+type GetBargainRecordInput struct {
+	BargainID int64 `json:"bargainId"` // 砍价id
+}
+
+type GetBargainRecordReply struct {
+	Cryptominer   []*Cryptominer   `json:"cryptominer"`   // 矿机
+	BargainAmount []*BargainAmount `json:"bargainAmount"` // 每份金额计算
+	Profile       []*Profile       `json:"profile"`       // 对应金额的砍价人信息
+}
+
+type BargainAmount struct {
+	FirstBargainPercentage float32 `json:"firstBargainPercentage"` // 初次砍价百分比
+	BargainMinPrice        float32 `json:"bargainMinPrice"`        // 砍价最小额度
+	BargainPrice           float32 `json:"bargainPrice"`           // 本次砍价额度
+}
+
+type Profile struct {
+	UserID   int64  `json:"userId"`   // 用户id
+	UserName string `json:"userName"` // 用户名
+	Avatar   string `json:"avatar"`   // 用户头像
 }
