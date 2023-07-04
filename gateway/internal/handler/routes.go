@@ -41,12 +41,12 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Handler: user.GetHelpCategoryListHandler(serverCtx),
 			},
 			{
-				Method:  http.MethodGet,
+				Method:  http.MethodPost,
 				Path:    "/user/getHelpDocumentTitleList",
 				Handler: user.GetHelpDocumentTitleListHandler(serverCtx),
 			},
 			{
-				Method:  http.MethodGet,
+				Method:  http.MethodPost,
 				Path:    "/user/getContentByHelpDocumentId",
 				Handler: user.GetContentByHelpDocumentIdHandler(serverCtx),
 			},
@@ -64,14 +64,19 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 					Handler: user.UserLogoutHandler(serverCtx),
 				},
 				{
-					Method:  http.MethodGet,
+					Method:  http.MethodPost,
 					Path:    "/user/getUserInfo",
 					Handler: user.GetUserInfoHandler(serverCtx),
 				},
 				{
-					Method:  http.MethodGet,
+					Method:  http.MethodPost,
 					Path:    "/user/getMessageList",
 					Handler: user.GetMessageListHandler(serverCtx),
+				},
+				{
+					Method:  http.MethodPost,
+					Path:    "/user/getMessageByNoticeId",
+					Handler: user.GetMessageByNoticeIdHandler(serverCtx),
 				},
 			}...,
 		),

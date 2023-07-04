@@ -53,11 +53,11 @@ type RegisteredPopulationReply struct {
 }
 
 type GetUserListByCondition struct {
-	BlackStatus int64  `json:"blackStatus"` //冻结状态
-	PageNum     int64  `json:"pageNum"`     //页码
-	PageSize    int64  `json:"pageSize"`    //每页条数
-	OrderType   string `json:"order"`       //排序
-	TwitterId   string `json:"twitterId"`   //推特id
+	BlackStatus *int64  `json:"blackStatus"` //冻结状态
+	PageNum     int64   `json:"pageNum"`     //页码
+	PageSize    int64   `json:"pageSize"`    //每页条数
+	OrderType   *string `json:"order"`       //排序
+	TwitterId   *string `json:"twitterId"`   //推特id
 }
 
 type GetUserListByConditionReply struct {
@@ -134,6 +134,10 @@ type NoticeList struct {
 
 type GetMessageListReply struct {
 	NoticeList []NoticeList `json:"noticeList"`
+}
+
+type GetMessageByNoticeId struct {
+	NoticeId int64 `json:"noticeId"` //通知id
 }
 
 type CreatePublishTaskInput struct {

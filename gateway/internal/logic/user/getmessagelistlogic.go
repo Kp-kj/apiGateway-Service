@@ -2,6 +2,7 @@ package user
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"gateway/userclient"
 
@@ -27,22 +28,38 @@ func NewGetMessageListLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Ge
 
 // GetMessageList 获取消息列表
 func (l *GetMessageListLogic) GetMessageList(req *types.GetMessageList) (resp *types.GetMessageListReply, err error) {
+	userId := l.ctx.Value("userId")
 
-	fmt.Println("req: ", req)
-	userId := l.ctx.Value("userId").(int64) // 从上下文中获取用户id
+	var userIdNum int64
+	if v, ok := userId.(json.Number); ok {
+		userIdNum, _ = v.Int64()
+	}
 
-	fmt.Println("userId: ", userId)
+	//如果req.LastNoticeI为0，则表示是第一次请求，需要从头开始查询
+	//如果有值需要转换为string
+	//重新赋值一个新变量
+	var lastBiticestring string
+	if req.LastNoticeId == 0 {
+		lastBiticestring = ""
+	} else {
+		lastBiticestring = fmt.Sprintf("%d", req.LastNoticeId)
+	}
+
+	fmt.Println("userId:", userIdNum)
 	messageListResp, err := l.svcCtx.UserRpcClient.RecordNotice(l.ctx, &userclient.RecordNoticeRequest{
-		UserId:               userId,
+		UserId:               userIdNum,
 		Limit:                30,
 		RecordNoticeStatus:   2, //0未读 1已读 2全部
 		RecordNoticeCategory: req.NoticeType,
-		LastNoticeId:         string(req.LastNoticeId),
+		LastNoticeId:         lastBiticestring,
 	})
 
 	if err != nil {
+		fmt.Println("err: ", err)
 		return nil, err
 	}
+
+	fmt.Println(messageListResp)
 	// 构造返回值
 	resp = &types.GetMessageListReply{
 		NoticeList: make([]types.NoticeList, 0),
@@ -51,7 +68,7 @@ func (l *GetMessageListLogic) GetMessageList(req *types.GetMessageList) (resp *t
 	// 将messageListResp中的每个元素赋值到NoticeList中
 	for _, notice := range messageListResp.Notice {
 		var Notice int64
-		if notice.RecordNoticeCategory == 1 {
+		if notice.RecordNoticeCategory == 0 {
 			// 如果是系统通知
 			Notice = notice.SystemNoticeId
 			noticeData, err := l.svcCtx.UserRpcClient.QuerySystemNotification(l.ctx, &userclient.QuerySystemNotificationRequest{

@@ -25,7 +25,11 @@ func NewGetCurrentOnlinePersonLogic(ctx context.Context, svcCtx *svc.ServiceCont
 
 // GetCurrentOnlinePerson 获取当前在线人数
 func (l *GetCurrentOnlinePersonLogic) GetCurrentOnlinePerson() (resp *types.CurrentOnlinePersonReply, err error) {
-	// todo: add your logic here and delete this line
+	// 获取在线用户数量
+	count, err := l.svcCtx.Redis.Scard("online_users")
+	if err != nil {
+		return nil, err
+	}
 
-	return &types.CurrentOnlinePersonReply{CurrentOnlinePerson: 0}, nil
+	return &types.CurrentOnlinePersonReply{CurrentOnlinePerson: count}, nil
 }
