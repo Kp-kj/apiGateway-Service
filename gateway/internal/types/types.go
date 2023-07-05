@@ -40,7 +40,7 @@ type HelpCategoryListReply struct {
 }
 
 type CategoryList struct {
-	CategoryId   int64  `json:"categoryId"`
+	CategoryId   string `json:"categoryId"`
 	CategoryName string `json:"categoryName"`
 }
 
@@ -132,12 +132,60 @@ type NoticeList struct {
 	NoticeStatus  int64  `json:"noticeStatus"`  //通知状态 1:未读 2:已读
 }
 
+type Noticelds struct {
+	SystemNoticeIds          int64 `json:"systemNoticeIds"`
+	TargetSystemNoticeStatus int64 `json:"targetSystemNoticeStatus"`
+}
+
+type EditNoticeStatus struct {
+	EditItems []Noticelds `json:"noticelds"` // 批量编辑通知的信息
+}
+
+type EditNoticeStatusReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
 type GetMessageListReply struct {
 	NoticeList []NoticeList `json:"noticeList"`
 }
 
 type GetMessageByNoticeId struct {
 	NoticeId int64 `json:"noticeId"` //通知id
+}
+
+type AddCategory struct {
+	CategoryName string `json:"categoryName"` //分类名称
+	LanguageCode string `json:"languageCode"` //语言编码
+}
+
+type AddCategoryReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type GetNoticeBy struct {
+	SystemNoticeId      int64  `json:"systemNoticeId"`      //系统通知id
+	SystemNoticeTitle   string `json:"systemNoticeTitle"`   //系统通知标题
+	SystemNoticeContent string `json:"systemNoticeContent"` //系统通知内容
+	SystemNoticeStatus  int64  `json:"systemNoticeStatus"`  //系统通知状态
+	SystemNoticeTime    int64  `json:"systemNoticeTime"`    //系统通知时间
+	IsAutoPublish       bool   `json:"isAutoPublish"`       //是否自动发布
+}
+
+type GetNoticeByReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type EditNotice struct {
+	SystemNoticeId      int64  `json:"systemNoticeId"`      //系统通知id
+	SystemNoticeTitle   string `json:"systemNoticeTitle"`   //系统通知标题
+	SystemNoticeContent string `json:"systemNoticeContent"` //系统通知内容
+	SystemNoticeStatus  int64  `json:"systemNoticeStatus"`  //系统通知状态
+	SystemNoticeTime    string `json:"systemNoticeTime"`    //系统通知时间
+	IsAutoPublish       bool   `json:"isAutoPublish"`       //是否自动发布
+}
+
+type EditNoticeReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
 }
 
 type CreatePublishTaskInput struct {

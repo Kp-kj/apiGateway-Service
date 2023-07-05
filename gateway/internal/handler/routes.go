@@ -132,6 +132,21 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Path:    "/admin/batchUpdateUserBlackStatus",
 				Handler: admin.BatchUpdateUserBlackStatusHandler(serverCtx),
 			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/editNoticeStatus",
+				Handler: admin.EditNoticeStatusHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/editNotice",
+				Handler: admin.EditNoticeHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/addCategory",
+				Handler: admin.AddCategoryHandler(serverCtx),
+			},
 		},
 		rest.WithJwt(serverCtx.Config.AdminAuth.AccessSecret),
 		rest.WithPrefix("/v1"),

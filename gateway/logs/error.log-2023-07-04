@@ -1,0 +1,1674 @@
+<<<<<<< HEAD
+2023-07-04T00:00:26.575+08:00	[31;1m error [0m	compress error: remove logs/access.log-2023-07-03: The process cannot access the file because it is being used by another process.	caller=logx/rotatelogger.go:410
+2023-07-04T00:00:26.578+08:00	[31;1m error [0m	compress error: remove logs/stat.log-2023-07-03: The process cannot access the file because it is being used by another process.	caller=logx/rotatelogger.go:410
+2023-07-04T00:00:26.584+08:00	[31;1m error [0m	compress error: remove logs/error.log-2023-07-03: The process cannot access the file because it is being used by another process.	caller=logx/rotatelogger.go:410
+2023-07-04T09:51:22.079+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T09:54:51.748+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/user.User/QueryUser - user_id:"1674266735504527360" - rpc error: code = Unimplemented desc = unknown service user.User	duration=0.5ms	caller=clientinterceptors/durationinterceptor.go:35	trace=bab62e37a1a71f3de29ceedbc539eb2e	span=7d51775adb3a8841
+2023-07-04T09:54:51.749+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/label/create - 127.0.0.1:64917 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/label/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 69
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "userId": "1674266735504527360",
+    "label": "美团UUID"
+}	duration=3.1ms	caller=handler/loghandler.go:162	trace=bab62e37a1a71f3de29ceedbc539eb2e	span=7d4d63e9b4e5cc58
+2023-07-04T09:57:39.406+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T09:58:59.084+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+=======
+2023-07-03T15:42:28.548+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-07-03T15:43:00.965+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1052 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorizationtoken: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IjEiLCJQYXNzV29yZCI6IjEyMzQ1NiIsImV4cCI6MTY3ODk0OTEyOCwiaWF0IjoxNjc4MzQ0MzI4LCJpc3MiOiIxMjcuMC4wLjEiLCJzdWIiOiJ1c2VyIHRva2VuIn0.piGKdaR2kcaAGIAbMXa02QhxZfyicxZTSco44Nl-wsM eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IjEiLCJQYXNzV29yZCI6IjEyMzQ1NiIsImV4cCI6MTY4MDkzNjMyOCwiaWF0IjoxNjc4MzQ0MzI4LCJpc3MiOiIxMjcuMC4wLjEiLCJzdWIiOiJ1c2VyIHRva2VuIn0.z2jYxa-NVsr5aue-CS_5246Dt-fkIp_HBRrG4O68G_A
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "cn"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=b233acd8ba8cc1c2522cfe796a941027	span=2b55475fc27559cf
+2023-07-03T15:43:25.837+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1066 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorizationtoken: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5NzQ5ODksImlhdCI6MTY4ODM3MDE4OSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.af4RVRZVQ7kMCCB5ITW-GRCj9GCJJ4YrGd2eMXkT14k
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "cn"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=498f9aafb130b7f71c033721755eec77	span=3f45ca2591b812e7
+2023-07-03T15:43:46.254+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1083 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "cn"
+}	duration=0.9ms	caller=handler/loghandler.go:162	trace=3b915656c13174e82fb2f00dea1da557	span=afb48ff239baa5f1
+2023-07-03T15:44:31.922+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-03T15:45:45.474+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1292 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorizationtoken: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IjEiLCJQYXNzV29yZCI6IjEyMzQ1NiIsImV4cCI6MTY3ODk0OTEyOCwiaWF0IjoxNjc4MzQ0MzI4LCJpc3MiOiIxMjcuMC4wLjEiLCJzdWIiOiJ1c2VyIHRva2VuIn0.piGKdaR2kcaAGIAbMXa02QhxZfyicxZTSco44Nl-wsM eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IjEiLCJQYXNzV29yZCI6IjEyMzQ1NiIsImV4cCI6MTY4MDkzNjMyOCwiaWF0IjoxNjc4MzQ0MzI4LCJpc3MiOiIxMjcuMC4wLjEiLCJzdWIiOiJ1c2VyIHRva2VuIn0.z2jYxa-NVsr5aue-CS_5246Dt-fkIp_HBRrG4O68G_A
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpDocumentId": "1674628031345332224",
+    "languageCode": "cn"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=98348e68b1c6ac758c8b92e4dce52ded	span=df85b36ae4dd1eb7
+2023-07-03T15:46:06.486+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1295 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 56
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "69",
+    "languageCode": "51"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=c8604bde99315eef895f1baad52e903f	span=867d62da2950682f
+2023-07-03T15:46:13.828+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1303 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "cn"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=247c0305911b0b667d1ed3312763f96f	span=aa0e0e80e8d1e0f7
+2023-07-03T15:46:17.555+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1304 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "en"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=ab7e125c8f3e7148ccdfb85049808a15	span=95a338282051d3cc
+2023-07-03T15:46:34.488+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1309 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "en"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=f61afb007ceb7c69cd56498ed61dfccb	span=53bd44440ca4d258
+2023-07-03T15:46:51.618+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-03T15:47:27.605+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/user.rpc/user.User/GetHelpDocumentTranslations - helpDocumentId:1674628031345332224  language:"zh" - rpc error: code = Unknown desc = sql: no rows in result set	duration=78.9ms	caller=clientinterceptors/durationinterceptor.go:35	trace=40445f1f58cc6e52a2ca2ea79f35ef7e	span=aa76b5d1ed7cc8b6
+2023-07-03T15:47:39.943+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/user.rpc/user.User/GetHelpDocumentTranslations - helpDocumentId:1674628031345332224  language:"zh" - rpc error: code = Unknown desc = sql: no rows in result set	duration=75.5ms	caller=clientinterceptors/durationinterceptor.go:35	trace=9362eb549cb12ff7953a95ba1359893b	span=71c9e4c664046802
+2023-07-03T15:47:58.368+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1397 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "zh"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=e573130d3a68c95e9208eb4331d68875	span=9a2bafd295323cc5
+2023-07-03T15:51:18.392+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1549 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "zh"
+}	duration=1.0ms	caller=handler/loghandler.go:162	trace=0d4c798f4ca4a39d8da0531fee7e8c78	span=727adbd33252094b
+2023-07-03T15:51:19.660+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1549 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "zh"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=5dc4082bc8ff76eb3e42ee2e163bedb0	span=f108a26fcef27e60
+2023-07-03T15:51:28.445+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1556 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "helpCategoryId": "1674628031345332224",
+    "languageCode": "zh"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=949a1c74edca07e9cf3196f53b396fb7	span=2a1f1704419a013c
+2023-07-03T15:52:57.447+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-03T15:53:41.868+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getContentByHelpDocumentId - 192.168.1.104:1607 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getContentByHelpDocumentId HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.0ms	caller=handler/loghandler.go:162	trace=194dd38b0a1c6b932e9253e7efe8b97b	span=41123f00b481f956
+2023-07-03T15:53:44.143+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/user.rpc/user.User/GetHelpDocumentTranslations - helpDocumentId:80  language:"45" - rpc error: code = Unknown desc = sql: no rows in result set	duration=228.3ms	caller=clientinterceptors/durationinterceptor.go:35	trace=3965dd708086e0ddb09d9812a4fc3d1e	span=d2f91b68ff186114
+2023-07-03T16:22:07.713+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-03T16:24:40.876+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-03T16:27:00.573+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-03T16:27:13.910+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=422da5261fdd0befdd1da8164925335c	span=622d45ea72d2f7ca
+2023-07-03T16:27:15.622+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=0.8ms	caller=handler/loghandler.go:162	trace=40e19129fa607e0f1d45ecfc09581763	span=e1493aa4fde96657
+2023-07-03T16:27:17.251+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=0.2ms	caller=handler/loghandler.go:162	trace=7ad13b321209c6dc79ea4795cc04d187	span=af59cf0468435ebf
+2023-07-03T16:27:18.518+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=0.4ms	caller=handler/loghandler.go:162	trace=0cfdbc154692450ece80426016115fcf	span=004bf06c3842cccc
+2023-07-03T16:27:19.553+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=1.1ms	caller=handler/loghandler.go:162	trace=a33a7b81a7d9dd56d4b183dc0caeefed	span=7bf0757f8bcdadb6
+2023-07-03T16:27:20.611+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=1.5ms	caller=handler/loghandler.go:162	trace=2da7c4c1f8a26186d9ff787c08ef75e8	span=0ce7c2d40fa35ea1
+2023-07-03T16:27:21.646+08:00	[31;1m error [0m	[http] dropped, /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)	caller=handler/breakerhandler.go:25
+2023-07-03T16:27:21.647+08:00	[31;1m error [0m	[HTTP] [103;90;1m 503 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1665 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+	duration=0.5ms	caller=handler/loghandler.go:162	trace=6ee69976c4fc0aceb8da8f85f6686c3e	span=2b019be73bb70b43
+2023-07-03T16:28:27.235+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1711 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=0.7ms	caller=handler/loghandler.go:162	trace=be68adcf9db129121d01ef3ac43703c0	span=c13ce94d73ab1ee6
+2023-07-03T16:28:28.657+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1711 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": null,
+    "NoticeType": "1"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=9b1bb83aa366ba6b9ec45cb5f175a411	span=4e66012e0bb676ba
+2023-07-03T16:28:39.363+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1717 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 52
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": "",
+    "NoticeType": "1"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=ed9c879a9bca9063ce7d664a4760b4a6	span=4ee2aef02e1d08da
+2023-07-03T16:29:27.923+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/user/getMessageList - 192.168.1.104:1750 - Apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/user/getMessageList HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzc1MDgsImlhdCI6MTY4ODM3MjcwOCwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.KvzN7nkZ-TtQ9IPYEGaQYtmatNP-_mH90AQaDqMzBLE
+Connection: keep-alive
+Content-Length: 52
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "lastNoticeId": "",
+    "NoticeType": "1"
+}	duration=0.5ms	caller=handler/loghandler.go:162	trace=029e7c76ce9c49fe7707b73368051550	span=a47d75c714aa10a3
+2023-07-03T16:30:03.486+08:00	[31;1m error [0m	authorize failed: Token is expired
+=> POST /v1/user/userLogout HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODY1NjQyMzIsImlhdCI6MTY4NTk1OTQzMiwidXNlcklkIjoxNjYxNjQwMDI3OTYyMDg1Mzc2fQ.orgeyww1CjuXHVk-jOgN0EuLZ2qSeYXhOqJEcf9IycE
+Connection: keep-alive
+Content-Length: 0
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+	caller=handler/authhandler.go:103
+2023-07-03T16:31:05.150+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+>>>>>>> 35271542c26e230efdfaa402f27909cfd98bda09
+2023-07-04T13:17:14.818+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/QueryTaskDetails - taskId:1  userId:"1674266735504527360" - rpc error: code = Internal desc = panic: runtime error: invalid memory address or nil pointer dereference
+
+goroutine 91 [running]:
+runtime/debug.Stack()
+	c:/go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:33 +0x46
+panic({0x2590400, 0x3ab0360})
+	c:/go/src/runtime/panic.go:884 +0x213
+taskManager-Service/internal/logic.(*QueryTaskDetailsLogic).QueryTaskDetails(0xc00055feb8, 0xc0000975c0)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/logic/querytaskdetailslogic.go:38 +0x187
+taskManager-Service/internal/server.(*TaskServer).QueryTaskDetails(0x1000000010000?, {0x2b3a960?, 0xc00010bc20}, 0x0?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/server/taskserver.go:38 +0xb6
+taskManager-Service/task._Task_QueryTaskDetails_Handler.func1({0x2b3a960, 0xc00010bc20}, {0x26c92e0?, 0xc0000975c0})
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/task/task_grpc.pb.go:460 +0x7b
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:39 +0x12f
+created by github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:29 +0x24a	duration=274.1ms	caller=clientinterceptors/durationinterceptor.go:35	trace=f85d1045bd04dbe4ed88e77d36d02cf5	span=fdfadfb951e0d9f9
+2023-07-04T13:17:14.819+08:00	[31;1m error [0m	(/v1/curatorial/details - 127.0.0.1:56805) runtime error: invalid memory address or nil pointer dereference
+goroutine 16 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x18f0540, 0x2cf7300})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*QueryTaskDetailsLogic).QueryTaskDetails(0xc0002efbb0, 0xc0005fc678)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/logic/curatorial/querytaskdetailslogic.go:34 +0xca
+gateway/internal/handler/curatorial.QueryTaskDetailsHandler.func1({0x1e5b5f0, 0xc0005c6b40}, 0xc000396a00)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/handler/curatorial/querytaskdetailshandler.go:23 +0x1b1
+gateway/internal/middleware.(*BlackMiddleware).Handle-fm.func1({0x1e5b5f0?, 0xc0005c6b40?}, 0xc000116701?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/middleware/blackmiddleware.go:19 +0x27
+net/http.HandlerFunc.ServeHTTP(0xc0002efcc0?, {0x1e5b5f0?, 0xc0005c6b40?}, 0xc0005d5120?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x1e5b5f0, 0xc0005c6b40}, 0xc000396900)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1e5b5f0?, 0xc0005c6b40?}, 0xc0005cd2f0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x1e5b5f0, 0xc0005c6b40}, 0xc000396900)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc35a25a?, {0x1e5b5f0?, 0xc0005c6b40?}, 0x23d16af8d?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x1e5b5f0?, 0xc0005c6b40?}, 0x2d2ede0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1e5b5f0?, 0xc0005c6b40?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x1e5b5f0, 0xc0005c6b40}, 0xc000549fb0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xc00009c720?, {0x1e5b5f0?, 0xc0005c6b40?}, 0xc0005c4b08?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x1e5b5f0?, 0xc0005c6b40?}, 0xc000549f98?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1e5b5f0?, 0xc0005c6b40?}, 0x215a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=f85d1045bd04dbe4ed88e77d36d02cf5	span=5cda0415e2451a27
+2023-07-04T13:17:14.819+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/details - 127.0.0.1:56805 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/details HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 59
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "userId": "1674266735504527360",
+    "taskId": 1
+}	duration=275.5ms	caller=handler/loghandler.go:162	trace=f85d1045bd04dbe4ed88e77d36d02cf5	span=5cda0415e2451a27
+2023-07-04T13:18:45.331+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T13:18:51.937+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/QueryTaskDetails - taskId:1  userId:"1674266735504527360" - rpc error: code = Internal desc = panic: runtime error: invalid memory address or nil pointer dereference
+
+goroutine 119 [running]:
+runtime/debug.Stack()
+	c:/go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:33 +0x46
+panic({0x2290400, 0x37b0360})
+	c:/go/src/runtime/panic.go:884 +0x213
+taskManager-Service/internal/logic.(*QueryTaskDetailsLogic).QueryTaskDetails(0xc00067feb8, 0xc00033a6c0)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/logic/querytaskdetailslogic.go:38 +0x187
+taskManager-Service/internal/server.(*TaskServer).QueryTaskDetails(0xc00046f188?, {0x283aa00?, 0xc0005d6f00}, 0xc0006a02a0?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/server/taskserver.go:38 +0xb6
+taskManager-Service/task._Task_QueryTaskDetails_Handler.func1({0x283aa00, 0xc0005d6f00}, {0x23c92e0?, 0xc00033a6c0})
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/task/task_grpc.pb.go:460 +0x7b
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:39 +0x12f
+created by github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:29 +0x24a	duration=300.0ms	caller=clientinterceptors/durationinterceptor.go:35	trace=fb67f5d5b28df9b9c0c7d94d70accb04	span=950a327facd4767f
+2023-07-04T13:18:51.937+08:00	[31;1m error [0m	(/v1/curatorial/details - 127.0.0.1:56865) runtime error: invalid memory address or nil pointer dereference
+goroutine 89 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x18f0540, 0x2cf7300})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*QueryTaskDetailsLogic).QueryTaskDetails(0xc0002ebbb0, 0xc0005fd2c0)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/logic/curatorial/querytaskdetailslogic.go:34 +0xca
+gateway/internal/handler/curatorial.QueryTaskDetailsHandler.func1({0x1e5b5f0, 0xc0002c6480}, 0xc000494a00)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/handler/curatorial/querytaskdetailshandler.go:23 +0x1b1
+gateway/internal/middleware.(*BlackMiddleware).Handle-fm.func1({0x1e5b5f0?, 0xc0002c6480?}, 0xc000369901?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/middleware/blackmiddleware.go:19 +0x27
+net/http.HandlerFunc.ServeHTTP(0xc0002ebcc0?, {0x1e5b5f0?, 0xc0002c6480?}, 0xc00008c870?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x1e5b5f0, 0xc0002c6480}, 0xc000494900)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1e5b5f0?, 0xc0002c6480?}, 0x21ed74?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x1e5b5f0, 0xc0002c6480}, 0xc000494900)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc35a2bb?, {0x1e5b5f0?, 0xc0002c6480?}, 0x18d85598a9?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x1e5b5f0?, 0xc0002c6480?}, 0x2d2ede0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1e5b5f0?, 0xc0002c6480?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x1e5b5f0, 0xc0002c6480}, 0xc000545fb0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xc00018ac00?, {0x1e5b5f0?, 0xc0002c6480?}, 0xc000105328?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x1e5b5f0?, 0xc0002c6480?}, 0xc000545f98?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1e5b5f0?, 0xc0002c6480?}, 0x215a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=fb67f5d5b28df9b9c0c7d94d70accb04	span=6d77057073b80449
+2023-07-04T13:18:51.938+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/details - 127.0.0.1:56865 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/details HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 59
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "userId": "1674266735504527360",
+    "taskId": 1
+}	duration=300.0ms	caller=handler/loghandler.go:162	trace=fb67f5d5b28df9b9c0c7d94d70accb04	span=6d77057073b80449
+2023-07-04T13:19:27.746+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-07-04T13:19:35.011+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/QueryTaskDetails - taskId:1  userId:"1674266735504527360" - rpc error: code = Internal desc = panic: runtime error: invalid memory address or nil pointer dereference
+
+goroutine 68 [running]:
+runtime/debug.Stack()
+	c:/go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:33 +0x46
+panic({0x2270400, 0x3790360})
+	c:/go/src/runtime/panic.go:884 +0x213
+taskManager-Service/internal/logic.(*QueryTaskDetailsLogic).QueryTaskDetails(0xc0003afeb8, 0xc0002b0180)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/logic/querytaskdetailslogic.go:38 +0x187
+taskManager-Service/internal/server.(*TaskServer).QueryTaskDetails(0x0?, {0x281aa40?, 0xc000098640}, 0x0?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/server/taskserver.go:38 +0xb6
+taskManager-Service/task._Task_QueryTaskDetails_Handler.func1({0x281aa40, 0xc000098640}, {0x23a92e0?, 0xc0002b0180})
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/task/task_grpc.pb.go:460 +0x7b
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:39 +0x12f
+created by github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:29 +0x24a	duration=268.8ms	caller=clientinterceptors/durationinterceptor.go:35	trace=d93258c977e7e097c7007190ccf9b4a1	span=de4391f912eab9db
+2023-07-04T13:19:35.011+08:00	[31;1m error [0m	(/v1/curatorial/details - 127.0.0.1:56886) runtime error: invalid memory address or nil pointer dereference
+goroutine 76 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x18f0540, 0x2cf7300})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*QueryTaskDetailsLogic).QueryTaskDetails(0xc0002d7bb0, 0xc000452360)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/logic/curatorial/querytaskdetailslogic.go:34 +0xca
+gateway/internal/handler/curatorial.QueryTaskDetailsHandler.func1({0x1e5b5f0, 0xc0004f8000}, 0xc000272600)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/handler/curatorial/querytaskdetailshandler.go:23 +0x1b1
+gateway/internal/middleware.(*BlackMiddleware).Handle-fm.func1({0x1e5b5f0?, 0xc0004f8000?}, 0xc000369601?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/middleware/blackmiddleware.go:19 +0x27
+net/http.HandlerFunc.ServeHTTP(0xc0002d7cc0?, {0x1e5b5f0?, 0xc0004f8000?}, 0xc0006e6aa0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x1e5b5f0, 0xc0004f8000}, 0xc000272500)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1e5b5f0?, 0xc0004f8000?}, 0xc0002a44b0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x1e5b5f0, 0xc0004f8000}, 0xc000272500)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc35a2e6?, {0x1e5b5f0?, 0xc0004f8000?}, 0x22e19e2291?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x1e5b5f0?, 0xc0004f8000?}, 0x2d2ede0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1e5b5f0?, 0xc0004f8000?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x1e5b5f0, 0xc0004f8000}, 0xc000545fb0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xc00018b380?, {0x1e5b5f0?, 0xc0004f8000?}, 0xc000081e88?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x1e5b5f0?, 0xc0004f8000?}, 0xc000545f98?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0xc000249c20?, {0x1e5b5f0?, 0xc0004f8000?}, 0x215a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=d93258c977e7e097c7007190ccf9b4a1	span=afe3989f04f0d3c2
+2023-07-04T13:19:35.011+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/details - 127.0.0.1:56886 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/details HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 59
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "userId": "1674266735504527360",
+    "taskId": 1
+}	duration=268.8ms	caller=handler/loghandler.go:162	trace=d93258c977e7e097c7007190ccf9b4a1	span=afe3989f04f0d3c2
+2023-07-04T13:25:14.404+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-07-04T13:25:21.268+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/QueryTaskDetails - taskId:1  userId:"1674266735504527360" - rpc error: code = Internal desc = panic: runtime error: invalid memory address or nil pointer dereference
+
+goroutine 85 [running]:
+runtime/debug.Stack()
+	c:/go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:33 +0x46
+panic({0x2760400, 0x3c80360})
+	c:/go/src/runtime/panic.go:884 +0x213
+taskManager-Service/internal/logic.(*QueryTaskDetailsLogic).QueryTaskDetails(0xc00049deb8, 0xc00013c080)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/logic/querytaskdetailslogic.go:38 +0x187
+taskManager-Service/internal/server.(*TaskServer).QueryTaskDetails(0xc0002be000?, {0x2d0aa80?, 0xc0005907d0}, 0x0?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/server/taskserver.go:38 +0xb6
+taskManager-Service/task._Task_QueryTaskDetails_Handler.func1({0x2d0aa80, 0xc0005907d0}, {0x28992e0?, 0xc00013c080})
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/task/task_grpc.pb.go:460 +0x7b
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:39 +0x12f
+created by github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:29 +0x24a	duration=322.2ms	caller=clientinterceptors/durationinterceptor.go:35	trace=c1729f5f57c3750f55b2c56237477d9f	span=e8530349ce0c1204
+2023-07-04T13:25:21.268+08:00	[31;1m error [0m	(/v1/curatorial/details - 127.0.0.1:57288) runtime error: invalid memory address or nil pointer dereference
+goroutine 97 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x18f0540, 0x2cf7300})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*QueryTaskDetailsLogic).QueryTaskDetails(0xc0002c1bb0, 0xc000530408)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/logic/curatorial/querytaskdetailslogic.go:34 +0xca
+gateway/internal/handler/curatorial.QueryTaskDetailsHandler.func1({0x1e5b5f0, 0xc0002c6120}, 0xc000404500)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/handler/curatorial/querytaskdetailshandler.go:23 +0x1b1
+gateway/internal/middleware.(*BlackMiddleware).Handle-fm.func1({0x1e5b5f0?, 0xc0002c6120?}, 0xc00014ef01?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/middleware/blackmiddleware.go:19 +0x27
+net/http.HandlerFunc.ServeHTTP(0xc0002c1cc0?, {0x1e5b5f0?, 0xc0002c6120?}, 0xc0006e67e0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x1e5b5f0, 0xc0002c6120}, 0xc000404400)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1e5b5f0?, 0xc0002c6120?}, 0x7?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x1e5b5f0, 0xc0002c6120}, 0xc000404400)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc35a440?, {0x1e5b5f0?, 0xc0002c6120?}, 0x737cebf435?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x1e5b5f0?, 0xc0002c6120?}, 0x2d2ede0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0xffffffffffffffff?, {0x1e5b5f0?, 0xc0002c6120?}, 0xc00033a420?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x1e5b5f0, 0xc0002c6120}, 0x0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0x27300000000?, {0x1e5b5f0?, 0xc0002c6120?}, 0xc0002edfc8?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x1e5b5f0?, 0xc0002c6120?}, 0x0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x1802a50?, {0x1e5b5f0?, 0xc0002c6120?}, 0x215a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=c1729f5f57c3750f55b2c56237477d9f	span=bc61406fd71b839c
+2023-07-04T13:25:21.268+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/details - 127.0.0.1:57288 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/details HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 59
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "userId": "1674266735504527360",
+    "taskId": 1
+}	duration=322.2ms	caller=handler/loghandler.go:162	trace=c1729f5f57c3750f55b2c56237477d9f	span=bc61406fd71b839c
+2023-07-04T13:26:01.970+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-07-04T13:26:09.336+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/QueryTaskDetails - taskId:1  userId:"1674266735504527360" - rpc error: code = Internal desc = panic: runtime error: invalid memory address or nil pointer dereference
+
+goroutine 109 [running]:
+runtime/debug.Stack()
+	c:/go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:33 +0x46
+panic({0x23d0400, 0x38f0360})
+	c:/go/src/runtime/panic.go:884 +0x213
+taskManager-Service/internal/logic.(*QueryTaskDetailsLogic).QueryTaskDetails(0xc000541eb8, 0xc000486300)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/logic/querytaskdetailslogic.go:38 +0x187
+taskManager-Service/internal/server.(*TaskServer).QueryTaskDetails(0xc00000ff58?, {0x297aac0?, 0xc00009f450}, 0x10?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/server/taskserver.go:38 +0xb6
+taskManager-Service/task._Task_QueryTaskDetails_Handler.func1({0x297aac0, 0xc00009f450}, {0x25092e0?, 0xc000486300})
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/task/task_grpc.pb.go:460 +0x7b
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:39 +0x12f
+created by github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:29 +0x24a	duration=296.8ms	caller=clientinterceptors/durationinterceptor.go:35	trace=7bdebe2b5bf78b8212a90e5be4612942	span=51d61d3a41aee5d7
+2023-07-04T13:26:09.336+08:00	[31;1m error [0m	(/v1/curatorial/details - 127.0.0.1:57321) runtime error: invalid memory address or nil pointer dereference
+goroutine 189 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x18f0540, 0x2cf7300})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*QueryTaskDetailsLogic).QueryTaskDetails(0xc0006f1bb0, 0xc000108b10)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/logic/curatorial/querytaskdetailslogic.go:34 +0xca
+gateway/internal/handler/curatorial.QueryTaskDetailsHandler.func1({0x1e5b5f0, 0xc00050ef60}, 0xc000188a00)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/handler/curatorial/querytaskdetailshandler.go:23 +0x1b1
+gateway/internal/middleware.(*BlackMiddleware).Handle-fm.func1({0x1e5b5f0?, 0xc00050ef60?}, 0xc00018dc01?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/middleware/blackmiddleware.go:19 +0x27
+net/http.HandlerFunc.ServeHTTP(0xc0006f1cc0?, {0x1e5b5f0?, 0xc00050ef60?}, 0xc00039f130?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x1e5b5f0, 0xc00050ef60}, 0xc000188900)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1e5b5f0?, 0xc00050ef60?}, 0x1dbf25?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x1e5b5f0, 0xc00050ef60}, 0xc000188900)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc35a471?, {0x1e5b5f0?, 0xc00050ef60?}, 0x7eaf80c735?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x1e5b5f0?, 0xc00050ef60?}, 0x2d2ede0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1e5b5f0?, 0xc00050ef60?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x1e5b5f0, 0xc00050ef60}, 0xc0002edfb0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xc0005d0de0?, {0x1e5b5f0?, 0xc00050ef60?}, 0xc000105328?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x1e5b5f0?, 0xc00050ef60?}, 0xc0002edf98?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0xc00009bc70?, {0x1e5b5f0?, 0xc00050ef60?}, 0x215a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=7bdebe2b5bf78b8212a90e5be4612942	span=06bab39f0ad34713
+2023-07-04T13:26:09.336+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/details - 127.0.0.1:57321 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/details HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 59
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "userId": "1674266735504527360",
+    "taskId": 1
+}	duration=297.3ms	caller=handler/loghandler.go:162	trace=7bdebe2b5bf78b8212a90e5be4612942	span=06bab39f0ad34713
+2023-07-04T13:26:52.803+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/QueryTaskDetails - taskId:1  userId:"1674266735504527360" - rpc error: code = Internal desc = panic: runtime error: invalid memory address or nil pointer dereference
+
+goroutine 86 [running]:
+runtime/debug.Stack()
+	c:/go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:33 +0x46
+panic({0x2150400, 0x3670360})
+	c:/go/src/runtime/panic.go:884 +0x213
+taskManager-Service/internal/logic.(*QueryTaskDetailsLogic).QueryTaskDetails(0xc00066deb8, 0xc000362380)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/logic/querytaskdetailslogic.go:38 +0x187
+taskManager-Service/internal/server.(*TaskServer).QueryTaskDetails(0x0?, {0x26fab30?, 0xc0005911a0}, 0x0?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/server/taskserver.go:38 +0xb6
+taskManager-Service/task._Task_QueryTaskDetails_Handler.func1({0x26fab30, 0xc0005911a0}, {0x22892e0?, 0xc000362380})
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/task/task_grpc.pb.go:460 +0x7b
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:39 +0x12f
+created by github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:29 +0x24a	duration=296.5ms	caller=clientinterceptors/durationinterceptor.go:35	trace=8c39a46ff2fbd37f7293d2146143185e	span=bf1e2a1d3baa4f79
+2023-07-04T13:26:52.803+08:00	[31;1m error [0m	(/v1/curatorial/details - 127.0.0.1:57342) runtime error: invalid memory address or nil pointer dereference
+goroutine 230 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x18f0540, 0x2cf7300})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*QueryTaskDetailsLogic).QueryTaskDetails(0xc0006f1bb0, 0xc0001093c8)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/logic/curatorial/querytaskdetailslogic.go:34 +0xca
+gateway/internal/handler/curatorial.QueryTaskDetailsHandler.func1({0x1e5b5f0, 0xc00050f9e0}, 0xc000189200)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/handler/curatorial/querytaskdetailshandler.go:23 +0x1b1
+gateway/internal/middleware.(*BlackMiddleware).Handle-fm.func1({0x1e5b5f0?, 0xc00050f9e0?}, 0xc0001bf801?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/middleware/blackmiddleware.go:19 +0x27
+net/http.HandlerFunc.ServeHTTP(0xc0006f1cc0?, {0x1e5b5f0?, 0xc00050f9e0?}, 0xc00052d9b0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x1e5b5f0, 0xc00050f9e0}, 0xc000189100)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1e5b5f0?, 0xc00050f9e0?}, 0x7763f6?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x1e5b5f0, 0xc00050f9e0}, 0xc000189100)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc35a49c?, {0x1e5b5f0?, 0xc00050f9e0?}, 0x88cdf151fd?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x1e5b5f0?, 0xc00050f9e0?}, 0x2d2ede0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0xc000472700?, {0x1e5b5f0?, 0xc00050f9e0?}, 0x1dc2e5?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x1e5b5f0, 0xc00050f9e0}, 0xc00009baa0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1e5b5f0?, 0xc00050f9e0?}, 0xc0005d0900?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x1e5b5f0?, 0xc00050f9e0?}, 0xc0006d5f58?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0xc0006d5fd0?, {0x1e5b5f0?, 0xc00050f9e0?}, 0xc0004cc9a0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=8c39a46ff2fbd37f7293d2146143185e	span=ca8a56601fad4abc
+2023-07-04T13:26:52.803+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/details - 127.0.0.1:57342 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/details HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 59
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "userId": "1674266735504527360",
+    "taskId": 1
+}	duration=296.5ms	caller=handler/loghandler.go:162	trace=8c39a46ff2fbd37f7293d2146143185e	span=ca8a56601fad4abc
+2023-07-04T13:29:36.385+08:00	[31;1m error [0m	authorize failed: Token is expired
+=> POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODY5MDEsImlhdCI6MTY4NzY4MjEwMSwidXNlcklkIjoxNjY4MTM0MjAzOTY4OTgzMDQwfQ.5WL43O-izh0a1s6H7fy4OGIpjx-aavuExpgrJUxfbpY
+Connection: keep-alive
+Content-Length: 624
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "1674266735504527360",
+    "tweetAddress": "https://twitter.com/Reuters/status/1676071080207810561",
+    "label": [
+        "mollit"
+    ],
+    "awardBudget": 100,
+    "maxUser": 4,
+    "awardAmount": 25,
+    "taskDemand": [
+        {
+            "taskName": 46,
+            "taskId": 10,
+            "taskDemand": "sunt nostrud",
+            "article": "aliquip veniam reprehenderit occaecat"
+        },
+        {
+            "taskId": 46,
+            "article": "qui",
+            "taskName": 41,
+            "taskDemand": "tempor in nulla veniam laborum"
+        },
+      
+    ]
+}	caller=handler/authhandler.go:103
+2023-07-04T13:29:53.056+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:57431 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 624
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "1674266735504527360",
+    "tweetAddress": "https://twitter.com/Reuters/status/1676071080207810561",
+    "label": [
+        "mollit"
+    ],
+    "awardBudget": 100,
+    "maxUser": 4,
+    "awardAmount": 25,
+    "taskDemand": [
+        {
+            "taskName": 46,
+            "taskId": 10,
+            "taskDemand": "sunt nostrud",
+            "article": "aliquip veniam reprehenderit occaecat"
+        },
+        {
+            "taskId": 46,
+            "article": "qui",
+            "taskName": 41,
+            "taskDemand": "tempor in nulla veniam laborum"
+       	duration=0.5ms	caller=handler/loghandler.go:162	trace=f6591768c6d0aaf7195a0b758c567639	span=dcdd450920fd9b9f
+2023-07-04T13:30:05.127+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T13:31:34.553+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-07-04T13:31:39.417+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:57530 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 624
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "1674266735504527360",
+    "tweetAddress": "https://twitter.com/Reuters/status/1676071080207810561",
+    "label": [
+        "mollit"
+    ],
+    "awardBudget": 100,
+    "maxUser": 4,
+    "awardAmount": 25,
+    "taskDemand": [
+        {
+            "taskName": 46,
+            "taskId": 10,
+            "taskDemand": "sunt nostrud",
+            "article": "aliquip veniam reprehenderit occaecat"
+        },
+        {
+            "taskId": 46,
+            "article": "qui",
+            "taskName": 41,
+            "taskDemand": "tempor in nulla veniam laborum"
+       	duration=0.0ms	caller=handler/loghandler.go:162	trace=91f11ae9bb6632effc0222c5e21dd5d3	span=8e5f6199ebb52927
+2023-07-04T13:31:49.391+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:57538 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 624
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "1674266735504527360",
+    "tweetAddress": "https://twitter.com/Reuters/status/1676071080207810561",
+    "label": [
+        "mollit"
+    ],
+    "awardBudget": 100,
+    "maxUser": 4,
+    "awardAmount": 25,
+    "taskDemand": [
+        {
+            "taskName": 46,
+            "taskId": 10,
+            "taskDemand": "sunt nostrud",
+            "article": "aliquip veniam reprehenderit occaecat"
+        },
+        {
+            "taskId": 46,
+            "article": "qui",
+            "taskName": 41,
+            "taskDemand": "tempor in nulla veniam laborum"
+       	duration=0.0ms	caller=handler/loghandler.go:162	trace=5bd77bd6e2dab09433f8ed121533647c	span=e78ec53a714ce387
+2023-07-04T13:32:01.684+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-07-04T13:32:22.135+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:57556 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 625
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "1674266735504527360",
+    "tweetAddress": "https://twitter.com/Reuters/status/1676071080207810561",
+    "label": [
+        "mollit"
+    ],
+    "awardBudget": 100,
+    "maxUser": 11,
+    "awardAmount": 25,
+    "taskDemand": [
+        {
+            "taskName": 46,
+            "taskId": 10,
+            "taskDemand": "sunt nostrud",
+            "article": "aliquip veniam reprehenderit occaecat"
+        },
+        {
+            "taskId": 46,
+            "article": "qui",
+            "taskName": 41,
+            "taskDemand": "tempor in nulla veniam laborum"
+      	duration=0.0ms	caller=handler/loghandler.go:162	trace=4a1fa433a792dd8ba9a2558162475378	span=6af26c7739290584
+2023-07-04T13:35:00.173+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T13:36:08.190+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:57637 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 717
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "1674266735504527360",
+    "tweetAddress": "https://twitter.com/Reuters/status/1676071080207810561",
+    "label": [
+        "mollit"
+    ],
+    "awardBudget": 100,
+    "maxUser": 11,
+    "awardAmount": 25,
+    "taskDemand": [
+        {
+            "taskName": 2,
+            "taskId": 1,
+            "taskDemand": "邀请好友助力",
+            "article": "将助力链接发送给好友，帮你点击助力，你将获得算力"
+        },
+        {
+            "taskId": 1,
+            "article": "qui",
+       "taskDemand": "邀请好友助力",
+            "	duration=0.5ms	caller=handler/loghandler.go:162	trace=ed4749846c9dcea30dbe8f06308043ea	span=f7bb05a293b88246
+2023-07-04T13:37:12.779+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:57702 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 717
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "1674266735504527360",
+    "tweetAddress": "https://twitter.com/Reuters/status/1676071080207810561",
+    "label": [
+        "mollit"
+    ],
+    "awardBudget": 100,
+    "maxUser": 11,
+    "awardAmount": 25,
+    "taskDemand": [
+        {
+            "taskName": 2,
+            "taskId": 1,
+            "taskDemand": "邀请好友助力",
+            "article": "将助力链接发送给好友，帮你点击助力，你将获得算力"
+        },
+        {
+            "taskId": 1,
+            "article": "qui",
+       "taskDemand": "邀请好友助力",
+            "	duration=0.5ms	caller=handler/loghandler.go:162	trace=28ee84cf0be8264a7888f973f818a88e	span=d9915a2f47bfbfec
+2023-07-04T13:37:34.799+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:57710 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 717
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "1674266735504527360",
+    "tweetAddress": "https://twitter.com/Reuters/status/1676071080207810561",
+    "label": [
+        "mollit"
+    ],
+    "awardBudget": 100,
+    "maxUser": 11,
+    "awardAmount": 25,
+    "taskDemand": [
+        {
+            "taskName": 2,
+            "taskId": 1,
+            "taskDemand": "邀请好友助力",
+            "article": "将助力链接发送给好友，帮你点击助力，你将获得算力"
+        },
+        {
+            "taskId": 1,
+            "article": "qui",
+       "taskDemand": "邀请好友助力",
+            "	duration=1.0ms	caller=handler/loghandler.go:162	trace=280d65cb7fa76f835f7cadd30ff916e4	span=e6435087aa7ff9c3
+2023-07-04T13:37:40.902+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:57711 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 716
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "1674266735504527360",
+    "tweetAddress": "https://twitter.com/Reuters/status/1676071080207810561",
+    "label": [
+        "mollit"
+    ],
+    "awardBudget": 100,
+    "maxUser": 11,
+    "awardAmount": 25,
+    "taskDemand": [
+        {
+            "taskName": 2,
+            "taskId": 1,
+            "taskDemand": "邀请好友助力",
+            "article": "将助力链接发送给好友，帮你点击助力，你将获得算力"
+        },
+        {
+            "taskId": 1,
+            "article": "qui",
+       "taskDemand": "邀请好友助力",
+            "	duration=0.5ms	caller=handler/loghandler.go:162	trace=243dc4df5f842996c98719fd67787dfe	span=5dca76bcb7ff257f
+2023-07-04T13:38:23.645+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/CreateCuratorialTask - creator:"1674266735504527360" tweetAddress:"https://twitter.com/Reuters/status/1676071080207810561" label:"mollit" awardBudget:100 maxUser:11 awardAmount:25 taskBak:{taskId:1 taskName:2 taskDemand:"邀请好友助力" article:"将助力链接发送给好友，帮你点击助力，你将获得算力"} taskBak:{taskId:1 taskName:1 taskDemand:"邀请好友助力" article:"将助力链接发送给好友，帮你点击助力，你将获得算力"} - rpc error: code = Internal desc = panic: runtime error: invalid memory address or nil pointer dereference
+
+goroutine 118 [running]:
+runtime/debug.Stack()
+	c:/go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:33 +0x46
+panic({0x20d0400, 0x35f0360})
+	c:/go/src/runtime/panic.go:884 +0x213
+taskManager-Service/internal/logic.(*CreateCuratorialTaskLogic).CreateCuratorialTask(0xc000403eb8, 0xc0004dc3f0)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/logic/createcuratorialtasklogic.go:57 +0x1e9
+taskManager-Service/internal/server.(*TaskServer).CreateCuratorialTask(0x0?, {0x267ab60?, 0xc0001bb1d0}, 0xc460c8?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/server/taskserver.go:28 +0xb6
+taskManager-Service/task._Task_CreateCuratorialTask_Handler.func1({0x267ab60, 0xc0001bb1d0}, {0x2293de0?, 0xc0004dc3f0})
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/task/task_grpc.pb.go:424 +0x78
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:39 +0x12f
+created by github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:29 +0x24a	duration=266.8ms	caller=clientinterceptors/durationinterceptor.go:35	trace=2a248b2cda9eb451b7246a94febff078	span=a0ae2b58c25bfcd1
+2023-07-04T13:38:23.645+08:00	[31;1m error [0m	(/v1/curatorial/create - 127.0.0.1:57725) runtime error: invalid memory address or nil pointer dereference
+goroutine 99 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x1740540, 0x2b48320})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*CreateCuratorialTaskLogic).CreateCuratorialTask(0xc00029dbb0, 0xc00011ce70)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/logic/curatorial/createcuratorialtasklogic.go:67 +0x556
+gateway/internal/handler/curatorial.CreateCuratorialTaskHandler.func1({0x1cab6f0, 0xc000349440}, 0xc000670800)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/handler/curatorial/createcuratorialtaskhandler.go:24 +0x218
+gateway/internal/middleware.(*BlackMiddleware).Handle-fm.func1({0x1cab6f0?, 0xc000349440?}, 0xc0001fc201?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/middleware/blackmiddleware.go:19 +0x27
+net/http.HandlerFunc.ServeHTTP(0xc00029dcc0?, {0x1cab6f0?, 0xc000349440?}, 0xc0004bf6b0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x1cab6f0, 0xc000349440}, 0xc000670700)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1cab6f0?, 0xc000349440?}, 0xc00033c420?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x1cab6f0, 0xc000349440}, 0xc000670700)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc35a74f?, {0x1cab6f0?, 0xc000349440?}, 0xbf27a4bb5?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x1cab6f0?, 0xc000349440?}, 0x2b7fe00?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1cab6f0?, 0xc000349440?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x1cab6f0, 0xc000349440}, 0x0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1cab6f0?, 0xc000349440?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x1cab6f0?, 0xc000349440?}, 0x0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1cab6f0?, 0xc000349440?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=2a248b2cda9eb451b7246a94febff078	span=32c548943306d7e6
+2023-07-04T13:38:23.645+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:57725 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 713
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "1674266735504527360",
+    "tweetAddress": "https://twitter.com/Reuters/status/1676071080207810561",
+    "label": [
+        "mollit"
+    ],
+    "awardBudget": 100,
+    "maxUser": 11,
+    "awardAmount": 25,
+    "taskDemand": [
+        {
+            "taskName": 2,
+            "taskId": 1,
+            "taskDemand": "邀请好友助力",
+            "article": "将助力链接发送给好友，帮你点击助力，你将获得算力"
+        },
+        {
+            "taskId": 1,
+            "taskName": 1,
+       "taskDemand": "邀请好友助力",
+            "art	duration=269.0ms	caller=handler/loghandler.go:162	trace=2a248b2cda9eb451b7246a94febff078	span=32c548943306d7e6
+2023-07-04T13:39:12.473+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T13:40:32.161+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T13:41:44.947+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-07-04T13:41:49.915+08:00	[31;1m error [0m	fail - etcd:/127.0.0.1:2379/task.rpc/task.Task/CreateCuratorialTask - creator:"1674266735504527360" tweetAddress:"https://twitter.com/Reuters/status/1676071080207810561" label:"mollit" awardBudget:100 maxUser:11 awardAmount:25 taskBak:{taskId:1 taskName:2 taskDemand:"邀请好友助力" article:"将助力链接发送给好友，帮你点击助力，你将获得算力"} taskBak:{taskId:1 taskName:1 taskDemand:"邀请好友助力" article:"将助力链接发送给好友，帮你点击助力，你将获得算力"} - rpc error: code = Internal desc = panic: runtime error: invalid memory address or nil pointer dereference
+
+goroutine 105 [running]:
+runtime/debug.Stack()
+	c:/go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:33 +0x46
+panic({0x2520400, 0x3a40360})
+	c:/go/src/runtime/panic.go:884 +0x213
+taskManager-Service/internal/logic.(*CreateCuratorialTaskLogic).CreateCuratorialTask(0xc0004f7eb8, 0xc0001246c0)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/logic/createcuratorialtasklogic.go:53 +0x289
+taskManager-Service/internal/server.(*TaskServer).CreateCuratorialTask(0xc0003487c8?, {0x2acac20?, 0xc0001a6d20}, 0xc00029a0e0?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/internal/server/taskserver.go:28 +0xb6
+taskManager-Service/task._Task_CreateCuratorialTask_Handler.func1({0x2acac20, 0xc0001a6d20}, {0x26e3de0?, 0xc0001246c0})
+	C:/Users/luck/Desktop/code/code/ADFI_Git/xxx/taskManager-Service/task/task/task_grpc.pb.go:424 +0x78
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1()
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:39 +0x12f
+created by github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1
+	c:/go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.3/zrpc/internal/serverinterceptors/timeoutinterceptor.go:29 +0x24a	duration=334.0ms	caller=clientinterceptors/durationinterceptor.go:35	trace=1ba53d7a01dceea2ef8bccf879bcc471	span=646470bad9dc1504
+2023-07-04T13:41:49.915+08:00	[31;1m error [0m	(/v1/curatorial/create - 127.0.0.1:57801) runtime error: invalid memory address or nil pointer dereference
+goroutine 113 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x1740540, 0x2b48320})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*CreateCuratorialTaskLogic).CreateCuratorialTask(0xc0007c1bb0, 0xc0000f4070)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/logic/curatorial/createcuratorialtasklogic.go:67 +0x556
+gateway/internal/handler/curatorial.CreateCuratorialTaskHandler.func1({0x1cab6f0, 0xc0006725a0}, 0xc000670900)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/handler/curatorial/createcuratorialtaskhandler.go:24 +0x218
+gateway/internal/middleware.(*BlackMiddleware).Handle-fm.func1({0x1cab6f0?, 0xc0006725a0?}, 0xc0000ec701?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/middleware/blackmiddleware.go:19 +0x27
+net/http.HandlerFunc.ServeHTTP(0xc0007c1cc0?, {0x1cab6f0?, 0xc0006725a0?}, 0xc0001843a0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x1cab6f0, 0xc0006725a0}, 0xc000670800)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1cab6f0?, 0xc0006725a0?}, 0x26d78?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x1cab6f0, 0xc0006725a0}, 0xc000670800)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc35a81d?, {0x1cab6f0?, 0xc0006725a0?}, 0x3bf2f69b1d?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x1cab6f0?, 0xc0006725a0?}, 0x2b7fe00?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0x5bdc6aaea3dbc?, {0x1cab6f0?, 0xc0006725a0?}, 0xc000585860?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x1cab6f0, 0xc0006725a0}, 0x1099ba?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xc0001c84e0?, {0x1cab6f0?, 0xc0006725a0?}, 0xc0001c8628?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x1cab6f0?, 0xc0006725a0?}, 0xc000507f98?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x210705?, {0x1cab6f0?, 0xc0006725a0?}, 0x65a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=1ba53d7a01dceea2ef8bccf879bcc471	span=62bd60529e9283cb
+2023-07-04T13:41:49.915+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/curatorial/create - 127.0.0.1:57801 - apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/curatorial/create HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 713
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "creator": "1674266735504527360",
+    "tweetAddress": "https://twitter.com/Reuters/status/1676071080207810561",
+    "label": [
+        "mollit"
+    ],
+    "awardBudget": 100,
+    "maxUser": 11,
+    "awardAmount": 25,
+    "taskDemand": [
+        {
+            "taskName": 2,
+            "taskId": 1,
+            "taskDemand": "邀请好友助力",
+            "article": "将助力链接发送给好友，帮你点击助力，你将获得算力"
+        },
+        {
+            "taskId": 1,
+            "taskName": 1,
+       "taskDemand": "邀请好友助力",
+            "art	duration=335.0ms	caller=handler/loghandler.go:162	trace=1ba53d7a01dceea2ef8bccf879bcc471	span=62bd60529e9283cb
+2023-07-04T13:43:51.445+08:00	[31;1m error [0m	(/v1/curatorial/list - 127.0.0.1:57885) runtime error: invalid memory address or nil pointer dereference
+goroutine 156 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x1740540, 0x2b48320})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*QueryTaskListLogic).QueryTaskList(0xc0007f5bb0, 0xc00059a078)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/logic/curatorial/querytasklistlogic.go:45 +0x1df
+gateway/internal/handler/curatorial.QueryTaskListHandler.func1({0x1cab6f0, 0xc0007003c0}, 0xc00050c700)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/handler/curatorial/querytasklisthandler.go:23 +0x1a6
+gateway/internal/middleware.(*BlackMiddleware).Handle-fm.func1({0x1cab6f0?, 0xc0007003c0?}, 0xc0000ec701?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/middleware/blackmiddleware.go:19 +0x27
+net/http.HandlerFunc.ServeHTTP(0xc0007f5cc0?, {0x1cab6f0?, 0xc0007003c0?}, 0xc00010ee10?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x1cab6f0, 0xc0007003c0}, 0xc00050c600)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1cab6f0?, 0xc0007003c0?}, 0xc000293f80?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x1cab6f0, 0xc0007003c0}, 0xc00050c600)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc35a897?, {0x1cab6f0?, 0xc0007003c0?}, 0x5837ee46b9?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x1cab6f0?, 0xc0007003c0?}, 0x2b7fe00?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0xc000195140?, {0x1cab6f0?, 0xc0007003c0?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x1cab6f0, 0xc0007003c0}, 0xc0001a604f?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0x9?, {0x1cab6f0?, 0xc0007003c0?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x1cab6f0?, 0xc0007003c0?}, 0x15d9440?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x15d9440?, {0x1cab6f0?, 0xc0007003c0?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=84829b9b2286fd130f0750066e0c96bd	span=80829ad1e5d40ccb
+2023-07-04T13:43:51.445+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/list - 127.0.0.1:57885 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/list HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 60
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "status": 1,
+    "currPage": 1,
+    "maxNum": 22
+}	duration=429.1ms	caller=handler/loghandler.go:162	trace=84829b9b2286fd130f0750066e0c96bd	span=80829ad1e5d40ccb
+2023-07-04T13:46:19.334+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+2023-07-04T13:46:31.813+08:00	[31;1m error [0m	(/v1/curatorial/list - 127.0.0.1:57953) runtime error: invalid memory address or nil pointer dereference
+goroutine 167 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x1740540, 0x2b48320})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*QueryTaskListLogic).QueryTaskList(0xc0004f5bb0, 0xc0001a62a0)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/logic/curatorial/querytasklistlogic.go:45 +0x1df
+gateway/internal/handler/curatorial.QueryTaskListHandler.func1({0x1cab6f0, 0xc000062fc0}, 0xc000670800)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/handler/curatorial/querytasklisthandler.go:23 +0x1a6
+gateway/internal/middleware.(*BlackMiddleware).Handle-fm.func1({0x1cab6f0?, 0xc000062fc0?}, 0xc0000ec701?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/middleware/blackmiddleware.go:19 +0x27
+net/http.HandlerFunc.ServeHTTP(0xc0004f5cc0?, {0x1cab6f0?, 0xc000062fc0?}, 0xc00069f8a0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x1cab6f0, 0xc000062fc0}, 0xc000670700)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1cab6f0?, 0xc000062fc0?}, 0xc00052e8a0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x1cab6f0, 0xc000062fc0}, 0xc000670700)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc35a937?, {0x1cab6f0?, 0xc000062fc0?}, 0x7d8d8093cd?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x1cab6f0?, 0xc000062fc0?}, 0x2b7fe00?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1cab6f0?, 0xc000062fc0?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x1cab6f0, 0xc000062fc0}, 0xc0004cdfb0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xc0001822a0?, {0x1cab6f0?, 0xc000062fc0?}, 0xc0001c9ce8?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x1cab6f0?, 0xc000062fc0?}, 0xc0004cdf98?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1cab6f0?, 0xc000062fc0?}, 0x65a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=b5de8839caefc7c23369e7bfb9af8d3f	span=586906a671807d9d
+2023-07-04T13:46:31.813+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/list - 127.0.0.1:57953 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/list HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 60
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "status": 1,
+    "currPage": 1,
+    "maxNum": 22
+}	duration=427.2ms	caller=handler/loghandler.go:162	trace=b5de8839caefc7c23369e7bfb9af8d3f	span=586906a671807d9d
+2023-07-04T13:46:49.345+08:00	[31;1m error [0m	(/v1/curatorial/list - 127.0.0.1:57959) runtime error: invalid memory address or nil pointer dereference
+goroutine 216 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x1740540, 0x2b48320})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*QueryTaskListLogic).QueryTaskList(0xc000475bb0, 0xc0001a6840)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/logic/curatorial/querytasklistlogic.go:45 +0x1df
+gateway/internal/handler/curatorial.QueryTaskListHandler.func1({0x1cab6f0, 0xc00041aba0}, 0xc0000a3300)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/handler/curatorial/querytasklisthandler.go:23 +0x1a6
+gateway/internal/middleware.(*BlackMiddleware).Handle-fm.func1({0x1cab6f0?, 0xc00041aba0?}, 0xc00002a201?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/middleware/blackmiddleware.go:19 +0x27
+net/http.HandlerFunc.ServeHTTP(0xc000475cc0?, {0x1cab6f0?, 0xc00041aba0?}, 0xc00021e3b0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x1cab6f0, 0xc00041aba0}, 0xc0000a3200)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1cab6f0?, 0xc00041aba0?}, 0x2bf25?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x1cab6f0, 0xc00041aba0}, 0xc0000a3200)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc35a949?, {0x1cab6f0?, 0xc00041aba0?}, 0x81ae3831ad?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x1cab6f0?, 0xc00041aba0?}, 0x2b7fe00?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0xc000559ec8?, {0x1cab6f0?, 0xc00041aba0?}, 0x50?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x1cab6f0, 0xc00041aba0}, 0x4?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xc000559f30?, {0x1cab6f0?, 0xc00041aba0?}, 0xc000559f48?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x1cab6f0?, 0xc00041aba0?}, 0x315c9e?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0xc000254d70?, {0x1cab6f0?, 0xc00041aba0?}, 0x65a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=a33e1dbb173b0418da86da765628c17c	span=1365b3f5f4005c1f
+2023-07-04T13:46:49.345+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/list - 127.0.0.1:57959 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/list HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 59
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "status":1,
+    "currPage": 1,
+    "maxNum": 22
+}	duration=229.0ms	caller=handler/loghandler.go:162	trace=a33e1dbb173b0418da86da765628c17c	span=1365b3f5f4005c1f
+2023-07-04T13:47:23.300+08:00	[31;1m error [0m	(/v1/curatorial/list - 127.0.0.1:57972) runtime error: invalid memory address or nil pointer dereference
+goroutine 183 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x1740540, 0x2b48320})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*QueryTaskListLogic).QueryTaskList(0xc0004f5bb0, 0xc00004e6c0)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/logic/curatorial/querytasklistlogic.go:45 +0x1df
+gateway/internal/handler/curatorial.QueryTaskListHandler.func1({0x1cab6f0, 0xc000348540}, 0xc00050c700)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/handler/curatorial/querytasklisthandler.go:23 +0x1a6
+gateway/internal/middleware.(*BlackMiddleware).Handle-fm.func1({0x1cab6f0?, 0xc000348540?}, 0xc00019be01?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/middleware/blackmiddleware.go:19 +0x27
+net/http.HandlerFunc.ServeHTTP(0xc0004f5cc0?, {0x1cab6f0?, 0xc000348540?}, 0xc0004a82f0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x1cab6f0, 0xc000348540}, 0xc00050c600)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1cab6f0?, 0xc000348540?}, 0xc00004e1c8?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x1cab6f0, 0xc000348540}, 0xc00050c600)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc35a96b?, {0x1cab6f0?, 0xc000348540?}, 0x89960b348d?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x1cab6f0?, 0xc000348540?}, 0x2b7fe00?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1cab6f0?, 0xc000348540?}, 0x0?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x1cab6f0, 0xc000348540}, 0xc000821fb0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xc00051e600?, {0x1cab6f0?, 0xc000348540?}, 0xc000644968?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x1cab6f0?, 0xc000348540?}, 0xc000821f98?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1cab6f0?, 0xc000348540?}, 0x65a65?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=6be045595492439282f885c29e8d0310	span=ddf34a7b1a65a10f
+2023-07-04T13:47:23.300+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/list - 127.0.0.1:57972 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/list HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 59
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "status":1,
+    "currPage": 1,
+    "maxNum": 22
+}	duration=225.6ms	caller=handler/loghandler.go:162	trace=6be045595492439282f885c29e8d0310	span=ddf34a7b1a65a10f
+2023-07-04T13:50:46.679+08:00	[31;1m error [0m	(/v1/curatorial/list - 127.0.0.1:58102) runtime error: invalid memory address or nil pointer dereference
+goroutine 102 [running]:
+runtime/debug.Stack()
+	C:/Go/src/runtime/debug/stack.go:24 +0x65
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1.1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:16 +0x66
+panic({0x2260540, 0x3668300})
+	C:/Go/src/runtime/panic.go:884 +0x213
+gateway/internal/logic/curatorial.(*QueryTaskListLogic).QueryTaskList(0xc0005dbbb0, 0xc00065e0d8)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/logic/curatorial/querytasklistlogic.go:49 +0x23f
+gateway/internal/handler/curatorial.QueryTaskListHandler.func1({0x27cb6b0, 0xc000664420}, 0xc000180900)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/handler/curatorial/querytasklisthandler.go:23 +0x1a6
+gateway/internal/middleware.(*BlackMiddleware).Handle-fm.func1({0x27cb6b0?, 0xc000664420?}, 0xc0000c8401?)
+	C:/Users/luck/Desktop/code/code/ADFI_Git/apiGateway-Service/apiGateway-Service1/gateway/internal/middleware/blackmiddleware.go:19 +0x27
+net/http.HandlerFunc.ServeHTTP(0xc0005dbcc0?, {0x27cb6b0?, 0xc000664420?}, 0xc00010e910?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.Authorize.func1.1({0x27cb6b0, 0xc000664420}, 0xc000180800)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/authhandler.go:81 +0x3ed
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x27cb6b0?, 0xc000664420?}, 0xc00060e960?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.GunzipHandler.func1({0x27cb6b0, 0xc000664420}, 0xc000180800)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/gunziphandler.go:26 +0xe9
+net/http.HandlerFunc.ServeHTTP(0xedc35aa36?, {0x27cb6b0?, 0xc000664420?}, 0x335372b4d?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MaxBytesHandler.func2.1({0x27cb6b0?, 0xc000664420?}, 0x369fde0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/maxbyteshandler.go:24 +0xff
+net/http.HandlerFunc.ServeHTTP(0xc00057be60?, {0x27cb6b0?, 0xc000664420?}, 0xc00057e240?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.MetricHandler.func1.1({0x27cb6b0, 0xc000664420}, 0xc00057eea0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/metrichandler.go:21 +0xd5
+net/http.HandlerFunc.ServeHTTP(0xc00057f200?, {0x27cb6b0?, 0xc000664420?}, 0xc00057f560?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.RecoverHandler.func1({0x27cb6b0?, 0xc000664420?}, 0xc00002c5a0?)
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/recoverhandler.go:21 +0x83
+net/http.HandlerFunc.ServeHTTP(0xc00002c900?, {0x27cb6b0?, 0xc000664420?}, 0xc00002cc60?)
+	C:/Go/src/net/http/server.go:2122 +0x2f
+github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP.func1()
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:81 +0x7c
+created by github.com/zeromicro/go-zero/rest/handler.(*timeoutHandler).ServeHTTP
+	C:/Go/bin/pkg/mod/github.com/zeromicro/go-zero@v1.5.2/rest/handler/timeouthandler.go:75 +0x350
+	caller=internal/log.go:57	trace=3685d6e7854d9909da031adcda2ae053	span=b7bf21474427811c
+2023-07-04T13:50:46.679+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [44;97;1m GET [0m /v1/curatorial/list - 127.0.0.1:58102 - apifox/1.0.0 (https://www.apifox.cn)
+GET /v1/curatorial/list HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg5Nzk0MjEsImlhdCI6MTY4ODM3NDYyMSwidXNlcklkIjoxNjc0MjY2NzM1NTA0NTI3MzYwfQ.nVDzzNS4D-4o4CiwlnUWiBs5tKRib6wPQ02OHXSybXA
+Connection: keep-alive
+Content-Length: 59
+Content-Type: application/json
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "status":1,
+    "currPage": 1,
+    "maxNum": 22
+}	duration=415.0ms	caller=handler/loghandler.go:162	trace=3685d6e7854d9909da031adcda2ae053	span=b7bf21474427811c
+2023-07-04T13:52:12.896+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T13:53:32.581+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T17:08:09.934+08:00	[31;1m error [0m	authorize failed: no token present in request
+=> POST /v1/admin/editNotice HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: 
+Connection: keep-alive
+Content-Length: 232
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "isAutoPublish": false,
+    "systemNoticeId": null,
+    "systemNoticeTime": "2011-07-07 06:25:51",
+    "systemNoticeStatus": 18,
+    "systemNoticeTitle": "以法细步",
+    "systemNoticeContent": "nisi in elit culpa"
+}	caller=handler/authhandler.go:103
+2023-07-04T17:08:14.406+08:00	[31;1m error [0m	[HTTP] [103;90;1m 500 [0m - [46;97;1m POST [0m /v1/admin/editNotice - 192.168.1.104:37333 - Apifox/1.0.0 (https://www.apifox.cn)
+POST /v1/admin/editNotice HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODkwNjY0NzksImlhdCI6MTY4ODQ2MTY3OSwidXNlcklkIjoxNjc0MzA0NTI0NTYwMzcxNzEyfQ.B0XOTwrSg3Lsd5InKqmfncBKDVopl0CnW2oV9CEGUVQ
+Connection: keep-alive
+Content-Length: 232
+Content-Type: application/json
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+{
+    "isAutoPublish": false,
+    "systemNoticeId": null,
+    "systemNoticeTime": "2011-07-07 06:25:51",
+    "systemNoticeStatus": 18,
+    "systemNoticeTitle": "以法细步",
+    "systemNoticeContent": "nisi in elit culpa"
+}	duration=0.0ms	caller=handler/loghandler.go:162	trace=c0084e602cc37f717b372b304d4c8c5e	span=7897b21241fce6db
+2023-07-04T17:08:41.943+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T17:18:01.648+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T17:21:49.823+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T17:25:36.764+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
+2023-07-04T17:31:26.733+08:00	[31;1m error [0m	authorize failed: Token is expired
+=> POST /v1/admin/getRegisteredPopulation HTTP/1.1
+Host: 192.168.1.104:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgyODk2NjEsImlhdCI6MTY4NzY4NDg2MSwidXNlcklkIjoxNjcyODk1NDYxNzg0MDMxMjMyfQ.Hvjxxgb8qA2DiKBL12XLY1aSty1pXzJsYh78KBGKj5Q
+Connection: keep-alive
+Content-Length: 0
+User-Agent: Apifox/1.0.0 (https://www.apifox.cn)
+
+	caller=handler/authhandler.go:103
+2023-07-04T17:32:56.480+08:00	[31;1m error [0m	[transport]Client received GoAway with error code ENHANCE_YOUR_CALM and debug data equal to ASCII "too_many_pings".	caller=internal/rpclogger.go:30
