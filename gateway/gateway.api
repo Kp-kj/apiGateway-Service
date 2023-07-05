@@ -713,6 +713,7 @@ type CreateCryptominerInput {
 	CryptominerDescribe string `json:"cryptominerDescribe"`
 	CryptominerPrice    int64  `json:"cryptominerPrice"`
 	CryptominerDuration int64  `json:"cryptominerDuration"`
+	PaymentWay          string `json:"paymentWay"`
 }
 
 // 响应
@@ -727,6 +728,7 @@ type CreatePropInput {
 	PropPicture  string `json:"propPicture"`  // 矿机图片
 	PropDescribe string `json:"propDescribe"` // 矿机描述
 	PropPrice    int64  `json:"propPrice"`    // 矿机价格
+	PaymentWay   string `json:"paymentWay"`   // 支付方式 0：U 1：ADF
 }
 
 // 获取商城列表
@@ -753,6 +755,7 @@ type Cryptominer {
 	PurchaseTime         string `json:"purchaseTime"`         // 购买时间
 	IsBargain            bool   `json:"isBargain"`            // 是否可砍
 	PurchaseWay          string `json:"purchaseWay"`          // 购买方式 0：全额购买 1：限时砍价
+	PaymentWay           string `json:"paymentWay"`           // 支付方式 0：U 1：ADF
 	CryptominerStartTime string `json:"cryptominerStartTime"` // 矿机开始运作时间
 	CryptominerEndTime   string `json:"cryptominerEndTime"`   // 矿机失效时间
 	CryptominerDuration  string `json:"cryptominerDuration"`  // 矿机运作时间
@@ -768,6 +771,7 @@ type Prop {
 	PropDescribe string `json:"propDescribe"` // 道具描述
 	PropPrice    int64  `json:"propPrice"`    // 道具价格
 	PurchaseTime string `json:"purchaseTime"` // 购买时间
+	PaymentWay   string `json:"paymentWay"`   // 支付方式 0：U 1：ADF
 }
 
 // 判断是否可以砍价
@@ -779,6 +783,12 @@ type JudgeBargainInput {
 // 判断是否可以砍价
 type JudgeBargainReply {
 	IsBargain bool `json:"isBargain"` // 砍价id
+}
+
+// 购买道具
+type PropPurchaseInput {
+	UserID int64 `json:"userId"` // 用户id
+	PropID int64 `json:"propId"` // 商品id
 }
 
 // 矿机全额购买
@@ -857,6 +867,17 @@ type Profile {
 	Avatar   string `json:"avatar"`   // 用户头像
 }
 
+// 金额计算
+type JudgeGoodsPurchaseInput {
+	UserID   int64  `json:"userId"`   // 用户id
+	GoodName string `json:"goodName"` // 商品名称
+}
+
+// 用户信息
+type JudgeGoodsPurchaseReply {
+	IsPurchase bool `json:"isPurchase"` //  true 已有购买，false 没有购买记录
+}
+
 // 创建商品，需要鉴权
 @server(
 	prefix :/v1
@@ -869,7 +890,7 @@ service gateway-api {
 	@doc "管理系统添加矿机"
 	@handler CreateCryptominer
 	post /adminmall/create/cryptominer (CreateCryptominerInput)  returns (IsSuccessReply)
-	
+
 	@doc "管理系统添加道具"
 	@handler CreateProp
 	post /adminmall/create/prop (CreatePropInput)  returns (IsSuccessReply)
@@ -880,40 +901,48 @@ service gateway-api {
 	prefix :/v1
 	group :mall
 	//	middleware : BlackMiddleware
-	jwt : Auth
+	// jwt : Auth
 )
 
 service gateway-api {
 	@doc "获取商品列表"
 	@handler GetGoodsList
-	get /mall/goodlist (GetGoodsListInput)  returns (GetGoodsListReply)
-	
+	post /mall/goodlist (GetGoodsListInput)  returns (GetGoodsListReply)
+
 	@doc "判断是否可砍"
 	@handler JudgeBargain
-	get /mall/judgebargain (JudgeBargainInput)  returns (JudgeBargainReply)
-	
-	@doc "全额购买"
+	post /mall/judgebargain (JudgeBargainInput)  returns (JudgeBargainReply)
+
+	@doc "全额购买矿机"
 	@handler CryptominerFullPurchase
-	post /mall/purchase/full(CryptominerPurchaseInput)  returns (IsSuccessReply)
-	
-	@doc "砍价购买"
+	post /mall/purchase/full (CryptominerPurchaseInput)  returns (IsSuccessReply)
+
+	@doc "砍价购买矿机"
 	@handler CryptominerBargainPurchase
-	post /mall/purchase/bargain(CryptominerBargainInput)  returns (CryptominerBargainReply)
-	
+	post /mall/purchase/bargain (CryptominerBargainInput)  returns (CryptominerBargainReply)
+
+	@doc "购买道具"
+	@handler PropPurchase
+	post /mall/purchase/prop (PropPurchaseInput)  returns (IsSuccessReply)
+
 	@doc "获取砍价活动规则"
 	@handler GetBargainRule
-	get /mall/activity/rule (GetBargainRuleInput)  returns (GetBargainRuleReply)
-	
+	post /mall/activity/rule (GetBargainRuleInput)  returns (GetBargainRuleReply)
+
 	@doc "获取砍价矿机信息"
 	@handler GetBargainCryptominer
-	get /mall/activity/cryptominer (GetBargainCryptominerInput)  returns (GetBargainCryptominerReply)
-	
+	post /mall/activity/cryptominer (GetBargainCryptominerInput)  returns (GetBargainCryptominerReply)
+
 	@doc "获取砍价进度"
 	@handler GetBargainProgress
-	get /mall/activity/progress (GetBargainProgressInput)  returns (GetBargainProgressReply)
-	
+	post /mall/activity/progress (GetBargainProgressInput)  returns (GetBargainProgressReply)
+
 	@doc "获取砍价记录列表"
 	@handler GetBargainRecord
-	get /mall/activity/bargainlist (GetBargainRecordInput)  returns (GetBargainRecordReply)
-	
+	post /mall/activity/bargainlist (GetBargainRecordInput)  returns (GetBargainRecordReply)
+
+	@doc "判断是否有今日购买记录"
+	@handler JudgeGoodsPurchase
+	post /mall/judgegoodspurchase (JudgeGoodsPurchaseInput)  returns (JudgeGoodsPurchaseReply)
+
 }

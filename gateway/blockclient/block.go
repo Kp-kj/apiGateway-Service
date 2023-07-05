@@ -20,12 +20,11 @@ type (
 	CryptominerBargainRequest     = block.CryptominerBargainRequest
 	CryptominerBargainResponse    = block.CryptominerBargainResponse
 	CryptominerPurchaseRequest    = block.CryptominerPurchaseRequest
+	PropPurchaseRequest    		  = block.PropPurchaseRequest
 	GetBargainCryptominerRequest  = block.GetBargainCryptominerRequest
 	GetBargainCryptominerResponse = block.GetBargainCryptominerResponse
 	GetBargainProgressRequest     = block.GetBargainProgressRequest
 	GetBargainProgressResponse    = block.GetBargainProgressResponse
-	GetBargainRecordRequest       = block.GetBargainRecordRequest
-	GetBargainRecordResponse      = block.GetBargainRecordResponse
 	GetBargainRuleRequest         = block.GetBargainRuleRequest
 	GetBargainRuleResponse        = block.GetBargainRuleResponse
 	GetGoodsListRequest           = block.GetGoodsListRequest
@@ -33,6 +32,8 @@ type (
 	IsSuccessResponse             = block.IsSuccessResponse
 	JudgeBargainRequest           = block.JudgeBargainRequest
 	JudgeBargainResponse          = block.JudgeBargainResponse
+	JudgeGoodsPurchaseRequest     = block.JudgeGoodsPurchaseRequest
+	JudgeGoodsPurchaseResponse    = block.JudgeGoodsPurchaseResponse
 	Profile                       = block.Profile
 	Prop                          = block.Prop
 	Request                       = block.Request
@@ -46,10 +47,11 @@ type (
 		JudgeBargain(ctx context.Context, in *JudgeBargainRequest, opts ...grpc.CallOption) (*JudgeBargainResponse, error)
 		CryptominerFullPurchase(ctx context.Context, in *CryptominerPurchaseRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error)
 		CryptominerBargainPurchase(ctx context.Context, in *CryptominerBargainRequest, opts ...grpc.CallOption) (*CryptominerBargainResponse, error)
+		PropPurchase(ctx context.Context, in *PropPurchaseRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error)
 		GetBargainRule(ctx context.Context, in *GetBargainRuleRequest, opts ...grpc.CallOption) (*GetBargainRuleResponse, error)
 		GetBargainCryptominer(ctx context.Context, in *GetBargainCryptominerRequest, opts ...grpc.CallOption) (*GetBargainCryptominerResponse, error)
 		GetBargainProgress(ctx context.Context, in *GetBargainProgressRequest, opts ...grpc.CallOption) (*GetBargainProgressResponse, error)
-		GetBargainRecord(ctx context.Context, in *GetBargainRecordRequest, opts ...grpc.CallOption) (*GetBargainRecordResponse, error)
+		JudgeGoodsPurchase(ctx context.Context, in *JudgeGoodsPurchaseRequest, opts ...grpc.CallOption) (*JudgeGoodsPurchaseResponse, error)
 	}
 
 	defaultBlock struct {
@@ -88,6 +90,11 @@ func (m *defaultBlock) JudgeBargain(ctx context.Context, in *JudgeBargainRequest
 	return client.JudgeBargain(ctx, in, opts...)
 }
 
+func (m *defaultBlock) JudgeGoodsPurchase(ctx context.Context, in *JudgeGoodsPurchaseRequest, opts ...grpc.CallOption) (*JudgeGoodsPurchaseResponse, error) {
+	client := block.NewBlockClient(m.cli.Conn())
+	return client.JudgeGoodsPurchase(ctx, in, opts...)
+}
+
 func (m *defaultBlock) CryptominerFullPurchase(ctx context.Context, in *CryptominerPurchaseRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error) {
 	client := block.NewBlockClient(m.cli.Conn())
 	return client.CryptominerFullPurchase(ctx, in, opts...)
@@ -96,6 +103,11 @@ func (m *defaultBlock) CryptominerFullPurchase(ctx context.Context, in *Cryptomi
 func (m *defaultBlock) CryptominerBargainPurchase(ctx context.Context, in *CryptominerBargainRequest, opts ...grpc.CallOption) (*CryptominerBargainResponse, error) {
 	client := block.NewBlockClient(m.cli.Conn())
 	return client.CryptominerBargainPurchase(ctx, in, opts...)
+}
+
+func (m *defaultBlock) PropPurchase(ctx context.Context, in *PropPurchaseRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error) {
+	client := block.NewBlockClient(m.cli.Conn())
+	return client.PropPurchase(ctx, in, opts...)
 }
 
 func (m *defaultBlock) GetBargainRule(ctx context.Context, in *GetBargainRuleRequest, opts ...grpc.CallOption) (*GetBargainRuleResponse, error) {
@@ -113,7 +125,4 @@ func (m *defaultBlock) GetBargainProgress(ctx context.Context, in *GetBargainPro
 	return client.GetBargainProgress(ctx, in, opts...)
 }
 
-func (m *defaultBlock) GetBargainRecord(ctx context.Context, in *GetBargainRecordRequest, opts ...grpc.CallOption) (*GetBargainRecordResponse, error) {
-	client := block.NewBlockClient(m.cli.Conn())
-	return client.GetBargainRecord(ctx, in, opts...)
-}
+
