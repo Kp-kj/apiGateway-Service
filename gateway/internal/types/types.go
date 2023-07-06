@@ -452,6 +452,7 @@ type CreateCryptominerInput struct {
 	CryptominerDescribe string `json:"cryptominerDescribe"`
 	CryptominerPrice    int64  `json:"cryptominerPrice"`
 	CryptominerDuration int64  `json:"cryptominerDuration"`
+	CryptominerPower    int64  `json:"cryptominerPower"`
 	PaymentWay          string `json:"paymentWay"`
 }
 
@@ -492,7 +493,8 @@ type Cryptominer struct {
 	PaymentWay           string `json:"paymentWay"`           // 支付方式 0：U 1：ADF
 	CryptominerStartTime string `json:"cryptominerStartTime"` // 矿机开始运作时间
 	CryptominerEndTime   string `json:"cryptominerEndTime"`   // 矿机失效时间
-	CryptominerDuration  string `json:"cryptominerDuration"`  // 矿机运作时间
+	CryptominerDuration  int64  `json:"cryptominerDuration"`  // 矿机运作时间
+	CryptominerPower     int64  `json:"cryptominerPower"`     // 矿机算力
 }
 
 type Prop struct {

@@ -2,7 +2,6 @@ package adminmall
 
 import (
 	"context"
-	"fmt"
 	"gateway/blockclient"
 	"gateway/internal/svc"
 	"gateway/internal/types"
@@ -25,7 +24,7 @@ func NewCreateCryptominerLogic(ctx context.Context, svcCtx *svc.ServiceContext) 
 }
 
 func (l *CreateCryptominerLogic) CreateCryptominer(req *types.CreateCryptominerInput) (resp *types.IsSuccessReply, err error) {
-	fmt.Println("22222222222")
+
 	result, err := l.svcCtx.BlockClient.CreateCryptominer(l.ctx, &blockclient.CreateCryptominerRequest{
 		AdminuserId:         req.AdminUserID,
 		CryptominerName:     req.CryptominerName,
@@ -33,6 +32,8 @@ func (l *CreateCryptominerLogic) CreateCryptominer(req *types.CreateCryptominerI
 		CryptominerDescribe: req.CryptominerDescribe,
 		CryptominerPrice:    req.CryptominerPrice,
 		CryptominerDuration: req.CryptominerDuration,
+		CryptominerPower:    req.CryptominerPower,
+		PaymentWay:          req.PaymentWay,
 	})
 
 	return &types.IsSuccessReply{IsSuccess: result.IsSuccess}, err

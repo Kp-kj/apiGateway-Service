@@ -30,9 +30,8 @@ func (l *CreatePropLogic) CreateProp(req *types.CreatePropInput) (resp *types.Is
 		PropPicture:  req.PropPicture,
 		PropDescribe: req.PropDescribe,
 		PropPrice:    req.PropPrice,
+		PaymentWay:   req.PaymentWay,
 	})
 
 	return &types.IsSuccessReply{IsSuccess: result.IsSuccess}, err
-
-	return
 }
