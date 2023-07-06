@@ -291,12 +291,12 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 	server.AddRoutes(
 		[]rest.Route{
 			{
-				Method:  http.MethodGet,
+				Method:  http.MethodPost,
 				Path:    "/mall/goodlist",
 				Handler: mall.GetGoodsListHandler(serverCtx),
 			},
 			{
-				Method:  http.MethodGet,
+				Method:  http.MethodPost,
 				Path:    "/mall/judgebargain",
 				Handler: mall.JudgeBargainHandler(serverCtx),
 			},
@@ -311,24 +311,34 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Handler: mall.CryptominerBargainPurchaseHandler(serverCtx),
 			},
 			{
-				Method:  http.MethodGet,
+				Method:  http.MethodPost,
+				Path:    "/mall/purchase/prop",
+				Handler: mall.PropPurchaseHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
 				Path:    "/mall/activity/rule",
 				Handler: mall.GetBargainRuleHandler(serverCtx),
 			},
 			{
-				Method:  http.MethodGet,
+				Method:  http.MethodPost,
 				Path:    "/mall/activity/cryptominer",
 				Handler: mall.GetBargainCryptominerHandler(serverCtx),
 			},
 			{
-				Method:  http.MethodGet,
+				Method:  http.MethodPost,
 				Path:    "/mall/activity/progress",
 				Handler: mall.GetBargainProgressHandler(serverCtx),
 			},
 			{
-				Method:  http.MethodGet,
+				Method:  http.MethodPost,
 				Path:    "/mall/activity/bargainlist",
 				Handler: mall.GetBargainRecordHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/mall/judgegoodspurchase",
+				Handler: mall.JudgeGoodsPurchaseHandler(serverCtx),
 			},
 		},
 		rest.WithJwt(serverCtx.Config.Auth.AccessSecret),

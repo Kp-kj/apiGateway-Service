@@ -439,11 +439,6 @@ type AssociatedSubtaskSeed struct {
 	Complete       int64  `json:"complete"`
 }
 
-type CreateUserPowerTaskInput struct {
-	PublishesUserId string `json:"publishesUserId"`
-	HelperUserId    string `json:"helperUserId"`
-}
-
 type CreateCryptominerInput struct {
 	AdminUserID         int64  `json:"adminUserId"`
 	CryptominerName     string `json:"cryptominerName"`
@@ -451,6 +446,7 @@ type CreateCryptominerInput struct {
 	CryptominerDescribe string `json:"cryptominerDescribe"`
 	CryptominerPrice    int64  `json:"cryptominerPrice"`
 	CryptominerDuration int64  `json:"cryptominerDuration"`
+	PaymentWay          string `json:"paymentWay"`
 }
 
 type IsSuccessReply struct {
@@ -463,6 +459,7 @@ type CreatePropInput struct {
 	PropPicture  string `json:"propPicture"`  // 矿机图片
 	PropDescribe string `json:"propDescribe"` // 矿机描述
 	PropPrice    int64  `json:"propPrice"`    // 矿机价格
+	PaymentWay   string `json:"paymentWay"`   // 支付方式 0：U 1：ADF
 }
 
 type GetGoodsListInput struct {
@@ -486,6 +483,7 @@ type Cryptominer struct {
 	PurchaseTime         string `json:"purchaseTime"`         // 购买时间
 	IsBargain            bool   `json:"isBargain"`            // 是否可砍
 	PurchaseWay          string `json:"purchaseWay"`          // 购买方式 0：全额购买 1：限时砍价
+	PaymentWay           string `json:"paymentWay"`           // 支付方式 0：U 1：ADF
 	CryptominerStartTime string `json:"cryptominerStartTime"` // 矿机开始运作时间
 	CryptominerEndTime   string `json:"cryptominerEndTime"`   // 矿机失效时间
 	CryptominerDuration  string `json:"cryptominerDuration"`  // 矿机运作时间
@@ -500,6 +498,7 @@ type Prop struct {
 	PropDescribe string `json:"propDescribe"` // 道具描述
 	PropPrice    int64  `json:"propPrice"`    // 道具价格
 	PurchaseTime string `json:"purchaseTime"` // 购买时间
+	PaymentWay   string `json:"paymentWay"`   // 支付方式 0：U 1：ADF
 }
 
 type JudgeBargainInput struct {
@@ -509,6 +508,11 @@ type JudgeBargainInput struct {
 
 type JudgeBargainReply struct {
 	IsBargain bool `json:"isBargain"` // 砍价id
+}
+
+type PropPurchaseInput struct {
+	UserID int64 `json:"userId"` // 用户id
+	PropID int64 `json:"propId"` // 商品id
 }
 
 type CryptominerPurchaseInput struct {
@@ -572,4 +576,13 @@ type Profile struct {
 	UserID   int64  `json:"userId"`   // 用户id
 	UserName string `json:"userName"` // 用户名
 	Avatar   string `json:"avatar"`   // 用户头像
+}
+
+type JudgeGoodsPurchaseInput struct {
+	UserID   int64  `json:"userId"`   // 用户id
+	GoodName string `json:"goodName"` // 商品名称
+}
+
+type JudgeGoodsPurchaseReply struct {
+	IsPurchase bool `json:"isPurchase"` //  true 已有购买，false 没有购买记录
 }
