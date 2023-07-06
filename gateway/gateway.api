@@ -42,7 +42,7 @@ type HelpCategoryListReply {
 }
 
 type CategoryList {
-	CategoryId   int64  `json:"categoryId"`
+	CategoryId   string `json:"categoryId"`
 	CategoryName string `json:"categoryName"`
 }
 // CurrentOnlinePersonReply
@@ -142,6 +142,21 @@ type NoticeList {
 	NoticeStatus  int64  `json:"noticeStatus"`  //通知状态 1:未读 2:已读
 }
 
+type Noticelds {
+	SystemNoticeIds          int64 `json:"systemNoticeIds"`
+	TargetSystemNoticeStatus int64 `json:"targetSystemNoticeStatus"`
+}
+
+//EditNoticeStatus 批量
+type EditNoticeStatus {
+	EditItems []Noticelds `json:"noticelds"` // 批量编辑通知的信息
+}
+
+//EditNoticeStatusReply
+type EditNoticeStatusReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
 @server(
 	prefix :/v1
 	group :ping
@@ -185,6 +200,44 @@ type GetMessageListReply {
 //GetMessageByNoticeId
 type GetMessageByNoticeId {
 	NoticeId int64 `json:"noticeId"` //通知id
+}
+
+//AddCategory
+type AddCategory {
+	CategoryName string `json:"categoryName"` //分类名称
+	LanguageCode string `json:"languageCode"` //语言编码
+}
+
+//AddCategoryReply
+type AddCategoryReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+//GetNoticeBy
+type GetNoticeBy {
+	SystemNoticeId      int64  `json:"systemNoticeId"`      //系统通知id
+	SystemNoticeTitle   string `json:"systemNoticeTitle"`   //系统通知标题
+	SystemNoticeContent string `json:"systemNoticeContent"` //系统通知内容
+	SystemNoticeStatus  int64  `json:"systemNoticeStatus"`  //系统通知状态
+	SystemNoticeTime    int64  `json:"systemNoticeTime"`    //系统通知时间
+	IsAutoPublish       bool   `json:"isAutoPublish"`       //是否自动发布
+}
+//GetNoticeByReply
+type GetNoticeByReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+//EditNotice
+type EditNotice {
+	SystemNoticeId      int64  `json:"systemNoticeId"`      //系统通知id
+	SystemNoticeTitle   string `json:"systemNoticeTitle"`   //系统通知标题
+	SystemNoticeContent string `json:"systemNoticeContent"` //系统通知内容
+	SystemNoticeStatus  int64  `json:"systemNoticeStatus"`  //系统通知状态
+	SystemNoticeTime    string `json:"systemNoticeTime"`    //系统通知时间
+	IsAutoPublish       bool   `json:"isAutoPublish"`       //是否自动发布
+}
+
+type EditNoticeReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
 }
 
 // 下面是用户接口，需要鉴权
@@ -262,18 +315,18 @@ service gateway-api {
 	@handler batchUpdateUserBlackStatus
 	post /admin/batchUpdateUserBlackStatus (BatchUpdateUserBlackStatus) returns (BatchUpdateUserBlackStatusReply)
 	
-	// 公告管理
+	//公告管理
 	//	@doc "按条件获取公告列表"
 	//	@handler getNoticeBy
 	//	post /admin/getNoticeBy (GetNoticeBy) returns (GetNoticeByReply)
 	
-	//	@doc "批量修改公告发布状态"
-	//	@handler editNoticeStatus
-	//	post /admin/editNoticeStatus (EditNoticeStatus) returns (EditNoticeStatusReply)
+	@doc "批量修改公告发布状态"
+	@handler editNoticeStatus
+	post /admin/editNoticeStatus (EditNoticeStatus) returns (EditNoticeStatusReply)
 	
-	//	@doc"新建编辑公告"
-	//	@handler editNotice
-	//	post /admin/editNotice (EditNotice) returns (EditNoticeReply)
+	@doc"新建编辑公告"
+	@handler editNotice
+	post /admin/editNotice (EditNotice) returns (EditNoticeReply)
 	
 	//	@doc"批量删除公告"
 	//	@handler deleteNotice
@@ -284,9 +337,9 @@ service gateway-api {
 	//	post /admin/getNotice (GetNotice) returns (GetNoticeReply)
 	
 	// 内容管理
-	//	@doc "新建编辑分类"
-	//	@handler addCategory
-	//	post /admin/addCategory (AddCategory) returns (AddCategoryReply)
+	@doc "新建编辑分类"
+	@handler addCategory
+	post /admin/addCategory (AddCategory) returns (AddCategoryReply)
 	
 	//	@doc "批量删除分类"
 	//	@handler batchDeleteCategory

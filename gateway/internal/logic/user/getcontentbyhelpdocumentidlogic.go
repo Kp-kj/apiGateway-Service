@@ -25,6 +25,7 @@ func NewGetContentByHelpDocumentIdLogic(ctx context.Context, svcCtx *svc.Service
 	}
 }
 
+// 根据帮助文档id获取帮助文档内容
 func (l *GetContentByHelpDocumentIdLogic) GetContentByHelpDocumentId(req *types.GetContentByHelpDocumentId) (resp *types.ContentByHelpDocumentIdReply, err error) {
 	// todo: add your logic here and delete this line
 	helpResp, err := l.svcCtx.UserRpcClient.GetHelpDocumentTranslations(l.ctx, &userclient.GetHelpDocumentTranslationsRequest{
