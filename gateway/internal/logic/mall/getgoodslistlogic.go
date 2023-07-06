@@ -29,7 +29,6 @@ func (l *GetGoodsListLogic) GetGoodsList(req *types.GetGoodsListInput) (resp *ty
 	result, err := l.svcCtx.BlockClient.GetGoodsList(l.ctx, &blockclient.GetGoodsListRequest{
 		UserId: req.UserID,
 	})
-
 	var cryptominerList []*types.Cryptominer
 	for _, item := range result.Cryptominer {
 		cryptominerList = append(cryptominerList, &types.Cryptominer{
@@ -40,6 +39,7 @@ func (l *GetGoodsListLogic) GetGoodsList(req *types.GetGoodsListInput) (resp *ty
 			CryptominerDescribe: item.CryptominerDescribe,
 			CryptominerPrice:    item.CryptominerPrice,
 			CryptominerDuration: item.CryptominerDuration,
+			PaymentWay:          item.PaymentWay,
 			OptionalStatus:      item.OptionalStatus,
 			IsBargain:           item.IsBargain,
 		})
@@ -54,6 +54,7 @@ func (l *GetGoodsListLogic) GetGoodsList(req *types.GetGoodsListInput) (resp *ty
 			PropPicture:  item.PropPicture,
 			PropDescribe: item.PropDescribe,
 			PropPrice:    item.PropPrice,
+			PaymentWay:   item.PaymentWay,
 		})
 	}
 
