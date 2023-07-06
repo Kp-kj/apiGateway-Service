@@ -21,6 +21,7 @@ type AdminLoginReply struct {
 }
 
 type UserInfoReply struct {
+	UserId      string `json:"userId"`
 	UserName    string `json:"userName"`
 	TwitterName string `json:"twitterName"`
 	UserAvatar  string `json:"userAvatar"`
@@ -88,7 +89,7 @@ type CreateAdminUserReply struct {
 }
 
 type GetHelpDocumentTitleList struct {
-	HelpCategoryId int64  `json:"helpCategoryId"` //帮助文档分类id
+	HelpCategoryId string `json:"helpCategoryId"` //帮助文档分类id
 	LanguageCode   string `json:"languageCode"`   //语言编码
 }
 
@@ -107,7 +108,7 @@ type HelpDocumentTitleListReply struct {
 }
 
 type GetContentByHelpDocumentId struct {
-	HelpDocumentId int64  `json:"helpDocumentId"` //帮助文档id
+	HelpDocumentId string `json:"helpDocumentId"` //帮助文档id
 	LanguageCode   string `json:"languageCode"`   //语言编码
 }
 
@@ -437,6 +438,11 @@ type AssociatedSubtaskSeed struct {
 	Link           string `json:"link"`
 	Label          string `json:"label"`
 	Complete       int64  `json:"complete"`
+}
+
+type CreateUserPowerTaskInput struct {
+	PublishesUserId string `json:"publishesUserId"`
+	HelperUserId    string `json:"helperUserId"`
 }
 
 type CreateCryptominerInput struct {

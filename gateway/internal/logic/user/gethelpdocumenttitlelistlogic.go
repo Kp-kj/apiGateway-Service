@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"gateway/userclient"
+	"strconv"
 
 	"gateway/internal/svc"
 	"gateway/internal/types"
@@ -28,8 +29,9 @@ func NewGetHelpDocumentTitleListLogic(ctx context.Context, svcCtx *svc.ServiceCo
 // 获取帮助文档标题列表
 func (l *GetHelpDocumentTitleListLogic) GetHelpDocumentTitleList(req *types.GetHelpDocumentTitleList) (resp *types.GetHelpDocumentTitleListReply, err error) {
 	////获取该分类下上架的帮助文档列表
+	helpCategoryId, err := strconv.ParseInt(req.HelpCategoryId, 10, 64)
 	helpResp, err := l.svcCtx.UserRpcClient.GetHelpDocuments(l.ctx, &userclient.GetHelpDocumentsRequest{
-		HelpCategoryId: req.HelpCategoryId,
+		HelpCategoryId: helpCategoryId,
 		DocumentStatus: 1, //上架
 	})
 	if err != nil {
