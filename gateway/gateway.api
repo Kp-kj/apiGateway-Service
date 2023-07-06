@@ -22,6 +22,7 @@ type AdminLoginReply {
 }
 
 type UserInfoReply {
+	UserId      string `json:"userId"`
 	UserName    string `json:"userName"`
 	TwitterName string `json:"twitterName"`
 	UserAvatar  string `json:"userAvatar"`
@@ -98,7 +99,7 @@ type CreateAdminUserReply {
 
 //GetHelpDocumentTitleList
 type GetHelpDocumentTitleList {
-	HelpCategoryId int64  `json:"helpCategoryId"` //帮助文档分类id
+	HelpCategoryId string `json:"helpCategoryId"` //帮助文档分类id
 	LanguageCode   string `json:"languageCode"`   //语言编码
 }
 
@@ -118,7 +119,7 @@ type HelpDocumentTitleListReply {
 
 //GetContentByHelpDocumentId
 type GetContentByHelpDocumentId {
-	HelpDocumentId int64  `json:"helpDocumentId"` //帮助文档id
+	HelpDocumentId string `json:"helpDocumentId"` //帮助文档id
 	LanguageCode   string `json:"languageCode"`   //语言编码
 }
 
@@ -943,7 +944,7 @@ service gateway-api {
 	@doc "管理系统添加矿机"
 	@handler CreateCryptominer
 	post /adminmall/create/cryptominer (CreateCryptominerInput)  returns (IsSuccessReply)
-
+	
 	@doc "管理系统添加道具"
 	@handler CreateProp
 	post /adminmall/create/prop (CreatePropInput)  returns (IsSuccessReply)
@@ -961,41 +962,41 @@ service gateway-api {
 	@doc "获取商品列表"
 	@handler GetGoodsList
 	post /mall/goodlist (GetGoodsListInput)  returns (GetGoodsListReply)
-
+	
 	@doc "判断是否可砍"
 	@handler JudgeBargain
 	post /mall/judgebargain (JudgeBargainInput)  returns (JudgeBargainReply)
-
+	
 	@doc "全额购买矿机"
 	@handler CryptominerFullPurchase
 	post /mall/purchase/full (CryptominerPurchaseInput)  returns (IsSuccessReply)
-
+	
 	@doc "砍价购买矿机"
 	@handler CryptominerBargainPurchase
 	post /mall/purchase/bargain (CryptominerBargainInput)  returns (CryptominerBargainReply)
-
+	
 	@doc "购买道具"
 	@handler PropPurchase
 	post /mall/purchase/prop (PropPurchaseInput)  returns (IsSuccessReply)
-
+	
 	@doc "获取砍价活动规则"
 	@handler GetBargainRule
 	post /mall/activity/rule (GetBargainRuleInput)  returns (GetBargainRuleReply)
-
+	
 	@doc "获取砍价矿机信息"
 	@handler GetBargainCryptominer
 	post /mall/activity/cryptominer (GetBargainCryptominerInput)  returns (GetBargainCryptominerReply)
-
+	
 	@doc "获取砍价进度"
 	@handler GetBargainProgress
 	post /mall/activity/progress (GetBargainProgressInput)  returns (GetBargainProgressReply)
-
+	
 	@doc "获取砍价记录列表"
 	@handler GetBargainRecord
 	post /mall/activity/bargainlist (GetBargainRecordInput)  returns (GetBargainRecordReply)
-
+	
 	@doc "判断是否有今日购买记录"
 	@handler JudgeGoodsPurchase
 	post /mall/judgegoodspurchase (JudgeGoodsPurchaseInput)  returns (JudgeGoodsPurchaseReply)
-
+	
 }

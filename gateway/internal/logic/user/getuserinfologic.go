@@ -28,9 +28,9 @@ func NewGetUserInfoLogic(ctx context.Context, svcCtx *svc.ServiceContext) *GetUs
 func (l *GetUserInfoLogic) GetUserInfo() (resp *types.UserInfoReply, err error) {
 
 	//userId := l.ctx.Value("userId").(int64)  // 从上下文中获取用户id
-
+	var UserId string = "1661640027962085376"
 	dbUserInfo, err := l.svcCtx.UserRpcClient.QueryUser(l.ctx, &userclient.QueryUserRequest{
-		UserId: "1661640027962085376",
+		UserId: UserId,
 	})
 
 	if err != nil {
@@ -41,6 +41,7 @@ func (l *GetUserInfoLogic) GetUserInfo() (resp *types.UserInfoReply, err error) 
 	fmt.Println(dbUserInfo.UserName)
 
 	return &types.UserInfoReply{
+		UserId:      UserId,                 // 用户id
 		UserName:    dbUserInfo.UserName,    // 用户名 （会改变）
 		TwitterName: dbUserInfo.TwitterName, // twitter名 推特唯一id
 		UserAvatar:  dbUserInfo.UserAvatar,  // 用户头像
