@@ -469,6 +469,58 @@ type CreatePropInput struct {
 	PaymentWay   string `json:"paymentWay"`   // 支付方式 0：U 1：ADF
 }
 
+type AdminGoodListInput struct {
+	AdminUserID int64 `json:"adminUserId"` // 管理员id
+}
+
+type Activity struct {
+	ActivityID       int64  `json:"activityId"`       // 关联矿机种类id
+	CryptominerName  string `json:"cryptominerName"`  // 矿机名称
+	UserAmount       int64  `json:"userAmount"`       // 砍价人数
+	MinPrice         string `json:"minPrice"`         // 最小砍价金额
+	FirstBargainPer  string `json:"firstBargainPer"`  // 首次砍价百分比
+	FriendBargainPer string `json:"friendBargainPer"` // 好友砍价比率
+	IsActivation     int64  `json:"isActivation"`     // 矿机状态  0：未开启  1：开启
+}
+
+type AdminGoodListReply struct {
+	AdminGood []*AdminGood `json:"adminGood"`
+}
+
+type AdminGood struct {
+	GoodTypeID   int64  `json:"goodTypeID"`   // 商品typeid
+	GoodName     string `json:"goodName"`     // 商品名称
+	GoodDuration int64  `json:"goodDuration"` // 商品工作时长
+	PaymentWay   string `json:"paymentWay"`   // 支付方式 0：U ,1:ADF
+	PropPrice    int64  `json:"propPrice"`    // 商品价格
+	GoodStatus   string `json:"goodStatus"`   // 商品状态  0：待上架  1：已上架 2：未上架
+}
+
+type StartGoodInput struct {
+	GoodTypeID int64 `json:"goodTypeId"` // 商品种类id
+}
+
+type CreateActivityInput struct {
+	AdminUserID       int64   `json:"adminUserID"`       // 管理员id
+	CryptominerTypeID int64   `json:"cryptominerTypeID"` // 关联矿机种类id
+	UserAmount        int64   `json:"userAmount"`        // 砍价人数
+	MinPrice          float64 `json:"minPrice"`          // 最小砍价金额
+	FirstBargainPer   float64 `json:"firstBargainPer"`   // 首次砍价百分比
+	FriendBargainPer  float64 `json:"friendBargainPer"`  // 好友砍价比率
+}
+
+type AdminActivityListInput struct {
+	AdminUserID int64 `json:"adminUserID"` // 管理员id
+}
+
+type AdminActivityListReply struct {
+	Activity []*Activity `json:"activity"`
+}
+
+type StartActivityInput struct {
+	ActivityID int64 `json:"activityId"` // 关联矿机种类id
+}
+
 type GetGoodsListInput struct {
 	UserID int64 `json:"userId"`
 }
@@ -519,8 +571,9 @@ type JudgeBargainReply struct {
 }
 
 type PropPurchaseInput struct {
-	UserID int64 `json:"userId"` // 用户id
-	PropID int64 `json:"propId"` // 商品id
+	UserID       int64 `json:"userId"`       // 用户id
+	PropID       int64 `json:"propId"`       // 商品id
+	GoodQuantity int64 `json:"goodQuantity"` // 购买数量
 }
 
 type CryptominerPurchaseInput struct {
