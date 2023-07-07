@@ -13,14 +13,21 @@ import (
 )
 
 type (
+	Activity                      = block.Activity
+	AdminActivityListRequest      = block.AdminActivityListRequest
+	AdminActivityListResponse     = block.AdminActivityListResponse
+	AdminGood                     = block.AdminGood
+	AdminGoodListRequest          = block.AdminGoodListRequest
+	AdminGoodListResponse         = block.AdminGoodListResponse
 	BargainAmount                 = block.BargainAmount
+	BargainRecord                 = block.BargainRecord
+	CreateActivityRequest         = block.CreateActivityRequest
 	CreateCryptominerRequest      = block.CreateCryptominerRequest
 	CreatePropRequest             = block.CreatePropRequest
 	Cryptominer                   = block.Cryptominer
 	CryptominerBargainRequest     = block.CryptominerBargainRequest
 	CryptominerBargainResponse    = block.CryptominerBargainResponse
 	CryptominerPurchaseRequest    = block.CryptominerPurchaseRequest
-	PropPurchaseRequest    		  = block.PropPurchaseRequest
 	GetBargainCryptominerRequest  = block.GetBargainCryptominerRequest
 	GetBargainCryptominerResponse = block.GetBargainCryptominerResponse
 	GetBargainProgressRequest     = block.GetBargainProgressRequest
@@ -29,20 +36,34 @@ type (
 	GetBargainRuleResponse        = block.GetBargainRuleResponse
 	GetGoodsListRequest           = block.GetGoodsListRequest
 	GetGoodsListResponse          = block.GetGoodsListResponse
+	GetPurchaseRecordRequest      = block.GetPurchaseRecordRequest
+	GetPurchaseRecordResponse     = block.GetPurchaseRecordResponse
 	IsSuccessResponse             = block.IsSuccessResponse
 	JudgeBargainRequest           = block.JudgeBargainRequest
 	JudgeBargainResponse          = block.JudgeBargainResponse
 	JudgeGoodsPurchaseRequest     = block.JudgeGoodsPurchaseRequest
 	JudgeGoodsPurchaseResponse    = block.JudgeGoodsPurchaseResponse
+	OneBargain                    = block.OneBargain
 	Profile                       = block.Profile
 	Prop                          = block.Prop
+	PropPurchaseRequest           = block.PropPurchaseRequest
+	PurchaseRecord                = block.PurchaseRecord
 	Request                       = block.Request
 	Response                      = block.Response
+	StartActivityRequest          = block.StartActivityRequest
+	StartGoodRequest              = block.StartGoodRequest
 
 	Block interface {
+		// 后台接口
 		Ping(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 		CreateCryptominer(ctx context.Context, in *CreateCryptominerRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error)
 		CreateProp(ctx context.Context, in *CreatePropRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error)
+		AdminGoodList(ctx context.Context, in *AdminGoodListRequest, opts ...grpc.CallOption) (*AdminGoodListResponse, error)
+		StartGood(ctx context.Context, in *StartGoodRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error)
+		CreateActivity(ctx context.Context, in *CreateActivityRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error)
+		AdminActivityList(ctx context.Context, in *AdminActivityListRequest, opts ...grpc.CallOption) (*AdminActivityListResponse, error)
+		StartActivity(ctx context.Context, in *StartActivityRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error)
+		// 前台接口
 		GetGoodsList(ctx context.Context, in *GetGoodsListRequest, opts ...grpc.CallOption) (*GetGoodsListResponse, error)
 		JudgeBargain(ctx context.Context, in *JudgeBargainRequest, opts ...grpc.CallOption) (*JudgeBargainResponse, error)
 		CryptominerFullPurchase(ctx context.Context, in *CryptominerPurchaseRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error)
@@ -51,6 +72,8 @@ type (
 		GetBargainRule(ctx context.Context, in *GetBargainRuleRequest, opts ...grpc.CallOption) (*GetBargainRuleResponse, error)
 		GetBargainCryptominer(ctx context.Context, in *GetBargainCryptominerRequest, opts ...grpc.CallOption) (*GetBargainCryptominerResponse, error)
 		GetBargainProgress(ctx context.Context, in *GetBargainProgressRequest, opts ...grpc.CallOption) (*GetBargainProgressResponse, error)
+		// 外部rpc接口
+		GetPurchaseRecord(ctx context.Context, in *GetPurchaseRecordRequest, opts ...grpc.CallOption) (*GetPurchaseRecordResponse, error)
 		JudgeGoodsPurchase(ctx context.Context, in *JudgeGoodsPurchaseRequest, opts ...grpc.CallOption) (*JudgeGoodsPurchaseResponse, error)
 	}
 
@@ -65,6 +88,7 @@ func NewBlock(cli zrpc.Client) Block {
 	}
 }
 
+// 后台接口
 func (m *defaultBlock) Ping(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	client := block.NewBlockClient(m.cli.Conn())
 	return client.Ping(ctx, in, opts...)
@@ -80,6 +104,32 @@ func (m *defaultBlock) CreateProp(ctx context.Context, in *CreatePropRequest, op
 	return client.CreateProp(ctx, in, opts...)
 }
 
+func (m *defaultBlock) AdminGoodList(ctx context.Context, in *AdminGoodListRequest, opts ...grpc.CallOption) (*AdminGoodListResponse, error) {
+	client := block.NewBlockClient(m.cli.Conn())
+	return client.AdminGoodList(ctx, in, opts...)
+}
+
+func (m *defaultBlock) StartGood(ctx context.Context, in *StartGoodRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error) {
+	client := block.NewBlockClient(m.cli.Conn())
+	return client.StartGood(ctx, in, opts...)
+}
+
+func (m *defaultBlock) CreateActivity(ctx context.Context, in *CreateActivityRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error) {
+	client := block.NewBlockClient(m.cli.Conn())
+	return client.CreateActivity(ctx, in, opts...)
+}
+
+func (m *defaultBlock) AdminActivityList(ctx context.Context, in *AdminActivityListRequest, opts ...grpc.CallOption) (*AdminActivityListResponse, error) {
+	client := block.NewBlockClient(m.cli.Conn())
+	return client.AdminActivityList(ctx, in, opts...)
+}
+
+func (m *defaultBlock) StartActivity(ctx context.Context, in *StartActivityRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error) {
+	client := block.NewBlockClient(m.cli.Conn())
+	return client.StartActivity(ctx, in, opts...)
+}
+
+// 前台接口
 func (m *defaultBlock) GetGoodsList(ctx context.Context, in *GetGoodsListRequest, opts ...grpc.CallOption) (*GetGoodsListResponse, error) {
 	client := block.NewBlockClient(m.cli.Conn())
 	return client.GetGoodsList(ctx, in, opts...)
@@ -88,11 +138,6 @@ func (m *defaultBlock) GetGoodsList(ctx context.Context, in *GetGoodsListRequest
 func (m *defaultBlock) JudgeBargain(ctx context.Context, in *JudgeBargainRequest, opts ...grpc.CallOption) (*JudgeBargainResponse, error) {
 	client := block.NewBlockClient(m.cli.Conn())
 	return client.JudgeBargain(ctx, in, opts...)
-}
-
-func (m *defaultBlock) JudgeGoodsPurchase(ctx context.Context, in *JudgeGoodsPurchaseRequest, opts ...grpc.CallOption) (*JudgeGoodsPurchaseResponse, error) {
-	client := block.NewBlockClient(m.cli.Conn())
-	return client.JudgeGoodsPurchase(ctx, in, opts...)
 }
 
 func (m *defaultBlock) CryptominerFullPurchase(ctx context.Context, in *CryptominerPurchaseRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error) {
@@ -125,4 +170,13 @@ func (m *defaultBlock) GetBargainProgress(ctx context.Context, in *GetBargainPro
 	return client.GetBargainProgress(ctx, in, opts...)
 }
 
+// 外部rpc接口
+func (m *defaultBlock) GetPurchaseRecord(ctx context.Context, in *GetPurchaseRecordRequest, opts ...grpc.CallOption) (*GetPurchaseRecordResponse, error) {
+	client := block.NewBlockClient(m.cli.Conn())
+	return client.GetPurchaseRecord(ctx, in, opts...)
+}
 
+func (m *defaultBlock) JudgeGoodsPurchase(ctx context.Context, in *JudgeGoodsPurchaseRequest, opts ...grpc.CallOption) (*JudgeGoodsPurchaseResponse, error) {
+	client := block.NewBlockClient(m.cli.Conn())
+	return client.JudgeGoodsPurchase(ctx, in, opts...)
+}

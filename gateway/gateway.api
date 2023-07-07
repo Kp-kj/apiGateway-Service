@@ -786,6 +786,65 @@ type CreatePropInput {
 	PaymentWay   string `json:"paymentWay"`   // 支付方式 0：U 1：ADF
 }
 
+// 管理系统获取活动列表
+type AdminGoodListInput {
+	AdminUserID int64 `json:"adminUserId"` // 管理员id
+}
+
+// 管理系统活动(用来展示)
+type Activity {
+	ActivityID       int64  `json:"activityId"`       // 关联矿机种类id
+	CryptominerName  string `json:"cryptominerName"`  // 矿机名称
+	UserAmount       int64  `json:"userAmount"`       // 砍价人数
+	MinPrice         string `json:"minPrice"`         // 最小砍价金额
+	FirstBargainPer  string `json:"firstBargainPer"`  // 首次砍价百分比
+	FriendBargainPer string `json:"friendBargainPer"` // 好友砍价比率
+	IsActivation     int64  `json:"isActivation"`     // 矿机状态  0：未开启  1：开启
+}
+
+// 管理系统获取活动列表
+type AdminGoodListReply {
+	AdminGood []*AdminGood `json:"adminGood"`
+}
+
+type AdminGood {
+	GoodTypeID   int64  `json:"goodTypeID"`   // 商品typeid
+	GoodName     string `json:"goodName"`     // 商品名称
+	GoodDuration int64  `json:"goodDuration"` // 商品工作时长
+	PaymentWay   string `json:"paymentWay"`   // 支付方式 0：U ,1:ADF
+	PropPrice    int64  `json:"propPrice"`    // 商品价格
+	GoodStatus   string `json:"goodStatus"`   // 商品状态  0：待上架  1：已上架 2：未上架
+}
+
+// 上架商品道具
+type StartGoodInput {
+	GoodTypeID int64 `json:"goodTypeId"` // 商品种类id
+}
+
+// 管理系统创建矿机活动
+type CreateActivityInput {
+	AdminUserID       int64   `json:"adminUserID"`       // 管理员id
+	CryptominerTypeID int64   `json:"cryptominerTypeID"` // 关联矿机种类id
+	UserAmount        int64   `json:"userAmount"`        // 砍价人数
+	MinPrice          float64 `json:"minPrice"`          // 最小砍价金额
+	FirstBargainPer   float64 `json:"firstBargainPer"`   // 首次砍价百分比
+	FriendBargainPer  float64 `json:"friendBargainPer"`  // 好友砍价比率
+}
+
+// 管理系统获取活动列表
+type AdminActivityListInput {
+	AdminUserID int64 `json:"adminUserID"` // 管理员id
+}
+
+type AdminActivityListReply {
+	Activity []*Activity `json:"activity"`
+}
+
+// 开启系统矿机活动
+type StartActivityInput {
+	ActivityID int64 `json:"activityId"` // 关联矿机种类id
+}
+
 // 获取商城列表
 type GetGoodsListInput {
 	UserID int64 `json:"userId"`
@@ -950,6 +1009,27 @@ service gateway-api {
 	@doc "管理系统添加道具"
 	@handler CreateProp
 	post /adminmall/create/prop (CreatePropInput)  returns (IsSuccessReply)
+	
+	@doc "后台获取商品列表"
+	@handler AdminGoodList
+	post /adminmall/req/goodlist (AdminGoodListInput)  returns (AdminGoodListReply)
+	
+	@doc "管理系统上架商品"
+	@handler StartGood
+	post /adminmall/manage/startgoodstart (StartGoodInput)  returns (IsSuccessReply)
+	
+	@doc "管理系统创建矿机活动"
+	@handler CreateActivity
+	post /adminmall/create/activity (CreateActivityInput)  returns (IsSuccessReply)
+	
+	@doc "后台获取活动列表"
+	@handler AdminActivityList
+	post /adminmall/req/activitylist (AdminActivityListInput)  returns (AdminActivityListReply)
+	
+	@doc "管理系统开启矿机活动"
+	@handler StartActivity
+	post /adminmall/manage/startactivity (StartActivityInput)  returns (IsSuccessReply)
+	
 }
 
 // 用户商城，需要鉴权
@@ -996,9 +1076,5 @@ service gateway-api {
 	@doc "获取砍价记录列表"
 	@handler GetBargainRecord
 	post /mall/activity/bargainlist (GetBargainRecordInput)  returns (GetBargainRecordReply)
-	
-	@doc "判断是否有今日购买记录"
-	@handler JudgeGoodsPurchase
-	post /mall/judgegoodspurchase (JudgeGoodsPurchaseInput)  returns (JudgeGoodsPurchaseReply)
 	
 }
