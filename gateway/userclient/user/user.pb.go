@@ -4353,6 +4353,437 @@ func (x *RecordNoticeResponse) GetNotice() []*Notice {
 	return nil
 }
 
+//QueryRecordNoticeRequest
+type QueryRecordNoticeRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserId   int64 `protobuf:"varint,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"` // 用户id
+	NoticeId int64 `protobuf:"varint,2,opt,name=Notice_id,json=NoticeId,proto3" json:"Notice_id,omitempty"`
+}
+
+func (x *QueryRecordNoticeRequest) Reset() {
+	*x = QueryRecordNoticeRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_user_proto_msgTypes[77]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *QueryRecordNoticeRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*QueryRecordNoticeRequest) ProtoMessage() {}
+
+func (x *QueryRecordNoticeRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_user_proto_msgTypes[77]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use QueryRecordNoticeRequest.ProtoReflect.Descriptor instead.
+func (*QueryRecordNoticeRequest) Descriptor() ([]byte, []int) {
+	return file_user_proto_rawDescGZIP(), []int{77}
+}
+
+func (x *QueryRecordNoticeRequest) GetUserId() int64 {
+	if x != nil {
+		return x.UserId
+	}
+	return 0
+}
+
+func (x *QueryRecordNoticeRequest) GetNoticeId() int64 {
+	if x != nil {
+		return x.NoticeId
+	}
+	return 0
+}
+
+type QueryRecordNoticeResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	RecordNoticeCategory int64 `protobuf:"varint,1,opt,name=recordNotice_category,json=recordNoticeCategory,proto3" json:"recordNotice_category,omitempty"` // 通知类别 0：系统通知 1：用户通知
+}
+
+func (x *QueryRecordNoticeResponse) Reset() {
+	*x = QueryRecordNoticeResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_user_proto_msgTypes[78]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *QueryRecordNoticeResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*QueryRecordNoticeResponse) ProtoMessage() {}
+
+func (x *QueryRecordNoticeResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_user_proto_msgTypes[78]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use QueryRecordNoticeResponse.ProtoReflect.Descriptor instead.
+func (*QueryRecordNoticeResponse) Descriptor() ([]byte, []int) {
+	return file_user_proto_rawDescGZIP(), []int{78}
+}
+
+func (x *QueryRecordNoticeResponse) GetRecordNoticeCategory() int64 {
+	if x != nil {
+		return x.RecordNoticeCategory
+	}
+	return 0
+}
+
+//RegisterCountResponse
+type RegisterCountResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Count int64 `protobuf:"varint,1,opt,name=count,proto3" json:"count,omitempty"` // 注册人数
+}
+
+func (x *RegisterCountResponse) Reset() {
+	*x = RegisterCountResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_user_proto_msgTypes[79]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *RegisterCountResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RegisterCountResponse) ProtoMessage() {}
+
+func (x *RegisterCountResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_user_proto_msgTypes[79]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RegisterCountResponse.ProtoReflect.Descriptor instead.
+func (*RegisterCountResponse) Descriptor() ([]byte, []int) {
+	return file_user_proto_rawDescGZIP(), []int{79}
+}
+
+func (x *RegisterCountResponse) GetCount() int64 {
+	if x != nil {
+		return x.Count
+	}
+	return 0
+}
+
+//OnlineCountResponse
+type OnlineCountResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Count int64 `protobuf:"varint,1,opt,name=count,proto3" json:"count,omitempty"` // 在线人数
+}
+
+func (x *OnlineCountResponse) Reset() {
+	*x = OnlineCountResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_user_proto_msgTypes[80]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *OnlineCountResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*OnlineCountResponse) ProtoMessage() {}
+
+func (x *OnlineCountResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_user_proto_msgTypes[80]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use OnlineCountResponse.ProtoReflect.Descriptor instead.
+func (*OnlineCountResponse) Descriptor() ([]byte, []int) {
+	return file_user_proto_rawDescGZIP(), []int{80}
+}
+
+func (x *OnlineCountResponse) GetCount() int64 {
+	if x != nil {
+		return x.Count
+	}
+	return 0
+}
+
+//CreateNotificationRequest
+type CreateNotificationRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserId             int64  `protobuf:"varint,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`                                     // 用户id
+	NoticeContent      string `protobuf:"bytes,2,opt,name=noticeContent,proto3" json:"noticeContent,omitempty"`                                      //通知标题
+	RecordNoticeStatus int64  `protobuf:"varint,3,opt,name=recordNotice_status,json=recordNoticeStatus,proto3" json:"recordNotice_status,omitempty"` // 通知状态   1：已发布 2：已下架
+}
+
+func (x *CreateNotificationRequest) Reset() {
+	*x = CreateNotificationRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_user_proto_msgTypes[81]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *CreateNotificationRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateNotificationRequest) ProtoMessage() {}
+
+func (x *CreateNotificationRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_user_proto_msgTypes[81]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateNotificationRequest.ProtoReflect.Descriptor instead.
+func (*CreateNotificationRequest) Descriptor() ([]byte, []int) {
+	return file_user_proto_rawDescGZIP(), []int{81}
+}
+
+func (x *CreateNotificationRequest) GetUserId() int64 {
+	if x != nil {
+		return x.UserId
+	}
+	return 0
+}
+
+func (x *CreateNotificationRequest) GetNoticeContent() string {
+	if x != nil {
+		return x.NoticeContent
+	}
+	return ""
+}
+
+func (x *CreateNotificationRequest) GetRecordNoticeStatus() int64 {
+	if x != nil {
+		return x.RecordNoticeStatus
+	}
+	return 0
+}
+
+//CreateNotificationResponse
+type CreateNotificationResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserNoticeId int64 `protobuf:"varint,1,opt,name=userNotice_id,json=userNoticeId,proto3" json:"userNotice_id,omitempty"` // 用户通知id
+	IsSuccess    bool  `protobuf:"varint,2,opt,name=is_success,json=isSuccess,proto3" json:"is_success,omitempty"`          //是否成功
+}
+
+func (x *CreateNotificationResponse) Reset() {
+	*x = CreateNotificationResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_user_proto_msgTypes[82]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *CreateNotificationResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateNotificationResponse) ProtoMessage() {}
+
+func (x *CreateNotificationResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_user_proto_msgTypes[82]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateNotificationResponse.ProtoReflect.Descriptor instead.
+func (*CreateNotificationResponse) Descriptor() ([]byte, []int) {
+	return file_user_proto_rawDescGZIP(), []int{82}
+}
+
+func (x *CreateNotificationResponse) GetUserNoticeId() int64 {
+	if x != nil {
+		return x.UserNoticeId
+	}
+	return 0
+}
+
+func (x *CreateNotificationResponse) GetIsSuccess() bool {
+	if x != nil {
+		return x.IsSuccess
+	}
+	return false
+}
+
+//GetUserNotificationsRequest
+type GetUserNotificationsRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserNoticeId int64 `protobuf:"varint,1,opt,name=userNotice_id,json=userNoticeId,proto3" json:"userNotice_id,omitempty"` // 用户通知id
+}
+
+func (x *GetUserNotificationsRequest) Reset() {
+	*x = GetUserNotificationsRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_user_proto_msgTypes[83]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetUserNotificationsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetUserNotificationsRequest) ProtoMessage() {}
+
+func (x *GetUserNotificationsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_user_proto_msgTypes[83]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetUserNotificationsRequest.ProtoReflect.Descriptor instead.
+func (*GetUserNotificationsRequest) Descriptor() ([]byte, []int) {
+	return file_user_proto_rawDescGZIP(), []int{83}
+}
+
+func (x *GetUserNotificationsRequest) GetUserNoticeId() int64 {
+	if x != nil {
+		return x.UserNoticeId
+	}
+	return 0
+}
+
+//GetUserNotificationsResponse
+type GetUserNotificationsResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	NoticeContent string `protobuf:"bytes,1,opt,name=notice_content,json=noticeContent,proto3" json:"notice_content,omitempty"` //通知标题
+	UserId        int64  `protobuf:"varint,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`                     // 用户id
+	NoticeStatus  int64  `protobuf:"varint,3,opt,name=notice_status,json=noticeStatus,proto3" json:"notice_status,omitempty"`   // 通知状态   1：已发布 2：已下架
+}
+
+func (x *GetUserNotificationsResponse) Reset() {
+	*x = GetUserNotificationsResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_user_proto_msgTypes[84]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetUserNotificationsResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetUserNotificationsResponse) ProtoMessage() {}
+
+func (x *GetUserNotificationsResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_user_proto_msgTypes[84]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetUserNotificationsResponse.ProtoReflect.Descriptor instead.
+func (*GetUserNotificationsResponse) Descriptor() ([]byte, []int) {
+	return file_user_proto_rawDescGZIP(), []int{84}
+}
+
+func (x *GetUserNotificationsResponse) GetNoticeContent() string {
+	if x != nil {
+		return x.NoticeContent
+	}
+	return ""
+}
+
+func (x *GetUserNotificationsResponse) GetUserId() int64 {
+	if x != nil {
+		return x.UserId
+	}
+	return 0
+}
+
+func (x *GetUserNotificationsResponse) GetNoticeStatus() int64 {
+	if x != nil {
+		return x.NoticeStatus
+	}
+	return 0
+}
+
 var File_user_proto protoreflect.FileDescriptor
 
 var file_user_proto_rawDesc = []byte{
@@ -4853,10 +5284,61 @@ var file_user_proto_rawDesc = []byte{
 	0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x52, 0x65, 0x73, 0x70,
 	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x24, 0x0a, 0x06, 0x6e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x18, 0x01,
 	0x20, 0x03, 0x28, 0x0b, 0x32, 0x0c, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x4e, 0x6f, 0x74, 0x69,
-	0x63, 0x65, 0x52, 0x06, 0x6e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x32, 0x91, 0x18, 0x0a, 0x04, 0x55,
-	0x73, 0x65, 0x72, 0x12, 0x25, 0x0a, 0x04, 0x50, 0x69, 0x6e, 0x67, 0x12, 0x0d, 0x2e, 0x75, 0x73,
-	0x65, 0x72, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0e, 0x2e, 0x75, 0x73, 0x65,
-	0x72, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x4b, 0x0a, 0x0e, 0x43, 0x68,
+	0x63, 0x65, 0x52, 0x06, 0x6e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x22, 0x50, 0x0a, 0x18, 0x51, 0x75,
+	0x65, 0x72, 0x79, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69,
+	0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x12,
+	0x1b, 0x0a, 0x09, 0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x03, 0x52, 0x08, 0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x49, 0x64, 0x22, 0x50, 0x0a, 0x19,
+	0x51, 0x75, 0x65, 0x72, 0x79, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x4e, 0x6f, 0x74, 0x69, 0x63,
+	0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x33, 0x0a, 0x15, 0x72, 0x65, 0x63,
+	0x6f, 0x72, 0x64, 0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x5f, 0x63, 0x61, 0x74, 0x65, 0x67, 0x6f,
+	0x72, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x14, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64,
+	0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x43, 0x61, 0x74, 0x65, 0x67, 0x6f, 0x72, 0x79, 0x22, 0x2d,
+	0x0a, 0x15, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x63, 0x6f, 0x75, 0x6e, 0x74,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x05, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x22, 0x2b, 0x0a,
+	0x13, 0x4f, 0x6e, 0x6c, 0x69, 0x6e, 0x65, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x03, 0x52, 0x05, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x22, 0x8b, 0x01, 0x0a, 0x19, 0x43,
+	0x72, 0x65, 0x61, 0x74, 0x65, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72,
+	0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49,
+	0x64, 0x12, 0x24, 0x0a, 0x0d, 0x6e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x43, 0x6f, 0x6e, 0x74, 0x65,
+	0x6e, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0d, 0x6e, 0x6f, 0x74, 0x69, 0x63, 0x65,
+	0x43, 0x6f, 0x6e, 0x74, 0x65, 0x6e, 0x74, 0x12, 0x2f, 0x0a, 0x13, 0x72, 0x65, 0x63, 0x6f, 0x72,
+	0x64, 0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x5f, 0x73, 0x74, 0x61, 0x74, 0x75, 0x73, 0x18, 0x03,
+	0x20, 0x01, 0x28, 0x03, 0x52, 0x12, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x4e, 0x6f, 0x74, 0x69,
+	0x63, 0x65, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x22, 0x60, 0x0a, 0x1a, 0x43, 0x72, 0x65, 0x61,
+	0x74, 0x65, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x23, 0x0a, 0x0d, 0x75, 0x73, 0x65, 0x72, 0x4e, 0x6f,
+	0x74, 0x69, 0x63, 0x65, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0c, 0x75,
+	0x73, 0x65, 0x72, 0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x49, 0x64, 0x12, 0x1d, 0x0a, 0x0a, 0x69,
+	0x73, 0x5f, 0x73, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x18, 0x02, 0x20, 0x01, 0x28, 0x08, 0x52,
+	0x09, 0x69, 0x73, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x22, 0x42, 0x0a, 0x1b, 0x47, 0x65,
+	0x74, 0x55, 0x73, 0x65, 0x72, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x23, 0x0a, 0x0d, 0x75, 0x73, 0x65,
+	0x72, 0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03,
+	0x52, 0x0c, 0x75, 0x73, 0x65, 0x72, 0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x49, 0x64, 0x22, 0x83,
+	0x01, 0x0a, 0x1c, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69,
+	0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
+	0x25, 0x0a, 0x0e, 0x6e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x65, 0x6e,
+	0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0d, 0x6e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x43,
+	0x6f, 0x6e, 0x74, 0x65, 0x6e, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69,
+	0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x12,
+	0x23, 0x0a, 0x0d, 0x6e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x5f, 0x73, 0x74, 0x61, 0x74, 0x75, 0x73,
+	0x18, 0x03, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0c, 0x6e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x53, 0x74,
+	0x61, 0x74, 0x75, 0x73, 0x32, 0x95, 0x1b, 0x0a, 0x04, 0x55, 0x73, 0x65, 0x72, 0x12, 0x25, 0x0a,
+	0x04, 0x50, 0x69, 0x6e, 0x67, 0x12, 0x0d, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x1a, 0x0e, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x3b, 0x0a, 0x0d, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72,
+	0x43, 0x6f, 0x75, 0x6e, 0x74, 0x12, 0x0d, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x1a, 0x1b, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x52, 0x65, 0x67, 0x69,
+	0x73, 0x74, 0x65, 0x72, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x12, 0x37, 0x0a, 0x0b, 0x4f, 0x6e, 0x6c, 0x69, 0x6e, 0x65, 0x43, 0x6f, 0x75, 0x6e, 0x74,
+	0x12, 0x0d, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
+	0x19, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x4f, 0x6e, 0x6c, 0x69, 0x6e, 0x65, 0x43, 0x6f, 0x75,
+	0x6e, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x4b, 0x0a, 0x0e, 0x43, 0x68,
 	0x65, 0x63, 0x6b, 0x54, 0x77, 0x69, 0x74, 0x74, 0x65, 0x72, 0x49, 0x64, 0x12, 0x1b, 0x2e, 0x75,
 	0x73, 0x65, 0x72, 0x2e, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x54, 0x77, 0x69, 0x74, 0x74, 0x65, 0x72,
 	0x49, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1c, 0x2e, 0x75, 0x73, 0x65, 0x72,
@@ -5046,8 +5528,25 @@ var file_user_proto_rawDesc = []byte{
 	0x64, 0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x12, 0x19, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x52,
 	0x65, 0x63, 0x6f, 0x72, 0x64, 0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65,
 	0x73, 0x74, 0x1a, 0x1a, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64,
-	0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x08,
-	0x5a, 0x06, 0x2e, 0x2f, 0x75, 0x73, 0x65, 0x72, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x54,
+	0x0a, 0x11, 0x51, 0x75, 0x65, 0x72, 0x79, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x4e, 0x6f, 0x74,
+	0x69, 0x63, 0x65, 0x12, 0x1e, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x51, 0x75, 0x65, 0x72, 0x79,
+	0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x1a, 0x1f, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x51, 0x75, 0x65, 0x72, 0x79,
+	0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x4e, 0x6f, 0x74, 0x69, 0x63, 0x65, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x57, 0x0a, 0x12, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x4e, 0x6f,
+	0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x1f, 0x2e, 0x75, 0x73, 0x65,
+	0x72, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61,
+	0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x20, 0x2e, 0x75, 0x73,
+	0x65, 0x72, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63,
+	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x5d, 0x0a,
+	0x14, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61,
+	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x21, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x47, 0x65, 0x74,
+	0x55, 0x73, 0x65, 0x72, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e,
+	0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x22, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e,
+	0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74,
+	0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x08, 0x5a, 0x06,
+	0x2e, 0x2f, 0x75, 0x73, 0x65, 0x72, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -5062,7 +5561,7 @@ func file_user_proto_rawDescGZIP() []byte {
 	return file_user_proto_rawDescData
 }
 
-var file_user_proto_msgTypes = make([]protoimpl.MessageInfo, 77)
+var file_user_proto_msgTypes = make([]protoimpl.MessageInfo, 85)
 var file_user_proto_goTypes = []interface{}{
 	(*Request)(nil),                               // 0: user.Request
 	(*Response)(nil),                              // 1: user.Response
@@ -5141,6 +5640,14 @@ var file_user_proto_goTypes = []interface{}{
 	(*RecordNoticeRequest)(nil),                   // 74: user.RecordNoticeRequest
 	(*Notice)(nil),                                // 75: user.Notice
 	(*RecordNoticeResponse)(nil),                  // 76: user.RecordNoticeResponse
+	(*QueryRecordNoticeRequest)(nil),              // 77: user.QueryRecordNoticeRequest
+	(*QueryRecordNoticeResponse)(nil),             // 78: user.QueryRecordNoticeResponse
+	(*RegisterCountResponse)(nil),                 // 79: user.RegisterCountResponse
+	(*OnlineCountResponse)(nil),                   // 80: user.OnlineCountResponse
+	(*CreateNotificationRequest)(nil),             // 81: user.CreateNotificationRequest
+	(*CreateNotificationResponse)(nil),            // 82: user.CreateNotificationResponse
+	(*GetUserNotificationsRequest)(nil),           // 83: user.GetUserNotificationsRequest
+	(*GetUserNotificationsResponse)(nil),          // 84: user.GetUserNotificationsResponse
 }
 var file_user_proto_depIdxs = []int32{
 	27, // 0: user.GetHelpCategoriesResponse.help_categories:type_name -> user.HelpCategory
@@ -5149,77 +5656,87 @@ var file_user_proto_depIdxs = []int32{
 	68, // 3: user.GetSystemNotificationsResponse.systemNotifications:type_name -> user.SystemNotification
 	75, // 4: user.RecordNoticeResponse.notice:type_name -> user.Notice
 	0,  // 5: user.User.Ping:input_type -> user.Request
-	2,  // 6: user.User.CheckTwitterId:input_type -> user.CheckTwitterIdRequest
-	4,  // 7: user.User.CreateUser:input_type -> user.CreateUserRequest
-	6,  // 8: user.User.CreateInvite:input_type -> user.CreateInviteRequest
-	8,  // 9: user.User.CheckTodayInvite:input_type -> user.CheckTodayInviteRequest
-	10, // 10: user.User.AddUserInfo:input_type -> user.AddUserInfoRequest
-	12, // 11: user.User.QueryUser:input_type -> user.QueryUserRequest
-	20, // 12: user.User.AddAdmin:input_type -> user.AddAdminRequest
-	22, // 13: user.User.AdminLogin:input_type -> user.AdminLoginRequest
-	24, // 14: user.User.RemoveAdmin:input_type -> user.RemoveAdminRequest
-	14, // 15: user.User.AddBlackList:input_type -> user.AddBlackListRequest
-	16, // 16: user.User.QueryBlackList:input_type -> user.QueryBlackListRequest
-	18, // 17: user.User.RemoveBlackList:input_type -> user.RemoveBlackListRequest
-	26, // 18: user.User.GetHelpCategories:input_type -> user.GetHelpCategoriesRequest
-	29, // 19: user.User.CreateHelpCategory:input_type -> user.CreateHelpCategoryRequest
-	31, // 20: user.User.DeleteHelpCategory:input_type -> user.DeleteHelpCategoryRequest
-	33, // 21: user.User.EditHelpCategory:input_type -> user.EditHelpCategoryRequest
-	35, // 22: user.User.CreateHelpCategoryTranslation:input_type -> user.CreateHelpCategoryTranslationRequest
-	37, // 23: user.User.DeleteHelpCategoryTranslation:input_type -> user.DeleteHelpCategoryTranslationRequest
-	39, // 24: user.User.GetHelpCategoryTranslations:input_type -> user.GetHelpCategoryTranslationsRequest
-	61, // 25: user.User.EditHelpCategoryTranslation:input_type -> user.EditHelpCategoryTranslationRequest
-	56, // 26: user.User.GetHelpDocuments:input_type -> user.GetHelpDocumentsRequest
-	44, // 27: user.User.CreateHelpDocument:input_type -> user.CreateHelpDocumentRequest
-	46, // 28: user.User.DeleteHelpDocument:input_type -> user.DeleteHelpDocumentRequest
-	48, // 29: user.User.EditHelpDocument:input_type -> user.EditHelpDocumentRequest
-	50, // 30: user.User.CreateHelpDocumentTranslation:input_type -> user.CreateHelpDocumentTranslationRequest
-	52, // 31: user.User.DeleteHelpDocumentTranslation:input_type -> user.DeleteHelpDocumentTranslationRequest
-	54, // 32: user.User.GetHelpDocumentTranslations:input_type -> user.GetHelpDocumentTranslationsRequest
-	59, // 33: user.User.EditHelpDocumentTranslation:input_type -> user.EditHelpDocumentTranslationRequest
-	63, // 34: user.User.CreateSystemNotification:input_type -> user.CreateSystemNotificationRequest
-	65, // 35: user.User.EditSystemNotification:input_type -> user.EditSystemNotificationRequest
-	67, // 36: user.User.GetSystemNotifications:input_type -> user.GetSystemNotificationsRequest
-	70, // 37: user.User.QuerySystemNotification:input_type -> user.QuerySystemNotificationRequest
-	72, // 38: user.User.CreateNotice:input_type -> user.CreateNoticeRequest
-	74, // 39: user.User.RecordNotice:input_type -> user.RecordNoticeRequest
-	1,  // 40: user.User.Ping:output_type -> user.Response
-	3,  // 41: user.User.CheckTwitterId:output_type -> user.CheckTwitterIdResponse
-	5,  // 42: user.User.CreateUser:output_type -> user.CreateUserResponse
-	7,  // 43: user.User.CreateInvite:output_type -> user.CreateInviteResponse
-	9,  // 44: user.User.CheckTodayInvite:output_type -> user.CheckTodayInviteResponse
-	11, // 45: user.User.AddUserInfo:output_type -> user.AddUserInfoResponse
-	13, // 46: user.User.QueryUser:output_type -> user.QueryUserResponse
-	21, // 47: user.User.AddAdmin:output_type -> user.AddAdminResponse
-	23, // 48: user.User.AdminLogin:output_type -> user.AdminLoginResponse
-	25, // 49: user.User.RemoveAdmin:output_type -> user.RemoveAdminResponse
-	15, // 50: user.User.AddBlackList:output_type -> user.AddBlackListResponse
-	17, // 51: user.User.QueryBlackList:output_type -> user.QueryBlackListResponse
-	19, // 52: user.User.RemoveBlackList:output_type -> user.RemoveBlackListResponse
-	28, // 53: user.User.GetHelpCategories:output_type -> user.GetHelpCategoriesResponse
-	30, // 54: user.User.CreateHelpCategory:output_type -> user.CreateHelpCategoryResponse
-	32, // 55: user.User.DeleteHelpCategory:output_type -> user.DeleteHelpCategoryResponse
-	34, // 56: user.User.EditHelpCategory:output_type -> user.EditHelpCategoryResponse
-	36, // 57: user.User.CreateHelpCategoryTranslation:output_type -> user.CreateHelpCategoryTranslationResponse
-	38, // 58: user.User.DeleteHelpCategoryTranslation:output_type -> user.DeleteHelpCategoryTranslationResponse
-	40, // 59: user.User.GetHelpCategoryTranslations:output_type -> user.GetHelpCategoryTranslationsResponse
-	62, // 60: user.User.EditHelpCategoryTranslation:output_type -> user.EditHelpCategoryTranslationResponse
-	57, // 61: user.User.GetHelpDocuments:output_type -> user.GetHelpDocumentsResponse
-	45, // 62: user.User.CreateHelpDocument:output_type -> user.CreateHelpDocumentResponse
-	47, // 63: user.User.DeleteHelpDocument:output_type -> user.DeleteHelpDocumentResponse
-	49, // 64: user.User.EditHelpDocument:output_type -> user.EditHelpDocumentResponse
-	51, // 65: user.User.CreateHelpDocumentTranslation:output_type -> user.CreateHelpDocumentTranslationResponse
-	53, // 66: user.User.DeleteHelpDocumentTranslation:output_type -> user.DeleteHelpDocumentTranslationResponse
-	55, // 67: user.User.GetHelpDocumentTranslations:output_type -> user.GetHelpDocumentTranslationsResponse
-	60, // 68: user.User.EditHelpDocumentTranslation:output_type -> user.EditHelpDocumentTranslationResponse
-	64, // 69: user.User.CreateSystemNotification:output_type -> user.CreateSystemNotificationResponse
-	66, // 70: user.User.EditSystemNotification:output_type -> user.EditSystemNotificationResponse
-	69, // 71: user.User.GetSystemNotifications:output_type -> user.GetSystemNotificationsResponse
-	71, // 72: user.User.QuerySystemNotification:output_type -> user.QuerySystemNotificationResponse
-	73, // 73: user.User.CreateNotice:output_type -> user.CreateNoticeResponse
-	76, // 74: user.User.RecordNotice:output_type -> user.RecordNoticeResponse
-	40, // [40:75] is the sub-list for method output_type
-	5,  // [5:40] is the sub-list for method input_type
+	0,  // 6: user.User.RegisterCount:input_type -> user.Request
+	0,  // 7: user.User.OnlineCount:input_type -> user.Request
+	2,  // 8: user.User.CheckTwitterId:input_type -> user.CheckTwitterIdRequest
+	4,  // 9: user.User.CreateUser:input_type -> user.CreateUserRequest
+	6,  // 10: user.User.CreateInvite:input_type -> user.CreateInviteRequest
+	8,  // 11: user.User.CheckTodayInvite:input_type -> user.CheckTodayInviteRequest
+	10, // 12: user.User.AddUserInfo:input_type -> user.AddUserInfoRequest
+	12, // 13: user.User.QueryUser:input_type -> user.QueryUserRequest
+	20, // 14: user.User.AddAdmin:input_type -> user.AddAdminRequest
+	22, // 15: user.User.AdminLogin:input_type -> user.AdminLoginRequest
+	24, // 16: user.User.RemoveAdmin:input_type -> user.RemoveAdminRequest
+	14, // 17: user.User.AddBlackList:input_type -> user.AddBlackListRequest
+	16, // 18: user.User.QueryBlackList:input_type -> user.QueryBlackListRequest
+	18, // 19: user.User.RemoveBlackList:input_type -> user.RemoveBlackListRequest
+	26, // 20: user.User.GetHelpCategories:input_type -> user.GetHelpCategoriesRequest
+	29, // 21: user.User.CreateHelpCategory:input_type -> user.CreateHelpCategoryRequest
+	31, // 22: user.User.DeleteHelpCategory:input_type -> user.DeleteHelpCategoryRequest
+	33, // 23: user.User.EditHelpCategory:input_type -> user.EditHelpCategoryRequest
+	35, // 24: user.User.CreateHelpCategoryTranslation:input_type -> user.CreateHelpCategoryTranslationRequest
+	37, // 25: user.User.DeleteHelpCategoryTranslation:input_type -> user.DeleteHelpCategoryTranslationRequest
+	39, // 26: user.User.GetHelpCategoryTranslations:input_type -> user.GetHelpCategoryTranslationsRequest
+	61, // 27: user.User.EditHelpCategoryTranslation:input_type -> user.EditHelpCategoryTranslationRequest
+	56, // 28: user.User.GetHelpDocuments:input_type -> user.GetHelpDocumentsRequest
+	44, // 29: user.User.CreateHelpDocument:input_type -> user.CreateHelpDocumentRequest
+	46, // 30: user.User.DeleteHelpDocument:input_type -> user.DeleteHelpDocumentRequest
+	48, // 31: user.User.EditHelpDocument:input_type -> user.EditHelpDocumentRequest
+	50, // 32: user.User.CreateHelpDocumentTranslation:input_type -> user.CreateHelpDocumentTranslationRequest
+	52, // 33: user.User.DeleteHelpDocumentTranslation:input_type -> user.DeleteHelpDocumentTranslationRequest
+	54, // 34: user.User.GetHelpDocumentTranslations:input_type -> user.GetHelpDocumentTranslationsRequest
+	59, // 35: user.User.EditHelpDocumentTranslation:input_type -> user.EditHelpDocumentTranslationRequest
+	63, // 36: user.User.CreateSystemNotification:input_type -> user.CreateSystemNotificationRequest
+	65, // 37: user.User.EditSystemNotification:input_type -> user.EditSystemNotificationRequest
+	67, // 38: user.User.GetSystemNotifications:input_type -> user.GetSystemNotificationsRequest
+	70, // 39: user.User.QuerySystemNotification:input_type -> user.QuerySystemNotificationRequest
+	72, // 40: user.User.CreateNotice:input_type -> user.CreateNoticeRequest
+	74, // 41: user.User.RecordNotice:input_type -> user.RecordNoticeRequest
+	77, // 42: user.User.QueryRecordNotice:input_type -> user.QueryRecordNoticeRequest
+	81, // 43: user.User.CreateNotification:input_type -> user.CreateNotificationRequest
+	83, // 44: user.User.GetUserNotifications:input_type -> user.GetUserNotificationsRequest
+	1,  // 45: user.User.Ping:output_type -> user.Response
+	79, // 46: user.User.RegisterCount:output_type -> user.RegisterCountResponse
+	80, // 47: user.User.OnlineCount:output_type -> user.OnlineCountResponse
+	3,  // 48: user.User.CheckTwitterId:output_type -> user.CheckTwitterIdResponse
+	5,  // 49: user.User.CreateUser:output_type -> user.CreateUserResponse
+	7,  // 50: user.User.CreateInvite:output_type -> user.CreateInviteResponse
+	9,  // 51: user.User.CheckTodayInvite:output_type -> user.CheckTodayInviteResponse
+	11, // 52: user.User.AddUserInfo:output_type -> user.AddUserInfoResponse
+	13, // 53: user.User.QueryUser:output_type -> user.QueryUserResponse
+	21, // 54: user.User.AddAdmin:output_type -> user.AddAdminResponse
+	23, // 55: user.User.AdminLogin:output_type -> user.AdminLoginResponse
+	25, // 56: user.User.RemoveAdmin:output_type -> user.RemoveAdminResponse
+	15, // 57: user.User.AddBlackList:output_type -> user.AddBlackListResponse
+	17, // 58: user.User.QueryBlackList:output_type -> user.QueryBlackListResponse
+	19, // 59: user.User.RemoveBlackList:output_type -> user.RemoveBlackListResponse
+	28, // 60: user.User.GetHelpCategories:output_type -> user.GetHelpCategoriesResponse
+	30, // 61: user.User.CreateHelpCategory:output_type -> user.CreateHelpCategoryResponse
+	32, // 62: user.User.DeleteHelpCategory:output_type -> user.DeleteHelpCategoryResponse
+	34, // 63: user.User.EditHelpCategory:output_type -> user.EditHelpCategoryResponse
+	36, // 64: user.User.CreateHelpCategoryTranslation:output_type -> user.CreateHelpCategoryTranslationResponse
+	38, // 65: user.User.DeleteHelpCategoryTranslation:output_type -> user.DeleteHelpCategoryTranslationResponse
+	40, // 66: user.User.GetHelpCategoryTranslations:output_type -> user.GetHelpCategoryTranslationsResponse
+	62, // 67: user.User.EditHelpCategoryTranslation:output_type -> user.EditHelpCategoryTranslationResponse
+	57, // 68: user.User.GetHelpDocuments:output_type -> user.GetHelpDocumentsResponse
+	45, // 69: user.User.CreateHelpDocument:output_type -> user.CreateHelpDocumentResponse
+	47, // 70: user.User.DeleteHelpDocument:output_type -> user.DeleteHelpDocumentResponse
+	49, // 71: user.User.EditHelpDocument:output_type -> user.EditHelpDocumentResponse
+	51, // 72: user.User.CreateHelpDocumentTranslation:output_type -> user.CreateHelpDocumentTranslationResponse
+	53, // 73: user.User.DeleteHelpDocumentTranslation:output_type -> user.DeleteHelpDocumentTranslationResponse
+	55, // 74: user.User.GetHelpDocumentTranslations:output_type -> user.GetHelpDocumentTranslationsResponse
+	60, // 75: user.User.EditHelpDocumentTranslation:output_type -> user.EditHelpDocumentTranslationResponse
+	64, // 76: user.User.CreateSystemNotification:output_type -> user.CreateSystemNotificationResponse
+	66, // 77: user.User.EditSystemNotification:output_type -> user.EditSystemNotificationResponse
+	69, // 78: user.User.GetSystemNotifications:output_type -> user.GetSystemNotificationsResponse
+	71, // 79: user.User.QuerySystemNotification:output_type -> user.QuerySystemNotificationResponse
+	73, // 80: user.User.CreateNotice:output_type -> user.CreateNoticeResponse
+	76, // 81: user.User.RecordNotice:output_type -> user.RecordNoticeResponse
+	78, // 82: user.User.QueryRecordNotice:output_type -> user.QueryRecordNoticeResponse
+	82, // 83: user.User.CreateNotification:output_type -> user.CreateNotificationResponse
+	84, // 84: user.User.GetUserNotifications:output_type -> user.GetUserNotificationsResponse
+	45, // [45:85] is the sub-list for method output_type
+	5,  // [5:45] is the sub-list for method input_type
 	5,  // [5:5] is the sub-list for extension type_name
 	5,  // [5:5] is the sub-list for extension extendee
 	0,  // [0:5] is the sub-list for field type_name
@@ -6155,6 +6672,102 @@ func file_user_proto_init() {
 				return nil
 			}
 		}
+		file_user_proto_msgTypes[77].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*QueryRecordNoticeRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_user_proto_msgTypes[78].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*QueryRecordNoticeResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_user_proto_msgTypes[79].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*RegisterCountResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_user_proto_msgTypes[80].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*OnlineCountResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_user_proto_msgTypes[81].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*CreateNotificationRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_user_proto_msgTypes[82].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*CreateNotificationResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_user_proto_msgTypes[83].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetUserNotificationsRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_user_proto_msgTypes[84].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetUserNotificationsResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -6162,7 +6775,7 @@ func file_user_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_user_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   77,
+			NumMessages:   85,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

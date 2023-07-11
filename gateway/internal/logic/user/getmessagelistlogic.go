@@ -90,6 +90,7 @@ func (l *GetMessageListLogic) GetMessageList(req *types.GetMessageList) (resp *t
 		} else {
 			// 如果是用户通知
 			Notice = notice.UserNoticeId
+
 		}
 	}
 
