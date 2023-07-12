@@ -2,6 +2,7 @@ package admin
 
 import (
 	"context"
+	"gateway/userclient"
 
 	"gateway/internal/svc"
 	"gateway/internal/types"
@@ -26,6 +27,9 @@ func NewGetRegisteredPopulationLogic(ctx context.Context, svcCtx *svc.ServiceCon
 // GetRegisteredPopulation 获取注册人数
 func (l *GetRegisteredPopulationLogic) GetRegisteredPopulation() (resp *types.RegisteredPopulationReply, err error) {
 	// todo: add your logic here and delete this line
-
-	return &types.RegisteredPopulationReply{RegisteredPopulation: 0}, nil
+	RegisteredPopulation, err := l.svcCtx.UserRpcClient.RegisterCount(l.ctx, &userclient.Request{Ping: "ping"})
+	if err != nil {
+		return nil, err
+	}
+	return &types.RegisteredPopulationReply{RegisteredPopulation: RegisteredPopulation.Count}, nil
 }

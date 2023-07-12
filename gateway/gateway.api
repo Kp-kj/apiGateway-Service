@@ -200,7 +200,8 @@ type GetMessageListReply {
 
 //GetMessageByNoticeId
 type GetMessageByNoticeId {
-	NoticeId int64 `json:"noticeId"` //通知id
+	NoticeId   int64 `json:"noticeId"`   //通知id
+	NoticeType int64 `json:"noticeType"` //通知类型 1:系统通知 2:用户通知
 }
 
 //AddCategory
@@ -239,6 +240,89 @@ type EditNotice {
 
 type EditNoticeReply {
 	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+//EditCategory
+type EditCategory {
+	CategoryId     int64  `json:"categoryId"`     //分类id
+	CategoryNameZh string `json:"categoryName"`   //分类名称
+	CategoryNameEn string `json:"categoryNameEn"` //分类名称
+}
+
+//EditCategoryReply
+type EditCategoryReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+//BatchDeleteCategory 批量删除分类
+type BatchDeleteCategory {
+	CategoryIds []int64 `json:"categoryIds"` //分类id
+}
+
+//BatchDeleteCategoryReply
+type BatchDeleteCategoryReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+//CategorylistStatus 批量编辑分类状态
+type CategorylistStatus {
+	CategoryIds []int64 `json:"categoryIds"` //分类id
+	Status      int64   `json:"status"`      //分类状态
+}
+
+//CategorylistStatusReply
+type CategorylistStatusReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+//EditDocumentContent
+type EditDocumentContent {
+	HelpCategoryId int64  `json:"helpCategoryId"` //帮助文档id
+	Helpdocumentid int64  `json:"helpdocumentid"` //帮助文档id
+	ContentZh      string `json:"contentZh"`      //内容
+	ContentEn      string `json:"contentEn"`      //内容
+	TitleZh        string `json:"titleZh"`        //标题
+	TitleEn        string `json:"titleEn"`        //标题
+
+}
+//EditDocumentContentReply
+type EditDocumentContentReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+//DocumentContentlistStatus
+type DocumentContentlistStatus {
+	Helpdocumentids []int64 `json:"helpdocumentids"` //帮助文档id
+	Status          int64   `json:"status"`          //帮助文档状态
+}
+
+//DocumentContentlistStatusReply
+type DocumentContentlistStatusReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+//BatchDeleteDocumentContent
+type BatchDeleteDocumentContent {
+	Helpdocumentids []int64 `json:"helpdocumentids"` //帮助文档id
+}
+
+//BatchDeleteDocumentContentReply
+type BatchDeleteDocumentContentReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+//GetCategoryListByCondition
+type GetCategoryListByCondition {
+	CategoryName string `json:"categoryName"`
+	IsShow bool `json:"isShow"`
+	LastId int64 `json:"lastId"`
+}
+
+//GetCategoryListByConditionReply
+type GetCategoryListByConditionReply {
+	HelpCategoryList []HelpCategoryList `json:"helpCategoryList"`
+	TotalCount int64 `json:"totalCount"`//这次返回的数据总共有多少条
+	TotalPage        int64              `json:"totalPage"`  //总页数
 }
 
 // 下面是用户接口，需要鉴权
@@ -333,7 +417,7 @@ service gateway-api {
 	//	@handler deleteNotice
 	//	post /admin/deleteNotice (DeleteNotice) returns (DeleteNoticeReply)
 	
-	//    @doc "查看公告详情"
+	//	@doc "查看公告详情"
 	//	@handler getNotice
 	//	post /admin/getNotice (GetNotice) returns (GetNoticeReply)
 	
@@ -342,33 +426,39 @@ service gateway-api {
 	@handler addCategory
 	post /admin/addCategory (AddCategory) returns (AddCategoryReply)
 	
-	//	@doc "批量删除分类"
-	//	@handler batchDeleteCategory
-	//	post /admin/batchDeleteCategory (BatchDeleteCategory) returns (BatchDeleteCategoryReply)
+	//  TODO:7.11 全部解决掉
 	
-	//	@doc "按条件筛选分类的问答列表"
-	//	@handler getCategoryListByCondition
-	//	post /admin/getCategoryListByCondition (GetCategoryListByCondition) returns (GetCategoryListByConditionReply)
+	@doc "新建编辑分类问答"
+	@handler editCategory
+	post /admin/editCategory (EditCategory) returns (EditCategoryReply)   //完成
 	
-	//	@doc "批量更改分类的发布状态"
-	//	@handler categorylistStatus
-	//	post /admin/categorylistStatus (CategorylistStatus) returns (CategorylistStatusReply)
+	@doc "批量删除分类"
+	@handler batchDeleteCategory
+	post /admin/batchDeleteCategory (BatchDeleteCategory) returns (BatchDeleteCategoryReply)
 	
-	//	@doc "新建编辑分类问答"
-	//	@handler editCategory
-	//	post /admin/editCategory (EditCategory) returns (EditCategoryReply)
+	@doc "批量更改分类的发布状态"
+	@handler categorylistStatus
+	post /admin/categorylistStatus (CategorylistStatus) returns (CategorylistStatusReply)
+	
+	@doc "新建编辑分类问答"
+	@handler editDocumentContent
+	post /admin/editDocumentContent (EditDocumentContent) returns (EditDocumentContentReply)
+	
+	@doc "批量更改分类问答的发布状态"
+	@handler documentContentlistStatus
+	post /admin/documentContentlistStatus (DocumentContentlistStatus) returns (DocumentContentlistStatusReply)
+	
+	@doc "批量删除分类问答"
+	@handler batchDeleteDocumentContent
+	post /admin/batchDeleteDocumentContent (BatchDeleteDocumentContent) returns (BatchDeleteDocumentContentReply)
+	
+	@doc "按条件筛选分类的问答列表"
+	@handler getCategoryListByCondition
+	post /admin/getCategoryListByCondition (GetCategoryListByCondition) returns (GetCategoryListByConditionReply)
 	
 	//	@doc "按条件筛选分类问答列表"
 	//	@handler getDocumentContentListByCondition
 	//	post /admin/getDocumentContentListByCondition (GetDocumentContentListByCondition) returns (GetDocumentContentListByConditionReply)
-	
-	//	@doc "批量更改分类问答的发布状态"
-	//	@handler documentContentlistStatus
-	//	post /admin/documentContentlistStatus (DocumentContentlistStatus) returns (DocumentContentlistStatusReply)
-	
-	//	@doc "批量删除分类问答"
-	//	@handler batchDeleteCategory
-	//	post /admin/batchDeleteCategory (BatchDeleteCategory) returns (BatchDeleteCategoryReply)
 	
 }
 

@@ -147,6 +147,36 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Path:    "/admin/addCategory",
 				Handler: admin.AddCategoryHandler(serverCtx),
 			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/editCategory",
+				Handler: admin.EditCategoryHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/batchDeleteCategory",
+				Handler: admin.BatchDeleteCategoryHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/categorylistStatus",
+				Handler: admin.CategorylistStatusHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/editDocumentContent",
+				Handler: admin.EditDocumentContentHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/documentContentlistStatus",
+				Handler: admin.DocumentContentlistStatusHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/batchDeleteDocumentContent",
+				Handler: admin.BatchDeleteDocumentContentHandler(serverCtx),
+			},
 		},
 		rest.WithJwt(serverCtx.Config.AdminAuth.AccessSecret),
 		rest.WithPrefix("/v1"),
