@@ -219,17 +219,27 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				{
 					Method:  http.MethodPost,
 					Path:    "/curatorial/label/list",
-					Handler: curatorial.GetLabelListHandler(serverCtx),
+					Handler: curatorial.QueryLabelListHandler(serverCtx),
 				},
 				{
 					Method:  http.MethodPost,
-					Path:    "/curatorial/verify",
-					Handler: curatorial.PerformTaskHandler(serverCtx),
+					Path:    "/curatorial/ping",
+					Handler: curatorial.PingHandler(serverCtx),
 				},
 				{
 					Method:  http.MethodPost,
-					Path:    "/curatorial/voluntarily",
-					Handler: curatorial.VoluntarilyTaskScheduleHandler(serverCtx),
+					Path:    "/curatorial/participating",
+					Handler: curatorial.ParticipatingTaskHandler(serverCtx),
+				},
+				{
+					Method:  http.MethodPost,
+					Path:    "/curatorial/call",
+					Handler: curatorial.TaskCallHandler(serverCtx),
+				},
+				{
+					Method:  http.MethodPost,
+					Path:    "/curatorial/call/sessage",
+					Handler: curatorial.CallSkipMessageHandler(serverCtx),
 				},
 			}...,
 		),
@@ -241,41 +251,6 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 		rest.WithMiddlewares(
 			[]rest.Middleware{serverCtx.BlackMiddleware},
 			[]rest.Route{
-				{
-					Method:  http.MethodPost,
-					Path:    "/everyday/treasure/amend",
-					Handler: everyday.AmendTreasureTaskHandler(serverCtx),
-				},
-				{
-					Method:  http.MethodPost,
-					Path:    "/everyday/treasure/change",
-					Handler: everyday.ChangeTreasureTaskHandler(serverCtx),
-				},
-				{
-					Method:  http.MethodPost,
-					Path:    "/everyday/treasure/list",
-					Handler: everyday.QueryTreasureTaskListHandler(serverCtx),
-				},
-				{
-					Method:  http.MethodPost,
-					Path:    "/everyday/subtask/list",
-					Handler: everyday.QuerySubtaskStyleHandler(serverCtx),
-				},
-				{
-					Method:  http.MethodPost,
-					Path:    "/everyday/subtask/amend",
-					Handler: everyday.AmendAssociatedSubtaskHandler(serverCtx),
-				},
-				{
-					Method:  http.MethodPost,
-					Path:    "/everyday/subtask/delete",
-					Handler: everyday.DeleteAssociatedSubtaskHandler(serverCtx),
-				},
-				{
-					Method:  http.MethodPost,
-					Path:    "/everyday/subtask/treasureId",
-					Handler: everyday.QueryAssociatedSubtaskHandler(serverCtx),
-				},
 				{
 					Method:  http.MethodPost,
 					Path:    "/everyday/chest/amemd",
@@ -293,12 +268,69 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				},
 				{
 					Method:  http.MethodPost,
-					Path:    "/everyday/subtask/create",
-					Handler: everyday.CreateSubtaskStyleHandler(serverCtx),
+					Path:    "/everyday/assistance/create",
+					Handler: everyday.CreateAssistanceTaskHandler(serverCtx),
+				},
+				{
+					Method:  http.MethodPost,
+					Path:    "/everyday/assistance/query",
+					Handler: everyday.QueryAssistanceTaskHandler(serverCtx),
+				},
+				{
+					Method:  http.MethodPost,
+					Path:    "/everyday/subtask/treasure",
+					Handler: everyday.QueryAssociatedSubtaskPcHandler(serverCtx),
 				},
 			}...,
 		),
 		rest.WithJwt(serverCtx.Config.Auth.AccessSecret),
+		rest.WithPrefix("/v1"),
+	)
+
+	server.AddRoutes(
+		[]rest.Route{
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/treasure/amend",
+				Handler: admin.AmendTreasureTaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/treasure/change",
+				Handler: admin.ChangeTreasureTaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/treasure/list",
+				Handler: admin.QueryTreasureTaskListHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/subtask/list",
+				Handler: admin.QuerySubtaskStyleHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/subtask/amend",
+				Handler: admin.AmendAssociatedSubtaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/subtask/delete",
+				Handler: admin.DeleteAssociatedSubtaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/subtask/treasureId",
+				Handler: admin.QueryAssociatedSubtaskHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/everyday/subtask/create",
+				Handler: admin.CreateSubtaskStyleHandler(serverCtx),
+			},
+		},
+		rest.WithJwt(serverCtx.Config.AdminAuth.AccessSecret),
 		rest.WithPrefix("/v1"),
 	)
 

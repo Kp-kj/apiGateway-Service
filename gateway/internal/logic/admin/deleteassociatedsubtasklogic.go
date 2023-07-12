@@ -1,4 +1,4 @@
-package everyday
+package admin
 
 import (
 	"context"
@@ -24,7 +24,8 @@ func NewDeleteAssociatedSubtaskLogic(ctx context.Context, svcCtx *svc.ServiceCon
 	}
 }
 
+// DeleteAssociatedSubtask 删除管理子任务
 func (l *DeleteAssociatedSubtaskLogic) DeleteAssociatedSubtask(req *types.TaskIDInquireInput) (resp *types.Mistake, err error) {
-	err1, err := l.svcCtx.TaskClient.DeleteAssociatedSubtask(l.ctx, &taskclient.TaskIDInquireInput{Id: req.Id})
+	err1, err := l.svcCtx.TaskClient.DeleteAssociatedSubtask(l.ctx, &taskclient.TaskIDInquireInput{TaskId: req.TaskId})
 	return &types.Mistake{Msg: err1.Msg}, err
 }

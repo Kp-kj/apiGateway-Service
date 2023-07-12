@@ -57,7 +57,7 @@ func (l *QueryChestCollectionLogic) QueryChestCollection(req *types.UserIDInquir
 		})
 	}
 	return &types.ReChestCollectionSrt{
-		SerId:                 data.SerId,
+		UserId:                data.UserId,
 		DemandIntegral:        data.DemandIntegral,
 		ChestAmount:           data.ChestAmount,
 		RewardQuantity:        data.RewardQuantity,

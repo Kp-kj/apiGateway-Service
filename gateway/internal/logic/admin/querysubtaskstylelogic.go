@@ -1,7 +1,8 @@
-package everyday
+package admin
 
 import (
 	"context"
+	"fmt"
 	"gateway/taskclient"
 
 	"gateway/internal/svc"
@@ -24,8 +25,14 @@ func NewQuerySubtaskStyleLogic(ctx context.Context, svcCtx *svc.ServiceContext) 
 	}
 }
 
+// QuerySubtaskStyle 查询子任务样式列表
 func (l *QuerySubtaskStyleLogic) QuerySubtaskStyle(req *types.TaskIDInquireInput) (resp *types.ReSubtaskStyle, err error) {
-	data, err := l.svcCtx.TaskClient.QuerySubtaskStyle(l.ctx, &taskclient.TaskIDInquireInput{Id: req.Id})
+	fmt.Printf("!1111111111111111111111\n")
+	data, err := l.svcCtx.TaskClient.QuerySubtaskStyle(l.ctx, &taskclient.TaskIDInquireInput{TaskId: req.TaskId})
+	if err != nil {
+		fmt.Printf("22222222:%v\n", err)
+		return nil, err
+	}
 	var subtaskStyle []*types.SubtaskStyle
 	for _, item := range data.SubtaskStyle {
 		subtaskStyle = append(subtaskStyle, &types.SubtaskStyle{

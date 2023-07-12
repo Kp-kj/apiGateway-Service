@@ -17,15 +17,17 @@ type (
 	AssociatedSubtask                       = task.AssociatedSubtask
 	AssociatedSubtaskSeed                   = task.AssociatedSubtaskSeed
 	AssociatedSubtaskSrt                    = task.AssociatedSubtaskSrt
+	CompleteDailyTasksInput                 = task.CompleteDailyTasksInput
 	CreateLabelInput                        = task.CreateLabelInput
 	CreatePublishTaskInput                  = task.CreatePublishTaskInput
 	CreateUserPowerTaskInput                = task.CreateUserPowerTaskInput
 	CreateUserPublishingAssistanceTaskInput = task.CreateUserPublishingAssistanceTaskInput
-	DetermineWhetherTaskComplete            = task.DetermineWhetherTaskComplete
+	LabelInput                              = task.LabelInput
 	Mistake                                 = task.Mistake
 	PaginationData                          = task.PaginationData
 	ParticipantBak                          = task.ParticipantBak
-	PerformTaskInput                        = task.PerformTaskInput
+	ParticipatingTaskInput                  = task.ParticipatingTaskInput
+	PersonalList                            = task.PersonalList
 	PublishTaskInput                        = task.PublishTaskInput
 	ReAssociatedSubtask                     = task.ReAssociatedSubtask
 	ReChestCollectionSrt                    = task.ReChestCollectionSrt
@@ -37,8 +39,7 @@ type (
 	ReTaskDetails                           = task.ReTaskDetails
 	ReTreasureTaskSrt                       = task.ReTreasureTaskSrt
 	SubtaskStyle                            = task.SubtaskStyle
-	TaskDemand                              = task.TaskDemand
-	TaskDemandBak                           = task.TaskDemandBak
+	TaskCallInput                           = task.TaskCallInput
 	TaskDetailsInput                        = task.TaskDetailsInput
 	TaskIDInquireInput                      = task.TaskIDInquireInput
 	TreasureTaskInput                       = task.TreasureTaskInput
@@ -47,21 +48,22 @@ type (
 	TreasureTaskStage                       = task.TreasureTaskStage
 	TreasureTaskStageSeed                   = task.TreasureTaskStageSeed
 	UserIDInquireInput                      = task.UserIDInquireInput
+	UserLaunchTaskList                      = task.UserLaunchTaskList
 	UserLaunchTaskListInput                 = task.UserLaunchTaskListInput
 	UserPublishingAssistanceTask            = task.UserPublishingAssistanceTask
-	VoluntarilyTaskScheduleInput            = task.VoluntarilyTaskScheduleInput
 
 	Task interface {
 		// 策展任务相关
 		CreateCuratorialTask(ctx context.Context, in *CreatePublishTaskInput, opts ...grpc.CallOption) (*Mistake, error)
 		QueryTaskList(ctx context.Context, in *PublishTaskInput, opts ...grpc.CallOption) (*RePublishTask, error)
 		QueryTaskDetails(ctx context.Context, in *TaskDetailsInput, opts ...grpc.CallOption) (*ReTaskDetails, error)
-		QueryUserLaunchTaskList(ctx context.Context, in *UserLaunchTaskListInput, opts ...grpc.CallOption) (*RePublishTask, error)
+		QueryUserLaunchTaskList(ctx context.Context, in *UserLaunchTaskListInput, opts ...grpc.CallOption) (*UserLaunchTaskList, error)
 		CreateLabel(ctx context.Context, in *CreateLabelInput, opts ...grpc.CallOption) (*Mistake, error)
-		DeleteLabel(ctx context.Context, in *TaskIDInquireInput, opts ...grpc.CallOption) (*Mistake, error)
+		DeleteLabel(ctx context.Context, in *LabelInput, opts ...grpc.CallOption) (*Mistake, error)
 		QueryLabelList(ctx context.Context, in *UserIDInquireInput, opts ...grpc.CallOption) (*ReLabelListOut, error)
-		PerformTask(ctx context.Context, in *PerformTaskInput, opts ...grpc.CallOption) (*Mistake, error)
-		VoluntarilyTaskSchedule(ctx context.Context, in *VoluntarilyTaskScheduleInput, opts ...grpc.CallOption) (*Mistake, error)
+		ParticipatingTask(ctx context.Context, in *ParticipatingTaskInput, opts ...grpc.CallOption) (*Mistake, error)
+		TaskCall(ctx context.Context, in *TaskCallInput, opts ...grpc.CallOption) (*TaskIDInquireInput, error)
+		CallSkipMessage(ctx context.Context, in *TaskCallInput, opts ...grpc.CallOption) (*ReTaskDetails, error)
 		// 每日任务
 		AmendTreasureTask(ctx context.Context, in *TreasureTaskSrtInput, opts ...grpc.CallOption) (*Mistake, error)
 		ChangeTreasureTask(ctx context.Context, in *TreasureTaskInput, opts ...grpc.CallOption) (*Mistake, error)
@@ -77,6 +79,7 @@ type (
 		CreateAssistanceTask(ctx context.Context, in *CreateUserPublishingAssistanceTaskInput, opts ...grpc.CallOption) (*Mistake, error)
 		QueryAssistanceTask(ctx context.Context, in *UserIDInquireInput, opts ...grpc.CallOption) (*UserPublishingAssistanceTask, error)
 		Ping(ctx context.Context, in *TaskIDInquireInput, opts ...grpc.CallOption) (*Mistake, error)
+		CompleteDailyTasks(ctx context.Context, in *CompleteDailyTasksInput, opts ...grpc.CallOption) (*Mistake, error)
 	}
 
 	defaultTask struct {
@@ -106,7 +109,7 @@ func (m *defaultTask) QueryTaskDetails(ctx context.Context, in *TaskDetailsInput
 	return client.QueryTaskDetails(ctx, in, opts...)
 }
 
-func (m *defaultTask) QueryUserLaunchTaskList(ctx context.Context, in *UserLaunchTaskListInput, opts ...grpc.CallOption) (*RePublishTask, error) {
+func (m *defaultTask) QueryUserLaunchTaskList(ctx context.Context, in *UserLaunchTaskListInput, opts ...grpc.CallOption) (*UserLaunchTaskList, error) {
 	client := task.NewTaskClient(m.cli.Conn())
 	return client.QueryUserLaunchTaskList(ctx, in, opts...)
 }
@@ -116,7 +119,7 @@ func (m *defaultTask) CreateLabel(ctx context.Context, in *CreateLabelInput, opt
 	return client.CreateLabel(ctx, in, opts...)
 }
 
-func (m *defaultTask) DeleteLabel(ctx context.Context, in *TaskIDInquireInput, opts ...grpc.CallOption) (*Mistake, error) {
+func (m *defaultTask) DeleteLabel(ctx context.Context, in *LabelInput, opts ...grpc.CallOption) (*Mistake, error) {
 	client := task.NewTaskClient(m.cli.Conn())
 	return client.DeleteLabel(ctx, in, opts...)
 }
@@ -126,14 +129,19 @@ func (m *defaultTask) QueryLabelList(ctx context.Context, in *UserIDInquireInput
 	return client.QueryLabelList(ctx, in, opts...)
 }
 
-func (m *defaultTask) PerformTask(ctx context.Context, in *PerformTaskInput, opts ...grpc.CallOption) (*Mistake, error) {
+func (m *defaultTask) ParticipatingTask(ctx context.Context, in *ParticipatingTaskInput, opts ...grpc.CallOption) (*Mistake, error) {
 	client := task.NewTaskClient(m.cli.Conn())
-	return client.PerformTask(ctx, in, opts...)
+	return client.ParticipatingTask(ctx, in, opts...)
 }
 
-func (m *defaultTask) VoluntarilyTaskSchedule(ctx context.Context, in *VoluntarilyTaskScheduleInput, opts ...grpc.CallOption) (*Mistake, error) {
+func (m *defaultTask) TaskCall(ctx context.Context, in *TaskCallInput, opts ...grpc.CallOption) (*TaskIDInquireInput, error) {
 	client := task.NewTaskClient(m.cli.Conn())
-	return client.VoluntarilyTaskSchedule(ctx, in, opts...)
+	return client.TaskCall(ctx, in, opts...)
+}
+
+func (m *defaultTask) CallSkipMessage(ctx context.Context, in *TaskCallInput, opts ...grpc.CallOption) (*ReTaskDetails, error) {
+	client := task.NewTaskClient(m.cli.Conn())
+	return client.CallSkipMessage(ctx, in, opts...)
 }
 
 // 每日任务
@@ -205,4 +213,9 @@ func (m *defaultTask) QueryAssistanceTask(ctx context.Context, in *UserIDInquire
 func (m *defaultTask) Ping(ctx context.Context, in *TaskIDInquireInput, opts ...grpc.CallOption) (*Mistake, error) {
 	client := task.NewTaskClient(m.cli.Conn())
 	return client.Ping(ctx, in, opts...)
+}
+
+func (m *defaultTask) CompleteDailyTasks(ctx context.Context, in *CompleteDailyTasksInput, opts ...grpc.CallOption) (*Mistake, error) {
+	client := task.NewTaskClient(m.cli.Conn())
+	return client.CompleteDailyTasks(ctx, in, opts...)
 }

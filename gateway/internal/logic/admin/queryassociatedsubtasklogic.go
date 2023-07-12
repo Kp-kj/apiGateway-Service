@@ -1,4 +1,4 @@
-package everyday
+package admin
 
 import (
 	"context"
@@ -26,7 +26,7 @@ func NewQueryAssociatedSubtaskLogic(ctx context.Context, svcCtx *svc.ServiceCont
 
 // QueryAssociatedSubtask 查询关联子任务
 func (l *QueryAssociatedSubtaskLogic) QueryAssociatedSubtask(req *types.TaskIDInquireInput) (resp *types.ReAssociatedSubtask, err error) {
-	data, err := l.svcCtx.TaskClient.QueryAssociatedSubtask(l.ctx, &taskclient.TaskIDInquireInput{Id: req.Id})
+	data, err := l.svcCtx.TaskClient.QueryAssociatedSubtask(l.ctx, &taskclient.TaskIDInquireInput{TaskId: req.TaskId})
 	var associatedSubtask []*types.AssociatedSubtask
 	for _, item := range data.AssociatedSubtask {
 		associatedSubtask = append(associatedSubtask, &types.AssociatedSubtask{

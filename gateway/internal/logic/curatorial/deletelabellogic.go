@@ -25,8 +25,7 @@ func NewDeleteLabelLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Delet
 }
 
 // DeleteLabel 删除标签
-func (l *DeleteLabelLogic) DeleteLabel(req *types.TaskIDInquireInput) (resp *types.Mistake, err error) {
-	err1, err := l.svcCtx.TaskClient.DeleteLabel(l.ctx, &taskclient.TaskIDInquireInput{Id: req.Id})
-
+func (l *DeleteLabelLogic) DeleteLabel(req *types.LabelInput) (resp *types.Mistake, err error) {
+	err1, err := l.svcCtx.TaskClient.DeleteLabel(l.ctx, &taskclient.LabelInput{LabelId: req.LabelId})
 	return &types.Mistake{Msg: err1.Msg}, err
 }

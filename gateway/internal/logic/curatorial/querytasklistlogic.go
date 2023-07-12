@@ -25,6 +25,7 @@ func NewQueryTaskListLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Que
 	}
 }
 
+// QueryTaskList 查询任务列表
 func (l *QueryTaskListLogic) QueryTaskList(req *types.PublishTaskInput) (resp *types.RePublishTask, err error) {
 	data, err := l.svcCtx.TaskClient.QueryTaskList(l.ctx, &taskclient.PublishTaskInput{
 		Status:   req.Status,
@@ -32,15 +33,6 @@ func (l *QueryTaskListLogic) QueryTaskList(req *types.PublishTaskInput) (resp *t
 		MaxNum:   req.MaxNum})
 	var rePublishTaskBak []*types.RePublishTaskBak
 	for _, item := range data.RePublishTaskBak {
-		var taskDemand []*types.TaskDemand
-		for _, item1 := range item.TaskDemand {
-			taskDemand = append(taskDemand, &types.TaskDemand{
-				TaskID:     uint(item1.TaskId),
-				TaskName:   int(item1.TaskName),
-				TaskDemand: item1.TaskDemand,
-				Article:    item1.Article,
-			})
-		}
 		// 获取用户信息
 		user, err := l.svcCtx.UserRpcClient.QueryUser(l.ctx, &userclient.QueryUserRequest{UserId: item.Creator})
 		if err != nil {
@@ -58,11 +50,10 @@ func (l *QueryTaskListLogic) QueryTaskList(req *types.PublishTaskInput) (resp *t
 			TweetPicture:  item.TweetPicture,
 			Label:         item.Label,
 			AwardBudget:   item.AwardBudget,
-			MaxUser:       int32(item.MaxUser),
+			MaxUser:       item.MaxUser,
 			AwardAmount:   item.AwardAmount,
 			EndTime:       item.EndTime,
-			Accomplish:    int32(item.Accomplish),
-			TaskDemand:    taskDemand,
+			Accomplish:    item.Accomplish,
 		})
 	}
 	return &types.RePublishTask{

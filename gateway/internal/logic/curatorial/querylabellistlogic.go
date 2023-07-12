@@ -24,15 +24,22 @@ func NewQueryLabelListLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Qu
 	}
 }
 
+// QueryLabelList 查询标签列表
 func (l *QueryLabelListLogic) QueryLabelList(req *types.UserIDInquireInput) (resp *types.ReLabelListOut, err error) {
-	label, err := l.svcCtx.TaskClient.QueryLabelList(l.ctx, &taskclient.UserIDInquireInput{UserId: req.UserId})
-	var labelList []*types.ReLabelList
-	for _, item := range label.ReLabelList {
-		labelList = append(labelList, &types.ReLabelList{
+	reLabelListOut, err := l.svcCtx.TaskClient.QueryLabelList(l.ctx, &taskclient.UserIDInquireInput{
+		UserId: req.UserId})
+	if err != nil {
+		return nil, err
+	}
+	var reLabelList []*types.ReLabelList
+	for _, item := range reLabelListOut.ReLabelList {
+		reLabelList = append(reLabelList, &types.ReLabelList{
 			Id:      item.Id,
 			Creator: item.Creator,
 			Content: item.Content,
 		})
 	}
-	return &types.ReLabelListOut{ReLabelList: labelList}, err
+	return &types.ReLabelListOut{
+		ReLabelList: reLabelList,
+	}, err
 }

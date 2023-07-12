@@ -1,4 +1,4 @@
-package everyday
+package admin
 
 import (
 	"context"

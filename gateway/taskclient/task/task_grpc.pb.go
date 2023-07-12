@@ -26,8 +26,9 @@ const (
 	Task_CreateLabel_FullMethodName             = "/task.Task/CreateLabel"
 	Task_DeleteLabel_FullMethodName             = "/task.Task/DeleteLabel"
 	Task_QueryLabelList_FullMethodName          = "/task.Task/QueryLabelList"
-	Task_PerformTask_FullMethodName             = "/task.Task/PerformTask"
-	Task_VoluntarilyTaskSchedule_FullMethodName = "/task.Task/VoluntarilyTaskSchedule"
+	Task_ParticipatingTask_FullMethodName       = "/task.Task/ParticipatingTask"
+	Task_TaskCall_FullMethodName                = "/task.Task/TaskCall"
+	Task_CallSkipMessage_FullMethodName         = "/task.Task/CallSkipMessage"
 	Task_AmendTreasureTask_FullMethodName       = "/task.Task/AmendTreasureTask"
 	Task_ChangeTreasureTask_FullMethodName      = "/task.Task/ChangeTreasureTask"
 	Task_QueryTreasureTaskList_FullMethodName   = "/task.Task/QueryTreasureTaskList"
@@ -42,6 +43,7 @@ const (
 	Task_CreateAssistanceTask_FullMethodName    = "/task.Task/CreateAssistanceTask"
 	Task_QueryAssistanceTask_FullMethodName     = "/task.Task/QueryAssistanceTask"
 	Task_Ping_FullMethodName                    = "/task.Task/ping"
+	Task_CompleteDailyTasks_FullMethodName      = "/task.Task/CompleteDailyTasks"
 )
 
 // TaskClient is the client API for Task service.
@@ -52,12 +54,13 @@ type TaskClient interface {
 	CreateCuratorialTask(ctx context.Context, in *CreatePublishTaskInput, opts ...grpc.CallOption) (*Mistake, error)
 	QueryTaskList(ctx context.Context, in *PublishTaskInput, opts ...grpc.CallOption) (*RePublishTask, error)
 	QueryTaskDetails(ctx context.Context, in *TaskDetailsInput, opts ...grpc.CallOption) (*ReTaskDetails, error)
-	QueryUserLaunchTaskList(ctx context.Context, in *UserLaunchTaskListInput, opts ...grpc.CallOption) (*RePublishTask, error)
+	QueryUserLaunchTaskList(ctx context.Context, in *UserLaunchTaskListInput, opts ...grpc.CallOption) (*UserLaunchTaskList, error)
 	CreateLabel(ctx context.Context, in *CreateLabelInput, opts ...grpc.CallOption) (*Mistake, error)
-	DeleteLabel(ctx context.Context, in *TaskIDInquireInput, opts ...grpc.CallOption) (*Mistake, error)
+	DeleteLabel(ctx context.Context, in *LabelInput, opts ...grpc.CallOption) (*Mistake, error)
 	QueryLabelList(ctx context.Context, in *UserIDInquireInput, opts ...grpc.CallOption) (*ReLabelListOut, error)
-	PerformTask(ctx context.Context, in *PerformTaskInput, opts ...grpc.CallOption) (*Mistake, error)
-	VoluntarilyTaskSchedule(ctx context.Context, in *VoluntarilyTaskScheduleInput, opts ...grpc.CallOption) (*Mistake, error)
+	ParticipatingTask(ctx context.Context, in *ParticipatingTaskInput, opts ...grpc.CallOption) (*Mistake, error)
+	TaskCall(ctx context.Context, in *TaskCallInput, opts ...grpc.CallOption) (*TaskIDInquireInput, error)
+	CallSkipMessage(ctx context.Context, in *TaskCallInput, opts ...grpc.CallOption) (*ReTaskDetails, error)
 	// 每日任务
 	AmendTreasureTask(ctx context.Context, in *TreasureTaskSrtInput, opts ...grpc.CallOption) (*Mistake, error)
 	ChangeTreasureTask(ctx context.Context, in *TreasureTaskInput, opts ...grpc.CallOption) (*Mistake, error)
@@ -73,6 +76,7 @@ type TaskClient interface {
 	CreateAssistanceTask(ctx context.Context, in *CreateUserPublishingAssistanceTaskInput, opts ...grpc.CallOption) (*Mistake, error)
 	QueryAssistanceTask(ctx context.Context, in *UserIDInquireInput, opts ...grpc.CallOption) (*UserPublishingAssistanceTask, error)
 	Ping(ctx context.Context, in *TaskIDInquireInput, opts ...grpc.CallOption) (*Mistake, error)
+	CompleteDailyTasks(ctx context.Context, in *CompleteDailyTasksInput, opts ...grpc.CallOption) (*Mistake, error)
 }
 
 type taskClient struct {
@@ -110,8 +114,8 @@ func (c *taskClient) QueryTaskDetails(ctx context.Context, in *TaskDetailsInput,
 	return out, nil
 }
 
-func (c *taskClient) QueryUserLaunchTaskList(ctx context.Context, in *UserLaunchTaskListInput, opts ...grpc.CallOption) (*RePublishTask, error) {
-	out := new(RePublishTask)
+func (c *taskClient) QueryUserLaunchTaskList(ctx context.Context, in *UserLaunchTaskListInput, opts ...grpc.CallOption) (*UserLaunchTaskList, error) {
+	out := new(UserLaunchTaskList)
 	err := c.cc.Invoke(ctx, Task_QueryUserLaunchTaskList_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -128,7 +132,7 @@ func (c *taskClient) CreateLabel(ctx context.Context, in *CreateLabelInput, opts
 	return out, nil
 }
 
-func (c *taskClient) DeleteLabel(ctx context.Context, in *TaskIDInquireInput, opts ...grpc.CallOption) (*Mistake, error) {
+func (c *taskClient) DeleteLabel(ctx context.Context, in *LabelInput, opts ...grpc.CallOption) (*Mistake, error) {
 	out := new(Mistake)
 	err := c.cc.Invoke(ctx, Task_DeleteLabel_FullMethodName, in, out, opts...)
 	if err != nil {
@@ -146,18 +150,27 @@ func (c *taskClient) QueryLabelList(ctx context.Context, in *UserIDInquireInput,
 	return out, nil
 }
 
-func (c *taskClient) PerformTask(ctx context.Context, in *PerformTaskInput, opts ...grpc.CallOption) (*Mistake, error) {
+func (c *taskClient) ParticipatingTask(ctx context.Context, in *ParticipatingTaskInput, opts ...grpc.CallOption) (*Mistake, error) {
 	out := new(Mistake)
-	err := c.cc.Invoke(ctx, Task_PerformTask_FullMethodName, in, out, opts...)
+	err := c.cc.Invoke(ctx, Task_ParticipatingTask_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *taskClient) VoluntarilyTaskSchedule(ctx context.Context, in *VoluntarilyTaskScheduleInput, opts ...grpc.CallOption) (*Mistake, error) {
-	out := new(Mistake)
-	err := c.cc.Invoke(ctx, Task_VoluntarilyTaskSchedule_FullMethodName, in, out, opts...)
+func (c *taskClient) TaskCall(ctx context.Context, in *TaskCallInput, opts ...grpc.CallOption) (*TaskIDInquireInput, error) {
+	out := new(TaskIDInquireInput)
+	err := c.cc.Invoke(ctx, Task_TaskCall_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *taskClient) CallSkipMessage(ctx context.Context, in *TaskCallInput, opts ...grpc.CallOption) (*ReTaskDetails, error) {
+	out := new(ReTaskDetails)
+	err := c.cc.Invoke(ctx, Task_CallSkipMessage_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -290,6 +303,15 @@ func (c *taskClient) Ping(ctx context.Context, in *TaskIDInquireInput, opts ...g
 	return out, nil
 }
 
+func (c *taskClient) CompleteDailyTasks(ctx context.Context, in *CompleteDailyTasksInput, opts ...grpc.CallOption) (*Mistake, error) {
+	out := new(Mistake)
+	err := c.cc.Invoke(ctx, Task_CompleteDailyTasks_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // TaskServer is the server API for Task service.
 // All implementations must embed UnimplementedTaskServer
 // for forward compatibility
@@ -298,12 +320,13 @@ type TaskServer interface {
 	CreateCuratorialTask(context.Context, *CreatePublishTaskInput) (*Mistake, error)
 	QueryTaskList(context.Context, *PublishTaskInput) (*RePublishTask, error)
 	QueryTaskDetails(context.Context, *TaskDetailsInput) (*ReTaskDetails, error)
-	QueryUserLaunchTaskList(context.Context, *UserLaunchTaskListInput) (*RePublishTask, error)
+	QueryUserLaunchTaskList(context.Context, *UserLaunchTaskListInput) (*UserLaunchTaskList, error)
 	CreateLabel(context.Context, *CreateLabelInput) (*Mistake, error)
-	DeleteLabel(context.Context, *TaskIDInquireInput) (*Mistake, error)
+	DeleteLabel(context.Context, *LabelInput) (*Mistake, error)
 	QueryLabelList(context.Context, *UserIDInquireInput) (*ReLabelListOut, error)
-	PerformTask(context.Context, *PerformTaskInput) (*Mistake, error)
-	VoluntarilyTaskSchedule(context.Context, *VoluntarilyTaskScheduleInput) (*Mistake, error)
+	ParticipatingTask(context.Context, *ParticipatingTaskInput) (*Mistake, error)
+	TaskCall(context.Context, *TaskCallInput) (*TaskIDInquireInput, error)
+	CallSkipMessage(context.Context, *TaskCallInput) (*ReTaskDetails, error)
 	// 每日任务
 	AmendTreasureTask(context.Context, *TreasureTaskSrtInput) (*Mistake, error)
 	ChangeTreasureTask(context.Context, *TreasureTaskInput) (*Mistake, error)
@@ -319,6 +342,7 @@ type TaskServer interface {
 	CreateAssistanceTask(context.Context, *CreateUserPublishingAssistanceTaskInput) (*Mistake, error)
 	QueryAssistanceTask(context.Context, *UserIDInquireInput) (*UserPublishingAssistanceTask, error)
 	Ping(context.Context, *TaskIDInquireInput) (*Mistake, error)
+	CompleteDailyTasks(context.Context, *CompleteDailyTasksInput) (*Mistake, error)
 	mustEmbedUnimplementedTaskServer()
 }
 
@@ -335,23 +359,26 @@ func (UnimplementedTaskServer) QueryTaskList(context.Context, *PublishTaskInput)
 func (UnimplementedTaskServer) QueryTaskDetails(context.Context, *TaskDetailsInput) (*ReTaskDetails, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method QueryTaskDetails not implemented")
 }
-func (UnimplementedTaskServer) QueryUserLaunchTaskList(context.Context, *UserLaunchTaskListInput) (*RePublishTask, error) {
+func (UnimplementedTaskServer) QueryUserLaunchTaskList(context.Context, *UserLaunchTaskListInput) (*UserLaunchTaskList, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method QueryUserLaunchTaskList not implemented")
 }
 func (UnimplementedTaskServer) CreateLabel(context.Context, *CreateLabelInput) (*Mistake, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateLabel not implemented")
 }
-func (UnimplementedTaskServer) DeleteLabel(context.Context, *TaskIDInquireInput) (*Mistake, error) {
+func (UnimplementedTaskServer) DeleteLabel(context.Context, *LabelInput) (*Mistake, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteLabel not implemented")
 }
 func (UnimplementedTaskServer) QueryLabelList(context.Context, *UserIDInquireInput) (*ReLabelListOut, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method QueryLabelList not implemented")
 }
-func (UnimplementedTaskServer) PerformTask(context.Context, *PerformTaskInput) (*Mistake, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method PerformTask not implemented")
+func (UnimplementedTaskServer) ParticipatingTask(context.Context, *ParticipatingTaskInput) (*Mistake, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ParticipatingTask not implemented")
 }
-func (UnimplementedTaskServer) VoluntarilyTaskSchedule(context.Context, *VoluntarilyTaskScheduleInput) (*Mistake, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method VoluntarilyTaskSchedule not implemented")
+func (UnimplementedTaskServer) TaskCall(context.Context, *TaskCallInput) (*TaskIDInquireInput, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method TaskCall not implemented")
+}
+func (UnimplementedTaskServer) CallSkipMessage(context.Context, *TaskCallInput) (*ReTaskDetails, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CallSkipMessage not implemented")
 }
 func (UnimplementedTaskServer) AmendTreasureTask(context.Context, *TreasureTaskSrtInput) (*Mistake, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AmendTreasureTask not implemented")
@@ -394,6 +421,9 @@ func (UnimplementedTaskServer) QueryAssistanceTask(context.Context, *UserIDInqui
 }
 func (UnimplementedTaskServer) Ping(context.Context, *TaskIDInquireInput) (*Mistake, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Ping not implemented")
+}
+func (UnimplementedTaskServer) CompleteDailyTasks(context.Context, *CompleteDailyTasksInput) (*Mistake, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CompleteDailyTasks not implemented")
 }
 func (UnimplementedTaskServer) mustEmbedUnimplementedTaskServer() {}
 
@@ -499,7 +529,7 @@ func _Task_CreateLabel_Handler(srv interface{}, ctx context.Context, dec func(in
 }
 
 func _Task_DeleteLabel_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(TaskIDInquireInput)
+	in := new(LabelInput)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -511,7 +541,7 @@ func _Task_DeleteLabel_Handler(srv interface{}, ctx context.Context, dec func(in
 		FullMethod: Task_DeleteLabel_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TaskServer).DeleteLabel(ctx, req.(*TaskIDInquireInput))
+		return srv.(TaskServer).DeleteLabel(ctx, req.(*LabelInput))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -534,38 +564,56 @@ func _Task_QueryLabelList_Handler(srv interface{}, ctx context.Context, dec func
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Task_PerformTask_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PerformTaskInput)
+func _Task_ParticipatingTask_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ParticipatingTaskInput)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(TaskServer).PerformTask(ctx, in)
+		return srv.(TaskServer).ParticipatingTask(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Task_PerformTask_FullMethodName,
+		FullMethod: Task_ParticipatingTask_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TaskServer).PerformTask(ctx, req.(*PerformTaskInput))
+		return srv.(TaskServer).ParticipatingTask(ctx, req.(*ParticipatingTaskInput))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Task_VoluntarilyTaskSchedule_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(VoluntarilyTaskScheduleInput)
+func _Task_TaskCall_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(TaskCallInput)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(TaskServer).VoluntarilyTaskSchedule(ctx, in)
+		return srv.(TaskServer).TaskCall(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Task_VoluntarilyTaskSchedule_FullMethodName,
+		FullMethod: Task_TaskCall_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TaskServer).VoluntarilyTaskSchedule(ctx, req.(*VoluntarilyTaskScheduleInput))
+		return srv.(TaskServer).TaskCall(ctx, req.(*TaskCallInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Task_CallSkipMessage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(TaskCallInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TaskServer).CallSkipMessage(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Task_CallSkipMessage_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TaskServer).CallSkipMessage(ctx, req.(*TaskCallInput))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -822,6 +870,24 @@ func _Task_Ping_Handler(srv interface{}, ctx context.Context, dec func(interface
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Task_CompleteDailyTasks_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CompleteDailyTasksInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TaskServer).CompleteDailyTasks(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Task_CompleteDailyTasks_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TaskServer).CompleteDailyTasks(ctx, req.(*CompleteDailyTasksInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // Task_ServiceDesc is the grpc.ServiceDesc for Task service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -858,12 +924,16 @@ var Task_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _Task_QueryLabelList_Handler,
 		},
 		{
-			MethodName: "PerformTask",
-			Handler:    _Task_PerformTask_Handler,
+			MethodName: "ParticipatingTask",
+			Handler:    _Task_ParticipatingTask_Handler,
 		},
 		{
-			MethodName: "VoluntarilyTaskSchedule",
-			Handler:    _Task_VoluntarilyTaskSchedule_Handler,
+			MethodName: "TaskCall",
+			Handler:    _Task_TaskCall_Handler,
+		},
+		{
+			MethodName: "CallSkipMessage",
+			Handler:    _Task_CallSkipMessage_Handler,
 		},
 		{
 			MethodName: "AmendTreasureTask",
@@ -920,6 +990,10 @@ var Task_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ping",
 			Handler:    _Task_Ping_Handler,
+		},
+		{
+			MethodName: "CompleteDailyTasks",
+			Handler:    _Task_CompleteDailyTasks_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -1,10 +1,11 @@
-package everyday
+package admin
 
 import (
 	"context"
+	"gateway/taskclient"
+
 	"gateway/internal/svc"
 	"gateway/internal/types"
-	"gateway/taskclient"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -23,9 +24,10 @@ func NewAmendAssociatedSubtaskLogic(ctx context.Context, svcCtx *svc.ServiceCont
 	}
 }
 
+// AmendAssociatedSubtask 创建关联子任务+编辑关联子任务
 func (l *AmendAssociatedSubtaskLogic) AmendAssociatedSubtask(req *types.AssociatedSubtaskSrt) (resp *types.Mistake, err error) {
 	err1, err := l.svcCtx.TaskClient.AmendAssociatedSubtask(l.ctx, &taskclient.AssociatedSubtaskSrt{
-		AssociatedId:   req.AssociatedId,
+		SubtaskId:      req.SubtaskId,
 		TaskId:         req.TaskId,
 		TreasureId:     req.TreasureId,
 		TaskName:       req.TaskName,
