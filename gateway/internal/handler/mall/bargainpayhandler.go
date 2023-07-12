@@ -9,16 +9,16 @@ import (
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
-func GetBargainRuleHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
+func BargainPayHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		var req types.GetBargainRuleInput
+		var req types.BargainPayInput
 		if err := httpx.Parse(r, &req); err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 			return
 		}
 
-		l := mall.NewGetBargainRuleLogic(r.Context(), svcCtx)
-		resp, err := l.GetBargainRule(&req)
+		l := mall.NewBargainPayLogic(r.Context(), svcCtx)
+		resp, err := l.BargainPay(&req)
 		if err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 		} else {

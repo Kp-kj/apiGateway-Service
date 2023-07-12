@@ -2,6 +2,7 @@ package mall
 
 import (
 	"context"
+	"encoding/json"
 	"gateway/blockclient"
 
 	"gateway/internal/svc"
@@ -25,9 +26,14 @@ func NewGetGoodsListLogic(ctx context.Context, svcCtx *svc.ServiceContext) *GetG
 }
 
 func (l *GetGoodsListLogic) GetGoodsList(req *types.GetGoodsListInput) (resp *types.GetGoodsListReply, err error) {
+	userId := l.ctx.Value("userId")
+	var userID int64
+	if v, ok := userId.(json.Number); ok {
+		userID, _ = v.Int64()
+	}
 
 	result, err := l.svcCtx.BlockClient.GetGoodsList(l.ctx, &blockclient.GetGoodsListRequest{
-		UserId: req.UserID,
+		UserId: userID,
 	})
 	var cryptominerList []*types.Cryptominer
 	for _, item := range result.Cryptominer {
