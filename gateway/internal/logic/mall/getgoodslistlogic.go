@@ -32,6 +32,7 @@ func (l *GetGoodsListLogic) GetGoodsList(req *types.GetGoodsListInput) (resp *ty
 	var cryptominerList []*types.Cryptominer
 	for _, item := range result.Cryptominer {
 		cryptominerList = append(cryptominerList, &types.Cryptominer{
+			UserID:              item.UserId,
 			CryptominerID:       item.CryptominerId,
 			CryptominerTypeID:   item.CryptominerTypeid,
 			CryptominerName:     item.CryptominerName,
@@ -39,6 +40,7 @@ func (l *GetGoodsListLogic) GetGoodsList(req *types.GetGoodsListInput) (resp *ty
 			CryptominerDescribe: item.CryptominerDescribe,
 			CryptominerPrice:    item.CryptominerPrice,
 			CryptominerDuration: item.CryptominerDuration,
+			CryptominerPower:    item.CryptominerPower,
 			PaymentWay:          item.PaymentWay,
 			OptionalStatus:      item.OptionalStatus,
 			IsBargain:           item.IsBargain,
@@ -48,6 +50,7 @@ func (l *GetGoodsListLogic) GetGoodsList(req *types.GetGoodsListInput) (resp *ty
 	var propList []*types.Prop
 	for _, item := range result.Prop {
 		propList = append(propList, &types.Prop{
+			UserID:       item.UserId,
 			PropID:       item.PropId,
 			PropTypeID:   item.PropTypeid,
 			PropName:     item.PropName,

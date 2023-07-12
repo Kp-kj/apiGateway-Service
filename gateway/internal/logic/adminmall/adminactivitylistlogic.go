@@ -35,8 +35,6 @@ func (l *AdminActivityListLogic) AdminActivityList(req *types.AdminActivityListI
 	}
 	var activityList []*types.Activity
 	for _, item := range result.Activity {
-		println("i=", item.CryptominerName)
-		println("ActivityId=", item.FirstBargainPer)
 		activityList = append(activityList, &types.Activity{
 			ActivityID:       item.ActivityId,
 			CryptominerName:  item.CryptominerName,

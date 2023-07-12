@@ -37,13 +37,21 @@ TaskRpcConf:
 #      - 127.0.0.1:2379
     Key: newTask.rpc
 
+
 # 链上配置
 blockRpcConf:
   Etcd:
     Hosts:
-      - 47.243.34.199:2379
+     - 47.243.34.199:2379
 #      - 127.0.0.1:2379
     Key: block.rpc
+
+
+#Telemetry:
+#  Name: gateway-api
+#  Enable: http://jaeger:14268/api/traces
+#  SamplerType: 1.0
+#  Batcher: jaeger
 
 
 

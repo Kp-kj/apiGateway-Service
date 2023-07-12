@@ -83,13 +83,30 @@ func (l *GetMessageListLogic) GetMessageList(req *types.GetMessageList) (resp *t
 				NoticeTitle:   noticeData.NoticeTitle,
 				NoticeContent: noticeData.NoticeContent,
 				NoticeTime:    noticeData.NoticeStartTime,
-				NoticeType:    noticeData.NoticeCategory,
+				NoticeType:    1, // 1表示系统通知
 				NoticeStatus:  noticeData.NoticeStatus,
 			}
 			resp.NoticeList = append(resp.NoticeList, noticeItem)
 		} else {
 			// 如果是用户通知
 			Notice = notice.UserNoticeId
+
+			noticeData, err := l.svcCtx.UserRpcClient.GetUserNotifications(l.ctx, &userclient.GetUserNotificationsRequest{
+				UserNoticeId: Notice,
+			})
+			if err != nil {
+				return nil, err
+			}
+			noticeItem := types.NoticeList{
+				NoticeId:      Notice, // 消息id
+				NoticeTitle:   "",
+				NoticeContent: noticeData.NoticeContent,
+				NoticeTime:    0, //用户通知没有时间
+				NoticeType:    2, // 2表示用户通知
+				NoticeStatus:  noticeData.NoticeStatus,
+			}
+			resp.NoticeList = append(resp.NoticeList, noticeItem)
+
 		}
 	}
 

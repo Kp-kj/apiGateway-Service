@@ -151,7 +151,8 @@ type GetMessageListReply struct {
 }
 
 type GetMessageByNoticeId struct {
-	NoticeId int64 `json:"noticeId"` //通知id
+	NoticeId   int64 `json:"noticeId"`   //通知id
+	NoticeType int64 `json:"noticeType"` //通知类型 1:系统通知 2:用户通知
 }
 
 type AddCategory struct {
@@ -186,6 +187,63 @@ type EditNotice struct {
 }
 
 type EditNoticeReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type EditCategory struct {
+	CategoryId     int64  `json:"categoryId"`     //分类id
+	CategoryNameZh string `json:"categoryName"`   //分类名称
+	CategoryNameEn string `json:"categoryNameEn"` //分类名称
+}
+
+type EditCategoryReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type BatchDeleteCategory struct {
+	CategoryIds []int64 `json:"categoryIds"` //分类id
+}
+
+type BatchDeleteCategoryReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type CategorylistStatus struct {
+	CategoryIds []int64 `json:"categoryIds"` //分类id
+	Status      int64   `json:"status"`      //分类状态
+}
+
+type CategorylistStatusReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type EditDocumentContent struct {
+	HelpCategoryId int64  `json:"helpCategoryId"` //帮助文档id
+	Helpdocumentid int64  `json:"helpdocumentid"` //帮助文档id
+	ContentZh      string `json:"contentZh"`      //内容
+	ContentEn      string `json:"contentEn"`      //内容
+	TitleZh        string `json:"titleZh"`        //标题
+	TitleEn        string `json:"titleEn"`        //标题
+}
+
+type EditDocumentContentReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type DocumentContentlistStatus struct {
+	Helpdocumentids []int64 `json:"helpdocumentids"` //帮助文档id
+	Status          int64   `json:"status"`          //帮助文档状态
+}
+
+type DocumentContentlistStatusReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type BatchDeleteDocumentContent struct {
+	Helpdocumentids []int64 `json:"helpdocumentids"` //帮助文档id
+}
+
+type BatchDeleteDocumentContentReply struct {
 	IsSuccess bool `json:"isSuccess"` //是否成功
 }
 
@@ -609,8 +667,9 @@ type JudgeBargainReply struct {
 }
 
 type PropPurchaseInput struct {
-	UserID int64 `json:"userId"` // 用户id
-	PropID int64 `json:"propId"` // 商品id
+	UserID       int64 `json:"userId"`       // 用户id
+	PropID       int64 `json:"propId"`       // 商品id
+	GoodQuantity int64 `json:"goodQuantity"` // 购买数量
 }
 
 type CryptominerPurchaseInput struct {
