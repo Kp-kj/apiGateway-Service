@@ -1,7 +1,8 @@
-package everyday
+package admin
 
 import (
 	"context"
+	"fmt"
 	"gateway/taskclient"
 
 	"gateway/internal/svc"
@@ -24,6 +25,7 @@ func NewAmendTreasureTaskLogic(ctx context.Context, svcCtx *svc.ServiceContext) 
 	}
 }
 
+// AmendTreasureTask 创建宝箱样式+编辑宝箱样式
 func (l *AmendTreasureTaskLogic) AmendTreasureTask(req *types.TreasureTaskSrtInput) (resp *types.Mistake, err error) {
 	var treasureTaskStage []*taskclient.TreasureTaskStage
 	for i, item := range req.TreasureTaskStage {
@@ -38,14 +40,17 @@ func (l *AmendTreasureTaskLogic) AmendTreasureTask(req *types.TreasureTaskSrtInp
 		})
 	}
 	treasureTask := &taskclient.TreasureTaskSrtInput{
-		Id:                req.Id,
+		TreasureId:        req.TreasureId,
 		Name:              req.Name,
 		DemandIntegral:    req.DemandIntegral,
-		TaskReward:        req.TaskReward,
 		ExperienceReward:  req.ExperienceReward,
 		RewardQuantity:    req.RewardQuantity,
 		TreasureTaskStage: treasureTaskStage,
 	}
 	err1, err := l.svcCtx.TaskClient.AmendTreasureTask(l.ctx, treasureTask)
-	return &types.Mistake{Msg: err1.Msg}, err
+	if err != nil {
+		fmt.Printf("xc:%v\n", err)
+		return nil, err
+	}
+	return &types.Mistake{Msg: err1.Msg}, nil
 }

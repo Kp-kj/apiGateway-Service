@@ -1,25 +1,24 @@
-package adminmall
+package everyday
 
 import (
 	"net/http"
 
-	"gateway/internal/logic/adminmall"
+	"gateway/internal/logic/everyday"
 	"gateway/internal/svc"
 	"gateway/internal/types"
-
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
-func AdminActivityListHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
+func CreateAssistanceTaskHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		var req types.AdminActivityListInput
+		var req types.UserIDInquireInput
 		if err := httpx.Parse(r, &req); err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 			return
 		}
 
-		l := adminmall.NewAdminActivityListLogic(r.Context(), svcCtx)
-		resp, err := l.AdminActivityList(&req)
+		l := everyday.NewCreateAssistanceTaskLogic(r.Context(), svcCtx)
+		resp, err := l.CreateAssistanceTask(&req)
 		if err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 		} else {

@@ -1,4 +1,4 @@
-package everyday
+package admin
 
 import (
 	"context"
@@ -24,6 +24,7 @@ func NewQueryTreasureTaskListLogic(ctx context.Context, svcCtx *svc.ServiceConte
 	}
 }
 
+// QueryTreasureTaskList 查询+搜索宝箱样式列表
 func (l *QueryTreasureTaskListLogic) QueryTreasureTaskList(req *types.TreasureTaskListInput) (resp *types.ReTreasureTaskSrt, err error) {
 	data, err := l.svcCtx.TaskClient.QueryTreasureTaskList(l.ctx, &taskclient.TreasureTaskListInput{
 		Name:     req.Name,
@@ -43,10 +44,9 @@ func (l *QueryTreasureTaskListLogic) QueryTreasureTaskList(req *types.TreasureTa
 			})
 		}
 		treasureTaskSrt = append(treasureTaskSrt, &types.TreasureTaskSrtInput{
-			Id:                item.Id,
+			TreasureId:        item.TreasureId,
 			Name:              item.Name,
 			DemandIntegral:    item.DemandIntegral,
-			TaskReward:        item.TaskReward,
 			ExperienceReward:  item.ExperienceReward,
 			RewardQuantity:    item.RewardQuantity,
 			TreasureTaskStage: treasureTaskStage,

@@ -1,26 +1,25 @@
-package everyday
+package admin
 
 import (
 	"net/http"
 
-	"gateway/internal/logic/everyday"
+	"gateway/internal/logic/admin"
 	"gateway/internal/svc"
 	"gateway/internal/types"
-
 	"github.com/zeromicro/go-zero/rest/httpx"
 	xhttp "github.com/zeromicro/x/http"
 )
 
-func ChangeTreasureTaskHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
+func AmendTreasureTaskHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		var req types.TreasureTaskInput
+		var req types.TreasureTaskSrtInput
 		if err := httpx.Parse(r, &req); err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 			return
 		}
 
-		l := everyday.NewChangeTreasureTaskLogic(r.Context(), svcCtx)
-		resp, err := l.ChangeTreasureTask(&req)
+		l := admin.NewAmendTreasureTaskLogic(r.Context(), svcCtx)
+		resp, err := l.AmendTreasureTask(&req)
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
 			xhttp.JsonBaseResponseCtx(r.Context(), w, err)

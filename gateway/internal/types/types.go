@@ -190,24 +190,42 @@ type EditNoticeReply struct {
 }
 
 type CreatePublishTaskInput struct {
-	Creator      string        `json:"creator"`
-	TweetAddress string        `json:"tweetAddress"`
-	Label        []string      `json:"label"`
-	AwardBudget  float64       `json:"awardBudget"`
-	MaxUser      int64         `json:"maxUser"`
-	AwardAmount  float64       `json:"awardAmount"`
-	TaskDemand   []*TaskDemand `json:"taskDemand"`
-}
-
-type TaskDemand struct {
-	TaskID     uint   `json:"taskId"`
-	TaskName   int    `json:"taskName"`
-	TaskDemand string `json:"taskDemand"`
-	Article    string `json:"article"`
+	Creator      string  `json:"creator"`
+	TweetAddress string  `json:"tweetAddress"`
+	TweetTopic   string  `json:"tweetTopic"`
+	TweetAvatar  string  `json:"tweetAvatar"`
+	Label        string  `json:"label"`
+	AwardBudget  float64 `json:"awardBudget"`
+	MaxUser      int64   `json:"maxUser"`
+	AwardAmount  float64 `json:"awardAmount"`
 }
 
 type Mistake struct {
 	Msg string `json:"msg"`
+}
+
+type UserLaunchTaskList struct {
+	UserId           string          `json:"userId"`
+	UserName         string          `json:"userName"`
+	UserNick         string          `json:"userNick"`
+	UserAvatar       string          `json:"userAvatar"`
+	LaunchAmount     int64           `json:"launchAmount"`
+	AccomplishAmount int64           `json:"accomplishAmount"`
+	PaginationData   PaginationData  `json:"paging"`
+	PersonalList     []*PersonalList `json:"personalList"`
+}
+
+type PersonalList struct {
+	TaskId       string  `json:"taskId"`
+	CreatedAt    string  `json:"createdAt"`
+	Creator      string  `json:"creator"`
+	Label        string  `json:"label"`
+	Status       int64   `json:"status"`
+	TweetDetails string  `json:"tweetDetails"`
+	TweetPicture string  `json:"tweetPicture"`
+	AwardBudget  float64 `json:"awardBudget"`
+	MaxUser      int64   `json:"maxUser"`
+	Accomplish   int64   `json:"accomplish"`
 }
 
 type RePublishTask struct {
@@ -216,22 +234,22 @@ type RePublishTask struct {
 }
 
 type RePublishTaskBak struct {
-	TaskID        uint64        `json:"taskId"`
-	CreatedAt     string        `json:"createdAt"`
-	Creator       string        `json:"creator"`
-	CreatorName   string        `json:"creatorName"`
-	CreatorNick   string        `json:"creatorNick"`
-	CreatorAvatar string        `json:"creatorAvatar"`
-	Status        int32         `json:"status"`
-	TweetDetails  string        `json:"tweetDetails"`
-	TweetPicture  string        `json:"tweetPicture"`
-	Label         string        `json:"label"`
-	AwardBudget   float64       `json:"awardBudget"`
-	MaxUser       int32         `json:"maxUser"`
-	AwardAmount   float64       `json:"awardAmount"`
-	EndTime       string        `json:"endTime"`
-	Accomplish    int32         `json:"accomplish"`
-	TaskDemand    []*TaskDemand `json:"taskDemand"`
+	TaskID        string  `json:"taskId"`
+	CreatedAt     string  `json:"createdAt"`
+	Creator       string  `json:"creator"`
+	CreatorName   string  `json:"creatorName"`
+	CreatorNick   string  `json:"creatorNick"`
+	CreatorAvatar string  `json:"creatorAvatar"`
+	Status        int64   `json:"status"`
+	Label         string  `json:"label"`
+	TweetDetails  string  `json:"tweetDetails"`
+	TweetPicture  string  `json:"tweetPicture"`
+	AwardBudget   float64 `json:"awardBudget"`
+	MaxUser       int64   `json:"maxUser"`
+	AwardAmount   float64 `json:"awardAmount"`
+	EndTime       string  `json:"endTime"`
+	Accomplish    int64   `json:"accomplish"`
+	Call          int64   `json:"call"`
 }
 
 type PaginationData struct {
@@ -249,30 +267,23 @@ type PublishTaskInput struct {
 type ReTaskDetails struct {
 	RePublishTaskBak RePublishTaskBak  `json:"publishTask"`
 	ParticipantBak   []*ParticipantBak `json:"participant"`
-	TaskDemandBak    []*TaskDemandBak  `json:"taskStatus"`
 }
 
 type TaskDetailsInput struct {
-	TaskId uint64 `json:"taskId"`
+	TaskId string `json:"taskId"`
 	UserId string `json:"userId"`
 }
 
 type ParticipantBak struct {
+	Id          int64   `json:"id"`
+	CreatedAt   string  `json:"createdAt"`
 	UserId      string  `json:"userId"`
+	TaskId      string  `json:"taskId"`
 	UserName    string  `json:"userName"`
 	NickName    string  `json:"nickName"`
 	Avatar      string  `json:"avatar"`
 	AwardAmount float64 `json:"awardAmount"`
-	TaskID      uint64  `json:"taskId"`
-	Status      int32   `json:"status"`
-}
-
-type TaskDemandBak struct {
-	TaskID     uint64 `json:"taskId"`
-	TaskName   int64  `json:"taskName"`
-	TaskDemand string `json:"taskDemand"`
-	Article    string `json:"article"`
-	Status     int32  `json:"status"`
+	Accomplish  int64   `json:"accomplish"`
 }
 
 type UserLaunchTaskListInput struct {
@@ -282,61 +293,39 @@ type UserLaunchTaskListInput struct {
 	Status   int64  `json:"status"`
 }
 
-type CreateLabelInput struct {
-	UserId string `json:"userId"`
-	Label  string `json:"label"`
-}
-
 type TaskIDInquireInput struct {
-	Id uint64 `json:"id"`
+	TaskId string `json:"taskId"`
 }
 
 type UserIDInquireInput struct {
 	UserId string `json:"userId"`
 }
 
-type ReLabelListOut struct {
-	ReLabelList []*ReLabelList `json:"reLabelList"`
-}
-
-type ReLabelList struct {
-	Id      uint64 `json:"id"`
-	Creator string `json:"creator"`
-	Content string `json:"content"`
-}
-
 type PerformTaskInput struct {
-	TaskId uint64 `json:"taskId"`
+	TaskId string `json:"taskId"`
 	UserId string `json:"userId"`
-}
-
-type VoluntarilyTaskScheduleInput struct {
-	UserId string `json:"userId"`
-	TaskId int64  `json:"taskId"`
-	Genre  int64  `json:"genre"`
 }
 
 type TreasureTaskSrtInput struct {
-	Id                uint64               `json:"id"`
+	TreasureId        string               `json:"treasureId"`
 	Name              string               `json:"name"`
 	DemandIntegral    int64                `json:"demandIntegral"`
-	TaskReward        int64                `json:"taskReward"`
 	ExperienceReward  int64                `json:"experienceReward"`
 	RewardQuantity    int64                `json:"rewardQuantity"`
 	TreasureTaskStage []*TreasureTaskStage `json:"treasureTaskStage"`
 }
 
 type TreasureTaskStage struct {
-	ID               int64 `json:"iD"`
-	Treasure         int64 `json:"treasure"`
-	TreasureSequence int64 `json:"treasureSequence"`
-	StageExperience  int64 `json:"stageExperience"`
-	StageReward      int64 `json:"stageReward"`
+	ID               int64  `json:"id"`
+	Treasure         string `json:"treasure"`
+	TreasureSequence int64  `json:"treasureSequence"`
+	StageExperience  int64  `json:"stageExperience"`
+	StageReward      int64  `json:"stageReward"`
 }
 
 type TreasureTaskInput struct {
-	Id     uint64 `json:"id"`
-	Status int32  `json:"status"`
+	TreasureId string `json:"treasureId"`
+	Status     int32  `json:"status"`
 }
 
 type TreasureTaskListInput struct {
@@ -365,9 +354,9 @@ type SubtaskStyle struct {
 }
 
 type AssociatedSubtaskSrt struct {
-	AssociatedId   uint64 `json:"associatedId"`
-	TaskId         uint64 `json:"taskId"`
-	TreasureId     uint64 `json:"treasureId"`
+	SubtaskId      int64  `json:"subtaskId"`
+	TaskId         string `json:"taskId"`
+	TreasureId     string `json:"treasureId"`
 	TaskName       string `json:"taskName"`
 	TaskNameEng    string `json:"taskNameEng"`
 	TaskDetails    string `json:"taskDetails"`
@@ -386,7 +375,8 @@ type ReAssociatedSubtask struct {
 }
 
 type AssociatedSubtask struct {
-	TaskId         uint64 `json:"taskId"`
+	SubtaskId      int64  `json:"subtaskId"`
+	TaskId         string `json:"taskId"`
 	TaskName       string `json:"taskName"`
 	TaskNameEng    string `json:"taskNameEng"`
 	TaskDetails    string `json:"taskDetails"`
@@ -398,7 +388,7 @@ type AssociatedSubtask struct {
 	Article        string `json:"article"`
 	Link           string `json:"link"`
 	Label          string `json:"label"`
-	TreasureId     uint64 `json:"treasureId"`
+	TreasureId     string `json:"treasureId"`
 }
 
 type AmendChestCollectionInput struct {
@@ -407,7 +397,7 @@ type AmendChestCollectionInput struct {
 }
 
 type ReChestCollectionSrt struct {
-	SerId                 string                   `json:"serId"`
+	UserId                string                   `json:"userId"`
 	DemandIntegral        int64                    `json:"demandIntegral"`
 	ChestAmount           int64                    `json:"chestAmount"`
 	RewardQuantity        int64                    `json:"rewardQuantity"`
@@ -416,7 +406,7 @@ type ReChestCollectionSrt struct {
 }
 
 type TreasureTaskStageSeed struct {
-	Treasure         int64   `json:"treasure"`
+	Treasure         string  `json:"treasure"`
 	TreasureSequence int64   `json:"treasureSequence"`
 	StageExperience  int64   `json:"stageExperience"`
 	TreasureRatio    float64 `json:"treasureRatio"`
@@ -424,8 +414,9 @@ type TreasureTaskStageSeed struct {
 }
 
 type AssociatedSubtaskSeed struct {
-	TreasureId     int64  `json:"treasureId"`
-	TaskId         int64  `json:"taskId"`
+	Id             uint64 `json:"id"`
+	TreasureId     string `json:"treasureId"`
+	TaskId         string `json:"taskId"`
 	TaskName       string `json:"taskName"`
 	TaskNameEng    string `json:"taskNameEng"`
 	TaskDetails    string `json:"taskDetails"`
@@ -443,6 +434,53 @@ type AssociatedSubtaskSeed struct {
 type CreateUserPowerTaskInput struct {
 	PublishesUserId string `json:"publishesUserId"`
 	HelperUserId    string `json:"helperUserId"`
+}
+
+type CreateLabelInput struct {
+	UserId string `json:"userId"`
+	Label  string `json:"label"`
+}
+
+type LabelInput struct {
+	LabelId int64 `json:"labelId"` // 标签ID
+}
+
+type ReLabelListOut struct {
+	ReLabelList []*ReLabelList `json:"reLabelList"`
+}
+
+type ReLabelList struct {
+	Id      uint64 `json:"id"`
+	Creator string `json:"creator"` // 创建者
+	Content string `json:"content"` // 内容
+}
+
+type CreateAssistanceTaskInput struct {
+	UserId   string `json:"userId"`
+	UserName string `json:"userName"`
+	Avatar   string `json:"avatar"`
+}
+
+type UserPublishingAssistanceTask struct {
+	ID        int64  `json:"id"`
+	CreatedAt string `json:"createdAt"`
+	UserId    string `json:"userId"`
+	UserName  string `json:"userName"`
+	Avatar    string `json:"avatar"`
+}
+
+type ParticipatingTaskInput struct {
+	UserId   string `json:"userId"`
+	UserName string `json:"userName"`
+	NickName string `json:"nickName"`
+	Avatar   string `json:"avatar"`
+	TaskID   string `json:"taskId"`
+}
+
+type TaskCallInput struct {
+	UserId string `json:"userId"`
+	Sharer string `json:"sharer"`
+	TaskID string `json:"taskId"`
 }
 
 type CreateCryptominerInput struct {
@@ -467,6 +505,58 @@ type CreatePropInput struct {
 	PropDescribe string `json:"propDescribe"` // 矿机描述
 	PropPrice    int64  `json:"propPrice"`    // 矿机价格
 	PaymentWay   string `json:"paymentWay"`   // 支付方式 0：U 1：ADF
+}
+
+type AdminGoodListInput struct {
+	AdminUserID int64 `json:"adminUserId"` // 管理员id
+}
+
+type Activity struct {
+	ActivityID       int64  `json:"activityId"`       // 关联矿机种类id
+	CryptominerName  string `json:"cryptominerName"`  // 矿机名称
+	UserAmount       int64  `json:"userAmount"`       // 砍价人数
+	MinPrice         string `json:"minPrice"`         // 最小砍价金额
+	FirstBargainPer  string `json:"firstBargainPer"`  // 首次砍价百分比
+	FriendBargainPer string `json:"friendBargainPer"` // 好友砍价比率
+	IsActivation     int64  `json:"isActivation"`     // 矿机状态  0：未开启  1：开启
+}
+
+type AdminGoodListReply struct {
+	AdminGood []*AdminGood `json:"adminGood"`
+}
+
+type AdminGood struct {
+	GoodTypeID   int64  `json:"goodTypeID"`   // 商品typeid
+	GoodName     string `json:"goodName"`     // 商品名称
+	GoodDuration int64  `json:"goodDuration"` // 商品工作时长
+	PaymentWay   string `json:"paymentWay"`   // 支付方式 0：U ,1:ADF
+	PropPrice    int64  `json:"propPrice"`    // 商品价格
+	GoodStatus   string `json:"goodStatus"`   // 商品状态  0：待上架  1：已上架 2：未上架
+}
+
+type StartGoodInput struct {
+	GoodTypeID int64 `json:"goodTypeId"` // 商品种类id
+}
+
+type CreateActivityInput struct {
+	AdminUserID       int64   `json:"adminUserID"`       // 管理员id
+	CryptominerTypeID int64   `json:"cryptominerTypeID"` // 关联矿机种类id
+	UserAmount        int64   `json:"userAmount"`        // 砍价人数
+	MinPrice          float64 `json:"minPrice"`          // 最小砍价金额
+	FirstBargainPer   float64 `json:"firstBargainPer"`   // 首次砍价百分比
+	FriendBargainPer  float64 `json:"friendBargainPer"`  // 好友砍价比率
+}
+
+type AdminActivityListInput struct {
+	AdminUserID int64 `json:"adminUserID"` // 管理员id
+}
+
+type AdminActivityListReply struct {
+	Activity []*Activity `json:"activity"`
+}
+
+type StartActivityInput struct {
+	ActivityID int64 `json:"activityId"` // 关联矿机种类id
 }
 
 type GetGoodsListInput struct {

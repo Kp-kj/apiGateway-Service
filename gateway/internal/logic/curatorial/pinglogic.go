@@ -1,4 +1,4 @@
-package everyday
+package curatorial
 
 import (
 	"context"
@@ -24,7 +24,7 @@ func NewPingLogic(ctx context.Context, svcCtx *svc.ServiceContext) *PingLogic {
 	}
 }
 
-func (l *PingLogic) Ping(req *types.UserIDInquireInput) (resp *types.Mistake, err error) {
-	err1, err := l.svcCtx.TaskClient.Ping(l.ctx, &taskclient.TaskIDInquireInput{Id: 1})
+func (l *PingLogic) Ping(req *types.TaskIDInquireInput) (resp *types.Mistake, err error) {
+	err1, err := l.svcCtx.TaskClient.Ping(l.ctx, &taskclient.TaskIDInquireInput{TaskId: req.TaskId})
 	return &types.Mistake{Msg: err1.Msg}, err
 }

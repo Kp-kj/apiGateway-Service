@@ -2,6 +2,8 @@ package curatorial
 
 import (
 	"context"
+	"encoding/json"
+	"fmt"
 	"gateway/taskclient"
 	"gateway/userclient"
 
@@ -11,26 +13,38 @@ import (
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
-type QueryTaskDetailsLogic struct {
+type CallSkipMessageLogic struct {
 	logx.Logger
 	ctx    context.Context
 	svcCtx *svc.ServiceContext
 }
 
-func NewQueryTaskDetailsLogic(ctx context.Context, svcCtx *svc.ServiceContext) *QueryTaskDetailsLogic {
-	return &QueryTaskDetailsLogic{
+func NewCallSkipMessageLogic(ctx context.Context, svcCtx *svc.ServiceContext) *CallSkipMessageLogic {
+	return &CallSkipMessageLogic{
 		Logger: logx.WithContext(ctx),
 		ctx:    ctx,
 		svcCtx: svcCtx,
 	}
 }
 
-// QueryTaskDetails 获取任务详情
-func (l *QueryTaskDetailsLogic) QueryTaskDetails(req *types.TaskDetailsInput) (resp *types.ReTaskDetails, err error) {
-	date, err := l.svcCtx.TaskClient.QueryTaskDetails(l.ctx, &taskclient.TaskDetailsInput{
-		TaskId: req.TaskId,
+// CallSkipMessage call跳转获取分享信息
+func (l *CallSkipMessageLogic) CallSkipMessage(req *types.TaskCallInput) (resp *types.ReTaskDetails, err error) {
+	userId := l.ctx.Value("userId")
+	var userIdNum string
+	if v, ok := userId.(json.Number); ok {
+		userIdNum = v.String()
+	}
+	if req.UserId != userIdNum {
+		return nil, fmt.Errorf("用户ID解析不正确")
+	}
+	date, err := l.svcCtx.TaskClient.CallSkipMessage(l.ctx, &taskclient.TaskCallInput{
+		TaskID: req.TaskID,
 		UserId: req.UserId,
+		Sharer: req.Sharer,
 	})
+	if err != nil {
+		return nil, err
+	}
 	// 获取用户信息
 	userPublishTask, err := l.svcCtx.UserRpcClient.QueryUser(l.ctx, &userclient.QueryUserRequest{UserId: date.RePublishTaskSrt.Creator})
 	if err != nil {

@@ -1,12 +1,11 @@
-package everyday
+package admin
 
 import (
 	"net/http"
 
-	"gateway/internal/logic/everyday"
+	"gateway/internal/logic/admin"
 	"gateway/internal/svc"
 	"gateway/internal/types"
-
 	"github.com/zeromicro/go-zero/rest/httpx"
 	xhttp "github.com/zeromicro/x/http"
 )
@@ -19,7 +18,7 @@ func QueryTreasureTaskListHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 			return
 		}
 
-		l := everyday.NewQueryTreasureTaskListLogic(r.Context(), svcCtx)
+		l := admin.NewQueryTreasureTaskListLogic(r.Context(), svcCtx)
 		resp, err := l.QueryTreasureTaskList(&req)
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
