@@ -90,6 +90,7 @@ func (l *GetMessageListLogic) GetMessageList(req *types.GetMessageList) (resp *t
 		} else {
 			// 如果是用户通知
 			Notice = notice.UserNoticeId
+
 			noticeData, err := l.svcCtx.UserRpcClient.GetUserNotifications(l.ctx, &userclient.GetUserNotificationsRequest{
 				UserNoticeId: Notice,
 			})
@@ -105,6 +106,7 @@ func (l *GetMessageListLogic) GetMessageList(req *types.GetMessageList) (resp *t
 				NoticeStatus:  noticeData.NoticeStatus,
 			}
 			resp.NoticeList = append(resp.NoticeList, noticeItem)
+
 		}
 	}
 

@@ -26,6 +26,7 @@ func NewGetMessageByNoticeIdLogic(ctx context.Context, svcCtx *svc.ServiceContex
 
 // GetMessageByNoticeId 获取消息
 func (l *GetMessageByNoticeIdLogic) GetMessageByNoticeId(req *types.GetMessageByNoticeId) (resp *types.NoticeList, err error) {
+	// 先查询 	notices id 的是用户id 还是系统id
 
 	if req.NoticeType == 1 {
 		// 获取系统消息

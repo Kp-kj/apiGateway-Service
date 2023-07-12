@@ -314,6 +314,31 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Path:    "/adminmall/create/prop",
 				Handler: adminmall.CreatePropHandler(serverCtx),
 			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/adminmall/req/goodlist",
+				Handler: adminmall.AdminGoodListHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/adminmall/manage/startgoodstart",
+				Handler: adminmall.StartGoodHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/adminmall/create/activity",
+				Handler: adminmall.CreateActivityHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/adminmall/req/activitylist",
+				Handler: adminmall.AdminActivityListHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/adminmall/manage/startactivity",
+				Handler: adminmall.StartActivityHandler(serverCtx),
+			},
 		},
 		rest.WithPrefix("/v1"),
 	)
@@ -364,11 +389,6 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Method:  http.MethodPost,
 				Path:    "/mall/activity/bargainlist",
 				Handler: mall.GetBargainRecordHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/mall/judgegoodspurchase",
-				Handler: mall.JudgeGoodsPurchaseHandler(serverCtx),
 			},
 		},
 		rest.WithPrefix("/v1"),

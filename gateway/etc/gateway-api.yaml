@@ -46,6 +46,13 @@ blockRpcConf:
     Key: block.rpc
 
 
+#Telemetry:
+#  Name: gateway-api
+#  Enable: http://jaeger:14268/api/traces
+#  SamplerType: 1.0
+#  Batcher: jaeger
+
+
 
 # 用户服务直连
 #UserRpcConf:
