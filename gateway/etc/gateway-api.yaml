@@ -35,7 +35,7 @@ TaskRpcConf:
     Hosts:
      - 47.243.34.199:2379
 #      - 127.0.0.1:2379
-    Key: newTask.rpc
+    Key: task.rpc
 
 
 # 链上配置
