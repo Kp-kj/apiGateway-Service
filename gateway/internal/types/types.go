@@ -191,9 +191,9 @@ type EditNoticeReply struct {
 }
 
 type EditCategory struct {
-	CategoryId     int64  `json:"categoryId"`     //分类id
-	CategoryNameZh string `json:"categoryName"`   //分类名称
-	CategoryNameEn string `json:"categoryNameEn"` //分类名称
+	CategoryId     int64  `json:"categoryId"`  //分类id
+	CategoryNameZh string `json:"category_zh"` //分类名称
+	CategoryNameEn string `json:"category_en"` //分类名称
 }
 
 type EditCategoryReply struct {
@@ -245,6 +245,18 @@ type BatchDeleteDocumentContent struct {
 
 type BatchDeleteDocumentContentReply struct {
 	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type GetCategoryListByCondition struct {
+	CategoryName string `json:"categoryName"`
+	IsShow       bool   `json:"isShow"`
+	LastId       int64  `json:"lastId"`
+}
+
+type GetCategoryListByConditionReply struct {
+	HelpCategoryList []HelpCategoryList `json:"helpCategoryList"`
+	TotalCount       int64              `json:"totalCount"` //这次返回的数据总共有多少条
+	TotalPage        int64              `json:"totalPage"`  //总页数
 }
 
 type CreatePublishTaskInput struct {
@@ -598,7 +610,7 @@ type StartGoodInput struct {
 
 type CreateActivityInput struct {
 	AdminUserID       int64   `json:"adminUserID"`       // 管理员id
-	CryptominerTypeID int64   `json:"cryptominerTypeID"` // 关联矿机种s类id
+	CryptominerTypeID int64   `json:"cryptominerTypeID"` // 关联矿机种类id
 	UserAmount        int64   `json:"userAmount"`        // 砍价人数
 	MinPrice          float64 `json:"minPrice"`          // 最小砍价金额
 	FirstBargainPer   float64 `json:"firstBargainPer"`   // 首次砍价百分比

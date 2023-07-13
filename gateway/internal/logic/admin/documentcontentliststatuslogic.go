@@ -2,6 +2,7 @@ package admin
 
 import (
 	"context"
+	"fmt"
 	"gateway/userclient/user"
 
 	"gateway/internal/svc"
@@ -26,6 +27,8 @@ func NewDocumentContentlistStatusLogic(ctx context.Context, svcCtx *svc.ServiceC
 
 // DocumentContentlistStatus 文档内容列表启用状态
 func (l *DocumentContentlistStatusLogic) DocumentContentlistStatus(req *types.DocumentContentlistStatus) (resp *types.DocumentContentlistStatusReply, err error) {
+
+	fmt.Println(req.Helpdocumentids, req.Status)
 	for _, v := range req.Helpdocumentids {
 		_, err = l.svcCtx.UserRpcClient.EditHelpDocument(l.ctx, &user.EditHelpDocumentRequest{HelpDocumentId: v, DocumentStatus: req.Status})
 		if err != nil {

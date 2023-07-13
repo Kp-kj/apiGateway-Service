@@ -2,9 +2,12 @@ package admin
 
 import (
 	"context"
+	"fmt"
 	"gateway/internal/svc"
 	"gateway/internal/types"
 	"gateway/userclient"
+	"strconv"
+	"time"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -25,18 +28,24 @@ func NewEditCategoryLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Edit
 
 // 新建和编辑分类
 func (l *EditCategoryLogic) EditCategory(req *types.EditCategory) (resp *types.EditCategoryReply, err error) {
+
+	fmt.Println("req.CategoryId", req.CategoryId)
 	if req.CategoryId == 0 {
 		// 新建分类
 		caregoryId, err := l.svcCtx.UserRpcClient.CreateHelpCategory(l.ctx, &userclient.CreateHelpCategoryRequest{
-			CreatedAt:      0,
+			CreatedAt:      time.Time{}.Unix(),
 			CategoryStatus: 1,
 		}) // 创建分类 返回分类id
 		if err != nil {
 			return nil, err
 		}
+		caregoryIdInt64, err := strconv.ParseInt(caregoryId.HelpCategoryId, 10, 64)
+		if err != nil {
+			return nil, err
+		}
 		// 那分类id取创建分类的翻译
 		_, err = l.svcCtx.UserRpcClient.CreateHelpCategoryTranslation(l.ctx, &userclient.CreateHelpCategoryTranslationRequest{
-			HelpCategoryId: caregoryId.HelpCategoryId,
+			HelpCategoryId: caregoryIdInt64,
 			CategoryName:   req.CategoryNameZh,
 			Language:       "zh",
 		})
@@ -45,8 +54,8 @@ func (l *EditCategoryLogic) EditCategory(req *types.EditCategory) (resp *types.E
 		}
 
 		_, err = l.svcCtx.UserRpcClient.CreateHelpCategoryTranslation(l.ctx, &userclient.CreateHelpCategoryTranslationRequest{
-			HelpCategoryId: caregoryId.GetHelpCategoryId(),
-			CategoryName:   req.CategoryNameZh,
+			HelpCategoryId: caregoryIdInt64,
+			CategoryName:   req.CategoryNameEn,
 			Language:       "en",
 		})
 		if err != nil {

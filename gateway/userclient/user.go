@@ -82,6 +82,10 @@ type (
 	OnlineCountResponse                   = user.OnlineCountResponse
 	QueryBlackListRequest                 = user.QueryBlackListRequest
 	QueryBlackListResponse                = user.QueryBlackListResponse
+	QueryHelpCategoryRequest              = user.QueryHelpCategoryRequest
+	QueryHelpCategoryResponse             = user.QueryHelpCategoryResponse
+	QueryHelpDocumentRequest              = user.QueryHelpDocumentRequest
+	QueryHelpDocumentResponse             = user.QueryHelpDocumentResponse
 	QueryRecordNoticeRequest              = user.QueryRecordNoticeRequest
 	QueryRecordNoticeResponse             = user.QueryRecordNoticeResponse
 	QuerySystemNotificationRequest        = user.QuerySystemNotificationRequest
@@ -98,6 +102,8 @@ type (
 	Request                               = user.Request
 	Response                              = user.Response
 	SystemNotification                    = user.SystemNotification
+	TotalCategory                         = user.TotalCategory
+	TotalDocument                         = user.TotalDocument
 	UserListResponse                      = user.UserListResponse
 	UserResponseList                      = user.UserResponseList
 
@@ -126,6 +132,7 @@ type (
 		DeleteHelpCategoryTranslation(ctx context.Context, in *DeleteHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*DeleteHelpCategoryTranslationResponse, error)
 		GetHelpCategoryTranslations(ctx context.Context, in *GetHelpCategoryTranslationsRequest, opts ...grpc.CallOption) (*GetHelpCategoryTranslationsResponse, error)
 		EditHelpCategoryTranslation(ctx context.Context, in *EditHelpCategoryTranslationRequest, opts ...grpc.CallOption) (*EditHelpCategoryTranslationResponse, error)
+		QueryHelpCategory(ctx context.Context, in *QueryHelpCategoryRequest, opts ...grpc.CallOption) (*QueryHelpCategoryResponse, error)
 		GetHelpDocuments(ctx context.Context, in *GetHelpDocumentsRequest, opts ...grpc.CallOption) (*GetHelpDocumentsResponse, error)
 		CreateHelpDocument(ctx context.Context, in *CreateHelpDocumentRequest, opts ...grpc.CallOption) (*CreateHelpDocumentResponse, error)
 		DeleteHelpDocument(ctx context.Context, in *DeleteHelpDocumentRequest, opts ...grpc.CallOption) (*DeleteHelpDocumentResponse, error)
@@ -134,6 +141,7 @@ type (
 		DeleteHelpDocumentTranslation(ctx context.Context, in *DeleteHelpDocumentTranslationRequest, opts ...grpc.CallOption) (*DeleteHelpDocumentTranslationResponse, error)
 		GetHelpDocumentTranslations(ctx context.Context, in *GetHelpDocumentTranslationsRequest, opts ...grpc.CallOption) (*GetHelpDocumentTranslationsResponse, error)
 		EditHelpDocumentTranslation(ctx context.Context, in *EditHelpDocumentTranslationRequest, opts ...grpc.CallOption) (*EditHelpDocumentTranslationResponse, error)
+		QueryHelpDocument(ctx context.Context, in *QueryHelpDocumentRequest, opts ...grpc.CallOption) (*QueryHelpDocumentResponse, error)
 		CreateSystemNotification(ctx context.Context, in *CreateSystemNotificationRequest, opts ...grpc.CallOption) (*CreateSystemNotificationResponse, error)
 		EditSystemNotification(ctx context.Context, in *EditSystemNotificationRequest, opts ...grpc.CallOption) (*EditSystemNotificationResponse, error)
 		GetSystemNotifications(ctx context.Context, in *GetSystemNotificationsRequest, opts ...grpc.CallOption) (*GetSystemNotificationsResponse, error)
@@ -279,6 +287,11 @@ func (m *defaultUser) EditHelpCategoryTranslation(ctx context.Context, in *EditH
 	return client.EditHelpCategoryTranslation(ctx, in, opts...)
 }
 
+func (m *defaultUser) QueryHelpCategory(ctx context.Context, in *QueryHelpCategoryRequest, opts ...grpc.CallOption) (*QueryHelpCategoryResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.QueryHelpCategory(ctx, in, opts...)
+}
+
 func (m *defaultUser) GetHelpDocuments(ctx context.Context, in *GetHelpDocumentsRequest, opts ...grpc.CallOption) (*GetHelpDocumentsResponse, error) {
 	client := user.NewUserClient(m.cli.Conn())
 	return client.GetHelpDocuments(ctx, in, opts...)
@@ -317,6 +330,11 @@ func (m *defaultUser) GetHelpDocumentTranslations(ctx context.Context, in *GetHe
 func (m *defaultUser) EditHelpDocumentTranslation(ctx context.Context, in *EditHelpDocumentTranslationRequest, opts ...grpc.CallOption) (*EditHelpDocumentTranslationResponse, error) {
 	client := user.NewUserClient(m.cli.Conn())
 	return client.EditHelpDocumentTranslation(ctx, in, opts...)
+}
+
+func (m *defaultUser) QueryHelpDocument(ctx context.Context, in *QueryHelpDocumentRequest, opts ...grpc.CallOption) (*QueryHelpDocumentResponse, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.QueryHelpDocument(ctx, in, opts...)
 }
 
 func (m *defaultUser) CreateSystemNotification(ctx context.Context, in *CreateSystemNotificationRequest, opts ...grpc.CallOption) (*CreateSystemNotificationResponse, error) {

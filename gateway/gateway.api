@@ -244,9 +244,9 @@ type EditNoticeReply {
 
 //EditCategory
 type EditCategory {
-	CategoryId     int64  `json:"categoryId"`     //分类id
-	CategoryNameZh string `json:"categoryName"`   //分类名称
-	CategoryNameEn string `json:"categoryNameEn"` //分类名称
+	CategoryId     int64  `json:"categoryId"`  //分类id
+	CategoryNameZh string `json:"category_zh"` //分类名称
+	CategoryNameEn string `json:"category_en"` //分类名称
 }
 
 //EditCategoryReply
@@ -314,14 +314,14 @@ type BatchDeleteDocumentContentReply {
 //GetCategoryListByCondition
 type GetCategoryListByCondition {
 	CategoryName string `json:"categoryName"`
-	IsShow bool `json:"isShow"`
-	LastId int64 `json:"lastId"`
+	IsShow       bool   `json:"isShow"`
+	LastId       int64  `json:"lastId"`
 }
 
 //GetCategoryListByConditionReply
 type GetCategoryListByConditionReply {
 	HelpCategoryList []HelpCategoryList `json:"helpCategoryList"`
-	TotalCount int64 `json:"totalCount"`//这次返回的数据总共有多少条
+	TotalCount       int64              `json:"totalCount"` //这次返回的数据总共有多少条
 	TotalPage        int64              `json:"totalPage"`  //总页数
 }
 
@@ -426,28 +426,29 @@ service gateway-api {
 	@handler addCategory
 	post /admin/addCategory (AddCategory) returns (AddCategoryReply)
 	
-	//  TODO:7.11 全部解决掉
-	
 	@doc "新建编辑分类问答"
 	@handler editCategory
 	post /admin/editCategory (EditCategory) returns (EditCategoryReply)   //完成
-	
+
 	@doc "批量删除分类"
 	@handler batchDeleteCategory
 	post /admin/batchDeleteCategory (BatchDeleteCategory) returns (BatchDeleteCategoryReply)
-	
+
 	@doc "批量更改分类的发布状态"
 	@handler categorylistStatus
 	post /admin/categorylistStatus (CategorylistStatus) returns (CategorylistStatusReply)
-	
+
+
 	@doc "新建编辑分类问答"
 	@handler editDocumentContent
 	post /admin/editDocumentContent (EditDocumentContent) returns (EditDocumentContentReply)
-	
+
+
 	@doc "批量更改分类问答的发布状态"
 	@handler documentContentlistStatus
 	post /admin/documentContentlistStatus (DocumentContentlistStatus) returns (DocumentContentlistStatusReply)
-	
+
+	//  TODO:7.11 全部解决掉
 	@doc "批量删除分类问答"
 	@handler batchDeleteDocumentContent
 	post /admin/batchDeleteDocumentContent (BatchDeleteDocumentContent) returns (BatchDeleteDocumentContentReply)

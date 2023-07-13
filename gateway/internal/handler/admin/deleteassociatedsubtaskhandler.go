@@ -21,9 +21,10 @@ func DeleteAssociatedSubtaskHandler(svcCtx *svc.ServiceContext) http.HandlerFunc
 		l := admin.NewDeleteAssociatedSubtaskLogic(r.Context(), svcCtx)
 		resp, err := l.DeleteAssociatedSubtask(&req)
 		if err != nil {
-			w.WriteHeader(http.StatusInternalServerError)
+			// code-data 响应格式
 			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {
+			// code-data 响应格式
 			w.WriteHeader(http.StatusOK)
 			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)
 		}

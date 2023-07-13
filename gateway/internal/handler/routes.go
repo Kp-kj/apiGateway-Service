@@ -177,6 +177,11 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Path:    "/admin/batchDeleteDocumentContent",
 				Handler: admin.BatchDeleteDocumentContentHandler(serverCtx),
 			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/getCategoryListByCondition",
+				Handler: admin.GetCategoryListByConditionHandler(serverCtx),
+			},
 		},
 		rest.WithJwt(serverCtx.Config.AdminAuth.AccessSecret),
 		rest.WithPrefix("/v1"),
