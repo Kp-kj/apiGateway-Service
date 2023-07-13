@@ -13,45 +13,53 @@ import (
 )
 
 type (
-	Activity                   = block.Activity
-	AdminActivityListRequest   = block.AdminActivityListRequest
-	AdminActivityListResponse  = block.AdminActivityListResponse
-	AdminGood                  = block.AdminGood
-	AdminGoodListRequest       = block.AdminGoodListRequest
-	AdminGoodListResponse      = block.AdminGoodListResponse
-	AssistorBargainRequest     = block.AssistorBargainRequest
-	AssistorBargainResponse    = block.AssistorBargainResponse
-	BargainPayRequest          = block.BargainPayRequest
-	BargainRecord              = block.BargainRecord
-	CreateActivityRequest      = block.CreateActivityRequest
-	CreateCryptominerRequest   = block.CreateCryptominerRequest
-	CreatePropRequest          = block.CreatePropRequest
-	Cryptominer                = block.Cryptominer
-	CryptominerBargainRequest  = block.CryptominerBargainRequest
-	CryptominerBargainResponse = block.CryptominerBargainResponse
-	CryptominerPurchaseRequest = block.CryptominerPurchaseRequest
-	GetBargainRecordRequest    = block.GetBargainRecordRequest
-	GetBargainRecordResponse   = block.GetBargainRecordResponse
-	GetGoodsListRequest        = block.GetGoodsListRequest
-	GetGoodsListResponse       = block.GetGoodsListResponse
-	GetPurchaseRecordRequest   = block.GetPurchaseRecordRequest
-	GetPurchaseRecordResponse  = block.GetPurchaseRecordResponse
-	IsSuccessResponse          = block.IsSuccessResponse
-	JudgeBargainRequest        = block.JudgeBargainRequest
-	JudgeBargainResponse       = block.JudgeBargainResponse
-	JudgeGoodsPurchaseRequest  = block.JudgeGoodsPurchaseRequest
-	JudgeGoodsPurchaseResponse = block.JudgeGoodsPurchaseResponse
-	Prop                       = block.Prop
-	PropPurchaseRequest        = block.PropPurchaseRequest
-	PurchaseRecord             = block.PurchaseRecord
-	Request                    = block.Request
-	Response                   = block.Response
-	StartActivityRequest       = block.StartActivityRequest
-	StartGoodRequest           = block.StartGoodRequest
-	SupportUser                = block.SupportUser
+	ActivateCryptominerRequest       = block.ActivateCryptominerRequest
+	ActivateCryptominerResponse      = block.ActivateCryptominerResponse
+	Activity                         = block.Activity
+	AdminActivityListRequest         = block.AdminActivityListRequest
+	AdminActivityListResponse        = block.AdminActivityListResponse
+	AdminGood                        = block.AdminGood
+	AdminGoodListRequest             = block.AdminGoodListRequest
+	AdminGoodListResponse            = block.AdminGoodListResponse
+	AssistorBargainRequest           = block.AssistorBargainRequest
+	AssistorBargainResponse          = block.AssistorBargainResponse
+	BargainPayRequest                = block.BargainPayRequest
+	BargainRecord                    = block.BargainRecord
+	CreateActivityRequest            = block.CreateActivityRequest
+	CreateCryptominerRequest         = block.CreateCryptominerRequest
+	CreatePropRequest                = block.CreatePropRequest
+	Cryptominer                      = block.Cryptominer
+	CryptominerBargainRequest        = block.CryptominerBargainRequest
+	CryptominerBargainResponse       = block.CryptominerBargainResponse
+	CryptominerPurchaseRequest       = block.CryptominerPurchaseRequest
+	GetBargainRecordRequest          = block.GetBargainRecordRequest
+	GetBargainRecordResponse         = block.GetBargainRecordResponse
+	GetGoodsListRequest              = block.GetGoodsListRequest
+	GetGoodsListResponse             = block.GetGoodsListResponse
+	GetPurchaseRecordRequest         = block.GetPurchaseRecordRequest
+	GetPurchaseRecordResponse        = block.GetPurchaseRecordResponse
+	GetUserCryptominerStatusRequest  = block.GetUserCryptominerStatusRequest
+	GetUserCryptominerStatusResponse = block.GetUserCryptominerStatusResponse
+	GetUserPropStatusRequest         = block.GetUserPropStatusRequest
+	GetUserPropStatusResponse        = block.GetUserPropStatusResponse
+	IsSuccessResponse                = block.IsSuccessResponse
+	JudgeBargainRequest              = block.JudgeBargainRequest
+	JudgeBargainResponse             = block.JudgeBargainResponse
+	JudgeGoodsPurchaseRequest        = block.JudgeGoodsPurchaseRequest
+	JudgeGoodsPurchaseResponse       = block.JudgeGoodsPurchaseResponse
+	Prop                             = block.Prop
+	PropPurchaseRequest              = block.PropPurchaseRequest
+	PurchaseRecord                   = block.PurchaseRecord
+	Request                          = block.Request
+	Response                         = block.Response
+	StartActivityRequest             = block.StartActivityRequest
+	StartGoodRequest                 = block.StartGoodRequest
+	SupportUser                      = block.SupportUser
+	UserCryptominer                  = block.UserCryptominer
+	UserProp                         = block.UserProp
 
 	Block interface {
-		// 后台接口
+		// 管理后台接口
 		Ping(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 		CreateCryptominer(ctx context.Context, in *CreateCryptominerRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error)
 		CreateProp(ctx context.Context, in *CreatePropRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error)
@@ -60,7 +68,7 @@ type (
 		CreateActivity(ctx context.Context, in *CreateActivityRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error)
 		AdminActivityList(ctx context.Context, in *AdminActivityListRequest, opts ...grpc.CallOption) (*AdminActivityListResponse, error)
 		StartActivity(ctx context.Context, in *StartActivityRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error)
-		// 前台接口
+		// PC接口
 		GetGoodsList(ctx context.Context, in *GetGoodsListRequest, opts ...grpc.CallOption) (*GetGoodsListResponse, error)
 		GetPurchaseRecord(ctx context.Context, in *GetPurchaseRecordRequest, opts ...grpc.CallOption) (*GetPurchaseRecordResponse, error)
 		JudgeBargain(ctx context.Context, in *JudgeBargainRequest, opts ...grpc.CallOption) (*JudgeBargainResponse, error)
@@ -72,6 +80,9 @@ type (
 		BargainPay(ctx context.Context, in *BargainPayRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error)
 		// 外部rpc接口
 		JudgeGoodsPurchase(ctx context.Context, in *JudgeGoodsPurchaseRequest, opts ...grpc.CallOption) (*JudgeGoodsPurchaseResponse, error)
+		GetUserCryptominerStatus(ctx context.Context, in *GetUserCryptominerStatusRequest, opts ...grpc.CallOption) (*GetUserCryptominerStatusResponse, error)
+		GetUserPropStatus(ctx context.Context, in *GetUserPropStatusRequest, opts ...grpc.CallOption) (*GetUserPropStatusResponse, error)
+		ActivateCryptominer(ctx context.Context, in *ActivateCryptominerRequest, opts ...grpc.CallOption) (*ActivateCryptominerResponse, error)
 	}
 
 	defaultBlock struct {
@@ -85,7 +96,7 @@ func NewBlock(cli zrpc.Client) Block {
 	}
 }
 
-// 后台接口
+// 管理后台接口
 func (m *defaultBlock) Ping(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	client := block.NewBlockClient(m.cli.Conn())
 	return client.Ping(ctx, in, opts...)
@@ -126,7 +137,7 @@ func (m *defaultBlock) StartActivity(ctx context.Context, in *StartActivityReque
 	return client.StartActivity(ctx, in, opts...)
 }
 
-// 前台接口
+// PC接口
 func (m *defaultBlock) GetGoodsList(ctx context.Context, in *GetGoodsListRequest, opts ...grpc.CallOption) (*GetGoodsListResponse, error) {
 	client := block.NewBlockClient(m.cli.Conn())
 	return client.GetGoodsList(ctx, in, opts...)
@@ -176,4 +187,19 @@ func (m *defaultBlock) BargainPay(ctx context.Context, in *BargainPayRequest, op
 func (m *defaultBlock) JudgeGoodsPurchase(ctx context.Context, in *JudgeGoodsPurchaseRequest, opts ...grpc.CallOption) (*JudgeGoodsPurchaseResponse, error) {
 	client := block.NewBlockClient(m.cli.Conn())
 	return client.JudgeGoodsPurchase(ctx, in, opts...)
+}
+
+func (m *defaultBlock) GetUserCryptominerStatus(ctx context.Context, in *GetUserCryptominerStatusRequest, opts ...grpc.CallOption) (*GetUserCryptominerStatusResponse, error) {
+	client := block.NewBlockClient(m.cli.Conn())
+	return client.GetUserCryptominerStatus(ctx, in, opts...)
+}
+
+func (m *defaultBlock) GetUserPropStatus(ctx context.Context, in *GetUserPropStatusRequest, opts ...grpc.CallOption) (*GetUserPropStatusResponse, error) {
+	client := block.NewBlockClient(m.cli.Conn())
+	return client.GetUserPropStatus(ctx, in, opts...)
+}
+
+func (m *defaultBlock) ActivateCryptominer(ctx context.Context, in *ActivateCryptominerRequest, opts ...grpc.CallOption) (*ActivateCryptominerResponse, error) {
+	client := block.NewBlockClient(m.cli.Conn())
+	return client.ActivateCryptominer(ctx, in, opts...)
 }

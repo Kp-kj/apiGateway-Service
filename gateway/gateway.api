@@ -986,7 +986,7 @@ type StartGoodInput {
 // 管理系统创建矿机活动
 type CreateActivityInput {
 	AdminUserID       int64   `json:"adminUserID"`       // 管理员id
-	CryptominerTypeID int64   `json:"cryptominerTypeID"` // 关联矿机种s类id
+	CryptominerTypeID int64   `json:"cryptominerTypeID"` // 关联矿机种类id
 	UserAmount        int64   `json:"userAmount"`        // 砍价人数
 	MinPrice          float64 `json:"minPrice"`          // 最小砍价金额
 	FirstBargainPer   float64 `json:"firstBargainPer"`   // 首次砍价百分比

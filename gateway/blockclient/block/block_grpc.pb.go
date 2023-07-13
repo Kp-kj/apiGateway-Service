@@ -37,6 +37,9 @@ const (
 	Block_GetBargainRecord_FullMethodName           = "/block.Block/GetBargainRecord"
 	Block_BargainPay_FullMethodName                 = "/block.Block/BargainPay"
 	Block_JudgeGoodsPurchase_FullMethodName         = "/block.Block/JudgeGoodsPurchase"
+	Block_GetUserCryptominerStatus_FullMethodName   = "/block.Block/GetUserCryptominerStatus"
+	Block_GetUserPropStatus_FullMethodName          = "/block.Block/GetUserPropStatus"
+	Block_ActivateCryptominer_FullMethodName        = "/block.Block/ActivateCryptominer"
 )
 
 // BlockClient is the client API for Block service.
@@ -64,6 +67,9 @@ type BlockClient interface {
 	BargainPay(ctx context.Context, in *BargainPayRequest, opts ...grpc.CallOption) (*IsSuccessResponse, error)
 	// 外部rpc接口
 	JudgeGoodsPurchase(ctx context.Context, in *JudgeGoodsPurchaseRequest, opts ...grpc.CallOption) (*JudgeGoodsPurchaseResponse, error)
+	GetUserCryptominerStatus(ctx context.Context, in *GetUserCryptominerStatusRequest, opts ...grpc.CallOption) (*GetUserCryptominerStatusResponse, error)
+	GetUserPropStatus(ctx context.Context, in *GetUserPropStatusRequest, opts ...grpc.CallOption) (*GetUserPropStatusResponse, error)
+	ActivateCryptominer(ctx context.Context, in *ActivateCryptominerRequest, opts ...grpc.CallOption) (*ActivateCryptominerResponse, error)
 }
 
 type blockClient struct {
@@ -236,6 +242,33 @@ func (c *blockClient) JudgeGoodsPurchase(ctx context.Context, in *JudgeGoodsPurc
 	return out, nil
 }
 
+func (c *blockClient) GetUserCryptominerStatus(ctx context.Context, in *GetUserCryptominerStatusRequest, opts ...grpc.CallOption) (*GetUserCryptominerStatusResponse, error) {
+	out := new(GetUserCryptominerStatusResponse)
+	err := c.cc.Invoke(ctx, Block_GetUserCryptominerStatus_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *blockClient) GetUserPropStatus(ctx context.Context, in *GetUserPropStatusRequest, opts ...grpc.CallOption) (*GetUserPropStatusResponse, error) {
+	out := new(GetUserPropStatusResponse)
+	err := c.cc.Invoke(ctx, Block_GetUserPropStatus_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *blockClient) ActivateCryptominer(ctx context.Context, in *ActivateCryptominerRequest, opts ...grpc.CallOption) (*ActivateCryptominerResponse, error) {
+	out := new(ActivateCryptominerResponse)
+	err := c.cc.Invoke(ctx, Block_ActivateCryptominer_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // BlockServer is the server API for Block service.
 // All implementations must embed UnimplementedBlockServer
 // for forward compatibility
@@ -261,6 +294,9 @@ type BlockServer interface {
 	BargainPay(context.Context, *BargainPayRequest) (*IsSuccessResponse, error)
 	// 外部rpc接口
 	JudgeGoodsPurchase(context.Context, *JudgeGoodsPurchaseRequest) (*JudgeGoodsPurchaseResponse, error)
+	GetUserCryptominerStatus(context.Context, *GetUserCryptominerStatusRequest) (*GetUserCryptominerStatusResponse, error)
+	GetUserPropStatus(context.Context, *GetUserPropStatusRequest) (*GetUserPropStatusResponse, error)
+	ActivateCryptominer(context.Context, *ActivateCryptominerRequest) (*ActivateCryptominerResponse, error)
 	mustEmbedUnimplementedBlockServer()
 }
 
@@ -321,6 +357,15 @@ func (UnimplementedBlockServer) BargainPay(context.Context, *BargainPayRequest) 
 }
 func (UnimplementedBlockServer) JudgeGoodsPurchase(context.Context, *JudgeGoodsPurchaseRequest) (*JudgeGoodsPurchaseResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method JudgeGoodsPurchase not implemented")
+}
+func (UnimplementedBlockServer) GetUserCryptominerStatus(context.Context, *GetUserCryptominerStatusRequest) (*GetUserCryptominerStatusResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserCryptominerStatus not implemented")
+}
+func (UnimplementedBlockServer) GetUserPropStatus(context.Context, *GetUserPropStatusRequest) (*GetUserPropStatusResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserPropStatus not implemented")
+}
+func (UnimplementedBlockServer) ActivateCryptominer(context.Context, *ActivateCryptominerRequest) (*ActivateCryptominerResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ActivateCryptominer not implemented")
 }
 func (UnimplementedBlockServer) mustEmbedUnimplementedBlockServer() {}
 
@@ -659,6 +704,60 @@ func _Block_JudgeGoodsPurchase_Handler(srv interface{}, ctx context.Context, dec
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Block_GetUserCryptominerStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetUserCryptominerStatusRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(BlockServer).GetUserCryptominerStatus(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Block_GetUserCryptominerStatus_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(BlockServer).GetUserCryptominerStatus(ctx, req.(*GetUserCryptominerStatusRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Block_GetUserPropStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetUserPropStatusRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(BlockServer).GetUserPropStatus(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Block_GetUserPropStatus_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(BlockServer).GetUserPropStatus(ctx, req.(*GetUserPropStatusRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Block_ActivateCryptominer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ActivateCryptominerRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(BlockServer).ActivateCryptominer(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Block_ActivateCryptominer_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(BlockServer).ActivateCryptominer(ctx, req.(*ActivateCryptominerRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // Block_ServiceDesc is the grpc.ServiceDesc for Block service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -737,6 +836,18 @@ var Block_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "JudgeGoodsPurchase",
 			Handler:    _Block_JudgeGoodsPurchase_Handler,
+		},
+		{
+			MethodName: "GetUserCryptominerStatus",
+			Handler:    _Block_GetUserCryptominerStatus_Handler,
+		},
+		{
+			MethodName: "GetUserPropStatus",
+			Handler:    _Block_GetUserPropStatus_Handler,
+		},
+		{
+			MethodName: "ActivateCryptominer",
+			Handler:    _Block_ActivateCryptominer_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
