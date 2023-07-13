@@ -9,16 +9,16 @@ import (
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
-func GetBargainCryptominerHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
+func GetPurchaseRecordHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		var req types.GetBargainCryptominerInput
+		var req types.GetPurchaseRecordInput
 		if err := httpx.Parse(r, &req); err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 			return
 		}
 
-		l := mall.NewGetBargainCryptominerLogic(r.Context(), svcCtx)
-		resp, err := l.GetBargainCryptominer(&req)
+		l := mall.NewGetPurchaseRecordLogic(r.Context(), svcCtx)
+		resp, err := l.GetPurchaseRecord(&req)
 		if err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 		} else {

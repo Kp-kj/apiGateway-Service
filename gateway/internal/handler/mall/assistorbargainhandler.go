@@ -9,16 +9,16 @@ import (
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
-func GetBargainProgressHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
+func AssistorBargainHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		var req types.GetBargainProgressInput
+		var req types.AssistorBargainInput
 		if err := httpx.Parse(r, &req); err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 			return
 		}
 
-		l := mall.NewGetBargainProgressLogic(r.Context(), svcCtx)
-		resp, err := l.GetBargainProgress(&req)
+		l := mall.NewAssistorBargainLogic(r.Context(), svcCtx)
+		resp, err := l.AssistorBargain(&req)
 		if err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 		} else {

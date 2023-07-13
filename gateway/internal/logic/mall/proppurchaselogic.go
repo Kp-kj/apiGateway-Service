@@ -2,6 +2,7 @@ package mall
 
 import (
 	"context"
+	"encoding/json"
 	"gateway/blockclient"
 	"gateway/internal/svc"
 	"gateway/internal/types"
@@ -24,9 +25,14 @@ func NewPropPurchaseLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Prop
 }
 
 func (l *PropPurchaseLogic) PropPurchase(req *types.PropPurchaseInput) (resp *types.IsSuccessReply, err error) {
+	userId := l.ctx.Value("userId")
+	var userID int64
+	if v, ok := userId.(json.Number); ok {
+		userID, _ = v.Int64()
+	}
 
 	result, err := l.svcCtx.BlockClient.PropPurchase(l.ctx, &blockclient.PropPurchaseRequest{
-		UserId:       req.UserID,
+		UserId:       userID,
 		PropId:       req.PropID,
 		GoodQuantity: req.GoodQuantity,
 	})
