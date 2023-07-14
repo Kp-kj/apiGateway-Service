@@ -200,7 +200,8 @@ type GetMessageListReply {
 
 //GetMessageByNoticeId
 type GetMessageByNoticeId {
-	NoticeId int64 `json:"noticeId"` //通知id
+	NoticeId   int64 `json:"noticeId"`   //通知id
+	NoticeType int64 `json:"noticeType"` //通知类型 1:系统通知 2:用户通知
 }
 
 //AddCategory
@@ -239,6 +240,89 @@ type EditNotice {
 
 type EditNoticeReply {
 	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+//EditCategory
+type EditCategory {
+	CategoryId     int64  `json:"categoryId"`  //分类id
+	CategoryNameZh string `json:"category_zh"` //分类名称
+	CategoryNameEn string `json:"category_en"` //分类名称
+}
+
+//EditCategoryReply
+type EditCategoryReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+//BatchDeleteCategory 批量删除分类
+type BatchDeleteCategory {
+	CategoryIds []int64 `json:"categoryIds"` //分类id
+}
+
+//BatchDeleteCategoryReply
+type BatchDeleteCategoryReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+//CategorylistStatus 批量编辑分类状态
+type CategorylistStatus {
+	CategoryIds []int64 `json:"categoryIds"` //分类id
+	Status      int64   `json:"status"`      //分类状态
+}
+
+//CategorylistStatusReply
+type CategorylistStatusReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+//EditDocumentContent
+type EditDocumentContent {
+	HelpCategoryId int64  `json:"helpCategoryId"` //帮助文档id
+	Helpdocumentid int64  `json:"helpdocumentid"` //帮助文档id
+	ContentZh      string `json:"contentZh"`      //内容
+	ContentEn      string `json:"contentEn"`      //内容
+	TitleZh        string `json:"titleZh"`        //标题
+	TitleEn        string `json:"titleEn"`        //标题
+
+}
+//EditDocumentContentReply
+type EditDocumentContentReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+//DocumentContentlistStatus
+type DocumentContentlistStatus {
+	Helpdocumentids []int64 `json:"helpdocumentids"` //帮助文档id
+	Status          int64   `json:"status"`          //帮助文档状态
+}
+
+//DocumentContentlistStatusReply
+type DocumentContentlistStatusReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+//BatchDeleteDocumentContent
+type BatchDeleteDocumentContent {
+	Helpdocumentids []int64 `json:"helpdocumentids"` //帮助文档id
+}
+
+//BatchDeleteDocumentContentReply
+type BatchDeleteDocumentContentReply {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+//GetCategoryListByCondition
+type GetCategoryListByCondition {
+	CategoryName string `json:"categoryName"`
+	IsShow       bool   `json:"isShow"`
+	LastId       int64  `json:"lastId"`
+}
+
+//GetCategoryListByConditionReply
+type GetCategoryListByConditionReply {
+	HelpCategoryList []HelpCategoryList `json:"helpCategoryList"`
+	TotalCount       int64              `json:"totalCount"` //这次返回的数据总共有多少条
+	TotalPage        int64              `json:"totalPage"`  //总页数
 }
 
 // 下面是用户接口，需要鉴权
@@ -333,7 +417,7 @@ service gateway-api {
 	//	@handler deleteNotice
 	//	post /admin/deleteNotice (DeleteNotice) returns (DeleteNoticeReply)
 	
-	//    @doc "查看公告详情"
+	//	@doc "查看公告详情"
 	//	@handler getNotice
 	//	post /admin/getNotice (GetNotice) returns (GetNoticeReply)
 	
@@ -342,33 +426,40 @@ service gateway-api {
 	@handler addCategory
 	post /admin/addCategory (AddCategory) returns (AddCategoryReply)
 	
-	//	@doc "批量删除分类"
-	//	@handler batchDeleteCategory
-	//	post /admin/batchDeleteCategory (BatchDeleteCategory) returns (BatchDeleteCategoryReply)
+	@doc "新建编辑分类问答"
+	@handler editCategory
+	post /admin/editCategory (EditCategory) returns (EditCategoryReply)   //完成
+
+	@doc "批量删除分类"
+	@handler batchDeleteCategory
+	post /admin/batchDeleteCategory (BatchDeleteCategory) returns (BatchDeleteCategoryReply)
+
+	@doc "批量更改分类的发布状态"
+	@handler categorylistStatus
+	post /admin/categorylistStatus (CategorylistStatus) returns (CategorylistStatusReply)
+
+
+	@doc "新建编辑分类问答"
+	@handler editDocumentContent
+	post /admin/editDocumentContent (EditDocumentContent) returns (EditDocumentContentReply)
+
+
+	@doc "批量更改分类问答的发布状态"
+	@handler documentContentlistStatus
+	post /admin/documentContentlistStatus (DocumentContentlistStatus) returns (DocumentContentlistStatusReply)
+
+	//  TODO:7.11 全部解决掉
+	@doc "批量删除分类问答"
+	@handler batchDeleteDocumentContent
+	post /admin/batchDeleteDocumentContent (BatchDeleteDocumentContent) returns (BatchDeleteDocumentContentReply)
 	
-	//	@doc "按条件筛选分类的问答列表"
-	//	@handler getCategoryListByCondition
-	//	post /admin/getCategoryListByCondition (GetCategoryListByCondition) returns (GetCategoryListByConditionReply)
-	
-	//	@doc "批量更改分类的发布状态"
-	//	@handler categorylistStatus
-	//	post /admin/categorylistStatus (CategorylistStatus) returns (CategorylistStatusReply)
-	
-	//	@doc "新建编辑分类问答"
-	//	@handler editCategory
-	//	post /admin/editCategory (EditCategory) returns (EditCategoryReply)
+	@doc "按条件筛选分类的问答列表"
+	@handler getCategoryListByCondition
+	post /admin/getCategoryListByCondition (GetCategoryListByCondition) returns (GetCategoryListByConditionReply)
 	
 	//	@doc "按条件筛选分类问答列表"
 	//	@handler getDocumentContentListByCondition
 	//	post /admin/getDocumentContentListByCondition (GetDocumentContentListByCondition) returns (GetDocumentContentListByConditionReply)
-	
-	//	@doc "批量更改分类问答的发布状态"
-	//	@handler documentContentlistStatus
-	//	post /admin/documentContentlistStatus (DocumentContentlistStatus) returns (DocumentContentlistStatusReply)
-	
-	//	@doc "批量删除分类问答"
-	//	@handler batchDeleteCategory
-	//	post /admin/batchDeleteCategory (BatchDeleteCategory) returns (BatchDeleteCategoryReply)
 	
 }
 
@@ -918,7 +1009,6 @@ type StartActivityInput {
 
 // 获取商城列表
 type GetGoodsListInput {
-	UserID int64 `json:"userId"`
 }
 
 // 获取商城列表
@@ -960,71 +1050,42 @@ type Prop {
 	PaymentWay   string `json:"paymentWay"`   // 支付方式 0：U 1：ADF
 }
 
-// 判断是否可以砍价
+// 判断砍价信息
 type JudgeBargainInput {
-	UserID            int64 `json:"userId"`            // 用户id
 	CryptominerTypeID int64 `json:"cryptominerTypeId"` // 矿机种类ids
 }
 
-// 判断是否可以砍价
+// 判断砍价信息
 type JudgeBargainReply {
-	IsBargain bool `json:"isBargain"` // 砍价id
+	IsBargain           bool   `json:"isBargain"`           // 砍价id
+	BargainRuleDescribe string `json:"bargainRuleDescribe"` // 规则描述
+	IsFirst             bool   `json:"isFirst"`             // 是否为第一次砍价
 }
 
 // 购买道具
 type PropPurchaseInput {
-	UserID int64 `json:"userId"` // 用户id
-	PropID int64 `json:"propId"` // 商品id
+	PropID       int64 `json:"propId"`       // 商品id
+	GoodQuantity int64 `json:"goodQuantity"` // 购买数量
 }
 
 // 矿机全额购买
 type CryptominerPurchaseInput {
-	UserID        int64 `json:"userId"`        // 用户id
 	CryptominerID int64 `json:"cryptominerId"` // 商品id
 }
 
-// 矿机限时购买
+// 发起砍价
 type CryptominerBargainInput {
-	UserID        int64 `json:"userId"`        // 用户id
 	CryptominerID int64 `json:"cryptominerId"` // 商品id
 }
 
-// 矿机限时购买
+// 发起砍价
 type CryptominerBargainReply {
 	BargainID int64 `json:"bargainId"` // 砍价id
-	IsFirst   bool  `json:"isFirst"`   // 是否为第一次砍价
 }
 
-// 获取活动规则
-type GetBargainRuleInput {
+// 好友助力
+type AssistorBargainInput {
 	BargainID int64 `json:"bargainId"` // 砍价id
-}
-
-// 获取活动规则
-type GetBargainRuleReply {
-	BargainRuleDescribe string `json:"bargainRuleDescribe"` // 规则描述
-}
-
-// 获取砍价商品信息
-type GetBargainCryptominerInput {
-	CryptominerID int64 `json:"cryptominerId"` // 矿机id
-}
-
-// 获取砍价矿机信息
-type GetBargainCryptominerReply {
-	CryptominerName    string `json:"cryptominerName"`    // 矿机名称
-	CryptominerPicture string `json:"cryptominerPicture"` // 矿机图片
-}
-
-// 获取砍价进度
-type GetBargainProgressInput {
-	BargainID int64 `json:"bargainId"` // 砍价id
-}
-
-// 获取砍价进度
-type GetBargainProgressReply {
-	ActivityStartTime string  `json:"activityStartTime"` // 活动开始时间
-	RemainingPrice    float32 `json:"remainingPrice"`    // 剩余金额
 }
 
 // 获取砍价记录列表
@@ -1032,36 +1093,66 @@ type GetBargainRecordInput {
 	BargainID int64 `json:"bargainId"` // 砍价id
 }
 
-// 获取砍价记录列表
 type GetBargainRecordReply {
-	Cryptominer   []*Cryptominer   `json:"cryptominer"`   // 矿机
-	BargainAmount []*BargainAmount `json:"bargainAmount"` // 每份金额计算
-	Profile       []*Profile       `json:"profile"`       // 对应金额的砍价人信息
+	BargainRecord *BargainRecord `json:"bargainRecord"` // 矿机
+	LoginStatus   string         `json:"loginStatus"`   // 登陆状态 0：砍价发起人 1:助力人 2：无token
+	InActivity    bool           `json:"inActivity"`    // 是否活动中，false包括倒计时结束，提前付款结束
+	BargainMax    bool           `json:"bargainMax"`    // 砍价次数已达上限
+	ISBargain     bool           `json:"iSBargain"`     // 是否可以砍价
+}
+// 砍价记录
+type BargainRecord {
+	BargainID          int64          `json:"bargainId"`          // 砍价id
+	UserName           string         `json:"userName"`           // 用户名
+	TwitterName        string         `json:"twitterName"`        // 用户推特名
+	CryptominerName    string         `json:"cryptominerName"`    // 矿机名称
+	CryptominerPicture string         `json:"cryptominerPicture"` // 矿机图片
+	CryptominerPrice   int64          `json:"cryptominerPrice"`   // 矿机价格
+	ActivityStartTime  int64          `json:"activityStartTime"`  // 砍价开始时间戳
+	RemainingPrice     float64        `json:"remainingPrice"`     // 剩余金额
+	SupportUser        []*SupportUser `json:"supportUser"`        //助力人信息
 }
 
-// 金额计算
-type BargainAmount {
-	FirstBargainPercentage float32 `json:"firstBargainPercentage"` // 初次砍价百分比
-	BargainMinPrice        float32 `json:"bargainMinPrice"`        // 砍价最小额度
-	BargainPrice           float32 `json:"bargainPrice"`           // 本次砍价额度
+// 关联助力人信息
+type SupportUser {
+	AssistorID   int64   `json:"assistorId"`   // 助力人id
+	AssistorName string  `json:"assistorName"` // 助力人名
+	TwitterName  string  `json:"TwitterName"`  // 推特名
+	Avatar       string  `json:"avatar"`       // 助力人头像
+	BargainPrice float64 `json:"bargainPrice"` // 助力金额
 }
 
-// 用户信息
-type Profile {
-	UserID   int64  `json:"userId"`   // 用户id
-	UserName string `json:"userName"` // 用户名
-	Avatar   string `json:"avatar"`   // 用户头像
+// 砍价支付
+type BargainPayInput {
+	CryptominerID int64 `json:"cryptominerId"` // 商品id
 }
 
 // 金额计算
 type JudgeGoodsPurchaseInput {
-	UserID   int64  `json:"userId"`   // 用户id
 	GoodName string `json:"goodName"` // 商品名称
 }
 
-// 用户信息
+// 金额计算
 type JudgeGoodsPurchaseReply {
 	IsPurchase bool `json:"isPurchase"` //  true 已有购买，false 没有购买记录
+}
+
+type GetPurchaseRecordInput {
+}
+
+type GetPurchaseRecordReply {
+	PurchaseRecord []*PurchaseRecord `json:"purchaseRecord"` // 对应金额的砍价人信息
+}
+
+type PurchaseRecord {
+	PurchaseRecordID int64  `json:"purchaseRecordId"` // 购买记录id
+	GoodName         string `json:"goodName"`         // 商品名称
+	GoodPicture      string `json:"goodPicture"`      // 商品图片
+	GoodQuantity     int64  `json:"goodQuantity"`     // 商品数量
+	PurchaseTime     string `json:"purchaseTime"`     // 购买时间
+	PurchasePrice    string `json:"purchasePrice"`    // 购买价格
+	PurchaseWay      string `json:"purchaseWay"`      // 购买方式 0：全额购买 1：限时砍价
+	PaymentWay       string `json:"paymentWay"`       // 支付方式 0：U ,1:ADF
 }
 
 // 创建商品，需要鉴权
@@ -1069,7 +1160,7 @@ type JudgeGoodsPurchaseReply {
 	prefix :/v1
 	group :adminmall
 	//	middleware : BlackMiddleware
-	//  jwt : AdminAuth
+	jwt : AdminAuth
 )
 
 service gateway-api {
@@ -1107,8 +1198,8 @@ service gateway-api {
 @server(
 	prefix :/v1
 	group :mall
-	//	middleware : BlackMiddleware
-	// jwt : Auth
+	middleware : BlackMiddleware
+	jwt : Auth
 )
 
 service gateway-api {
@@ -1116,7 +1207,7 @@ service gateway-api {
 	@handler GetGoodsList
 	post /mall/goodlist (GetGoodsListInput)  returns (GetGoodsListReply)
 	
-	@doc "判断是否可砍"
+	@doc "判断砍价信息"
 	@handler JudgeBargain
 	post /mall/judgebargain (JudgeBargainInput)  returns (JudgeBargainReply)
 	
@@ -1124,28 +1215,28 @@ service gateway-api {
 	@handler CryptominerFullPurchase
 	post /mall/purchase/full (CryptominerPurchaseInput)  returns (IsSuccessReply)
 	
-	@doc "砍价购买矿机"
-	@handler CryptominerBargainPurchase
-	post /mall/purchase/bargain (CryptominerBargainInput)  returns (CryptominerBargainReply)
-	
 	@doc "购买道具"
 	@handler PropPurchase
 	post /mall/purchase/prop (PropPurchaseInput)  returns (IsSuccessReply)
 	
-	@doc "获取砍价活动规则"
-	@handler GetBargainRule
-	post /mall/activity/rule (GetBargainRuleInput)  returns (GetBargainRuleReply)
+	@doc "发起砍价"
+	@handler CryptominerBargainPurchase
+	post /mall/activity/bargainstart (CryptominerBargainInput)  returns (CryptominerBargainReply)
 	
-	@doc "获取砍价矿机信息"
-	@handler GetBargainCryptominer
-	post /mall/activity/cryptominer (GetBargainCryptominerInput)  returns (GetBargainCryptominerReply)
+	@doc "好友助力"
+	@handler AssistorBargain
+	post /mall/activity/assistor (AssistorBargainInput)  returns (IsSuccessReply)
 	
-	@doc "获取砍价进度"
-	@handler GetBargainProgress
-	post /mall/activity/progress (GetBargainProgressInput)  returns (GetBargainProgressReply)
-	
-	@doc "获取砍价记录列表"
+	@doc "获取砍价记录"
 	@handler GetBargainRecord
 	post /mall/activity/bargainlist (GetBargainRecordInput)  returns (GetBargainRecordReply)
+	
+	@doc "砍价支付"
+	@handler BargainPay
+	post /mall/activity/bargainpay (BargainPayInput)  returns (IsSuccessReply)
+	
+	@doc "获取购买记录列表"
+	@handler GetPurchaseRecord
+	post /mall/purchase/PurchaseRecordlist (GetPurchaseRecordInput)  returns (GetPurchaseRecordReply)
 	
 }

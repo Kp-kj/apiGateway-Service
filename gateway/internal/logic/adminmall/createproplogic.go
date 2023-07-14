@@ -24,6 +24,7 @@ func NewCreatePropLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Create
 }
 
 func (l *CreatePropLogic) CreateProp(req *types.CreatePropInput) (resp *types.IsSuccessReply, err error) {
+
 	result, err := l.svcCtx.BlockClient.CreateProp(l.ctx, &blockclient.CreatePropRequest{
 		AdminuserId:  req.AdminUserID,
 		PropName:     req.PropName,

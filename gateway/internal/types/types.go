@@ -151,7 +151,8 @@ type GetMessageListReply struct {
 }
 
 type GetMessageByNoticeId struct {
-	NoticeId int64 `json:"noticeId"` //通知id
+	NoticeId   int64 `json:"noticeId"`   //通知id
+	NoticeType int64 `json:"noticeType"` //通知类型 1:系统通知 2:用户通知
 }
 
 type AddCategory struct {
@@ -187,6 +188,75 @@ type EditNotice struct {
 
 type EditNoticeReply struct {
 	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type EditCategory struct {
+	CategoryId     int64  `json:"categoryId"`  //分类id
+	CategoryNameZh string `json:"category_zh"` //分类名称
+	CategoryNameEn string `json:"category_en"` //分类名称
+}
+
+type EditCategoryReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type BatchDeleteCategory struct {
+	CategoryIds []int64 `json:"categoryIds"` //分类id
+}
+
+type BatchDeleteCategoryReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type CategorylistStatus struct {
+	CategoryIds []int64 `json:"categoryIds"` //分类id
+	Status      int64   `json:"status"`      //分类状态
+}
+
+type CategorylistStatusReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type EditDocumentContent struct {
+	HelpCategoryId int64  `json:"helpCategoryId"` //帮助文档id
+	Helpdocumentid int64  `json:"helpdocumentid"` //帮助文档id
+	ContentZh      string `json:"contentZh"`      //内容
+	ContentEn      string `json:"contentEn"`      //内容
+	TitleZh        string `json:"titleZh"`        //标题
+	TitleEn        string `json:"titleEn"`        //标题
+}
+
+type EditDocumentContentReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type DocumentContentlistStatus struct {
+	Helpdocumentids []int64 `json:"helpdocumentids"` //帮助文档id
+	Status          int64   `json:"status"`          //帮助文档状态
+}
+
+type DocumentContentlistStatusReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type BatchDeleteDocumentContent struct {
+	Helpdocumentids []int64 `json:"helpdocumentids"` //帮助文档id
+}
+
+type BatchDeleteDocumentContentReply struct {
+	IsSuccess bool `json:"isSuccess"` //是否成功
+}
+
+type GetCategoryListByCondition struct {
+	CategoryName string `json:"categoryName"`
+	IsShow       bool   `json:"isShow"`
+	LastId       int64  `json:"lastId"`
+}
+
+type GetCategoryListByConditionReply struct {
+	HelpCategoryList []HelpCategoryList `json:"helpCategoryList"`
+	TotalCount       int64              `json:"totalCount"` //这次返回的数据总共有多少条
+	TotalPage        int64              `json:"totalPage"`  //总页数
 }
 
 type CreatePublishTaskInput struct {
@@ -559,7 +629,6 @@ type StartActivityInput struct {
 }
 
 type GetGoodsListInput struct {
-	UserID int64 `json:"userId"`
 }
 
 type GetGoodsListReply struct {
@@ -599,58 +668,34 @@ type Prop struct {
 }
 
 type JudgeBargainInput struct {
-	UserID            int64 `json:"userId"`            // 用户id
 	CryptominerTypeID int64 `json:"cryptominerTypeId"` // 矿机种类ids
 }
 
 type JudgeBargainReply struct {
-	IsBargain bool `json:"isBargain"` // 砍价id
+	IsBargain           bool   `json:"isBargain"`           // 砍价id
+	BargainRuleDescribe string `json:"bargainRuleDescribe"` // 规则描述
+	IsFirst             bool   `json:"isFirst"`             // 是否为第一次砍价
 }
 
 type PropPurchaseInput struct {
-	UserID int64 `json:"userId"` // 用户id
-	PropID int64 `json:"propId"` // 商品id
+	PropID       int64 `json:"propId"`       // 商品id
+	GoodQuantity int64 `json:"goodQuantity"` // 购买数量
 }
 
 type CryptominerPurchaseInput struct {
-	UserID        int64 `json:"userId"`        // 用户id
 	CryptominerID int64 `json:"cryptominerId"` // 商品id
 }
 
 type CryptominerBargainInput struct {
-	UserID        int64 `json:"userId"`        // 用户id
 	CryptominerID int64 `json:"cryptominerId"` // 商品id
 }
 
 type CryptominerBargainReply struct {
 	BargainID int64 `json:"bargainId"` // 砍价id
-	IsFirst   bool  `json:"isFirst"`   // 是否为第一次砍价
 }
 
-type GetBargainRuleInput struct {
+type AssistorBargainInput struct {
 	BargainID int64 `json:"bargainId"` // 砍价id
-}
-
-type GetBargainRuleReply struct {
-	BargainRuleDescribe string `json:"bargainRuleDescribe"` // 规则描述
-}
-
-type GetBargainCryptominerInput struct {
-	CryptominerID int64 `json:"cryptominerId"` // 矿机id
-}
-
-type GetBargainCryptominerReply struct {
-	CryptominerName    string `json:"cryptominerName"`    // 矿机名称
-	CryptominerPicture string `json:"cryptominerPicture"` // 矿机图片
-}
-
-type GetBargainProgressInput struct {
-	BargainID int64 `json:"bargainId"` // 砍价id
-}
-
-type GetBargainProgressReply struct {
-	ActivityStartTime string  `json:"activityStartTime"` // 活动开始时间
-	RemainingPrice    float32 `json:"remainingPrice"`    // 剩余金额
 }
 
 type GetBargainRecordInput struct {
@@ -658,28 +703,59 @@ type GetBargainRecordInput struct {
 }
 
 type GetBargainRecordReply struct {
-	Cryptominer   []*Cryptominer   `json:"cryptominer"`   // 矿机
-	BargainAmount []*BargainAmount `json:"bargainAmount"` // 每份金额计算
-	Profile       []*Profile       `json:"profile"`       // 对应金额的砍价人信息
+	BargainRecord *BargainRecord `json:"bargainRecord"` // 矿机
+	LoginStatus   string         `json:"loginStatus"`   // 登陆状态 0：砍价发起人 1:助力人 2：无token
+	InActivity    bool           `json:"inActivity"`    // 是否活动中，false包括倒计时结束，提前付款结束
+	BargainMax    bool           `json:"bargainMax"`    // 砍价次数已达上限
+	ISBargain     bool           `json:"iSBargain"`     // 是否可以砍价
 }
 
-type BargainAmount struct {
-	FirstBargainPercentage float32 `json:"firstBargainPercentage"` // 初次砍价百分比
-	BargainMinPrice        float32 `json:"bargainMinPrice"`        // 砍价最小额度
-	BargainPrice           float32 `json:"bargainPrice"`           // 本次砍价额度
+type BargainRecord struct {
+	BargainID          int64          `json:"bargainId"`          // 砍价id
+	UserName           string         `json:"userName"`           // 用户名
+	TwitterName        string         `json:"twitterName"`        // 用户推特名
+	CryptominerName    string         `json:"cryptominerName"`    // 矿机名称
+	CryptominerPicture string         `json:"cryptominerPicture"` // 矿机图片
+	CryptominerPrice   int64          `json:"cryptominerPrice"`   // 矿机价格
+	ActivityStartTime  int64          `json:"activityStartTime"`  // 砍价开始时间戳
+	RemainingPrice     float64        `json:"remainingPrice"`     // 剩余金额
+	SupportUser        []*SupportUser `json:"supportUser"`        //助力人信息
 }
 
-type Profile struct {
-	UserID   int64  `json:"userId"`   // 用户id
-	UserName string `json:"userName"` // 用户名
-	Avatar   string `json:"avatar"`   // 用户头像
+type SupportUser struct {
+	AssistorID   int64   `json:"assistorId"`   // 助力人id
+	AssistorName string  `json:"assistorName"` // 助力人名
+	TwitterName  string  `json:"TwitterName"`  // 推特名
+	Avatar       string  `json:"avatar"`       // 助力人头像
+	BargainPrice float64 `json:"bargainPrice"` // 助力金额
+}
+
+type BargainPayInput struct {
+	CryptominerID int64 `json:"cryptominerId"` // 商品id
 }
 
 type JudgeGoodsPurchaseInput struct {
-	UserID   int64  `json:"userId"`   // 用户id
 	GoodName string `json:"goodName"` // 商品名称
 }
 
 type JudgeGoodsPurchaseReply struct {
 	IsPurchase bool `json:"isPurchase"` //  true 已有购买，false 没有购买记录
+}
+
+type GetPurchaseRecordInput struct {
+}
+
+type GetPurchaseRecordReply struct {
+	PurchaseRecord []*PurchaseRecord `json:"purchaseRecord"` // 对应金额的砍价人信息
+}
+
+type PurchaseRecord struct {
+	PurchaseRecordID int64  `json:"purchaseRecordId"` // 购买记录id
+	GoodName         string `json:"goodName"`         // 商品名称
+	GoodPicture      string `json:"goodPicture"`      // 商品图片
+	GoodQuantity     int64  `json:"goodQuantity"`     // 商品数量
+	PurchaseTime     string `json:"purchaseTime"`     // 购买时间
+	PurchasePrice    string `json:"purchasePrice"`    // 购买价格
+	PurchaseWay      string `json:"purchaseWay"`      // 购买方式 0：全额购买 1：限时砍价
+	PaymentWay       string `json:"paymentWay"`       // 支付方式 0：U ,1:ADF
 }

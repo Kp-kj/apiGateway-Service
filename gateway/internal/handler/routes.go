@@ -147,6 +147,41 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Path:    "/admin/addCategory",
 				Handler: admin.AddCategoryHandler(serverCtx),
 			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/editCategory",
+				Handler: admin.EditCategoryHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/batchDeleteCategory",
+				Handler: admin.BatchDeleteCategoryHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/categorylistStatus",
+				Handler: admin.CategorylistStatusHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/editDocumentContent",
+				Handler: admin.EditDocumentContentHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/documentContentlistStatus",
+				Handler: admin.DocumentContentlistStatusHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/batchDeleteDocumentContent",
+				Handler: admin.BatchDeleteDocumentContentHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/admin/getCategoryListByCondition",
+				Handler: admin.GetCategoryListByConditionHandler(serverCtx),
+			},
 		},
 		rest.WithJwt(serverCtx.Config.AdminAuth.AccessSecret),
 		rest.WithPrefix("/v1"),
@@ -342,57 +377,62 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Handler: adminmall.StartActivityHandler(serverCtx),
 			},
 		},
+		rest.WithJwt(serverCtx.Config.AdminAuth.AccessSecret),
 		rest.WithPrefix("/v1"),
 	)
 
 	server.AddRoutes(
-		[]rest.Route{
-			{
-				Method:  http.MethodPost,
-				Path:    "/mall/goodlist",
-				Handler: mall.GetGoodsListHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/mall/judgebargain",
-				Handler: mall.JudgeBargainHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/mall/purchase/full",
-				Handler: mall.CryptominerFullPurchaseHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/mall/purchase/bargain",
-				Handler: mall.CryptominerBargainPurchaseHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/mall/purchase/prop",
-				Handler: mall.PropPurchaseHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/mall/activity/rule",
-				Handler: mall.GetBargainRuleHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/mall/activity/cryptominer",
-				Handler: mall.GetBargainCryptominerHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/mall/activity/progress",
-				Handler: mall.GetBargainProgressHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/mall/activity/bargainlist",
-				Handler: mall.GetBargainRecordHandler(serverCtx),
-			},
-		},
+		rest.WithMiddlewares(
+			[]rest.Middleware{serverCtx.BlackMiddleware},
+			[]rest.Route{
+				{
+					Method:  http.MethodPost,
+					Path:    "/mall/goodlist",
+					Handler: mall.GetGoodsListHandler(serverCtx),
+				},
+				{
+					Method:  http.MethodPost,
+					Path:    "/mall/judgebargain",
+					Handler: mall.JudgeBargainHandler(serverCtx),
+				},
+				{
+					Method:  http.MethodPost,
+					Path:    "/mall/purchase/full",
+					Handler: mall.CryptominerFullPurchaseHandler(serverCtx),
+				},
+				{
+					Method:  http.MethodPost,
+					Path:    "/mall/purchase/prop",
+					Handler: mall.PropPurchaseHandler(serverCtx),
+				},
+				{
+					Method:  http.MethodPost,
+					Path:    "/mall/activity/bargainstart",
+					Handler: mall.CryptominerBargainPurchaseHandler(serverCtx),
+				},
+				{
+					Method:  http.MethodPost,
+					Path:    "/mall/activity/assistor",
+					Handler: mall.AssistorBargainHandler(serverCtx),
+				},
+				{
+					Method:  http.MethodPost,
+					Path:    "/mall/activity/bargainlist",
+					Handler: mall.GetBargainRecordHandler(serverCtx),
+				},
+				{
+					Method:  http.MethodPost,
+					Path:    "/mall/activity/bargainpay",
+					Handler: mall.BargainPayHandler(serverCtx),
+				},
+				{
+					Method:  http.MethodPost,
+					Path:    "/mall/purchase/PurchaseRecordlist",
+					Handler: mall.GetPurchaseRecordHandler(serverCtx),
+				},
+			}...,
+		),
+		rest.WithJwt(serverCtx.Config.Auth.AccessSecret),
 		rest.WithPrefix("/v1"),
 	)
 }
