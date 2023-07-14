@@ -37,6 +37,8 @@ func (l *AdminGoodListLogic) AdminGoodList(req *types.AdminGoodListInput) (resp 
 			PaymentWay:   item.PaymentWay,
 			PropPrice:    item.PropPrice,
 			GoodStatus:   item.GoodStatus,
+			GoodPower:    item.GoodPower,
+			GoodType:     item.GoodType,
 		})
 	}
 

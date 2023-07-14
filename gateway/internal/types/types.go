@@ -601,6 +601,8 @@ type AdminGood struct {
 	PaymentWay   string `json:"paymentWay"`   // 支付方式 0：U ,1:ADF
 	PropPrice    int64  `json:"propPrice"`    // 商品价格
 	GoodStatus   string `json:"goodStatus"`   // 商品状态  0：待上架  1：已上架 2：未上架
+	GoodType     string `json:"goodType"`     // 商品类型  0：胡萝卜  1：能量水
+	GoodPower    int64  `json:"goodPower"`    // 商品算力  (能量水为0)
 }
 
 type StartGoodInput struct {
