@@ -22,9 +22,10 @@ func AmendChestCollectionHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 		l := everyday.NewAmendChestCollectionLogic(r.Context(), svcCtx)
 		resp, err := l.AmendChestCollection(&req)
 		if err != nil {
-			w.WriteHeader(http.StatusInternalServerError)
+			// code-data 响应格式
 			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {
+			// code-data 响应格式
 			w.WriteHeader(http.StatusOK)
 			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)
 		}

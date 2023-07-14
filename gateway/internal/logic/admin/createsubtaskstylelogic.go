@@ -27,5 +27,8 @@ func NewCreateSubtaskStyleLogic(ctx context.Context, svcCtx *svc.ServiceContext)
 // CreateSubtaskStyle 创建子任务样式
 func (l *CreateSubtaskStyleLogic) CreateSubtaskStyle(req *types.UserIDInquireInput) (resp *types.Mistake, err error) {
 	err1, err := l.svcCtx.TaskClient.CreateSubtaskStyle(l.ctx, &taskclient.UserIDInquireInput{UserId: req.UserId})
+	if err != nil {
+		return nil, err
+	}
 	return &types.Mistake{Msg: err1.Msg}, err
 }

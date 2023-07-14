@@ -642,7 +642,7 @@ type ReSubtaskStyle {
 
 // The substyle returns the struct (子样式返回结构体)
 type SubtaskStyle {
-	TaskId         int64  `json:"taskId"`
+	TaskId         string `json:"taskId"`
 	TaskName       string `json:"taskName"`
 	TaskNameEng    string `json:"taskNameEng"`
 	TaskDetails    string `json:"taskDetails"`
@@ -652,7 +652,7 @@ type SubtaskStyle {
 
 // Associated subtask (关联子任务)
 type AssociatedSubtaskSrt {
-	SubtaskId      int64  `json:"subtaskId"`
+	SubtaskId      string `json:"subtaskId"`
 	TaskId         string `json:"taskId"`
 	TreasureId     string `json:"treasureId"`
 	TaskName       string `json:"taskName"`
@@ -660,7 +660,6 @@ type AssociatedSubtaskSrt {
 	TaskDetails    string `json:"taskDetails"`
 	TaskDetailsEng string `json:"taskDetailsEng"`
 	TaskStatus     int64  `json:"taskStatus"`
-	Reward         int64  `json:"reward"`
 	Experience     int64  `json:"experience"`
 	Number         int64  `json:"number"`
 	Article        string `json:"article"`
@@ -674,7 +673,7 @@ type ReAssociatedSubtask {
 }
 // Associated Subtask (关联子任务)
 type AssociatedSubtask {
-	SubtaskId      int64  `json:"subtaskId"`
+	SubtaskId      string `json:"subtaskId"`
 	TaskId         string `json:"taskId"`
 	TaskName       string `json:"taskName"`
 	TaskNameEng    string `json:"taskNameEng"`

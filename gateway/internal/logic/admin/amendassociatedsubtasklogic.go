@@ -35,12 +35,14 @@ func (l *AmendAssociatedSubtaskLogic) AmendAssociatedSubtask(req *types.Associat
 		TaskDetails:    req.TaskDetails,
 		TaskDetailsEng: req.TaskDetailsEng,
 		TaskStatus:     req.TaskStatus,
-		Reward:         req.Reward,
 		Experience:     req.Experience,
 		Number:         req.Number,
 		Article:        req.Article,
 		Link:           req.Link,
 		Label:          req.Label,
 	})
-	return &types.Mistake{Msg: err1.Msg}, err
+	if err != nil {
+		return nil, err
+	}
+	return &types.Mistake{Msg: err1.Msg}, nil
 }

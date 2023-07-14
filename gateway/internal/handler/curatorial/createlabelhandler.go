@@ -23,9 +23,10 @@ func CreateLabelHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 
 		resp, err := l.CreateLabel(&req)
 		if err != nil {
-			w.WriteHeader(http.StatusInternalServerError)
+			// code-data 响应格式
 			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {
+			// code-data 响应格式
 			w.WriteHeader(http.StatusOK)
 			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)
 		}

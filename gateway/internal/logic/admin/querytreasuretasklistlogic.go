@@ -52,7 +52,6 @@ func (l *QueryTreasureTaskListLogic) QueryTreasureTaskList(req *types.TreasureTa
 			TreasureTaskStage: treasureTaskStage,
 		})
 	}
-
 	return &types.ReTreasureTaskSrt{
 		PaginationData: types.PaginationData{
 			Total:   data.PaginationData.Total,

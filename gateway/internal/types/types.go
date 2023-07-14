@@ -415,7 +415,7 @@ type ReSubtaskStyle struct {
 }
 
 type SubtaskStyle struct {
-	TaskId         int64  `json:"taskId"`
+	TaskId         string `json:"taskId"`
 	TaskName       string `json:"taskName"`
 	TaskNameEng    string `json:"taskNameEng"`
 	TaskDetails    string `json:"taskDetails"`
@@ -424,7 +424,7 @@ type SubtaskStyle struct {
 }
 
 type AssociatedSubtaskSrt struct {
-	SubtaskId      int64  `json:"subtaskId"`
+	SubtaskId      string `json:"subtaskId"`
 	TaskId         string `json:"taskId"`
 	TreasureId     string `json:"treasureId"`
 	TaskName       string `json:"taskName"`
@@ -432,7 +432,6 @@ type AssociatedSubtaskSrt struct {
 	TaskDetails    string `json:"taskDetails"`
 	TaskDetailsEng string `json:"taskDetailsEng"`
 	TaskStatus     int64  `json:"taskStatus"`
-	Reward         int64  `json:"reward"`
 	Experience     int64  `json:"experience"`
 	Number         int64  `json:"number"`
 	Article        string `json:"article"`
@@ -445,7 +444,7 @@ type ReAssociatedSubtask struct {
 }
 
 type AssociatedSubtask struct {
-	SubtaskId      int64  `json:"subtaskId"`
+	SubtaskId      string `json:"subtaskId"`
 	TaskId         string `json:"taskId"`
 	TaskName       string `json:"taskName"`
 	TaskNameEng    string `json:"taskNameEng"`
