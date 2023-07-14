@@ -30,13 +30,13 @@ func (l *QueryAssociatedSubtaskLogic) QueryAssociatedSubtask(req *types.TaskIDIn
 	var associatedSubtask []*types.AssociatedSubtask
 	for _, item := range data.AssociatedSubtask {
 		associatedSubtask = append(associatedSubtask, &types.AssociatedSubtask{
+			SubtaskId:      item.SubtaskId,
 			TaskId:         item.TaskId,
 			TaskName:       item.TaskName,
 			TaskNameEng:    item.TaskNameEng,
 			TaskDetails:    item.TaskDetails,
 			TaskDetailsEng: item.TaskDetailsEng,
 			TaskStatus:     item.TaskStatus,
-			Reward:         item.Reward,
 			Experience:     item.Experience,
 			Number:         item.Number,
 			Article:        item.Article,

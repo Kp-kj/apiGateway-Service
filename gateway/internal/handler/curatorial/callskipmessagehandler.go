@@ -21,9 +21,10 @@ func CallSkipMessageHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 		l := curatorial.NewCallSkipMessageLogic(r.Context(), svcCtx)
 		resp, err := l.CallSkipMessage(&req)
 		if err != nil {
-			w.WriteHeader(http.StatusInternalServerError)
+			// code-data 响应格式
 			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {
+			// code-data 响应格式
 			w.WriteHeader(http.StatusOK)
 			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)
 		}

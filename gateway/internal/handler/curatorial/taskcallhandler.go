@@ -6,6 +6,7 @@ import (
 	"gateway/internal/logic/curatorial"
 	"gateway/internal/svc"
 	"gateway/internal/types"
+
 	"github.com/zeromicro/go-zero/rest/httpx"
 	xhttp "github.com/zeromicro/x/http"
 )
@@ -21,9 +22,10 @@ func TaskCallHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 		l := curatorial.NewTaskCallLogic(r.Context(), svcCtx)
 		resp, err := l.TaskCall(&req)
 		if err != nil {
-			w.WriteHeader(http.StatusInternalServerError)
+			// code-data 响应格式
 			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {
+			// code-data 响应格式
 			w.WriteHeader(http.StatusOK)
 			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)
 		}
