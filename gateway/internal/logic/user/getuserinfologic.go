@@ -2,10 +2,12 @@ package user
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"gateway/internal/svc"
 	"gateway/internal/types"
 	"gateway/userclient"
+	"strconv"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -26,11 +28,15 @@ func NewGetUserInfoLogic(ctx context.Context, svcCtx *svc.ServiceContext) *GetUs
 
 // GetUserInfo 获取用户信息逻辑
 func (l *GetUserInfoLogic) GetUserInfo() (resp *types.UserInfoReply, err error) {
+	userId := l.ctx.Value("userId")
+	var userIdStr string
+	if v, ok := userId.(json.Number); ok {
+		userIdNum, _ := v.Int64()
+		userIdStr = strconv.FormatInt(userIdNum, 10)
+	}
 
-	//userId := l.ctx.Value("userId").(int64)  // 从上下文中获取用户id
-	var UserId string = "1661640027962085376"
 	dbUserInfo, err := l.svcCtx.UserRpcClient.QueryUser(l.ctx, &userclient.QueryUserRequest{
-		UserId: UserId,
+		UserId: userIdStr,
 	})
 
 	if err != nil {
@@ -41,7 +47,7 @@ func (l *GetUserInfoLogic) GetUserInfo() (resp *types.UserInfoReply, err error) 
 	fmt.Println(dbUserInfo.UserName)
 
 	return &types.UserInfoReply{
-		UserId:      UserId,                 // 用户id
+		UserId:      userIdStr,              // 用户id
 		UserName:    dbUserInfo.UserName,    // 用户名 （会改变）
 		TwitterName: dbUserInfo.TwitterName, // twitter名 推特唯一id
 		UserAvatar:  dbUserInfo.UserAvatar,  // 用户头像
